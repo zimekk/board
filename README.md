@@ -37,13 +37,10 @@ curl http://localhost:8080 # <!DOCTYPE html>
 ```
 
 ```sh
-docker system prune -f # Deleted Containers:
+docker-compose up --build sql # database system is ready to accept connections
+docker-compose exec sql su postgres -c "psql board"
 ```
 
-## hooks
-
 ```sh
-yarn husky install
-yarn husky add .husky/pre-commit "yarn pretty-quick --staged"
-yarn husky add .husky/commit-msg "yarn commitlint --edit \$1"
+docker system prune -f # Deleted Containers:
 ```

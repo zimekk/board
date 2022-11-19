@@ -1,8 +1,9 @@
 import path from "path";
 import express, { Router } from "express";
+import { api } from "@dev/api/lib";
 
 export const router = Router()
-  .use("/api", (_req, res) => res.json({ hello: "Hello" }))
+  .use("/api", api)
   .use(require("./push").default());
 
 class Server {

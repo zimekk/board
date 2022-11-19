@@ -21,6 +21,7 @@
     "start": "webpack serve --mode development"
   },
   "dependencies": {
+    "@dev/api": "1.0.0",
     "@dev/web": "1.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",

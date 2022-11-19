@@ -1,0 +1,23 @@
+{
+  "name": "@dev/sql",
+  "version": "1.0.0",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "lib",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "build": "NODE_ENV=production tsc",
+    "coverage": "type-coverage && tsc --noEmit"
+  },
+  "dependencies": {
+    "pg": "^8.8.0",
+    "zod": "^3.19.1"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.6.5"
+  }
+}
