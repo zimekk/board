@@ -4,7 +4,7 @@ import env from "dotenv";
 
 env.config({ path: path.resolve(__dirname, "../../.env") });
 
-export default (env, { mode }, dev = mode === "development") => ({
+export default (_env, { mode }, dev = mode === "development") => ({
   target: "web",
   devtool: dev ? "eval-cheap-source-map" : "source-map",
   entry: {
@@ -26,9 +26,6 @@ export default (env, { mode }, dev = mode === "development") => ({
             loader: "sass-loader",
             options: {
               implementation: require("sass"),
-              sassOptions: {
-                fiber: require("fibers"),
-              },
             },
           },
         ],

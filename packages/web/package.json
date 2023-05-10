@@ -45,7 +45,6 @@
     "css-loader": "^6.7.2",
     "dotenv": "^16.0.3",
     "favicons-webpack-plugin": "^5.0.2",
-    "fibers": "^5.0.3",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "react-hot-loader": "^4.13.1",
