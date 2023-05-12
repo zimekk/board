@@ -6,6 +6,7 @@ import styles from "./App.module.scss";
 const Spinner = () => <span>Loading...</span>;
 
 const PAGES = {
+  audio: lazy(() => import("./Audio")),
   hello: lazy(() => import("./Hello")),
 };
 

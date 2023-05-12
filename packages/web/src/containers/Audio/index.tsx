@@ -1,0 +1,54 @@
+import React, { Suspense, useMemo, useState } from "react";
+import { suspend } from "suspend-react";
+
+import Player, { Button, Text, View } from "./Player";
+
+function Loading() {
+  return (
+    <View>
+      <Text>Loading...</Text>
+    </View>
+  );
+}
+
+const { API_URL = "" } = {};
+
+function Playlist({ version = 1 }) {
+  const [href, setHref] = useState<string | undefined>();
+  const data = suspend(async () => {
+    const res = await fetch(`${API_URL}/api/audio?${version}`);
+    return res.json() as Promise<string[]>;
+  }, [version]);
+
+  const list = useMemo(
+    () =>
+      (data || []).map((name) => ({
+        name,
+        href: `${API_URL}/api/audio/${encodeURIComponent(name)}`,
+      })),
+    [data]
+  );
+
+  console.log({ list });
+
+  return (
+    <View>
+      {list.map(({ name, href }, key) => (
+        <Button key={key} title={name} onPress={() => setHref(href)} />
+      ))}
+      {href && <Player key={href} uri={href} />}
+      <Text>{JSON.stringify(data, null, 2)}</Text>
+    </View>
+  );
+}
+
+export default function Audio() {
+  return (
+    <View>
+      <Text>{`API_URL: ${API_URL}`}</Text>
+      <Suspense fallback={<Loading />}>
+        <Playlist />
+      </Suspense>
+    </View>
+  );
+}
