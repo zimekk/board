@@ -1,5 +1,5 @@
 import { createReadStream, statSync } from "fs";
-import glob from "glob";
+import { sync } from "glob";
 import { Router } from "express";
 import { dirname, resolve } from "path";
 
@@ -29,8 +29,9 @@ export const stream = () =>
       createReadStream(filepath, { start, end }).pipe(res.status(206));
     } else {
       res.status(200).json(
-        await glob.sync("**/*.flac", {
+        sync("**/*.flac", {
           cwd,
+          follow: true,
         })
       );
     }

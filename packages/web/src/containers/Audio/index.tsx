@@ -1,7 +1,7 @@
 import React, { Suspense, useMemo, useState } from "react";
 import { suspend } from "suspend-react";
 
-import Player, { Button, Text, View } from "./Player";
+import Player, { Link, Text, View } from "./Player";
 
 function Loading() {
   return (
@@ -11,9 +11,36 @@ function Loading() {
   );
 }
 
+function Data({
+  data,
+  expanded: initialExpanded = false,
+}: {
+  data: object;
+  expanded?: boolean;
+}) {
+  const [expanded, setExpanded] = useState(initialExpanded);
+
+  return (
+    <pre>
+      {expanded ? (
+        JSON.stringify(data, null, 2)
+      ) : (
+        <>
+          [
+          <a href="#" onClick={(e) => (e.preventDefault(), setExpanded(true))}>
+            ...
+          </a>
+          ]
+        </>
+      )}
+    </pre>
+  );
+}
+
 const { API_URL = "" } = {};
 
 function Playlist({ version = 1 }) {
+  const [loop, setLoop] = useState(true);
   const [href, setHref] = useState<string | undefined>();
   const data = suspend(async () => {
     const res = await fetch(`${API_URL}/api/audio?${version}`);
@@ -33,11 +60,24 @@ function Playlist({ version = 1 }) {
 
   return (
     <View>
-      {list.map(({ name, href }, key) => (
-        <Button key={key} title={name} onPress={() => setHref(href)} />
-      ))}
-      {href && <Player key={href} uri={href} />}
-      <Text>{JSON.stringify(data, null, 2)}</Text>
+      <ul>
+        {list.map(({ name, href }, key) => (
+          <li key={key}>
+            <Link title={name} onPress={() => setHref(href)} />
+          </li>
+        ))}
+      </ul>
+
+      <Player uri={href} loop={loop} />
+      <label>
+        <input
+          type="checkbox"
+          checked={loop}
+          onChange={({ target }) => setLoop(target.checked)}
+        />
+        <span>loop</span>
+      </label>
+      <Data data={data} />
     </View>
   );
 }
