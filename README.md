@@ -44,3 +44,10 @@ docker-compose exec sql su postgres -c "psql board"
 ```sh
 docker system prune -f # Deleted Containers:
 ```
+
+## deploy
+
+```sh
+git fetch && git reset --hard origin
+docker-compose -f docker-compose.yml up --build -d && docker system prune -f
+```
