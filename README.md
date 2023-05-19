@@ -49,5 +49,5 @@ docker system prune -f # Deleted Containers:
 
 ```sh
 git fetch && git reset --hard origin
-docker-compose -f docker-compose.yml up --build -d && docker system prune -f
+docker-compose up --build -d && docker system prune -f
 ```
