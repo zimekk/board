@@ -2,6 +2,7 @@ import { createReadStream, statSync } from "fs";
 import { sync } from "glob";
 import { Router } from "express";
 import { dirname, resolve } from "path";
+import mime from "mime-types";
 
 const { LIBRARY_PATH = "" } = process.env;
 
@@ -22,14 +23,14 @@ export const stream = () =>
         end ? Number(end) : size - 1,
       ])(range.match(/bytes=(\d+)-(\d*)/) || []) as [number, number];
       Object.entries({
-        "Content-Type": "audio/flac",
+        "Content-Type": mime.lookup(filepath),
         "Content-Length": end - start + 1,
         "Content-Range": `bytes ${start}-${end}/${size}`,
       }).forEach(([name, value]) => res.setHeader(name, value));
       createReadStream(filepath, { start, end }).pipe(res.status(206));
     } else {
       res.status(200).json(
-        sync("**/*.flac", {
+        sync("**/*.{flac,mp3,wav}", {
           cwd,
           follow: true,
         })
