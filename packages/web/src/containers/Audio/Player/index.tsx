@@ -1,4 +1,10 @@
-import React, { MouseEventHandler, useEffect, useRef, useState } from "react";
+import React, {
+  ComponentProps,
+  MouseEventHandler,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 export const Button = ({
   title,
@@ -17,13 +23,15 @@ export const Button = ({
 export const Link = ({
   title,
   onPress,
-}: {
+  ...rest
+}: ComponentProps<"a"> & {
   title: string;
   onPress: MouseEventHandler;
 }) => (
   <a
     href="#"
     onClick={onPress ? (e) => (e.preventDefault(), onPress(e)) : undefined}
+    {...rest}
   >
     {title}
   </a>

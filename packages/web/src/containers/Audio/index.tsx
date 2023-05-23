@@ -39,17 +39,27 @@ function Data({
 
 const { API_URL = "" } = {};
 
+interface ItemType {
+  name: string;
+  year?: string;
+  album?: string;
+  title?: string;
+  artists?: string[];
+  picture?: string[];
+}
+
 function Playlist({ version = 1 }) {
   const [loop, setLoop] = useState(true);
   const [href, setHref] = useState<string | undefined>();
   const data = suspend(async () => {
     const res = await fetch(`${API_URL}/api/audio?${version}`);
-    return res.json() as Promise<string[]>;
+    return res.json() as Promise<ItemType[]>;
   }, [version]);
 
   const list = useMemo(
     () =>
-      (data || []).map((name) => ({
+      (data || []).map(({ name, ...rest }) => ({
+        ...rest,
         name,
         href: `${API_URL}/api/audio/${encodeURIComponent(name)}`,
       })),
@@ -61,13 +71,28 @@ function Playlist({ version = 1 }) {
   return (
     <View>
       <ul>
-        {list.map(({ name, href }, key) => (
-          <li key={key}>
-            <Link title={name} onPress={() => setHref(href)} />
+        {list.map(({ name, href, title, artists, picture }, key) => (
+          <li
+            key={key}
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              padding: 1,
+              alignItems: "center",
+            }}
+          >
+            {picture &&
+              picture.map((src, key) => (
+                <img key={key} src={src} width="50" height="50" />
+              ))}
+            <Link
+              style={{ padding: 4 }}
+              title={title ? `${artists.join(", ")} - ${title}` : name}
+              onPress={() => setHref(href)}
+            />
           </li>
         ))}
       </ul>
-
       <Player uri={href} loop={loop} />
       <label>
         <input
