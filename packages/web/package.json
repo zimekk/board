@@ -45,7 +45,7 @@
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.4",
     "dotenv": "^16.0.3",
-    "favicons-webpack-plugin": "^5.0.2",
+    "favicons-webpack-plugin": "^6.0.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.1",
     "react-hot-loader": "^4.13.1",
