@@ -1,6 +1,7 @@
 # FROM node:14-alpine
 # FROM node:14.18.1-alpine3.12
-FROM node:16.13.0-alpine3.12
+# FROM node:16.13.0-alpine3.12
+FROM node:16.20.0-alpine3.17
 
 ENV WORKDIR=/app
 
