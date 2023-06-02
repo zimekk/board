@@ -45,6 +45,14 @@ docker-compose exec sql su postgres -c "psql board"
 docker system prune -f # Deleted Containers:
 ```
 
+## backup & restore
+
+```sh
+docker-compose exec -u postgres sql psql board
+docker-compose exec -u postgres sql pg_dump board | gzip -c > "backup/dump_$(date +%Y%m%d_%H%M).sql.gz"
+gunzip -c tmp/dump_20230602_1811.sql.gz | docker-compose exec -T -u postgres sql psql board
+```
+
 ## deploy
 
 ```sh
