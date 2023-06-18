@@ -1,7 +1,7 @@
 import React, { Suspense, useMemo, useState } from "react";
 import { suspend } from "suspend-react";
 
-import Player, { Link, Text, View } from "./Player";
+import Player, { MetaType, Link, Text, View } from "./Player";
 
 function Loading() {
   return (
@@ -51,6 +51,7 @@ interface ItemType {
 function Playlist({ version = 1 }) {
   const [loop, setLoop] = useState(true);
   const [href, setHref] = useState<string | undefined>();
+  const [meta, setMeta] = useState<MetaType | undefined>();
   const data = suspend(async () => {
     const res = await fetch(`${API_URL}/api/audio?${version}`);
     return res.json() as Promise<ItemType[]>;
@@ -66,12 +67,12 @@ function Playlist({ version = 1 }) {
     [data]
   );
 
-  console.log({ list });
+  console.log({ list, meta });
 
   return (
     <View>
       <ul>
-        {list.map(({ name, href, title, artists, picture }, key) => (
+        {list.map(({ name, href, title, album, artists, picture }, key) => (
           <li
             key={key}
             style={{
@@ -88,12 +89,28 @@ function Playlist({ version = 1 }) {
             <Link
               style={{ padding: 4 }}
               title={title ? `${artists.join(", ")} - ${title}` : name}
-              onPress={() => setHref(href)}
+              onPress={() => (
+                setHref(href),
+                setMeta(
+                  Object.assign(
+                    title
+                      ? {
+                          title,
+                          album,
+                          artist: artists.join(", "),
+                        }
+                      : { title: name },
+                    picture && {
+                      artwork: picture.map((src) => ({ src })),
+                    }
+                  )
+                )
+              )}
             />
           </li>
         ))}
       </ul>
-      <Player uri={href} loop={loop} />
+      <Player uri={href} loop={loop} meta={meta} />
       <label>
         <input
           type="checkbox"

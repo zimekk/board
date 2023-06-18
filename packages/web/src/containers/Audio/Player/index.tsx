@@ -6,6 +6,13 @@ import React, {
   useState,
 } from "react";
 
+export interface MetaType {
+  title: string;
+  album?: string;
+  artist?: string;
+  artwork?: { src: string }[];
+}
+
 export const Button = ({
   title,
   onPress,
@@ -40,13 +47,22 @@ export const Link = ({
 export const Text = "div";
 export const View = "div";
 
-export default function Player({ uri, loop }: { uri: string; loop: boolean }) {
+export default function Player({
+  uri,
+  loop,
+  meta,
+}: {
+  uri: string;
+  loop: boolean;
+  meta: MetaType;
+}) {
   const [playing, setPlaying] = useState(false);
   const ref = useRef<HTMLAudioElement>(null);
 
   async function play() {
     if (ref.current) {
-      ref.current.play();
+      await ref.current.play();
+      console.log(["play"]);
     }
   }
 
@@ -59,8 +75,8 @@ export default function Player({ uri, loop }: { uri: string; loop: boolean }) {
   useEffect(() => {
     const audio = ref.current;
     if (audio) {
-      const onPlay = (e) => (console.log(["play"], e), setPlaying(true));
-      const onPause = (e) => (console.log(["pause"], e), setPlaying(false));
+      const onPlay = (e) => (console.log(["onPlay"], e), setPlaying(true));
+      const onPause = (e) => (console.log(["onPause"], e), setPlaying(false));
 
       audio.addEventListener("play", onPlay);
       audio.addEventListener("pause", onPause);
@@ -71,6 +87,15 @@ export default function Player({ uri, loop }: { uri: string; loop: boolean }) {
       };
     }
   }, [ref]);
+
+  useEffect(() => {
+    if (playing) {
+      // https://web.dev/media-session/
+      if ("mediaSession" in navigator) {
+        navigator.mediaSession.metadata = new MediaMetadata(meta);
+      }
+    }
+  }, [playing, meta]);
 
   return (
     <View>
