@@ -1,4 +1,5 @@
 *.log
+.env.local
 lib
 node_modules
 public

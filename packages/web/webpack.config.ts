@@ -62,7 +62,9 @@ export default (_env, { mode }, dev = mode === "development") => ({
     clean: true,
   },
   plugins: [
-    new webpack.EnvironmentPlugin({}),
+    new webpack.EnvironmentPlugin({
+      API_URL: "",
+    }),
     new webpack.ProvidePlugin({
       Buffer: ["buffer", "Buffer"],
     }),

@@ -37,7 +37,7 @@ function Data({
   );
 }
 
-const { API_URL = "" } = {};
+const API_URL = process.env.API_URL || "";
 
 interface ItemType {
   name: string;
