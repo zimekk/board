@@ -12,7 +12,7 @@ COPY packages/app/package.json packages/app/
 COPY packages/sql/package.json packages/sql/
 COPY packages/web/package.json packages/web/
 RUN yarn --frozen-lockfile
-RUN yarn add -W music-metadata strtok3 token-types
+RUN yarn add -W music-metadata@7 strtok3 token-types
 
 COPY . ./
 RUN yarn build

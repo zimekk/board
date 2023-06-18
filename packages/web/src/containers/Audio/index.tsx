@@ -45,6 +45,7 @@ interface ItemType {
   album?: string;
   title?: string;
   artists?: string[];
+  artwork?: MetaType["artwork"];
   picture?: string[];
 }
 
@@ -72,43 +73,51 @@ function Playlist({ version = 1 }) {
   return (
     <View>
       <ul>
-        {list.map(({ name, href, title, album, artists, picture }, key) => (
-          <li
-            key={key}
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              padding: 1,
-              alignItems: "center",
-            }}
-          >
-            {picture &&
-              picture.map((src, key) => (
-                <img key={key} src={src} width="50" height="50" />
-              ))}
-            <Link
-              style={{ padding: 4 }}
-              title={title ? `${artists.join(", ")} - ${title}` : name}
-              onPress={() => (
-                setHref(href),
-                setMeta(
-                  Object.assign(
-                    title
-                      ? {
-                          title,
-                          album,
-                          artist: artists.join(", "),
-                        }
-                      : { title: name },
-                    picture && {
-                      artwork: picture.map((src) => ({ src })),
-                    }
+        {list.map(
+          ({ name, href, title, album, artists, artwork, picture }, key) => (
+            <li
+              key={key}
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                padding: 1,
+                alignItems: "center",
+              }}
+            >
+              {picture &&
+                picture.map((src, key) => (
+                  <img key={key} src={src} width="50" height="50" />
+                ))}
+              <Link
+                style={{ padding: 4 }}
+                title={title ? `${artists.join(", ")} - ${title}` : name}
+                onPress={() => (
+                  setHref(href),
+                  setMeta(
+                    Object.assign(
+                      title
+                        ? {
+                            title,
+                            album,
+                            artist: artists.join(", "),
+                          }
+                        : { title: name },
+                      artwork && {
+                        artwork: artwork.map(({ src, ...artwork }) => ({
+                          src: new URL(
+                            `${href}/${src}`,
+                            document.location.origin || ""
+                          ).toString(),
+                          ...artwork,
+                        })),
+                      }
+                    )
                   )
-                )
-              )}
-            />
-          </li>
-        ))}
+                )}
+              />
+            </li>
+          )
+        )}
       </ul>
       <Player uri={href} loop={loop} meta={meta} />
       <label>
