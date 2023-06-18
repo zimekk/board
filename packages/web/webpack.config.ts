@@ -75,13 +75,13 @@ export default (_env, { mode }, dev = mode === "development") => ({
     //   ],
     // }),
     // https://github.com/jantimon/favicons-webpack-plugin#basic
-    new (require("favicons-webpack-plugin"))({
-      logo: require.resolve("./src/assets/favicon.ico"),
-      // https://web.dev/add-manifest/
-      // https://felixgerschau.com/how-to-make-your-react-app-a-progressive-web-app-pwa/#adding-a-manifest-file
-      manifest: require.resolve("./src/assets/manifest.json"),
-      mode: "light",
-    }),
+    // new (require("favicons-webpack-plugin"))({
+    //   logo: require.resolve("./src/assets/favicon.ico"),
+    //   // https://web.dev/add-manifest/
+    //   // https://felixgerschau.com/how-to-make-your-react-app-a-progressive-web-app-pwa/#adding-a-manifest-file
+    //   manifest: require.resolve("./src/assets/manifest.json"),
+    //   mode: "light",
+    // }),
     // https://webpack.js.org/plugins/html-webpack-plugin/
     new (require("html-webpack-plugin"))({
       title: require("./src/assets/manifest").name,

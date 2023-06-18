@@ -35,18 +35,14 @@
     ]
   },
   "scripts": {
-    "build": "yarn workspaces run build",
+    "build": "pnpm -r run build",
     "clean": "rm -rf packages/*/public packages/*/lib",
-    "coverage": "yarn workspaces run coverage",
+    "coverage": "pnpm -r run coverage",
     "lint": "eslint . --ext .json,.js,.jsx,.ts,.tsx",
     "reset": "rm -rf node_modules packages/*/node_modules",
-    "serve": "yarn workspace @dev/app serve",
-    "start": "dotenv -e .env.local yarn workspace @dev/app start",
-    "dedupe": "yarn-deduplicate && yarn",
-    "dedupe:list": "yarn-deduplicate --list",
-    "update": "yarn upgrade-interactive",
-    "update:dedupe": "yarn-deduplicate && yarn",
-    "update:latest": "yarn upgrade-interactive --latest",
+    "serve": "pnpm --filter=@dev/app run serve",
+    "start": "dotenv -e .env.local -- pnpm --filter=@dev/app run start",
+    "update:latest": "pnpm -r up -i",
     "prepare": "husky install"
   },
   "workspaces": [
@@ -65,7 +61,6 @@
     "prettier": "^2.8.8",
     "pretty-quick": "^3.1.3",
     "type-coverage": "^2.26.0",
-    "typescript": "^5.0.4",
-    "yarn-deduplicate": "^6.0.2"
+    "typescript": "^5.0.4"
   }
 }
