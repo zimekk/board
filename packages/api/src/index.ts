@@ -12,4 +12,5 @@ export const api = Router()
   .all("/data.json", (_req, res) =>
     query(`select * from contact`).then(({ rows }) => res.json(rows))
   )
-  .use("/audio/", require("./audio").stream());
+  .use("/audio/", require("./audio").stream())
+  .use("/scrap/", require("./scrap").chrome());

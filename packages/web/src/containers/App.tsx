@@ -8,6 +8,7 @@ const Spinner = () => <span>Loading...</span>;
 const PAGES = {
   audio: lazy(() => import("./Audio")),
   hello: lazy(() => import("./Hello")),
+  scrap: lazy(() => import("@dev/scrap")),
 };
 
 const getPage = (location: { hash: string }) => {
