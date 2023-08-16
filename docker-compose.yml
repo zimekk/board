@@ -3,14 +3,23 @@ services:
   app:
     build: .
     environment:
+      - PORT
       - DATABASE_URL=postgres://postgres:password@sql:5432/board
+      - REDIS_URL=redis://redis
     links:
+      - redis
       - sql
     # network_mode: bridge
     networks:
       - app_network
+    ports:
+      - $PORT:$PORT
     volumes:
       - ./share/library:/app/share/library
+  redis:
+    image: redis:7.0-alpine
+    networks:
+      - app_network
   sql:
     image: postgres:15-alpine
     environment:
