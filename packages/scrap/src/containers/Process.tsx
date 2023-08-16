@@ -2,7 +2,7 @@ import React, {
   type ChangeEventHandler,
   useCallback,
   useEffect,
-  useId,
+  // useId,
   useMemo,
   useState,
 } from "react";
@@ -14,6 +14,7 @@ import { z } from "zod";
 import { DataSchema, OptsSchema } from "@dev/schema";
 import { Fieldset } from "../components/Fieldset";
 import { Link } from "../components/Link";
+import { Spinner } from "../components/Spinner";
 
 export const API_URL = process.env.API_URL || "";
 
@@ -257,9 +258,15 @@ export const post = (path: string, data?: object, base = API_URL) =>
 const TYPE = ["repeatable", "delayed"] as const;
 const DELAY = [5, 10, 15, 30] as const;
 
+const scrap = async (item: object, text: string) =>
+  (console.info([text], { item }), post("scrap", item, ""))
+    .then((response) => response.json())
+    .then((json) => post("parse", json));
+
 export default function Process({ getDelayed }: { getDelayed: () => void }) {
   const [selected, setSelected] = useState<string[]>(() => []);
   const [priority, setPriority] = useState<boolean>(() => false);
+  const [loading, setLoading] = useState(false);
   const [type, setType] = useState<(typeof TYPE)[number]>(() => TYPE[1]);
   const [delay, setDelay] = useState<(typeof DELAY)[number]>(() => DELAY[0]);
   const [match, setMatch] = useState(() => ({
@@ -563,11 +570,15 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
             [
               "dom/mazowieckie/piaseczynski/konstancin--jeziorna",
               "dzialka/lodzkie/belchatowski/kleszczow",
+              "dzialka/mazowieckie/otwocki/jozefow/jozefow",
               "dzialka/mazowieckie/piaseczynski/konstancin--jeziorna",
               "dzialka/mazowieckie/pruszkowski/michalowice",
               "dzialka/mazowieckie/pruszkowski/raszyn",
               "dzialka/mazowieckie/warszawa/warszawa/warszawa/bemowo/boernerowo",
               "dzialka/mazowieckie/warszawa/warszawa/warszawa/ursus",
+              "dzialka/mazowieckie/warszawa/warszawa/warszawa/wawer/anin",
+              "dzialka/mazowieckie/warszawa/warszawa/warszawa/wawer/miedzeszyn",
+              "dzialka/mazowieckie/warszawa/warszawa/warszawa/wawer/miedzylesie",
               "dzialka/mazowieckie/warszawski-zachodni/izabelin",
               "dzialka/mazowieckie/warszawski-zachodni/stare-babice",
             ].map(
@@ -724,7 +735,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
           // "g-4/c/979-karty-pamieci-microsd.html?producent=303-sandisk",
           "g-4/c/1590-smartfony-i-telefony.html?producent=357-apple",
           "g-4/c/1836-etui-i-obudowy-na-smartfony.html?producent=357-apple",
-          "g-4/c/1837-ladowarki-do-smartfonow.html?producent=1839-green-cell",
+          "g-4/c/1837-ladowarki-do-smartfonow.html?producent=357-apple&producent=1839-green-cell",
           "g-4/c/2287-akcesoria-do-tabletow.html?producent=357-apple",
           "g-4/c/2748-sluchawki-true-wireless.html?producent=357-apple",
           "g-4/c/3008-smartwatche-lte.html?producent=357-apple",
@@ -746,6 +757,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
           "g-6/c/15-monitory.html?producent=357-apple",
           "g-6/c/1215-sluchawki.html?producent=357-apple&producent=1214-marshall&producent=2334-shure",
           "g-6/c/1295-monitory-led-32-i-wieksze.html?producent=396-dell",
+          "g-6/c/2326-kamery-ip.html?producent=276-tp-link&producent=2287-hikvision",
           "g-6/c/2506-glosniki-przenosne.html?producent=374-jbl&f1872-moc-glosnikow-rms=71075-10-49-w",
           "g-6/c/3095-statywy-do-mikrofonow.html?producent=818-elgato&producent=2025-rode&producent=2438-blue-microphones",
           "g-7/c/171-joysticki.html?producent=896-thrustmaster",
@@ -756,6 +768,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
           "g-64/c/2582-gimbale.html?producent=1009-dji&producent=1155-zhiyun",
           // "g-64/c/2582-gimbale.html?producent=1009-dji",
           // "g-64/c/2582-gimbale.html?producent=1155-zhiyun",
+          "g-64/c/3037-rejestratory-ip.html?producent=276-tp-link&producent=2287-hikvision",
         ]
           .map((path) => `https://www.x-kom.pl/${path}`)
           .map((url, i) => ({
@@ -832,6 +845,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
           "category=telefony-komorkowe&__=Apple",
           "category=telewizory-led-lcd-plazmowe&__=Panasonic",
           "category=wentylatory-i-klimatory&__=xiaomi",
+          "category=wyposazenie-do-ekspresow&__=Siemens",
           "category=wyposazenie-do-robotow-kuchennych&__=Bosch",
           "category=zelazka-systemowe&__=Philips",
           "category=zmywarki-do-zabudowy&__=Siemens",
@@ -853,13 +867,16 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
         [
           "CategoryId=8305&BrandIds=6254", // Dzbanki i filtry / RUBIN
           "CategoryId=8339&BrandIds=4081", // Środki do zmywarki / FINISH
-          "CategoryId=8380&BrandIds=10504", // Karma sucha dla kota / PURINA ONE
+          "CategoryId=8343&BrandIds=10624&BrandIds=10757", // Akcesoria Do Sprzątania / 3M SCOTCH-BRITE / VILEDA
           "CategoryId=8344", // Worki na śmieci
+          "CategoryId=8380&BrandIds=10504", // Karma sucha dla kota / PURINA ONE
           "CategoryId=8379&BrandIds=10251", // Karma mokra dla kota / PURINA GOURMET
+          "CategoryId=8382&BrandIds=10193&BrandIds=11576", // Akcesoria dla kota / CATSI / ELOY
           "CategoryId=8576&BrandIds=7261", // Higiena / YOPE
           "CategoryId=8589&BrandIds=5259", // Pasty do zębów / MERIDOL
-          "CategoryId=8603&BrandIds=4309&Tags=393_2702", // Maszynki i wkłady / GILLETTE / wkłady do maszynek (14)
+          "CategoryId=8603&BrandIds=4309&Tags=393_2702", // Maszynki i wkłady / GILLETTE / wkłady do maszynek
           "CategoryId=8613&BrandIds=2353", // Papiery toaletowe / ALOUETTE
+          "CategoryId=8615&BrandIds=2353", // Chusteczki higieniczne / ALOUETTE
           "CategoryId=8657&BrandIds=2362", // Szampony / ALTERRA
         ]
           .map(
@@ -1077,7 +1094,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
   );
 
   // const typeId = useId();
-  const typeId = "typeId";
+  const typeId = "useId";
 
   const onChangeType = useCallback<ChangeEventHandler<HTMLInputElement>>(
     ({ target }) => setType(target.value as (typeof TYPE)[number]),
@@ -1085,17 +1102,15 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
   );
 
   const handleScrap = useCallback(
-    (item: object) => (
-      console.log(["scrap"], { item }),
-      post("scrap", item, "")
-        .then((response) => response.json())
-        .then((json) => post("parse", json))
-    ),
+    (item: object, text = "scrap") =>
+      (setLoading(true), scrap(item, text))
+        .catch(console.error)
+        .then(() => setLoading(false)),
     []
   );
 
   const handleAvailability = useCallback(
-    (id: number) =>
+    (id: string) =>
       SHOPS
         // .slice(0, 2)
         .reduce<Promise<unknown>>(
@@ -1125,18 +1140,28 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
     []
   );
 
+  const selectedIds = useMemo(
+    () => list.map((item) => item.id).filter((id) => selected.includes(id)),
+    [list, selected]
+  );
+
   return (
-    <Fieldset legend="process">
+    <Fieldset legend="process" expanded>
       {/* <pre>{JSON.stringify(delayed, null, 2)}</pre> */}
       <div>
         <label>
           <input
             type="checkbox"
-            checked={list.length > 0 && selected.length === list.length}
+            checked={list.length > 0 && selectedIds.length === list.length}
             disabled={list.length === 0}
             onChange={useCallback<ChangeEventHandler<HTMLInputElement>>(
               ({ target }) =>
-                setSelected(target.checked ? list.map(({ id }) => id) : []),
+                ((listIds) =>
+                  setSelected((selected) =>
+                    selected
+                      .filter((id) => !listIds.includes(id))
+                      .concat(target.checked ? listIds : [])
+                  ))(list.map((item) => item.id)),
               [list]
             )}
           />
@@ -1223,14 +1248,20 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
             [list, selected]
           )}
         >
-          process
+          {type === "delayed" ? "process" : "add"}
         </button>
         <button
           onClick={useCallback(() => post("cleanup").then(getDelayed), [])}
         >
           cleanup
         </button>
-        <button onClick={() => handleAvailability(1225761)}>shops</button>
+        <button
+          onClick={() =>
+            ((plu) => plu && handleAvailability(plu))(prompt("plu:", "1225761"))
+          }
+        >
+          shops
+        </button>
         <button
           onClick={useCallback(() => {
             const url = prompt("Url:", "https://");
@@ -1255,28 +1286,39 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
           append url
         </button>
         <button
+          disabled={loading}
           onClick={useCallback(
             () =>
-              list
+              (setLoading(true), list)
                 .filter((item) => selected.includes(item.id))
                 .reduce<Promise<unknown>>(
-                  (promise, item) =>
+                  (promise, item, key, list) =>
                     promise
-                      .then(() => handleScrap(item))
+                      .then(() =>
+                        scrap(item, `scrap ${key + 1}/${list.length}`)
+                      )
+                      .then(() =>
+                        setSelected((selected) =>
+                          selected.filter((id) => id !== item.id)
+                        )
+                      )
                       .then(
                         () =>
+                          key < list.length - 1 &&
                           new Promise((resolve) =>
                             setTimeout(resolve, seconds(10 * Math.random()))
                           )
                       ),
                   Promise.resolve()
                 )
-                .then(() => setSelected([])),
+                .catch(console.error)
+                .then(() => setLoading(false)),
             [list, selected]
           )}
         >
           scrap
         </button>
+        {loading && <Spinner />}
       </div>
 
       {list.map((item: any) => (
@@ -1316,7 +1358,9 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
                   {item.opts.repeat.cron}
                 </pre>
               ) : (
-                <button onClick={() => handleScrap(item)}>scrap</button>
+                <button disabled={loading} onClick={() => handleScrap(item)}>
+                  scrap
+                </button>
               )}
             </label>
           </div>

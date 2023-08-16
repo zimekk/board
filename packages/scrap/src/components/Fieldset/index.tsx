@@ -14,12 +14,14 @@ const StyledLegend = styled.legend``;
 
 export function Fieldset({
   children,
+  expanded: initiallyExpanded = false,
   legend,
 }: {
   children: any;
+  expanded?: boolean;
   legend: string;
 }) {
-  const [expanded, setExpanded] = useState(() => false);
+  const [expanded, setExpanded] = useState(() => initiallyExpanded);
 
   const handleExpand = useCallback<MouseEventHandler>(
     (e) => (e.preventDefault(), setExpanded((expanded) => !expanded)),

@@ -1,6 +1,6 @@
 import React from "react";
 
-import Entries from "./Entries";
+// import Entries from "./Entries";
 import Delayed from "./Delayed";
 
 export default function Section() {
