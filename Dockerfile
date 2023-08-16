@@ -35,6 +35,7 @@ COPY packages/schema/package.json packages/schema/
 COPY packages/scrap/package.json packages/scrap/
 COPY packages/sql/package.json packages/sql/
 COPY packages/web/package.json packages/web/
+COPY packages/worker/package.json packages/worker/
 # RUN yarn --frozen-lockfile
 # RUN yarn add -W music-metadata@7 strtok3 token-types
 RUN pnpm i

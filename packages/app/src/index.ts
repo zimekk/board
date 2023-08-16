@@ -4,6 +4,7 @@ import { api } from "@dev/api/lib";
 
 export const router = Router()
   .use("/api", api)
+  .use(require("@dev/worker").router())
   .use(require("./push").default());
 
 class Server {

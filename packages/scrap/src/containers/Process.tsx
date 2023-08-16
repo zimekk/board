@@ -1087,7 +1087,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
   const handleScrap = useCallback(
     (item: object) => (
       console.log(["scrap"], { item }),
-      post("api/scrap", item, "")
+      post("scrap", item, "")
         .then((response) => response.json())
         .then((json) => post("parse", json))
     ),
