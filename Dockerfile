@@ -1,7 +1,27 @@
 # FROM node:14-alpine
 # FROM node:14.18.1-alpine3.12
 # FROM node:16.13.0-alpine3.12
-FROM node:16.20.2-alpine3.17
+# FROM node:16.20.2-alpine3.17
+FROM node:18.17.1-alpine3.17
+
+# https://pptr.dev/troubleshooting#running-on-alpine
+# Installs latest Chromium (100) package.
+RUN apk add --no-cache \
+      chromium \
+      nss \
+      freetype \
+      harfbuzz \
+      ca-certificates \
+      ttf-freefont \
+      tzdata
+
+# https://stackoverflow.com/questions/68996420/how-to-set-timezone-inside-alpine-base-docker-image
+# https://docs.diladele.com/docker/timezones.html
+ENV TZ=Europe/Warsaw
+
+# Tell Puppeteer to skip installing Chrome. We'll be using the installed package.
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
+    PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
 ENV WORKDIR=/app
 RUN npm i -g pnpm
