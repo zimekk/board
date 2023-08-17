@@ -17,7 +17,7 @@ services:
     volumes:
       - ./share/library:/app/share/library
   redis:
-    image: redis:7.0-alpine
+    image: redis:7.2-alpine
     networks:
       - app_network
   sql:
