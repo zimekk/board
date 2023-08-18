@@ -89,7 +89,7 @@ export const router = () => {
                   "Content-Type": "application/json",
                 },
               })
-                .then((res) => res.json())
+                .then((res) => (res.status === 200 ? res.json() : res.text()))
                 .then((data) => res.json(data))
             )
           )
