@@ -1,11 +1,17 @@
 import { json } from "express";
-import { fetch } from "cross-fetch";
 import { Router } from "express";
 import { createBullBoard } from "@bull-board/api";
 import { BullAdapter } from "@bull-board/api/bullAdapter";
 import { ExpressAdapter } from "@bull-board/express";
 import { z } from "zod";
-import { DataSchema, ROBOT_URL, chrome, client } from "../client";
+import {
+  DataSchema,
+  EntrySchema,
+  OptsSchema,
+  chrome,
+  client,
+  parse,
+} from "../client";
 
 export const router = () => {
   const BASE_PATH = "/board";
@@ -24,34 +30,6 @@ export const router = () => {
 
   return (
     Router()
-      // .get("/shops/:id", json(), async (req, res, next) =>
-      //   z
-      //     .object({
-      //       id: z.string(),
-      //     })
-      //     .parseAsync(req.params)
-      //     .then(({ id }) =>
-      //       z
-      //         .object({
-      //           areaName: z.string(),
-      //         })
-      //         .parseAsync(req.query)
-      //         .then(
-      //           ({ areaName }) =>
-      //             `https://www.euro.com.pl/rest/api/products/${id}/shops?areaName=${encodeURIComponent(
-      //               areaName
-      //             )}`
-      //         )
-      //         .then(
-      //           (url) => (
-      //             console.log(["fetch"], url),
-      //             fetch(url).then((res) => res.json())
-      //           )
-      //         )
-      //     )
-      //     .then((json) => (console.log(json), res.json(json)))
-      //     .catch(next)
-      // )
       .post("/scrap", json(), async (req, res, next) =>
         z
           .object({
@@ -79,86 +57,62 @@ export const router = () => {
             returnvalue: z.unknown(),
           })
           .parseAsync(req.body)
-          .then(
-            ({ id, data, returnvalue }) => (
-              console.log(["parse"], { data }),
-              fetch(`${ROBOT_URL}parse`, {
-                method: "post",
-                body: JSON.stringify({ id, data, returnvalue }),
-                headers: {
-                  "Content-Type": "application/json",
-                },
-              })
-                .then((res) => (res.status === 200 ? res.json() : res.text()))
-                .then((data) => res.json(data))
-            )
-          )
+          .then(parse)
+          .then((data) => res.json(data))
           .catch(next)
       )
-      // .post("/process", json(), async (req, res) => {
-      //   const { data, opts } = await z
-      //     .object({
-      //       data: DataSchema,
-      //       opts: OptsSchema.optional(),
-      //     })
-      //     .parseAsync(req.body);
+      .post("/process", json(), async (req, res) => {
+        const { data, opts } = await z
+          .object({
+            data: DataSchema,
+            opts: OptsSchema.optional(),
+          })
+          .parseAsync(req.body);
 
-      //   await worker.produce(data, opts);
+        await worker.produce(data, opts);
 
-      //   return res.json({ status: "ok" });
-      // })
-      // .post("/entries/delete", json(), async (req, res) =>
-      //   z
-      //     .object({
-      //       selected: z.string().array(),
-      //     })
-      //     .parseAsync(req.body)
-      //     .then(async ({ selected }) =>
-      //       selected
-      //         .reduce(
-      //           (promise, id) => promise.then(() => worker.queue.removeJobs(id)),
-      //           Promise.resolve()
-      //         )
-      //         .then(() => res.json({ status: "ok" }))
-      //     )
-      // )
-      // .post("/entries", json(), async (req, res, next) =>
-      //   z
-      //     .object({
-      //       start: z.number().default(0),
-      //       limit: z.number().default(250),
-      //       type: z.string().default(""),
-      //       data: z.boolean().default(false),
-      //       returnvalue: z.boolean().default(true),
-      //     })
-      //     .parseAsync(req.body)
-      //     .then(async ({ start, limit, type, data }) => {
-      //       const list = await worker.queue.getCompleted(
-      //         start,
-      //         start + limit - 1
-      //       );
-      //       return EntrySchema.array()
-      //         .parseAsync(list)
-      //         .then((list) =>
-      //           list.filter((item) => type === "" || item.type === type)
-      //         )
-      //         .then((list) =>
-      //           data
-      //             ? z
-      //                 .object({
-      //                   id: z.string(),
-      //                   data: DataSchema,
-      //                   opts: OptsSchema.optional(),
-      //                   type: z.string(),
-      //                 })
-      //                 .array()
-      //                 .parseAsync(list)
-      //             : list
-      //         );
-      //     })
-      //     .then((entries) => res.json(entries))
-      //     .catch(next)
-      // )
+        return res.json({ status: "ok" });
+      })
+      .post("/entries/delete", json(), async (req, res) =>
+        z
+          .object({
+            selected: z.string().array(),
+          })
+          .parseAsync(req.body)
+          .then(async ({ selected }) =>
+            selected
+              .reduce(
+                (promise, id) =>
+                  promise.then(() => worker.queue.removeJobs(id)),
+                Promise.resolve()
+              )
+              .then(() => res.json({ status: "ok" }))
+          )
+      )
+      .post("/entries", json(), async (req, res, next) =>
+        z
+          .object({
+            start: z.number().default(0),
+            limit: z.number().default(250),
+            type: z.string().default(""),
+            data: z.boolean().default(false),
+            returnvalue: z.boolean().default(true),
+          })
+          .parseAsync(req.body)
+          .then(async ({ start, limit, type }) => {
+            const list = await worker.queue.getCompleted(
+              start,
+              start + limit - 1
+            );
+            return EntrySchema.array()
+              .parseAsync(list)
+              .then((list) =>
+                list.filter((item) => type === "" || item.type === type)
+              );
+          })
+          .then((entries) => res.json(entries))
+          .catch(next)
+      )
       .post("/delayed", json(), async (req, res) =>
         z
           .object({})
@@ -169,19 +123,19 @@ export const router = () => {
           })
           .then((entries) => res.json(entries))
       )
-      // .get("/entry/:id", async (req, res) =>
-      //   Promise.resolve(req.params).then(({ id }) =>
-      //     worker.queue
-      //       .getJob(id)
-      //       .then((item) => EntrySchema.parseAsync(item))
-      //       .then((json) => res.send(json))
-      //   )
-      // )
-      // .get("/delete/:id", async (req, res) =>
-      //   Promise.resolve(req.params).then(({ id }) =>
-      //     worker.queue.removeJobs(id).then(() => res.json({ status: "ok" }))
-      //   )
-      // )
+      .get("/entry/:id", async (req, res) =>
+        Promise.resolve(req.params).then(({ id }) =>
+          worker.queue
+            .getJob(id)
+            .then((item) => EntrySchema.parseAsync(item))
+            .then((json) => res.send(json))
+        )
+      )
+      .get("/delete/:id", async (req, res) =>
+        Promise.resolve(req.params).then(({ id }) =>
+          worker.queue.removeJobs(id).then(() => res.json({ status: "ok" }))
+        )
+      )
       // .get("/:type/:id/", async (req, res) =>
       //   Promise.resolve(req.params).then(({ id, type = "" }) =>
       //     worker.queue
@@ -203,19 +157,19 @@ export const router = () => {
       //       .then((json) => (type === "html" ? res.send(json) : res.json(json)))
       //   )
       // )
-      // .post("/cleanup", async (_req, res) => {
-      //   const queue = worker.queue;
-      //   await Promise.all(
-      //     (
-      //       await queue.getRepeatableJobs()
-      //     ).map(
-      //       async ({ key }) =>
-      //         Boolean(console.log(["cleanup"], { key })) ||
-      //         (await queue.removeRepeatableByKey(key))
-      //     )
-      //   );
-      //   return res.json({ status: "ok" });
-      // })
+      .post("/cleanup", async (_req, res) => {
+        const queue = worker.queue;
+        await Promise.all(
+          (
+            await queue.getRepeatableJobs()
+          ).map(
+            async ({ key }) =>
+              Boolean(console.log(["cleanup"], { key })) ||
+              (await queue.removeRepeatableByKey(key))
+          )
+        );
+        return res.json({ status: "ok" });
+      })
       .use(BASE_PATH, serverAdapter.getRouter())
   );
 };

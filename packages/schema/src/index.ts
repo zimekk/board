@@ -106,6 +106,7 @@ export const DelayedSchema = z
   .array();
 
 export const EntriesSchema = ReturnSchema.extend({
-  type: z.literal(Type.UNKNOWN),
+  data: z.object({}).passthrough(),
+  type: z.string().optional(),
   returnvalue: z.any({}),
 });

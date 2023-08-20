@@ -11,7 +11,7 @@ import { format } from "date-fns";
 import prettyBytes from "pretty-bytes";
 import { Subject, debounceTime, distinctUntilChanged, map } from "rxjs";
 import { z } from "zod";
-import { EntriesSchema, ReturnSchema, Type } from "@dev/schema";
+import { EntriesSchema, Type } from "@dev/schema";
 
 import { Spinner } from "../components/Spinner";
 import { API_URL, post } from "./Process";
@@ -144,18 +144,7 @@ export default function Entries() {
           pager.data
             ? z.any({}).array().parseAsync(list)
             : Promise.all(
-                list.map((item: unknown, key: number) =>
-                  EntriesSchema.parseAsync(item).catch(
-                    (error) => (
-                      console.info(key),
-                      console.error(error),
-                      ReturnSchema.extend({
-                        type: z.string(),
-                        error: z.string().default(String(error)),
-                      }).parseAsync(item)
-                    )
-                  )
-                )
+                list.map((item: unknown) => EntriesSchema.parseAsync(item))
               )
         )
         .then(setEntries)
@@ -488,10 +477,15 @@ export default function Entries() {
                               id: z.string(),
                               data: z
                                 .object({
-                                  url: z.string(),
+                                  data: z
+                                    .object({
+                                      url: z.string(),
+                                    })
+                                    .optional(),
+                                  url: z.string().optional(),
                                 })
-                                .transform(({ url }) => url),
-                              type: z.string(),
+                                .transform(({ data, url }) => url || data.url),
+                              type: z.string().optional(),
                             })
                             .parse(item),
                       null,
