@@ -87,7 +87,7 @@ export const client = () => {
           "completed",
           async ({ id, name, data, opts, finishedOn }, returnvalue) => {
             console.log(["completed"], { id, name, data, opts, finishedOn });
-            if (name === NAME_SCRAP) {
+            if (name === NAME_SCRAP && returnvalue.json) {
               await queue.add(
                 NAME_PARSE,
                 { id, data, returnvalue },
@@ -123,13 +123,14 @@ export const client = () => {
         await job.log(`process ${NAME_SCRAP}`);
         await job.progress(50);
 
-        const returnvalue = await chrome(data.url).then((returnvalue) => {
-          if (returnvalue.html && returnvalue.url !== data.url) {
-            console.log(["failure"], NAME_SCRAP);
-            throw new Error(`Invalid response url: ${returnvalue.url}`);
-          }
-          return returnvalue;
-        });
+        const returnvalue = await chrome(data.url);
+        // .then((returnvalue) => {
+        //   if (returnvalue.html && returnvalue.url !== data.url) {
+        //     console.log(["failure"], NAME_SCRAP);
+        //     throw new Error(`Invalid response url: ${returnvalue.url}`);
+        //   }
+        //   return returnvalue;
+        // });
 
         await job.progress(100);
 

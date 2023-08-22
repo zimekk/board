@@ -261,7 +261,7 @@ const DELAY = [5, 10, 15, 30] as const;
 const scrap = async (item: object, text: string) =>
   (console.info([text], { item }), post("scrap", item, ""))
     .then((response) => response.json())
-    .then((json) => post("parse", json));
+    .then((json) => json.returnvalue.json && post("parse", json));
 
 export default function Process({ getDelayed }: { getDelayed: () => void }) {
   const [selected, setSelected] = useState<string[]>(() => []);
@@ -554,13 +554,13 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
       )
       .concat(
         [
-          "dom/komorow_5600",
-          "dom/michalowice_62659",
-          "dom/warszawa",
-          "dzialka/komorow_5600",
-          "dzialka/michalowice_62659",
-          "dzialka/warszawa",
-          "dzialka/zalesie-gorne",
+          // "dom/komorow_5600",
+          // "dom/michalowice_62659",
+          // "dom/warszawa",
+          // "dzialka/komorow_5600",
+          // "dzialka/michalowice_62659",
+          // "dzialka/warszawa",
+          // "dzialka/zalesie-gorne",
         ]
           .map(
             (cat) =>
@@ -572,8 +572,10 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
               "dzialka/lodzkie/belchatowski/kleszczow",
               "dzialka/mazowieckie/otwocki/jozefow/jozefow",
               "dzialka/mazowieckie/piaseczynski/konstancin--jeziorna",
+              "dzialka/mazowieckie/piaseczynski/piaseczno/zalesie-gorne",
               "dzialka/mazowieckie/pruszkowski/michalowice",
               "dzialka/mazowieckie/pruszkowski/raszyn",
+              "dzialka/mazowieckie/warszawa/warszawa/warszawa",
               "dzialka/mazowieckie/warszawa/warszawa/warszawa/bemowo/boernerowo",
               "dzialka/mazowieckie/warszawa/warszawa/warszawa/ursus",
               "dzialka/mazowieckie/warszawa/warszawa/warszawa/wawer/anin",

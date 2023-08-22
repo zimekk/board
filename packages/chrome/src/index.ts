@@ -50,6 +50,28 @@ export async function chrome(url = "https://zimekk.github.io/robot/") {
   await page.setUserAgent((await browser.userAgent()).replace("Headless", ""));
   await page.setRequestInterception(true);
 
+  if (url.match("/goracy_strzal|/pl/\\w+/-home|//promocje")) {
+    return Promise.all([
+      import("./pl.xkom").then(({ scrap }) => scrap(page)),
+      page.goto(url, {
+        waitUntil: "networkidle2",
+        timeout: 60_000,
+      }),
+    ]).then(async ([result]) => {
+      await delay();
+      await page.close();
+      await browser.close();
+      return result;
+    });
+  } else if (url.match("dom.pl/pl/")) {
+    return import("./pl.otodom")
+      .then(({ scrap }) => scrap(page, url))
+      .then(async (result) => {
+        await browser.close();
+        return result;
+      });
+  }
+
   return await Promise.all([
     new Promise<{ url: string; html?: string; json?: object }>(
       (resolve, reject) =>

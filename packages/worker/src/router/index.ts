@@ -39,12 +39,12 @@ export const router = () => {
           .parseAsync(req.body)
           .then(({ id, data }) =>
             (console.log(["scrap"], { data }), chrome(data.url))
-              .then((returnvalue) => {
-                if (returnvalue.html && returnvalue.url !== data.url) {
-                  throw new Error(`Invalid response url: ${returnvalue.url}`);
-                }
-                return returnvalue;
-              })
+              // .then((returnvalue) => {
+              //   if (returnvalue.html && returnvalue.url !== data.url) {
+              //     throw new Error(`Invalid response url: ${returnvalue.url}`);
+              //   }
+              //   return returnvalue;
+              // })
               .then((returnvalue) => res.json({ id, data, returnvalue }))
           )
           .catch(next)
