@@ -86,7 +86,7 @@ export default (_env, { mode }, dev = mode === "development") => ({
     new (require("html-webpack-plugin"))({
       title: require("./src/assets/manifest").name,
       excludeChunks: ["sw"],
-      // favicon: require.resolve("./src/assets/favicon.ico"),
+      favicon: require.resolve("./src/assets/favicon.ico"),
     }),
     // !dev &&
     //   new (require("workbox-webpack-plugin").InjectManifest)({
