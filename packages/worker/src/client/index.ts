@@ -53,7 +53,12 @@ export const parse = async ({ id, data, returnvalue }) => (
     headers: {
       "Content-Type": "application/json",
     },
-  }).then((res) => (res.status === 200 ? res.json() : res.text()))
+  }).then(
+    (res) =>
+      new Promise((resolve, reject) =>
+        res.ok ? res.json().then(resolve) : res.text().then(reject)
+      )
+  )
 );
 
 export const client = () => {
@@ -62,7 +67,7 @@ export const client = () => {
   const queue = new Queue<Data>(QUEUE_NAME, REDIS_URL, {
     limiter: {
       max: 1, // Max number of jobs processed
-      duration: seconds(15), // per duration in milliseconds
+      duration: seconds(45), // per duration in milliseconds
     },
   });
 
@@ -74,9 +79,9 @@ export const client = () => {
       }
     ) {
       await queue.add(NAME_SCRAP, data, {
-        attempts: 1, // 5 - If job fails it will retry till 5 times
-        backoff: seconds(10), // 5000 - static 5 sec delay between retry
-        delay: seconds(1),
+        attempts: 3, // 5 - If job fails it will retry till 5 times
+        backoff: seconds(30), // 5000 - static 5 sec delay between retry
+        delay: seconds(15),
         ...opts,
       });
       return q;
@@ -93,7 +98,7 @@ export const client = () => {
                 { id, data, returnvalue },
                 {
                   attempts: 1, // 5 - If job fails it will retry till 5 times
-                  backoff: seconds(10), // 5000 - static 5 sec delay between retry
+                  backoff: seconds(15), // 5000 - static 5 sec delay between retry
                   delay: seconds(1),
                   // ...opts,
                 }

@@ -41,6 +41,6 @@ COPY packages/worker/package.json packages/worker/
 RUN pnpm i
 
 COPY . ./
-RUN pnpm build
+RUN pnpm build && pnpm prune --prod --config.ignore-scripts=true
 
 CMD ["pnpm", "serve"]

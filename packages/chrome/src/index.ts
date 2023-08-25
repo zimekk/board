@@ -57,19 +57,17 @@ export async function chrome(url = "https://zimekk.github.io/robot/") {
         waitUntil: "networkidle2",
         timeout: 60_000,
       }),
-    ]).then(async ([result]) => {
-      await delay();
-      await page.close();
-      await browser.close();
-      return result;
-    });
+    ])
+      .then(([returnvalue]) => returnvalue)
+      .finally(async () => {
+        await delay();
+        await page.close();
+        await browser.close();
+      });
   } else if (url.match("dom.pl/pl/")) {
     return import("./pl.otodom")
       .then(({ scrap }) => scrap(page, url))
-      .then(async (result) => {
-        await browser.close();
-        return result;
-      });
+      .finally(() => browser.close());
   }
 
   return await Promise.all([
