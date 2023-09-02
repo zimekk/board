@@ -84,7 +84,9 @@ function Delayed({
       delayed.filter(
         (item) =>
           // (filters.type === "" || filters.type === item.type) &&
-          filters.query === "" || item.data.url.includes(filters.query)
+          filters.query === "" ||
+          (typeof item.data.url === "string" &&
+            item.data.url.includes(filters.query))
       )
     ),
     [delayed, filters]
@@ -178,7 +180,7 @@ function Delayed({
                       id: z.string(),
                       // name: z.string(),
                       data: z
-                        .object({ url: z.string() })
+                        .object({ url: z.string().optional() })
                         .transform(({ url }) => url),
                     })
                     .parse(item),

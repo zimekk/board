@@ -42,8 +42,12 @@ export const EntrySchema = z
 
 type Data = any;
 
-export const chrome = async (...args: string[]) =>
-  (await import("@dev/chrome")).chrome(...args);
+export const chrome = async (url: string) =>
+  url.match(new RegExp("warszawa.pl/api/action"))
+    ? await fetch(url)
+        .then((res) => res.json())
+        .then((json) => (console.log(json), { url, json }))
+    : (await import("@dev/chrome")).chrome(url);
 
 export const parse = async ({ id, data, returnvalue }) => (
   console.log(["parse"], { data }),

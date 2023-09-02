@@ -73,7 +73,11 @@ export const DelayedSchema = z
   .object({
     id: z.string(),
     name: z.string(),
-    data: z.object({ url: z.string() }).passthrough(),
+    data: z
+      .object({
+        url: z.string().optional(),
+      })
+      .passthrough(),
     opts: OptsSchema.extend({
       removeOnComplete: z.union([z.boolean(), z.number()]).optional(),
       repeat: z
