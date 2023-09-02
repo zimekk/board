@@ -2,6 +2,8 @@ import { client } from "./client";
 
 export { chrome } from "./client";
 
+export { parser } from "./parser";
+
 export { router } from "./router";
 
 export const broker = async (

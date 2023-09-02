@@ -49,9 +49,12 @@ export const chrome = async (url: string) =>
         .then((json) => (console.log(json), { url, json }))
     : (await import("@dev/chrome")).chrome(url);
 
-export const parse = async ({ id, data, returnvalue }) => (
-  console.log(["parse"], { data }),
-  fetch(`${ROBOT_URL}parse`, {
+export const parse = async (
+  { id, data, returnvalue },
+  url = `${ROBOT_URL}parse`
+) => (
+  console.log(["parse"], { url, data }),
+  fetch(url, {
     method: "post",
     body: JSON.stringify({ id, data, returnvalue }),
     headers: {

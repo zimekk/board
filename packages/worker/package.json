@@ -13,6 +13,7 @@
   "bin": {
     "broker": "bin/broker.js",
     "chrome": "bin/chrome.js",
+    "parser": "bin/parser.js",
     "status": "bin/status.js",
     "worker": "bin/worker.js"
   },
