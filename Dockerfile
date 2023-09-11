@@ -2,7 +2,7 @@
 # FROM node:14.18.1-alpine3.12
 # FROM node:16.13.0-alpine3.12
 # FROM node:16.20.2-alpine3.17
-FROM node:20.6.0-alpine3.17
+FROM node:20.6.1-alpine3.17
 
 # https://pptr.dev/troubleshooting#running-on-alpine
 # Installs latest Chromium (100) package.
