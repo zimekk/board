@@ -1,6 +1,6 @@
 {
   "short_name": "Hello App",
-  "name": "Hello App",
+  "name": "Board",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#066ace",
