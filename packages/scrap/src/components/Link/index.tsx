@@ -1,8 +1,4 @@
-import React, {
-  type CSSProperties,
-  type MouseEventHandler,
-  type ReactNode,
-} from "react";
+import React, { type CSSProperties, type MouseEventHandler } from "react";
 
 export function Link({
   href = "#",

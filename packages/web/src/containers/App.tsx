@@ -7,6 +7,7 @@ const Spinner = () => <span>Loading...</span>;
 
 const PAGES = {
   audio: lazy(() => import("./Audio")),
+  cron: lazy(() => import("@dev/cron")),
   hello: lazy(() => import("./Hello")),
   scrap: lazy(() => import("@dev/scrap")),
 };
