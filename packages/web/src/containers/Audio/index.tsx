@@ -7,6 +7,7 @@ import React, {
 } from "react";
 import { suspend } from "suspend-react";
 
+import Filters, { initialQueries } from "./Filters";
 import Player, { MetaType, Link, Text, View } from "./Player";
 
 function Loading() {
@@ -64,6 +65,7 @@ function Playlist({ version = 1 }) {
     const res = await fetch(`${API_URL}/api/audio?${version}`);
     return res.json() as Promise<ItemType[]>;
   }, [version]);
+  const [queries, setQueries] = useState(() => initialQueries());
 
   const handleSelect = useCallback<ChangeEventHandler<HTMLInputElement>>(
     ({ target }) =>
@@ -124,12 +126,21 @@ function Playlist({ version = 1 }) {
 
   const current = href;
 
-  console.log({ list, meta });
+  const filtered = useMemo(
+    () =>
+      list.filter((item) =>
+        item.name.toLocaleLowerCase().includes(queries.search)
+      ),
+    [list, queries]
+  );
+
+  console.log({ filtered, list, meta });
 
   return (
     <View>
+      <Filters setQueries={setQueries} />
       <ul>
-        {list.map(({ name, href, title, artists, picture }, key) => (
+        {filtered.map(({ name, href, title, artists, picture }, key) => (
           <li
             key={key}
             style={{
