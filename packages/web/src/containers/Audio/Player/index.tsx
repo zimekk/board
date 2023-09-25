@@ -51,10 +51,12 @@ export default function Player({
   uri,
   loop,
   meta,
+  onEnded,
 }: {
   uri: string;
   loop: boolean;
   meta: MetaType;
+  onEnded?: () => void;
 }) {
   const [playing, setPlaying] = useState(false);
   const ref = useRef<HTMLAudioElement>(null);
@@ -77,16 +79,19 @@ export default function Player({
     if (audio) {
       const onPlay = (e) => (console.log(["onPlay"], e), setPlaying(true));
       const onPause = (e) => (console.log(["onPause"], e), setPlaying(false));
+      // const onEnded = (e) => (console.log(["onEnded"], e));
 
       audio.addEventListener("play", onPlay);
       audio.addEventListener("pause", onPause);
+      audio.addEventListener("ended", onEnded);
 
       return () => {
         audio.removeEventListener("play", onPlay);
         audio.removeEventListener("pause", onPause);
+        audio.removeEventListener("ended", onEnded);
       };
     }
-  }, [ref]);
+  }, [ref, onEnded]);
 
   useEffect(() => {
     if (playing) {
@@ -105,6 +110,16 @@ export default function Player({
         <Button title="Play" onPress={play} disabled={!uri} />
       )}
       <audio ref={ref} src={uri} loop={loop} autoPlay controls />
+      <Button
+        title="Forward"
+        onPress={() => {
+          const audio = ref.current;
+          if (audio && audio.duration) {
+            audio.currentTime = audio.duration - 3;
+          }
+        }}
+        disabled={!ref}
+      />
     </View>
   );
 }

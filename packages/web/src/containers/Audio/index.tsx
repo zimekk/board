@@ -1,4 +1,10 @@
-import React, { Suspense, useMemo, useState } from "react";
+import React, {
+  type ChangeEventHandler,
+  Suspense,
+  useCallback,
+  useMemo,
+  useState,
+} from "react";
 import { suspend } from "suspend-react";
 
 import Player, { MetaType, Link, Text, View } from "./Player";
@@ -50,13 +56,25 @@ interface ItemType {
 }
 
 function Playlist({ version = 1 }) {
-  const [loop, setLoop] = useState(true);
+  const [selected, setSelected] = useState<string[]>([]);
+  const [loop, setLoop] = useState(false);
   const [href, setHref] = useState<string | undefined>();
   const [meta, setMeta] = useState<MetaType | undefined>();
   const data = suspend(async () => {
     const res = await fetch(`${API_URL}/api/audio?${version}`);
     return res.json() as Promise<ItemType[]>;
   }, [version]);
+
+  const handleSelect = useCallback<ChangeEventHandler<HTMLInputElement>>(
+    ({ target }) =>
+      ((id) =>
+        setSelected((selected) =>
+          target.checked
+            ? selected.concat(id)
+            : selected.filter((item) => item !== id)
+        ))(target.value),
+    []
+  );
 
   const list = useMemo(
     () =>
@@ -68,58 +86,84 @@ function Playlist({ version = 1 }) {
     [data]
   );
 
+  const handlePlay = useCallback(
+    (id: string) =>
+      (({ name, href, title, album, artists, artwork }) => (
+        setHref(href),
+        setMeta(
+          Object.assign(
+            title
+              ? {
+                  title,
+                  album,
+                  artist: artists.join(", "),
+                }
+              : { title: name },
+            artwork && {
+              artwork: artwork.map(({ src, ...artwork }) => ({
+                src: new URL(
+                  `${href}/${src}`,
+                  document.location.origin || ""
+                ).toString(),
+                ...artwork,
+              })),
+            }
+          )
+        )
+      ))(list.find((item) => item.href === id)),
+    [list]
+  );
+
+  const handleEnded = useCallback(() => {
+    console.log(["onEnded"]);
+    if (selected.length > 0) {
+      const index = selected.indexOf(href) + 1;
+      handlePlay(index < selected.length ? selected[index] : selected[0]);
+    }
+  }, [href, selected]);
+
+  const current = href;
+
   console.log({ list, meta });
 
   return (
     <View>
       <ul>
-        {list.map(
-          ({ name, href, title, album, artists, artwork, picture }, key) => (
-            <li
-              key={key}
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                padding: 1,
-                alignItems: "center",
-              }}
-            >
-              {picture &&
-                picture.map((src, key) => (
-                  <img key={key} src={src} width="50" height="50" />
-                ))}
-              <Link
-                style={{ padding: 4 }}
-                title={title ? `${artists.join(", ")} - ${title}` : name}
-                onPress={() => (
-                  setHref(href),
-                  setMeta(
-                    Object.assign(
-                      title
-                        ? {
-                            title,
-                            album,
-                            artist: artists.join(", "),
-                          }
-                        : { title: name },
-                      artwork && {
-                        artwork: artwork.map(({ src, ...artwork }) => ({
-                          src: new URL(
-                            `${href}/${src}`,
-                            document.location.origin || ""
-                          ).toString(),
-                          ...artwork,
-                        })),
-                      }
-                    )
-                  )
-                )}
-              />
-            </li>
-          )
-        )}
+        {list.map(({ name, href, title, artists, picture }, key) => (
+          <li
+            key={key}
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              padding: 1,
+              alignItems: "center",
+              background: href === current ? "aliceblue" : "",
+            }}
+          >
+            <input
+              type="checkbox"
+              value={href}
+              checked={selected.includes(href)}
+              onChange={handleSelect}
+            />
+            {picture &&
+              picture.map((src, key) => (
+                <img key={key} src={src} width="50" height="50" />
+              ))}
+            <Link
+              style={{ padding: 4 }}
+              title={title ? `${artists.join(", ")} - ${title}` : name}
+              onPress={() => (setSelected([href]), handlePlay(href))}
+            />
+          </li>
+        ))}
       </ul>
-      <Player uri={href} loop={loop} meta={meta} />
+      <Player
+        uri={href}
+        loop={selected.length === 1 && selected.includes(href)}
+        meta={meta}
+        onEnded={handleEnded}
+      />
       <label>
         <input
           type="checkbox"
