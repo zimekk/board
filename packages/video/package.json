@@ -1,0 +1,31 @@
+{
+  "name": "@dev/video",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "eslintConfig": {
+    "env": {
+      "browser": true
+    }
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production tsc",
+    "coverage": "type-coverage && tsc --noEmit"
+  },
+  "scripts-": {
+    "build": "webpack --mode production",
+    "coverage": "type-coverage && tsc --noEmit",
+    "start": "webpack serve --mode development"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-player": "^2.13.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.18"
+  }
+}

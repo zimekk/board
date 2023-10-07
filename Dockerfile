@@ -35,6 +35,7 @@ COPY packages/cron/package.json packages/cron/
 COPY packages/schema/package.json packages/schema/
 COPY packages/scrap/package.json packages/scrap/
 COPY packages/sql/package.json packages/sql/
+COPY packages/video/package.json packages/video/
 COPY packages/web/package.json packages/web/
 COPY packages/worker/package.json packages/worker/
 # RUN yarn --frozen-lockfile
