@@ -1,4 +1,9 @@
-import React, { type MouseEventHandler, useCallback, useState } from "react";
+import React, {
+  type MouseEventHandler,
+  useCallback,
+  useState,
+  useEffect,
+} from "react";
 import ReactPlayer from "react-player/youtube";
 
 function List() {
@@ -10,6 +15,12 @@ function List() {
     "https://www.youtube.com/watch?v=a0q6JMuLBYQ",
   ]);
 
+  useEffect(() => {
+    fetch("video")
+      .then((res) => res.json())
+      .then(console.info);
+  }, []);
+
   const handleClick = useCallback<MouseEventHandler<HTMLAnchorElement>>(
     (e) => (
       e.preventDefault(),
@@ -20,7 +31,7 @@ function List() {
 
   return (
     <div>
-      {videoId && <ReactPlayer url={videoId} />}
+      {videoId && <ReactPlayer url={videoId} controls loop />}
       <ul>
         {list.map((link) => (
           <li key={link}>

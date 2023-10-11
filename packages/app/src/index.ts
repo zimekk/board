@@ -4,6 +4,7 @@ import { api } from "@dev/api/lib";
 
 export const router = Router()
   .use("/api", api)
+  .use("/video", require("@dev/video/api").router())
   .use(require("@dev/worker").router())
   .use(require("./push").default());
 

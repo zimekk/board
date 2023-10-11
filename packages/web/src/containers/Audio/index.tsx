@@ -62,7 +62,9 @@ function Playlist({ version = 1 }) {
   const [href, setHref] = useState<string | undefined>();
   const [meta, setMeta] = useState<MetaType | undefined>();
   const data = suspend(async () => {
-    const res = await fetch(`${API_URL}/api/audio?${version}`);
+    const res = await fetch(
+      `${API_URL ? `${API_URL}/` : ""}api/audio?${version}`
+    );
     return res.json() as Promise<ItemType[]>;
   }, [version]);
   const [queries, setQueries] = useState(() => initialQueries());
