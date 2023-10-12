@@ -29,6 +29,17 @@ function List() {
     []
   );
 
+  const handleClickDownload = useCallback<MouseEventHandler<HTMLAnchorElement>>(
+    (e) => (
+      e.preventDefault(),
+      ((videoId) =>
+        fetch(`video/download?videoId=${videoId}`)
+          .then((res) => res.json())
+          .then(console.info))(e.currentTarget.href)
+    ),
+    []
+  );
+
   return (
     <div>
       {videoId && <ReactPlayer url={videoId} controls loop />}
@@ -38,6 +49,11 @@ function List() {
             <a href={link} onClick={handleClick}>
               {link}
             </a>
+            [
+            <a href={link} onClick={handleClickDownload}>
+              download
+            </a>
+            ]
           </li>
         ))}
       </ul>
