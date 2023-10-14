@@ -3,6 +3,8 @@ import { config } from "dotenv";
 import { seconds } from "milliseconds";
 import { resolve } from "path";
 import { z } from "zod";
+import { Type, getTypeByUrl } from "@dev/schema";
+import PromoTransform from "./promo";
 
 config({ path: resolve(__dirname, "../../../.env") });
 
@@ -109,6 +111,37 @@ export const client = () => {
                   delay: seconds(1),
                   // ...opts,
                 }
+              );
+            } else if (
+              name === NAME_SCRAP &&
+              getTypeByUrl(data.url) === Type.PROMO
+            ) {
+              const { json } = await z
+                .object({
+                  html: z.string(),
+                })
+                .transform(PromoTransform)
+                .parseAsync(returnvalue);
+
+              const list = json.list
+                .map((data) => ({ ...data, url: data.href }))
+                .filter(
+                  ({ url }) => url && new RegExp("//promocje.").test(url)
+                );
+
+              console.log({ list });
+
+              return list.reduce(
+                (promise, data) =>
+                  promise.then(() =>
+                    queue.add(NAME_SCRAP, data, {
+                      attempts: 3, // 5 - If job fails it will retry till 5 times
+                      backoff: seconds(30), // 5000 - static 5 sec delay between retry
+                      delay: seconds(15),
+                      // ...opts,
+                    })
+                  ),
+                Promise.resolve()
               );
             }
           }

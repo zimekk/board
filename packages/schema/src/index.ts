@@ -34,6 +34,15 @@ export const Type = {
   UNKNOWN: "UNKNOWN",
 } as const;
 
+export const getTypeByUrl = (url: string) =>
+  Object.entries({
+    [Type.PROMO]: new RegExp("x-kom.pl/promocje|al.to/promocje"),
+    [Type.PROMO_ITEM]: new RegExp("promocje.x-kom.pl/|promocje.al.to/"),
+    [Type.UNKNOWN]: new RegExp(""),
+  })
+    .find(([, regExp]) => regExp.test(url))
+    ?.shift() as string;
+
 export const DataSchema = z.object({
   url: z.string(),
   body: z.object({}).passthrough().optional(),
