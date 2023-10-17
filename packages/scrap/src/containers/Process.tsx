@@ -769,6 +769,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
           "g-8/c/1425-odtwarzacze-multimedialne.html?producent=357-apple",
           "g-8/c/2672-etui-na-sluchawki.html?f5654-kompatybilnosc=151468-apple-airpods",
           "g-12/c/2466-baterie-i-akumulatorki.html?f2834-typ-ogniwa=41678-aa-r6&f2834-typ-ogniwa=41679-aaa-r03",
+          "g-12/c/3472-stacje-zasilania.html?producent=2599-ecoflow",
           "g-64/c/2294-drony.html?producent=1009-dji",
           "g-64/c/2582-gimbale.html?producent=1009-dji&producent=1155-zhiyun",
           // "g-64/c/2582-gimbale.html?producent=1009-dji",
