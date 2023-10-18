@@ -13,6 +13,16 @@ const cwd = resolve(dirname(require.resolve("../../../../.env")), LIBRARY_PATH);
 export const router = () =>
   Router()
     .get("/", (_req, res) => res.json({ status: 1 }))
+    .get("/info", (req, res) =>
+      z
+        .object({
+          videoId: z.string(),
+        })
+        .parseAsync(req.query)
+        .then(({ videoId }) =>
+          ytdl.getInfo(videoId).then((info) => res.json(info))
+        )
+    )
     .get("/download", (req, res) =>
       z
         .object({
