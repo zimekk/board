@@ -47,6 +47,9 @@ function List() {
     "https://www.youtube.com/watch?v=Fp_P_e1cPOE",
     "https://www.youtube.com/watch?v=XXYlFuWEuKI",
     "https://www.youtube.com/watch?v=a0q6JMuLBYQ",
+    "https://www.youtube.com/watch?v=b6U3xeYqdKQ",
+    "https://www.youtube.com/watch?v=L4QxmPMplYc",
+    "https://www.youtube.com/watch?v=c8WDzsqQ7UY",
   ]);
 
   useEffect(() => {
