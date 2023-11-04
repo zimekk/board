@@ -14,10 +14,12 @@ services:
       - app_network
     ports:
       - $PORT:$PORT
+    restart: unless-stopped
     volumes:
       - ./share/library:/app/share/library
   redis:
     image: redis:7.2-alpine
+    restart: unless-stopped
     networks:
       - app_network
   sql:
@@ -29,6 +31,7 @@ services:
     # network_mode: bridge
     networks:
       - app_network
+    restart: unless-stopped
     # https://stackoverflow.com/questions/66892446/signal-11-segmentation-fault-error-after-switching-postgresql-alpine-image-to
     security_opt:
       - seccomp:unconfined
