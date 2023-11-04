@@ -34,6 +34,9 @@
       "@commitlint/config-conventional"
     ]
   },
+  "lint-staged": {
+    "*.{json,js,jsx,md,scss,ts,tsx,css,yml,yaml}": "prettier --write"
+  },
   "scripts": {
     "build": "pnpm -r run build",
     "clean": "rm -rf packages/*/public packages/*/lib",
@@ -42,6 +45,7 @@
     "reset": "rm -rf node_modules packages/*/node_modules",
     "serve": "dotenv -e .env.local -- pnpm --filter=@dev/app run serve",
     "start": "dotenv -e .env.local -- pnpm --filter=@dev/app run start",
+    "update:dedupe": "pnpm dedupe",
     "update:latest": "pnpm -r up -i",
     "prepare": "husky install"
   },
@@ -58,8 +62,8 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.33.1",
     "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
     "prettier": "^2.8.8",
-    "pretty-quick": "^3.1.3",
     "type-coverage": "^2.26.0",
     "typescript": "^5.1.6"
   }
