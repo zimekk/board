@@ -285,13 +285,13 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
           JSON.stringify({
             ...match,
             query: query.toLowerCase().trim(),
-          })
+          }),
         ),
         distinctUntilChanged(),
-        debounceTime(400)
+        debounceTime(400),
       )
       .subscribe((filters) =>
-        setFilters((queries) => ({ ...queries, ...JSON.parse(filters) }))
+        setFilters((queries) => ({ ...queries, ...JSON.parse(filters) })),
       );
     return () => subscription.unsubscribe();
   }, [filters$]);
@@ -505,7 +505,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
             opts: {
               repeat: { cron: `${i} 9,18 * * *` },
             },
-          }))
+          })),
       )
       .concat(
         [
@@ -522,7 +522,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
             opts: {
               repeat: { cron: `${i} 21 * * *` },
             },
-          }))
+          })),
       )
       .concat(
         [
@@ -541,7 +541,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
         ]
           .map(
             (cat) =>
-              `https://www.olx.pl/d/nieruchomosci/dzialki/sprzedaz/${cat}/`
+              `https://www.olx.pl/d/nieruchomosci/dzialki/sprzedaz/${cat}/`,
           )
           .map((url, i) => ({
             data: {
@@ -550,7 +550,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
             opts: {
               repeat: { cron: `${i} 9,17 * * *` },
             },
-          }))
+          })),
       )
       .concat(
         [
@@ -564,7 +564,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
         ]
           .map(
             (cat) =>
-              `https://www.otodom.pl/pl/oferty/sprzedaz/${cat}?limit=72&page=1`
+              `https://www.otodom.pl/pl/oferty/sprzedaz/${cat}?limit=72&page=1`,
           )
           .concat(
             [
@@ -585,8 +585,8 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
               "dzialka/mazowieckie/warszawski-zachodni/stare-babice",
             ].map(
               (cat) =>
-                `https://www.otodom.pl/pl/wyniki/sprzedaz/${cat}?limit=72&page=1`
-            )
+                `https://www.otodom.pl/pl/wyniki/sprzedaz/${cat}?limit=72&page=1`,
+            ),
           )
           .map((url, i) => ({
             blocked: true,
@@ -596,7 +596,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
             opts: {
               repeat: { cron: `${i + 30} 10,18 * * *` },
             },
-          }))
+          })),
       )
       .concat(
         [
@@ -614,7 +614,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
             opts: {
               repeat: { cron: `${i + 30} 9 * * *` },
             },
-          }))
+          })),
       )
       .concat(
         ["nowe-domy-mazowieckie", "nowe-domy-warszawa"]
@@ -626,7 +626,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
             opts: {
               repeat: { cron: `${i + 1} 10 * * *` },
             },
-          }))
+          })),
       )
       .concat(
         [
@@ -642,7 +642,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
         ]
           .map(
             (fund) =>
-              `https://www.pkotfi.pl/_ajax/rest/v2/tfi/fund/${fund}/values/?format=json&division=daily`
+              `https://www.pkotfi.pl/_ajax/rest/v2/tfi/fund/${fund}/values/?format=json&division=daily`,
           )
           .map((url, i) => ({
             data: {
@@ -651,7 +651,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
             opts: {
               repeat: { cron: `${i + 1} 14 * * *` },
             },
-          }))
+          })),
       )
       .concat(
         chunk(
@@ -703,12 +703,12 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
             "9NNF99GPP4XW",
             "9PMQDM08SNK9",
           ],
-          5
+          5,
         )
           .map((ids) => {
             const mscv = "DGU1mcuYo0WMMp+F.1";
             return `https://displaycatalog.mp.microsoft.com/v7.0/products?bigIds=${ids.join(
-              ","
+              ",",
             )}&market=PL&languages=pl-pl&MS-CV=${mscv}`;
           })
           .map((url, i) => ({
@@ -718,7 +718,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
             opts: {
               repeat: { cron: `${i + 1} 13 * * *` },
             },
-          }))
+          })),
       )
       .concat(
         [
@@ -760,8 +760,12 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
           "g-6/c/15-monitory.html?producent=357-apple",
           "g-6/c/34-zasilacze-awaryjne-ups.html?producent=154-apc",
           "g-6/c/34-zasilacze-awaryjne-ups.html?producent=1308-eaton",
+          "g-6/c/421-urzadzenia-sieciowe.html?producent=628-ubiquiti&hide_unavailable=1",
+          "g-6/c/425-switche.html?producent=276-tp-link&f3303-typ-obudowy=45868-do-szaf-rack&hide_unavailable=1",
+          "g-6/c/456-access-pointy.html?producent=276-tp-link&hide_unavailable=1",
           "g-6/c/1215-sluchawki.html?producent=357-apple&producent=1214-marshall&producent=2334-shure",
           "g-6/c/1295-monitory-led-32-i-wieksze.html?producent=396-dell",
+          "g-6/c/2280-szafy-rack.html?producent=1278-lanberg",
           "g-6/c/2326-kamery-ip.html?producent=276-tp-link&producent=2287-hikvision",
           "g-6/c/2506-glosniki-przenosne.html?producent=374-jbl&f1872-moc-glosnikow-rms=71075-10-49-w",
           "g-6/c/3095-statywy-do-mikrofonow.html?producent=818-elgato&producent=2025-rode&producent=2438-blue-microphones",
@@ -771,10 +775,13 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
           "g-12/c/2466-baterie-i-akumulatorki.html?f2834-typ-ogniwa=41678-aa-r6&f2834-typ-ogniwa=41679-aaa-r03",
           "g-12/c/3472-stacje-zasilania.html?producent=2599-ecoflow",
           "g-64/c/2294-drony.html?producent=1009-dji",
+          "g-64/c/2326-kamery-ip.html?producent=2287-hikvision",
+          "g-64/c/2326-kamery-ip.html?producent=276-tp-link&producent=628-ubiquiti",
           "g-64/c/2582-gimbale.html?producent=1009-dji&producent=1155-zhiyun",
           // "g-64/c/2582-gimbale.html?producent=1009-dji",
           // "g-64/c/2582-gimbale.html?producent=1155-zhiyun",
-          "g-64/c/3037-rejestratory-ip.html?producent=276-tp-link&producent=2287-hikvision",
+          "g-64/c/3037-rejestratory-ip.html?producent=276-tp-link&producent=628-ubiquiti&producent=2287-hikvision",
+          "g-64/c/3086-dyski-twarde-do-monitoringu.html",
         ]
           .map((path) => `https://www.x-kom.pl/${path}`)
           .map((url, i) => ({
@@ -785,7 +792,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
             opts: {
               repeat: { cron: `${i + 1} 7,14 * * *` },
             },
-          }))
+          })),
       )
       .concat(
         [
@@ -813,7 +820,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
             opts: {
               repeat: { cron: `${i + 1} 8,15 * * *` },
             },
-          }))
+          })),
       )
       .concat(
         [
@@ -858,7 +865,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
         ]
           .map(
             (path) =>
-              `https://www.euro.com.pl/rest/api/products/search?startFrom=0&numberOfItems=17&${path}&developSearchMode=false&orderBy=POPULARITY&direction=ASC`
+              `https://www.euro.com.pl/rest/api/products/search?startFrom=0&numberOfItems=17&${path}&developSearchMode=false&orderBy=POPULARITY&direction=ASC`,
           )
           .map((url, i) => ({
             data: {
@@ -867,7 +874,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
             opts: {
               repeat: { cron: `${i + 1} 9,16 * * *` },
             },
-          }))
+          })),
       )
       .concat(
         [
@@ -887,7 +894,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
         ]
           .map(
             (path) =>
-              `https://www.rossmann.pl/szukaj?${path}&Page=1&PageSize=24`
+              `https://www.rossmann.pl/szukaj?${path}&Page=1&PageSize=24`,
           )
           .map((url, i) => ({
             data: {
@@ -896,7 +903,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
             opts: {
               repeat: { cron: `${i + 1} 7 * * *` },
             },
-          }))
+          })),
       )
       .concat(
         [
@@ -913,7 +920,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
             opts: {
               repeat: { cron: `${i + 1} 8 * * *` },
             },
-          }))
+          })),
       )
       .concat(
         chunk(
@@ -926,7 +933,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
             // "730597",
             // "1070889",
           ],
-          1
+          1,
         )
           .map((ids) => `https://www.x-kom.pl/szukaj?q=${ids.join("+")}`)
           .map((url, i) => ({
@@ -936,14 +943,14 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
             opts: {
               repeat: { cron: `${i} 16 * * *` },
             },
-          }))
+          })),
       )
       .concat(
         chunk(
           [
             // "1022668"
           ],
-          1
+          1,
         )
           .map((ids) => `https://www.al.to/szukaj?q=${ids.join("+")}`)
           .map((url, i) => ({
@@ -953,7 +960,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
             opts: {
               repeat: { cron: `${i} 17 * * *` },
             },
-          }))
+          })),
       )
       .concat(
         [
@@ -1015,7 +1022,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
             opts: {
               repeat: { cron: `${i} 18 * * *` },
             },
-          }))
+          })),
       )
       .concat(
         [
@@ -1033,10 +1040,10 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
             ([lat, lng, travelmode = "driving"]) =>
               // `https://www.google.com/maps/dir/${lat},${lng}/52.2268,20.9921/data=!4m2!4m1!3e0`
               `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(
-                [lat, lng].join(",")
+                [lat, lng].join(","),
               )}&destination=${encodeURIComponent(
-                [52.2268, 20.9921].join(",")
-              )}&travelmode=${encodeURIComponent(travelmode)}&hl=pl`
+                [52.2268, 20.9921].join(","),
+              )}&travelmode=${encodeURIComponent(travelmode)}&hl=pl`,
           )
           .map((url, i) => ({
             data: {
@@ -1045,15 +1052,15 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
             opts: {
               repeat: { cron: `${i} 19 * * *` },
             },
-          }))
+          })),
       )
       .concat(
         ["ab75c33d-3a26-4342-b36a-6e5fef0a3ac3"]
           .map(
             (id) =>
               `https://api.um.warszawa.pl/api/action/dbstore_get/?id=${encodeURIComponent(
-                id
-              )}`
+                id,
+              )}`,
           )
           .map((url, i) => ({
             data: {
@@ -1062,8 +1069,8 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
             opts: {
               repeat: { cron: `${i + 30} 22 * * *` },
             },
-          }))
-      )
+          })),
+      ),
   );
 
   const entries = useMemo(
@@ -1076,29 +1083,29 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
               ? {
                   priority: z.number().default(1),
                 }
-              : {}
+              : {},
           ).transform(
             ({ repeat, ...opts }) =>
               ({
                 delayed: { ...opts, delay: seconds(delay) },
                 repeatable: { ...opts, repeat },
-              }[type])
+              })[type],
           ),
         })
         .transform((item) => ({ ...item, id: item.data.url }))
         .array()
         .parse(
-          records.filter(({ blocked = false }) => blocked === match.blocked)
+          records.filter(({ blocked = false }) => blocked === match.blocked),
         ),
-    [type, delay, priority, records, match.blocked]
+    [type, delay, priority, records, match.blocked],
   );
 
   const list = useMemo(
     () =>
       entries.filter(
-        (item) => filters.query === "" || item.data.url.includes(filters.query)
+        (item) => filters.query === "" || item.data.url.includes(filters.query),
       ),
-    [entries, filters]
+    [entries, filters],
   );
 
   const onSelect = useCallback<ChangeEventHandler<HTMLInputElement>>(
@@ -1106,14 +1113,14 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
       setSelected((selected) =>
         !target.checked
           ? selected.filter((n) => n !== target.value)
-          : selected.concat(target.value)
+          : selected.concat(target.value),
       ),
-    []
+    [],
   );
 
   const onChangeDelay = useCallback<ChangeEventHandler<HTMLSelectElement>>(
     ({ target }) => setDelay(Number(target.value) as (typeof DELAY)[number]),
-    []
+    [],
   );
 
   // const typeId = useId();
@@ -1121,7 +1128,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
 
   const onChangeType = useCallback<ChangeEventHandler<HTMLInputElement>>(
     ({ target }) => setType(target.value as (typeof TYPE)[number]),
-    []
+    [],
   );
 
   const handleScrap = useCallback(
@@ -1129,7 +1136,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
       (setLoading(true), scrap(item, text))
         .catch(console.error)
         .then(() => setLoading(false)),
-    []
+    [],
   );
 
   const handleAvailability = useCallback(
@@ -1140,7 +1147,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
           (promise, areaName) =>
             promise
               .then(() =>
-                fetch(`shops/${id}?areaName=${encodeURIComponent(areaName)}`)
+                fetch(`shops/${id}?areaName=${encodeURIComponent(areaName)}`),
               )
               .then((res) => res.json())
               .then((json) =>
@@ -1148,24 +1155,24 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
                   { areaName },
                   json.filter(
                     ({ productAvailability }: any) =>
-                      !["UNAVAILABLE"].includes(productAvailability)
-                  )
-                )
+                      !["UNAVAILABLE"].includes(productAvailability),
+                  ),
+                ),
               )
               .then(
                 () =>
                   new Promise((resolve) =>
-                    setTimeout(resolve, seconds(10 * Math.random()))
-                  )
+                    setTimeout(resolve, seconds(10 * Math.random())),
+                  ),
               ),
-          Promise.resolve()
+          Promise.resolve(),
         ),
-    []
+    [],
   );
 
   const selectedIds = useMemo(
     () => list.map((item) => item.id).filter((id) => selected.includes(id)),
-    [list, selected]
+    [list, selected],
   );
 
   return (
@@ -1183,9 +1190,9 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
                   setSelected((selected) =>
                     selected
                       .filter((id) => !listIds.includes(id))
-                      .concat(target.checked ? listIds : [])
+                      .concat(target.checked ? listIds : []),
                   ))(list.map((item) => item.id)),
-              [list]
+              [list],
             )}
           />
         </label>
@@ -1201,7 +1208,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
                   ...match,
                   query: target.value,
                 })),
-              []
+              [],
             )}
           />
         </label>
@@ -1215,7 +1222,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
                   ...match,
                   blocked: target.checked,
                 })),
-              []
+              [],
             )}
           />
           <span>blocked</span>
@@ -1252,7 +1259,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
             checked={priority}
             onChange={useCallback<ChangeEventHandler<HTMLInputElement>>(
               ({ target }) => setPriority(target.checked),
-              []
+              [],
             )}
           />
           <span>priority</span>
@@ -1264,11 +1271,11 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
                 .filter((item) => selected.includes(item.id))
                 .reduce<Promise<unknown>>(
                   (promise, item) => promise.then(() => post("process", item)),
-                  Promise.resolve()
+                  Promise.resolve(),
                 )
                 .then(() => setSelected([]))
                 .then(getDelayed),
-            [list, selected]
+            [list, selected],
           )}
         >
           {type === "delayed" ? "process" : "add"}
@@ -1300,7 +1307,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
                       repeat: { cron: `0 19 * * *` },
                     },
                   },
-                ].concat(records)
+                ].concat(records),
               );
               setSelected([url]);
             }
@@ -1318,25 +1325,25 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
                   (promise, item, key, list) =>
                     promise
                       .then(() =>
-                        scrap(item, `scrap ${key + 1}/${list.length}`)
+                        scrap(item, `scrap ${key + 1}/${list.length}`),
                       )
                       .then(() =>
                         setSelected((selected) =>
-                          selected.filter((id) => id !== item.id)
-                        )
+                          selected.filter((id) => id !== item.id),
+                        ),
                       )
                       .then(
                         () =>
                           key < list.length - 1 &&
                           new Promise((resolve) =>
-                            setTimeout(resolve, seconds(10 * Math.random()))
-                          )
+                            setTimeout(resolve, seconds(10 * Math.random())),
+                          ),
                       ),
-                  Promise.resolve()
+                  Promise.resolve(),
                 )
                 .catch(console.error)
                 .then(() => setLoading(false)),
-            [list, selected]
+            [list, selected],
           )}
         >
           scrap
