@@ -510,8 +510,8 @@ importers:
         specifier: ^4.17.17
         version: 4.17.17
       '@types/milliseconds':
-        specifier: ^0.0.32
-        version: 0.0.32
+        specifier: ^0.0.33
+        version: 0.0.33
       '@types/node':
         specifier: ^20.0.0
         version: 20.8.7
@@ -2822,8 +2822,8 @@ packages:
     resolution: {integrity: sha512-Hr5Jfhc9eYOQNPYO5WLDq/n4jqijdHNlDXjuAQkkt+mWdQR+XJToOHrsD4cPaMXpn6KO7y2+wM8AZEs8VpBLVA==}
     dev: true
 
-  /@types/milliseconds@0.0.32:
-    resolution: {integrity: sha512-mKZKOEpMEZQMYFFcNmopf52CJj7Lu+72+udmQlWiZW7b6LlF0BKLFk8uCa7S3O8aBXs82AKWjAc81+5lZcfkLA==}
+  /@types/milliseconds@0.0.33:
+    resolution: {integrity: sha512-RMJhntbMMTZ5VHJYuMiMjF6zM9lkpq+SCHwLaiCdBq38wkp9L+iEFRAmQuHi+aTsO62VBu5HRPodr1pWFiQpqA==}
     dev: true
 
   /@types/mime-types@2.1.1:
