@@ -7,7 +7,25 @@ import React, {
 } from "react";
 import ReactPlayer from "react-player/youtube";
 import { Spinner } from "../components/Spinner";
-import { type InfoType, InfoSchema } from "../schema";
+import {
+  type BasicInfoType as InfoType,
+  BasicInfoSchema as InfoSchema,
+} from "../schema";
+
+function Data({ data }: { data: object }) {
+  const [show, setShow] = useState(false);
+
+  const handleClick = useCallback(
+    (e) => (e.preventDefault(), setShow((show) => !show)),
+    [],
+  );
+
+  return (
+    <a href="#" onClick={handleClick} style={{ textDecoration: "none" }}>
+      <pre>{show ? JSON.stringify(data, null, 2) : `[...]`}</pre>
+    </a>
+  );
+}
 
 function Info({ link }: { link: string }) {
   const [info, setInfo] = useState<InfoType | null>(null);
@@ -32,7 +50,7 @@ function Info({ link }: { link: string }) {
             referrerPolicy="no-referrer"
           />
         ))}
-      <pre>{JSON.stringify(info, null, 2)}</pre>
+      <Data data={info} />
     </div>
   ) : (
     <Spinner />
@@ -49,6 +67,7 @@ function List() {
     "https://www.youtube.com/watch?v=a0q6JMuLBYQ",
     "https://www.youtube.com/watch?v=b6U3xeYqdKQ",
     "https://www.youtube.com/watch?v=L4QxmPMplYc",
+    "https://www.youtube.com/watch?v=ekmHAfUIu1M",
     "https://www.youtube.com/watch?v=c8WDzsqQ7UY",
   ]);
 
@@ -63,7 +82,7 @@ function List() {
       e.preventDefault(),
       ((videoId) => setVideoId(videoId))(e.currentTarget.href)
     ),
-    []
+    [],
   );
 
   const handleClickDownload = useCallback<MouseEventHandler<HTMLAnchorElement>>(
@@ -74,7 +93,7 @@ function List() {
           .then((res) => res.json())
           .then(console.info))(e.currentTarget.href)
     ),
-    []
+    [],
   );
 
   const handleSelect = useCallback<ChangeEventHandler<HTMLInputElement>>(
@@ -82,14 +101,29 @@ function List() {
       setSelected((selected) =>
         !target.checked
           ? selected.filter((value) => value !== target.value)
-          : selected.concat(target.value)
+          : selected.concat(target.value),
       ),
-    []
+    [],
+  );
+
+  const handleSelectAll = useCallback<ChangeEventHandler<HTMLInputElement>>(
+    ({ target }) => setSelected(() => (!target.checked ? [] : list)),
+    [],
   );
 
   return (
     <div>
       {videoId && <ReactPlayer url={videoId} controls loop />}
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            checked={selected.length === list.length}
+            onChange={handleSelectAll}
+          />
+          <span>select all</span>{" "}
+        </label>
+      </div>
       <ul>
         {list.map((link) => (
           <li key={link}>

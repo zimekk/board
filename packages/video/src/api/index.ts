@@ -19,9 +19,11 @@ export const router = () =>
           videoId: z.string(),
         })
         .parseAsync(req.query)
-        .then(({ videoId }) =>
-          ytdl.getInfo(videoId).then((info) => res.json(info))
-        )
+        .then(
+          ({ videoId }) =>
+            ytdl.getBasicInfo(videoId).then((info) => res.json(info)),
+          // ytdl.getInfo(videoId).then((info) => res.json(info))
+        ),
     )
     .get("/download", (req, res) =>
       z
@@ -33,10 +35,10 @@ export const router = () =>
           ytdl.getInfo(videoId).then((info) => {
             ytdl(videoId).pipe(
               fs.createWriteStream(
-                resolve(cwd, `${info.videoDetails.videoId}.mp4`)
-              )
+                resolve(cwd, `${info.videoDetails.videoId}.mp4`),
+              ),
             );
             return res.json(info);
-          })
-        )
+          }),
+        ),
     );
