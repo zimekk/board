@@ -1,14 +1,17 @@
 import { Router } from "express";
-import { z } from "zod";
-import ytdl from "ytdl-core";
 import fs from "node:fs";
 import { dirname, resolve } from "node:path";
+import { LocalStorage } from "node-localstorage";
+import ytdl from "ytdl-core";
+import { z } from "zod";
 
 const { LIBRARY_PATH = "" } = process.env;
 
 const cwd = resolve(dirname(require.resolve("../../../../.env")), LIBRARY_PATH);
 
 // console.log({ LIBRARY_PATH, cwd });
+
+const storage = new LocalStorage(resolve(cwd, `storage`));
 
 export const router = () =>
   Router()
@@ -19,11 +22,17 @@ export const router = () =>
           videoId: z.string(),
         })
         .parseAsync(req.query)
-        .then(
-          ({ videoId }) =>
-            ytdl.getBasicInfo(videoId).then((info) => res.json(info)),
-          // ytdl.getInfo(videoId).then((info) => res.json(info))
-        ),
+        .then(({ videoId }) => {
+          const item = storage.getItem(videoId);
+          if (item) {
+            return JSON.parse(item);
+          }
+          return ytdl.getBasicInfo(videoId).then((info) => {
+            storage.setItem(videoId, JSON.stringify(info));
+            return info;
+          });
+        })
+        .then((json) => res.json(json)),
     )
     .get("/download", (req, res) =>
       z

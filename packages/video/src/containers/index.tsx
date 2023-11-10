@@ -27,7 +27,13 @@ function Data({ data }: { data: object }) {
   );
 }
 
-function Info({ link }: { link: string }) {
+function Info({
+  link,
+  onClick: handleClick,
+}: {
+  link: string;
+  onClick: MouseEventHandler<HTMLAnchorElement>;
+}) {
   const [info, setInfo] = useState<InfoType | null>(null);
 
   useEffect(() => {
@@ -42,13 +48,20 @@ function Info({ link }: { link: string }) {
       {info.videoDetails.thumbnails
         .slice(0, 1)
         .map(({ url, width, height }, key) => (
-          <img
-            key={key}
-            src={url}
-            width={width}
-            height={height}
-            referrerPolicy="no-referrer"
-          />
+          <div>
+            <a href={link} onClick={handleClick}>
+              <img
+                key={key}
+                src={url}
+                width={width}
+                height={height}
+                referrerPolicy="no-referrer"
+              />
+            </a>
+            <div>
+              <strong>{info.videoDetails.title}</strong>
+            </div>
+          </div>
         ))}
       <Data data={info} />
     </div>
@@ -113,7 +126,7 @@ function List() {
 
   return (
     <div>
-      {videoId && <ReactPlayer url={videoId} controls loop />}
+      {videoId && <ReactPlayer url={videoId} controls loop playing />}
       <div>
         <label>
           <input
@@ -140,7 +153,10 @@ function List() {
             <a href={link} onClick={handleClickDownload}>
               download
             </a>
-            ]{selected.includes(link) && <Info link={link} />}
+            ]
+            {selected.includes(link) && (
+              <Info link={link} onClick={handleClick} />
+            )}
           </li>
         ))}
       </ul>
