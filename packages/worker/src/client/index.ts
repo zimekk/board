@@ -53,7 +53,7 @@ export const chrome = async (url: string) =>
 
 export const parse = async (
   { id, data, returnvalue },
-  url = `${ROBOT_URL}parse`
+  url = `${ROBOT_URL}parse`,
 ) => (
   console.log(["parse"], { url, data }),
   fetch(url, {
@@ -65,8 +65,8 @@ export const parse = async (
   }).then(
     (res) =>
       new Promise((resolve, reject) =>
-        res.ok ? res.json().then(resolve) : res.text().then(reject)
-      )
+        res.ok ? res.json().then(resolve) : res.text().then(reject),
+      ),
   )
 );
 
@@ -85,12 +85,13 @@ export const client = () => {
       data: Data,
       opts = {
         // repeat: { cron: "1 10,22 * * *" },
-      }
+      },
     ) {
       await queue.add(NAME_SCRAP, data, {
         attempts: 3, // 5 - If job fails it will retry till 5 times
         backoff: seconds(30), // 5000 - static 5 sec delay between retry
         delay: seconds(15),
+        removeOnComplete: 3, // 3 - A number specified the amount of jobs to keep.
         ...opts,
       });
       return q;
@@ -110,7 +111,7 @@ export const client = () => {
                   backoff: seconds(15), // 5000 - static 5 sec delay between retry
                   delay: seconds(1),
                   // ...opts,
-                }
+                },
               );
             } else if (
               name === NAME_SCRAP &&
@@ -126,7 +127,7 @@ export const client = () => {
               const list = json.list
                 .map((data) => ({ ...data, url: data.href }))
                 .filter(
-                  ({ url }) => url && new RegExp("//promocje.").test(url)
+                  ({ url }) => url && new RegExp("//promocje.").test(url),
                 );
 
               console.log({ list });
@@ -139,12 +140,12 @@ export const client = () => {
                       backoff: seconds(30), // 5000 - static 5 sec delay between retry
                       delay: seconds(15),
                       // ...opts,
-                    })
+                    }),
                   ),
-                Promise.resolve()
+                Promise.resolve(),
               );
             }
-          }
+          },
         )
         .process(NAME_PARSE, async function (job) {
           const { data } = job;
