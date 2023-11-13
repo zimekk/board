@@ -80,6 +80,9 @@ function List() {
     "https://www.youtube.com/watch?v=a0q6JMuLBYQ",
     "https://www.youtube.com/watch?v=b6U3xeYqdKQ",
     "https://www.youtube.com/watch?v=L4QxmPMplYc",
+    "https://www.youtube.com/watch?v=WJvtX-Ec1S8",
+    "https://www.youtube.com/watch?v=wXWZiGnaeqo",
+    "https://www.youtube.com/watch?v=OiC1rgCPmUQ",
     "https://www.youtube.com/watch?v=ekmHAfUIu1M",
     "https://www.youtube.com/watch?v=c8WDzsqQ7UY",
   ]);
