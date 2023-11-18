@@ -5,7 +5,17 @@ body {
   margin: 0;
 }
 .App {
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  border: 2px solid red;
+}
+.Options {
   min-height: 100%;
+  border: 2px solid green;
+}
+.Popup {
+  border: 2px solid blue;
 }
 .Nav {
   a {

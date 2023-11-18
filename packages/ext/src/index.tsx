@@ -1,8 +1,8 @@
 import React, { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./containers/Options";
+import App from "./containers/App";
 
-console.log(["options"]);
+console.log(["index"]);
 
 createRoot(document.body.appendChild(document.createElement("div"))).render(
   <StrictMode>
