@@ -1,5 +1,6 @@
 *.log
 .env.local
-lib
 node_modules
-public
+packages/*/dist
+packages/*/lib
+packages/*/public
