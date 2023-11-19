@@ -11,6 +11,7 @@ import {
   type BasicInfoType as InfoType,
   BasicInfoSchema as InfoSchema,
 } from "../schema";
+import videos from "./videos";
 
 function Data({ data }: { data: object }) {
   const [show, setShow] = useState(false);
@@ -73,26 +74,7 @@ function Info({
 function List() {
   const [selected, setSelected] = useState<string[]>(() => []);
   const [videoId, setVideoId] = useState("");
-  const [list] = useState(() => [
-    "https://www.youtube.com/watch?v=yxW5yuzVi8w",
-    "https://www.youtube.com/watch?v=Fp_P_e1cPOE",
-    "https://www.youtube.com/watch?v=XXYlFuWEuKI",
-    "https://www.youtube.com/watch?v=a0q6JMuLBYQ",
-    "https://www.youtube.com/watch?v=b6U3xeYqdKQ",
-    "https://www.youtube.com/watch?v=4qvBnEgCvkc",
-    "https://www.youtube.com/watch?v=m8_8tMzmpTg",
-    "https://www.youtube.com/watch?v=j4IXCjWnAkY",
-    "https://www.youtube.com/watch?v=gCadlN8fexk",
-    "https://www.youtube.com/watch?v=aAkMkVFwAoo",
-    "https://www.youtube.com/watch?v=E8gmARGvPlI",
-    "https://www.youtube.com/watch?v=L4QxmPMplYc",
-    "https://www.youtube.com/watch?v=WJvtX-Ec1S8",
-    "https://www.youtube.com/watch?v=wXWZiGnaeqo",
-    "https://www.youtube.com/watch?v=OiC1rgCPmUQ",
-    "https://www.youtube.com/watch?v=ekmHAfUIu1M",
-    "https://www.youtube.com/watch?v=YFoDEQXJLcQ",
-    "https://www.youtube.com/watch?v=c8WDzsqQ7UY",
-  ]);
+  const [list] = useState(() => videos);
 
   useEffect(() => {
     fetch("video")
