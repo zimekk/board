@@ -410,6 +410,9 @@ importers:
       '@dev/cron':
         specifier: 1.0.0
         version: link:../cron
+      '@dev/ext':
+        specifier: 1.0.0
+        version: link:../ext
       '@dev/scrap':
         specifier: 1.0.0
         version: link:../scrap

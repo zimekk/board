@@ -13,7 +13,8 @@ RUN apk add --no-cache \
       harfbuzz \
       ca-certificates \
       ttf-freefont \
-      tzdata
+      tzdata \
+      zip
 
 # https://stackoverflow.com/questions/68996420/how-to-set-timezone-inside-alpine-base-docker-image
 # https://docs.diladele.com/docker/timezones.html
@@ -32,6 +33,7 @@ COPY packages/api/package.json packages/api/
 COPY packages/app/package.json packages/app/
 COPY packages/chrome/package.json packages/chrome/
 COPY packages/cron/package.json packages/cron/
+COPY packages/ext/package.json packages/ext/
 COPY packages/schema/package.json packages/schema/
 COPY packages/scrap/package.json packages/scrap/
 COPY packages/sql/package.json packages/sql/

@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() =>
     // location is an object like window.location
-    history.listen(({ location }) => setPage(getPage(location)))
+    history.listen(({ location }) => setPage(getPage(location))),
   );
 
   const Page = PAGES[page] || null;
@@ -38,7 +38,7 @@ function App() {
             {page}
           </a>
         ))}
-        [{page}]
+        <a href="ext.zip">ext</a>[{page}]
       </h1>
       <Suspense fallback={<Spinner />}>
         <Page />

@@ -1,6 +1,7 @@
 import path from "path";
 import webpack from "webpack";
 import env from "dotenv";
+import { dirname } from "node:path";
 
 env.config({ path: path.resolve(__dirname, "../../.env") });
 
@@ -75,6 +76,12 @@ export default (_env, { mode }, dev = mode === "development") => ({
         { from: require.resolve("./src/assets/audio.json"), to: "api/[name]" },
         { from: require.resolve("./src/assets/delayed.json"), to: "[name]" },
         { from: require.resolve("./src/assets/video.json"), to: "[name]" },
+        {
+          context: dirname(require.resolve("@dev/ext/package")),
+          from: "dist/*.zip",
+          to: "[name][ext]",
+          noErrorOnMissing: true,
+        },
       ],
     }),
     // https://github.com/jantimon/favicons-webpack-plugin#basic
