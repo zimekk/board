@@ -16,8 +16,14 @@ chrome.runtime.onInstalled.addListener((details) => {
   console.log(["onInstalled"], { details });
 });
 
-chrome.action.onClicked.addListener(() => {
+chrome.action.onClicked.addListener((tab) => {
   console.log(["onClicked"]);
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    func: function () {
+      window.postMessage({ type: "SKIP_ACTION" });
+    },
+  });
 });
 
 export {};
