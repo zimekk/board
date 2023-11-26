@@ -62,12 +62,17 @@ export const parse = async (
     headers: {
       "Content-Type": "application/json",
     },
-  }).then(
-    (res) =>
-      new Promise((resolve, reject) =>
-        res.ok ? res.json().then(resolve) : res.text().then(reject),
-      ),
-  )
+  })
+    .then(
+      (res) =>
+        new Promise((resolve, reject) =>
+          res.ok ? res.json().then(resolve) : res.text().then(reject),
+        ),
+    )
+    .catch((e) => {
+      console.error(e);
+      return Promise.reject(`Error: ${e}`);
+    })
 );
 
 export const client = () => {
