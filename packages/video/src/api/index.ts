@@ -11,7 +11,9 @@ const cwd = resolve(dirname(require.resolve("../../../../.env")), LIBRARY_PATH);
 
 // console.log({ LIBRARY_PATH, cwd });
 
-const storage = new LocalStorage(resolve(cwd, `storage`));
+const STORAGE_QUOTA = 10 * 1024 * 1024;
+
+const storage = new LocalStorage(resolve(cwd, `storage`), STORAGE_QUOTA);
 
 export const router = () =>
   Router()

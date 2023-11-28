@@ -118,7 +118,6 @@ function List() {
 
   return (
     <div>
-      {videoId && <ReactPlayer url={videoId} controls loop playing />}
       <div>
         <label>
           <input
@@ -152,6 +151,27 @@ function List() {
           </li>
         ))}
       </ul>
+      <div
+        style={{
+          position: "fixed",
+          bottom: 0,
+          right: 0,
+          border: "2px solid black",
+        }}
+      >
+        {videoId && (
+          <ReactPlayer
+            url={videoId}
+            width={320}
+            height={180}
+            controls
+            light
+            loop
+            pip
+            playing
+          />
+        )}
+      </div>
     </div>
   );
 }
