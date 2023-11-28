@@ -388,7 +388,7 @@ export const BasicInfoSchema = z.object({
       playerStoryboardSpecRenderer: z.object({
         spec: z.string(),
         recommendedLevel: z.number(),
-        highResolutionRecommendedLevel: z.number(),
+        highResolutionRecommendedLevel: z.number().optional(),
       }),
     }),
     microformat: z.object({
