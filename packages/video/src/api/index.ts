@@ -3,6 +3,7 @@ import fs from "node:fs";
 import { dirname, resolve } from "node:path";
 import { LocalStorage } from "node-localstorage";
 import ytdl from "ytdl-core";
+import ffmpeg from "fluent-ffmpeg";
 import { z } from "zod";
 
 const { LIBRARY_PATH = "" } = process.env;
@@ -50,6 +51,35 @@ export const router = () =>
               ),
             );
             return res.json(info);
+          }),
+        ),
+    )
+    .get("/download-audio", (req, res) =>
+      z
+        .object({
+          videoId: z.string(),
+        })
+        .parseAsync(req.query)
+        .then(({ videoId }) =>
+          ytdl.getInfo(videoId).then((info) => {
+            const filter = "audioonly";
+            const format = ytdl.chooseFormat(info.formats, {
+              quality: "highestaudio",
+              filter,
+            });
+            const output = resolve(cwd, `${info.videoDetails.videoId}.mp3`);
+            console.log({ format, output });
+            // https://github.com/fent/node-ytdl-core/blob/master/example/convert_to_mp3.js
+            return new Promise((resolve, reject) => {
+              ffmpeg(ytdl(videoId, { format }))
+                .audioBitrate(128)
+                .output(output)
+                .on("end", resolve)
+                .on("error", reject)
+                .run();
+            })
+              .then(() => res.json({ format }))
+              .catch((error) => res.json({ error }));
           }),
         ),
     );

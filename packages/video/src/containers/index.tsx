@@ -101,6 +101,19 @@ function List() {
     [],
   );
 
+  const handleClickDownloadAudio = useCallback<
+    MouseEventHandler<HTMLAnchorElement>
+  >(
+    (e) => (
+      e.preventDefault(),
+      ((videoId) =>
+        fetch(`video/download-audio?videoId=${videoId}`)
+          .then((res) => res.json())
+          .then(console.info))(e.currentTarget.href)
+    ),
+    [],
+  );
+
   const handleSelect = useCallback<ChangeEventHandler<HTMLInputElement>>(
     ({ target }) =>
       setSelected((selected) =>
@@ -143,6 +156,10 @@ function List() {
             [
             <a href={link} onClick={handleClickDownload}>
               download
+            </a>
+            ][
+            <a href={link} onClick={handleClickDownloadAudio}>
+              download-audio
             </a>
             ]
             {selected.includes(link) && (
