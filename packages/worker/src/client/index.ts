@@ -108,16 +108,41 @@ export const client = () => {
           async ({ id, name, data, opts, finishedOn }, returnvalue) => {
             console.log(["completed"], { id, name, data, opts, finishedOn });
             if (name === NAME_SCRAP && returnvalue.json) {
-              await queue.add(
-                NAME_PARSE,
-                { id, data, returnvalue },
-                {
-                  attempts: 1, // 5 - If job fails it will retry till 5 times
-                  backoff: seconds(15), // 5000 - static 5 sec delay between retry
-                  delay: seconds(1),
-                  // ...opts,
-                },
-              );
+              const { status, redirect_to } = returnvalue.json;
+              console.log({ data, status, redirect_to });
+
+              if (status === "301") {
+                console.log({ returnvalue });
+
+                queue.add(
+                  NAME_SCRAP,
+                  {
+                    url: String(
+                      ((u) =>
+                        Object.assign(u, { pathname: `/${redirect_to}` }))(
+                        new URL(data.url),
+                      ),
+                    ),
+                  },
+                  {
+                    attempts: 3, // 5 - If job fails it will retry till 5 times
+                    backoff: seconds(30), // 5000 - static 5 sec delay between retry
+                    delay: seconds(15),
+                    // ...opts,
+                  },
+                );
+              } else {
+                await queue.add(
+                  NAME_PARSE,
+                  { id, data, returnvalue },
+                  {
+                    attempts: 1, // 5 - If job fails it will retry till 5 times
+                    backoff: seconds(15), // 5000 - static 5 sec delay between retry
+                    delay: seconds(1),
+                    // ...opts,
+                  },
+                );
+              }
             } else if (
               name === NAME_SCRAP &&
               getTypeByUrl(data.url) === Type.PROMO
