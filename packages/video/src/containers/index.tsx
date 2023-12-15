@@ -49,10 +49,9 @@ function Info({
       {info.videoDetails.thumbnails
         .slice(0, 1)
         .map(({ url, width, height }, key) => (
-          <div>
+          <div key={key}>
             <a href={link} onClick={handleClick}>
               <img
-                key={key}
                 src={url}
                 width={width}
                 height={height}

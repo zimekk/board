@@ -116,7 +116,7 @@ export const BasicInfoSchema = z.object({
       videoId: z.string(),
       title: z.string(),
       lengthSeconds: z.string(),
-      keywords: z.array(z.string()),
+      keywords: z.array(z.string()).optional(),
       channelId: z.string(),
       isOwnerViewing: z.boolean(),
       shortDescription: z.string(),
@@ -5697,15 +5697,17 @@ export const BasicInfoSchema = z.object({
     pageVisualEffects: z.array(
       z.object({
         cinematicContainerRenderer: z.object({
-          gradientColorConfig: z.array(
-            // z.union([
-            z.object({
-              darkThemeColor: z.number(),
-              startLocation: z.number().optional(),
-            }),
-            //   z.object({ darkThemeColor: z.number() })
-            // ])
-          ),
+          gradientColorConfig: z
+            .array(
+              // z.union([
+              z.object({
+                darkThemeColor: z.number(),
+                startLocation: z.number().optional(),
+              }),
+              //   z.object({ darkThemeColor: z.number() })
+              // ])
+            )
+            .optional(),
           presentationStyle: z.string(),
           config: z.object({
             lightThemeBackgroundColor: z.number(),
@@ -5963,7 +5965,7 @@ export const BasicInfoSchema = z.object({
     // }),
     uploadDate: z.string(),
     videoId: z.string(),
-    keywords: z.array(z.string()),
+    keywords: z.array(z.string()).optional(),
     channelId: z.string(),
     isOwnerViewing: z.boolean(),
     isCrawlable: z.boolean(),
