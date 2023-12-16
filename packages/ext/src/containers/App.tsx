@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { SKIP_ACTION } from "../constants";
 import styles from "./App.module.scss";
 
@@ -25,16 +25,40 @@ function skipVideo() {
 }
 
 export default function App() {
-  const videoRef = useRef(null);
+  const [auto, setAuto] = useState(false);
 
-  useEffect(() => {
-    const video = document.querySelector("video");
-    console.log({ video });
-  }, [videoRef]);
+  const autoSkip = useRef(auto);
 
   const handleClick = useCallback(() => {
     skipVideo();
-  }, [videoRef]);
+  }, []);
+
+  useEffect(() => {
+    autoSkip.current = auto;
+  }, [auto]);
+
+  useEffect(() => {
+    const autoSkipVideo = () => autoSkip.current && skipVideo();
+
+    const onLoadedMetadata = ({ target }) => {
+      console.log(["loadedmetadata"], { target });
+      setTimeout(() => {
+        autoSkipVideo();
+      }, 1000);
+    };
+
+    const video = document.querySelector("video");
+    console.log({ video });
+
+    if (video) {
+      autoSkipVideo();
+      video.addEventListener("loadedmetadata", onLoadedMetadata);
+
+      return () => {
+        video.removeEventListener("loadedmetadata", onLoadedMetadata);
+      };
+    }
+  }, [autoSkip]);
 
   useEffect(() => {
     const onMessage = ({ data: message }) => {
@@ -49,6 +73,9 @@ export default function App() {
     const onKeyDown = ({ keyCode }) => {
       console.log({ keyCode });
       switch (keyCode) {
+        case 65: // a
+          setAuto((auto) => !auto);
+          break;
         case 83: // s
           skipVideo();
           break;
@@ -63,10 +90,14 @@ export default function App() {
       removeEventListener("keydown", onKeyDown);
     };
   }, []);
+
+  console.log({ auto });
+
   return (
     <section className={styles.App}>
       <button
         className={styles.Button}
+        style={{ borderColor: auto ? "currentcolor" : "transparent" }}
         onClick={handleClick}
         title={
           import.meta.env.DEV
