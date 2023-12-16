@@ -13,7 +13,7 @@ const manifest = defineManifest({
   version: "1.0.0",
   action: {
     // default_popup: "popup.html",
-    default_title: "Board Extension App",
+    default_title: dev ? "Board Extension App [dev]" : "Board Extension App",
   },
   background: {
     service_worker: "src/background.ts",
@@ -29,6 +29,7 @@ const manifest = defineManifest({
       ],
       js: ["src/index.tsx"],
       // css: ["contentStyle.css"],
+      run_at: "document_end",
     },
   ],
   options_page: "options.html",
@@ -46,4 +47,11 @@ const manifest = defineManifest({
 
 export default defineConfig({
   plugins: [react(), crx({ manifest })],
+  // server: {
+  //   port: 5173,
+  //   strictPort: true,
+  //   hmr: {
+  //     port: 5173,
+  //   },
+  // },
 });

@@ -11,7 +11,11 @@ export default function Popup() {
   }, []);
   return (
     <section className={styles.Popup}>
-      <h1 className={styles.Nav}>Board Extension Popup</h1>
+      <h1 className={styles.Nav}>
+        {import.meta.env.DEV
+          ? "Board Extension Popup [dev]"
+          : "Board Extension Popup"}
+      </h1>
       <button onClick={handleClick}>skip</button>
     </section>
   );

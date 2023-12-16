@@ -1,3 +1,5 @@
+import { SKIP_ACTION } from "./constants";
+
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   console.log(`Change URL: ${tab.url}`);
 });
@@ -20,9 +22,10 @@ chrome.action.onClicked.addListener((tab) => {
   console.log(["onClicked"]);
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
-    func: function () {
-      window.postMessage({ type: "SKIP_ACTION" });
+    func: function (type) {
+      window.postMessage({ type });
     },
+    args: [SKIP_ACTION],
   });
 });
 

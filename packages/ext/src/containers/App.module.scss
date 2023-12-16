@@ -6,9 +6,21 @@ body {
 }
 .App {
   position: fixed;
-  top: 0;
+  bottom: 9em;
+  right: 1em;
   z-index: 10000;
-  border: 2px solid red;
+}
+.Button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+  background: lightgray;
+  width: 3.5em;
+  height: 3.5em;
+  opacity: 0.2;
+  &:hover {
+    opacity: 0.6;
+  }
 }
 .Options {
   min-height: 100%;
@@ -18,7 +30,5 @@ body {
   border: 2px solid blue;
 }
 .Nav {
-  a {
-    margin: 1em;
-  }
+  color: orange;
 }
