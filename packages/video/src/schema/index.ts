@@ -43,7 +43,7 @@ export const BasicInfoSchema = z.object({
           approxDurationMs: z.string(),
           audioSampleRate: z.string(),
           audioChannels: z.number(),
-          signatureCipher: z.string(),
+          signatureCipher: z.string().optional(),
         }),
       ),
       adaptiveFormats: z
@@ -324,7 +324,7 @@ export const BasicInfoSchema = z.object({
             webPlayerShareEntityServiceEndpoint: z.object({
               serializedShareEntity: z.string(),
             }),
-          }),
+          }).optional(),
           subscribeCommand: z.object({
             clickTrackingParams: z.string(),
             commandMetadata: z.object({
@@ -365,7 +365,7 @@ export const BasicInfoSchema = z.object({
                 z.object({ addedVideoId: z.string(), action: z.string() }),
               ),
             }),
-          }),
+          }).optional(),
           removeFromWatchLaterCommand: z.object({
             clickTrackingParams: z.string(),
             commandMetadata: z.object({
@@ -380,7 +380,7 @@ export const BasicInfoSchema = z.object({
                 z.object({ action: z.string(), removedVideoId: z.string() }),
               ),
             }),
-          }),
+          }).optional(),
         }),
       }),
     }),
@@ -5430,7 +5430,7 @@ export const BasicInfoSchema = z.object({
               }),
             }),
           }),
-        }),
+        }).optional(),
         countryCode: z.string(),
         topbarButtons: z.array(
           // z.union([
