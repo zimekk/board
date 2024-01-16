@@ -251,8 +251,8 @@ importers:
         specifier: ^1.0.14
         version: 1.0.14(vite@4.2.3)
       '@types/chrome':
-        specifier: ^0.0.256
-        version: 0.0.256
+        specifier: ^0.0.257
+        version: 0.0.257
       '@types/react':
         specifier: ^18.2.18
         version: 18.2.18
@@ -3030,8 +3030,8 @@ packages:
       '@types/node': 20.8.7
     dev: true
 
-  /@types/chrome@0.0.256:
-    resolution: {integrity: sha512-NleTQw4DNzhPwObLNuQ3i3nvX1rZ1mgnx5FNHc2KP+Cj1fgd3BrT5yQ6Xvs+7H0kNsYxCY+lxhiCwsqq3JwtEg==}
+  /@types/chrome@0.0.257:
+    resolution: {integrity: sha512-kfWNKMTYJ3Qk6vvM+YPSgDh6Ci290uOxtfSaYxgv2SCdZ9OvX8PyvMDrdP9+k50g9jBllWDpG68aJVlwXuvDNg==}
     dependencies:
       '@types/filesystem': 0.0.35
       '@types/har-format': 1.2.15
