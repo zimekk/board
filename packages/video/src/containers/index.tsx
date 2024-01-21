@@ -11,7 +11,7 @@ import {
   type BasicInfoType as InfoType,
   BasicInfoSchema as InfoSchema,
 } from "../schema";
-import videos from "./videos";
+import videos from "../videos";
 
 function Data({ data }: { data: object }) {
   const [show, setShow] = useState(false);
