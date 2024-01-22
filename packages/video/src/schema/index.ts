@@ -313,18 +313,20 @@ export const BasicInfoSchema = z.object({
       webPlayerConfig: z.object({
         useCobaltTvosDash: z.boolean(),
         webPlayerActionsPorting: z.object({
-          getSharePanelCommand: z.object({
-            clickTrackingParams: z.string(),
-            commandMetadata: z.object({
-              webCommandMetadata: z.object({
-                sendPost: z.boolean(),
-                apiUrl: z.string(),
+          getSharePanelCommand: z
+            .object({
+              clickTrackingParams: z.string(),
+              commandMetadata: z.object({
+                webCommandMetadata: z.object({
+                  sendPost: z.boolean(),
+                  apiUrl: z.string(),
+                }),
               }),
-            }),
-            webPlayerShareEntityServiceEndpoint: z.object({
-              serializedShareEntity: z.string(),
-            }),
-          }).optional(),
+              webPlayerShareEntityServiceEndpoint: z.object({
+                serializedShareEntity: z.string(),
+              }),
+            })
+            .optional(),
           subscribeCommand: z.object({
             clickTrackingParams: z.string(),
             commandMetadata: z.object({
@@ -351,36 +353,40 @@ export const BasicInfoSchema = z.object({
               params: z.string(),
             }),
           }),
-          addToWatchLaterCommand: z.object({
-            clickTrackingParams: z.string(),
-            commandMetadata: z.object({
-              webCommandMetadata: z.object({
-                sendPost: z.boolean(),
-                apiUrl: z.string(),
+          addToWatchLaterCommand: z
+            .object({
+              clickTrackingParams: z.string(),
+              commandMetadata: z.object({
+                webCommandMetadata: z.object({
+                  sendPost: z.boolean(),
+                  apiUrl: z.string(),
+                }),
               }),
-            }),
-            playlistEditEndpoint: z.object({
-              playlistId: z.string(),
-              actions: z.array(
-                z.object({ addedVideoId: z.string(), action: z.string() }),
-              ),
-            }),
-          }).optional(),
-          removeFromWatchLaterCommand: z.object({
-            clickTrackingParams: z.string(),
-            commandMetadata: z.object({
-              webCommandMetadata: z.object({
-                sendPost: z.boolean(),
-                apiUrl: z.string(),
+              playlistEditEndpoint: z.object({
+                playlistId: z.string(),
+                actions: z.array(
+                  z.object({ addedVideoId: z.string(), action: z.string() }),
+                ),
               }),
-            }),
-            playlistEditEndpoint: z.object({
-              playlistId: z.string(),
-              actions: z.array(
-                z.object({ action: z.string(), removedVideoId: z.string() }),
-              ),
-            }),
-          }).optional(),
+            })
+            .optional(),
+          removeFromWatchLaterCommand: z
+            .object({
+              clickTrackingParams: z.string(),
+              commandMetadata: z.object({
+                webCommandMetadata: z.object({
+                  sendPost: z.boolean(),
+                  apiUrl: z.string(),
+                }),
+              }),
+              playlistEditEndpoint: z.object({
+                playlistId: z.string(),
+                actions: z.array(
+                  z.object({ action: z.string(), removedVideoId: z.string() }),
+                ),
+              }),
+            })
+            .optional(),
         }),
       }),
     }),
@@ -408,7 +414,7 @@ export const BasicInfoSchema = z.object({
           height: z.number(),
         }),
         title: z.object({ simpleText: z.string() }),
-        description: z.object({ simpleText: z.string() }),
+        description: z.object({ simpleText: z.string() }).optional(),
         lengthSeconds: z.string(),
         ownerProfileUrl: z.string(),
         externalChannelId: z.string(),
@@ -5200,67 +5206,34 @@ export const BasicInfoSchema = z.object({
           }),
         }),
         trackingParams: z.string(),
-        interstitial: z.object({
-          consentBumpV2Renderer: z.object({
-            interstitialLogoAside: z.object({
-              runs: z.array(z.object({ text: z.string() })),
-            }),
-            languagePickerButton: z.object({
-              buttonRenderer: z.object({
-                style: z.string(),
-                size: z.string(),
-                isDisabled: z.boolean(),
-                text: z.object({ simpleText: z.string() }),
-                icon: z.object({ iconType: z.string() }),
-                accessibility: z.object({ label: z.string() }),
-                trackingParams: z.string(),
+        interstitial: z
+          .object({
+            consentBumpV2Renderer: z.object({
+              interstitialLogoAside: z.object({
+                runs: z.array(z.object({ text: z.string() })),
               }),
-            }),
-            interstitialTitle: z.object({
-              runs: z.array(z.object({ text: z.string() })),
-            }),
-            customizeButton: z.object({
-              buttonRenderer: z.object({
-                style: z.string(),
-                size: z.string(),
-                isDisabled: z.boolean(),
-                text: z.object({ simpleText: z.string() }),
-                trackingParams: z.string(),
-                command: z.object({
-                  clickTrackingParams: z.string(),
-                  commandMetadata: z.object({
-                    webCommandMetadata: z.object({
-                      url: z.string(),
-                      webPageType: z.string(),
-                      rootVe: z.number(),
-                    }),
-                  }),
-                  urlEndpoint: z.object({ url: z.string() }),
+              languagePickerButton: z.object({
+                buttonRenderer: z.object({
+                  style: z.string(),
+                  size: z.string(),
+                  isDisabled: z.boolean(),
+                  text: z.object({ simpleText: z.string() }),
+                  icon: z.object({ iconType: z.string() }),
+                  accessibility: z.object({ label: z.string() }),
+                  trackingParams: z.string(),
                 }),
               }),
-            }),
-            agreeButton: z.object({
-              buttonRenderer: z.object({
-                style: z.string(),
-                size: z.string(),
-                isDisabled: z.boolean(),
-                text: z.object({ simpleText: z.string() }),
-                accessibility: z.object({ label: z.string() }),
-                trackingParams: z.string(),
-                command: z.object({
-                  clickTrackingParams: z.string(),
-                  saveConsentAction: z.object({
-                    socsCookie: z.string(),
-                    savePreferenceUrl: z.string(),
-                  }),
-                }),
+              interstitialTitle: z.object({
+                runs: z.array(z.object({ text: z.string() })),
               }),
-            }),
-            privacyLink: z.object({
-              runs: z.array(
-                z.object({
-                  text: z.string(),
-                  navigationEndpoint: z.object({
+              customizeButton: z.object({
+                buttonRenderer: z.object({
+                  style: z.string(),
+                  size: z.string(),
+                  isDisabled: z.boolean(),
+                  text: z.object({ simpleText: z.string() }),
+                  trackingParams: z.string(),
+                  command: z.object({
                     clickTrackingParams: z.string(),
                     commandMetadata: z.object({
                       webCommandMetadata: z.object({
@@ -5272,165 +5245,200 @@ export const BasicInfoSchema = z.object({
                     urlEndpoint: z.object({ url: z.string() }),
                   }),
                 }),
-              ),
-            }),
-            termsLink: z.object({
-              runs: z.array(
-                z.object({
-                  text: z.string(),
-                  navigationEndpoint: z.object({
+              }),
+              agreeButton: z.object({
+                buttonRenderer: z.object({
+                  style: z.string(),
+                  size: z.string(),
+                  isDisabled: z.boolean(),
+                  text: z.object({ simpleText: z.string() }),
+                  accessibility: z.object({ label: z.string() }),
+                  trackingParams: z.string(),
+                  command: z.object({
                     clickTrackingParams: z.string(),
-                    commandMetadata: z.object({
-                      webCommandMetadata: z.object({
-                        url: z.string(),
-                        webPageType: z.string(),
-                        rootVe: z.number(),
-                      }),
-                    }),
-                    urlEndpoint: z.object({ url: z.string() }),
-                  }),
-                }),
-              ),
-            }),
-            trackingParams: z.string(),
-            signInButton: z.object({
-              buttonRenderer: z.object({
-                style: z.string(),
-                size: z.string(),
-                isDisabled: z.boolean(),
-                text: z.object({ simpleText: z.string() }),
-                icon: z.object({ iconType: z.string() }),
-                tooltip: z.string(),
-                trackingParams: z.string(),
-                command: z.object({
-                  clickTrackingParams: z.string(),
-                  commandMetadata: z.object({
-                    webCommandMetadata: z.object({
-                      url: z.string(),
-                      webPageType: z.string(),
-                      rootVe: z.number(),
+                    saveConsentAction: z.object({
+                      socsCookie: z.string(),
+                      savePreferenceUrl: z.string(),
                     }),
                   }),
-                  signInEndpoint: z.object({ hack: z.boolean() }),
                 }),
               }),
-            }),
-            languageList: z.object({
-              dropdownRenderer: z.object({
-                entries: z.array(
+              privacyLink: z.object({
+                runs: z.array(
                   z.object({
-                    dropdownItemRenderer: z.object({
-                      label: z.object({ simpleText: z.string() }),
-                      isSelected: z.boolean(),
-                      stringValue: z.string(),
-                      onSelectCommand: z.object({
-                        clickTrackingParams: z.string(),
-                        commandMetadata: z.object({
-                          webCommandMetadata: z.object({
-                            sendPost: z.boolean(),
+                    text: z.string(),
+                    navigationEndpoint: z.object({
+                      clickTrackingParams: z.string(),
+                      commandMetadata: z.object({
+                        webCommandMetadata: z.object({
+                          url: z.string(),
+                          webPageType: z.string(),
+                          rootVe: z.number(),
+                        }),
+                      }),
+                      urlEndpoint: z.object({ url: z.string() }),
+                    }),
+                  }),
+                ),
+              }),
+              termsLink: z.object({
+                runs: z.array(
+                  z.object({
+                    text: z.string(),
+                    navigationEndpoint: z.object({
+                      clickTrackingParams: z.string(),
+                      commandMetadata: z.object({
+                        webCommandMetadata: z.object({
+                          url: z.string(),
+                          webPageType: z.string(),
+                          rootVe: z.number(),
+                        }),
+                      }),
+                      urlEndpoint: z.object({ url: z.string() }),
+                    }),
+                  }),
+                ),
+              }),
+              trackingParams: z.string(),
+              signInButton: z.object({
+                buttonRenderer: z.object({
+                  style: z.string(),
+                  size: z.string(),
+                  isDisabled: z.boolean(),
+                  text: z.object({ simpleText: z.string() }),
+                  icon: z.object({ iconType: z.string() }),
+                  tooltip: z.string(),
+                  trackingParams: z.string(),
+                  command: z.object({
+                    clickTrackingParams: z.string(),
+                    commandMetadata: z.object({
+                      webCommandMetadata: z.object({
+                        url: z.string(),
+                        webPageType: z.string(),
+                        rootVe: z.number(),
+                      }),
+                    }),
+                    signInEndpoint: z.object({ hack: z.boolean() }),
+                  }),
+                }),
+              }),
+              languageList: z.object({
+                dropdownRenderer: z.object({
+                  entries: z.array(
+                    z.object({
+                      dropdownItemRenderer: z.object({
+                        label: z.object({ simpleText: z.string() }),
+                        isSelected: z.boolean(),
+                        stringValue: z.string(),
+                        onSelectCommand: z.object({
+                          clickTrackingParams: z.string(),
+                          commandMetadata: z.object({
+                            webCommandMetadata: z.object({
+                              sendPost: z.boolean(),
+                            }),
+                          }),
+                          signalServiceEndpoint: z.object({
+                            signal: z.string(),
+                            actions: z.array(
+                              z.object({
+                                clickTrackingParams: z.string(),
+                                selectLanguageCommand: z.object({
+                                  hl: z.string(),
+                                }),
+                              }),
+                            ),
                           }),
                         }),
-                        signalServiceEndpoint: z.object({
-                          signal: z.string(),
-                          actions: z.array(
-                            z.object({
-                              clickTrackingParams: z.string(),
-                              selectLanguageCommand: z.object({
-                                hl: z.string(),
-                              }),
-                            }),
-                          ),
-                        }),
                       }),
                     }),
-                  }),
-                ),
-                accessibility: z.object({ label: z.string() }),
-              }),
-            }),
-            readMoreButton: z.object({
-              buttonRenderer: z.object({
-                style: z.string(),
-                size: z.string(),
-                isDisabled: z.boolean(),
-                text: z.object({ simpleText: z.string() }),
-                icon: z.object({ iconType: z.string() }),
-                trackingParams: z.string(),
-                iconPosition: z.string(),
-              }),
-            }),
-            disableP13nButton: z.object({
-              buttonRenderer: z.object({
-                style: z.string(),
-                size: z.string(),
-                isDisabled: z.boolean(),
-                text: z.object({ simpleText: z.string() }),
-                trackingParams: z.string(),
-                accessibilityData: z.object({
-                  accessibilityData: z.object({ label: z.string() }),
-                }),
-                command: z.object({
-                  clickTrackingParams: z.string(),
-                  disablePersonalizationAction: z.object({
-                    socsCookie: z.string(),
-                    savePreferenceUrl: z.string(),
-                  }),
+                  ),
+                  accessibility: z.object({ label: z.string() }),
                 }),
               }),
-            }),
-            loadingMessage: z.object({
-              runs: z.array(z.object({ text: z.string() })),
-            }),
-            errorMessage: z.object({
-              runs: z.array(z.object({ text: z.string() })),
-            }),
-            eomV1Text: z.object({
-              essentialCookieMsg: z.object({
-                begin: z.object({
-                  runs: z.array(
-                    // z.union([
-                    z.object({ text: z.string() }),
-                    //   z.object({
-                    //     text: z.string(),
-                    //     navigationEndpoint: z.object({
-                    //       clickTrackingParams: z.string(),
-                    //       commandMetadata: z.object({
-                    //         webCommandMetadata: z.object({
-                    //           url: z.string(),
-                    //           webPageType: z.string(),
-                    //           rootVe: z.number()
-                    //         })
-                    //       }),
-                    //       urlEndpoint: z.object({ url: z.string() })
-                    //     })
-                    //   })
-                    // ])
+              readMoreButton: z.object({
+                buttonRenderer: z.object({
+                  style: z.string(),
+                  size: z.string(),
+                  isDisabled: z.boolean(),
+                  text: z.object({ simpleText: z.string() }),
+                  icon: z.object({ iconType: z.string() }),
+                  trackingParams: z.string(),
+                  iconPosition: z.string(),
+                }),
+              }),
+              disableP13nButton: z.object({
+                buttonRenderer: z.object({
+                  style: z.string(),
+                  size: z.string(),
+                  isDisabled: z.boolean(),
+                  text: z.object({ simpleText: z.string() }),
+                  trackingParams: z.string(),
+                  accessibilityData: z.object({
+                    accessibilityData: z.object({ label: z.string() }),
+                  }),
+                  command: z.object({
+                    clickTrackingParams: z.string(),
+                    disablePersonalizationAction: z.object({
+                      socsCookie: z.string(),
+                      savePreferenceUrl: z.string(),
+                    }),
+                  }),
+                }),
+              }),
+              loadingMessage: z.object({
+                runs: z.array(z.object({ text: z.string() })),
+              }),
+              errorMessage: z.object({
+                runs: z.array(z.object({ text: z.string() })),
+              }),
+              eomV1Text: z.object({
+                essentialCookieMsg: z.object({
+                  begin: z.object({
+                    runs: z.array(
+                      // z.union([
+                      z.object({ text: z.string() }),
+                      //   z.object({
+                      //     text: z.string(),
+                      //     navigationEndpoint: z.object({
+                      //       clickTrackingParams: z.string(),
+                      //       commandMetadata: z.object({
+                      //         webCommandMetadata: z.object({
+                      //           url: z.string(),
+                      //           webPageType: z.string(),
+                      //           rootVe: z.number()
+                      //         })
+                      //       }),
+                      //       urlEndpoint: z.object({ url: z.string() })
+                      //     })
+                      //   })
+                      // ])
+                    ),
+                  }),
+                  items: z.array(
+                    z.object({ runs: z.array(z.object({ text: z.string() })) }),
                   ),
                 }),
-                items: z.array(
-                  z.object({ runs: z.array(z.object({ text: z.string() })) }),
-                ),
-              }),
-              nonEssentialCookieMsg: z.object({
-                begin: z.object({
+                nonEssentialCookieMsg: z.object({
+                  begin: z.object({
+                    runs: z.array(z.object({ text: z.string() })),
+                  }),
+                  items: z.array(
+                    z.object({ runs: z.array(z.object({ text: z.string() })) }),
+                  ),
+                }),
+                ifReject: z.object({
                   runs: z.array(z.object({ text: z.string() })),
                 }),
-                items: z.array(
-                  z.object({ runs: z.array(z.object({ text: z.string() })) }),
-                ),
-              }),
-              ifReject: z.object({
-                runs: z.array(z.object({ text: z.string() })),
-              }),
-              personalization: z.object({
-                runs: z.array(z.object({ text: z.string() })),
-              }),
-              moreOptions: z.object({
-                runs: z.array(z.object({ text: z.string() })),
+                personalization: z.object({
+                  runs: z.array(z.object({ text: z.string() })),
+                }),
+                moreOptions: z.object({
+                  runs: z.array(z.object({ text: z.string() })),
+                }),
               }),
             }),
-          }),
-        }).optional(),
+          })
+          .optional(),
         countryCode: z.string(),
         topbarButtons: z.array(
           // z.union([
@@ -5946,7 +5954,7 @@ export const BasicInfoSchema = z.object({
       height: z.number(),
     }),
     title: z.string(),
-    description: z.string(),
+    description: z.string().nullable(),
     lengthSeconds: z.string(),
     ownerProfileUrl: z.string(),
     externalChannelId: z.string(),
