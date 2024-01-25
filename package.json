@@ -47,7 +47,7 @@
     "start": "dotenv -e .env.local -- pnpm --filter=@dev/app run start",
     "update:dedupe": "pnpm dedupe",
     "update:latest": "pnpm -r up -i",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "workspaces": [
     "packages/*"
