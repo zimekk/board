@@ -97,7 +97,7 @@ export default function App() {
     <section className={styles.App}>
       <button
         className={styles.Button}
-        style={{ borderColor: auto ? "currentcolor" : "transparent" }}
+        style={{ borderColor: auto ? "currentColor" : "transparent" }}
         onClick={handleClick}
         title={
           import.meta.env.DEV
@@ -105,9 +105,9 @@ export default function App() {
             : "Board Extension App"
         }
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
           <path
-            d={`M4 4 l10 7 v-7 h3 v14 h-3 v-7 l-10 7 z`}
+            d={`M1.5 2 l10 7 v-7 h3 v14 h-3 v-7 l-10 7 z`}
             fill="currentColor"
           />
         </svg>

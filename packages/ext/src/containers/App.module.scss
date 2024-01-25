@@ -6,17 +6,19 @@ body {
 }
 .App {
   position: fixed;
-  bottom: 9em;
-  right: 1em;
+  bottom: 8.2em;
+  right: 2.4em;
   z-index: 10000;
 }
 .Button {
   cursor: pointer;
-  border: 2px solid transparent;
+  border: 3px solid transparent;
   border-radius: 50%;
-  background: lightgray;
-  width: 3.5em;
-  height: 3.5em;
+  background: white;
+  color: red;
+  font-size: 1em;
+  width: 3.6em;
+  height: 3.6em;
   opacity: 0.2;
   &:hover {
     opacity: 0.6;
