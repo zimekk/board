@@ -10,6 +10,7 @@ const PAGES = {
   cron: lazy(() => import("@dev/cron")),
   hello: lazy(() => import("./Hello")),
   scrap: lazy(() => import("@dev/scrap")),
+  status: lazy(() => import("@dev/status")),
   video: lazy(() => import("@dev/video")),
 };
 
