@@ -42,7 +42,7 @@ const asset = createAsset(() =>
 );
 
 function Status() {
-  const [status, setStatus] = useState(null);
+  const [status, setStatus] = useState({});
 
   useEffect(() => {
     const client = mqtt.connect(MQTT_URL);
@@ -59,8 +59,11 @@ function Status() {
 
     client.on("message", (_topic, message) => {
       // message is Buffer
-      const status = JSON.parse(message.toString());
-      setStatus(status);
+      const result = JSON.parse(message.toString());
+      setStatus((status) => ({
+        ...status,
+        [result.hostname]: result,
+      }));
     });
 
     return () => {
@@ -68,7 +71,18 @@ function Status() {
     };
   }, []);
 
-  return <pre>{JSON.stringify(status, null, 2)}</pre>;
+  return (
+    <div>
+      <a
+        href="http://www.emqx.io/online-mqtt-client"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        online-mqtt-client
+      </a>
+      <pre>{JSON.stringify(status, null, 2)}</pre>
+    </div>
+  );
 }
 
 export default function Section() {
