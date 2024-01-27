@@ -1,5 +1,5 @@
 import mqtt from "mqtt";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import prettyMilliseconds from "pretty-ms";
 import prettyBytes from "pretty-bytes";
 import { createAsset } from "use-asset";
@@ -41,36 +41,46 @@ const asset = createAsset(() =>
     ),
 );
 
+function Status() {
+  const [status, setStatus] = useState(null);
+
+  useEffect(() => {
+    const client = mqtt.connect(MQTT_URL);
+
+    console.log({ MQTT_URL });
+
+    client.on("connect", () => {
+      client.subscribe("status", (err) => {
+        // if (!err) {
+        //   client.publish("presence", "Hello mqtt");
+        // }
+      });
+    });
+
+    client.on("message", (_topic, message) => {
+      // message is Buffer
+      const status = JSON.parse(message.toString());
+      setStatus(status);
+    });
+
+    return () => {
+      client.end();
+    };
+  }, []);
+
+  return <pre>{JSON.stringify(status, null, 2)}</pre>;
+}
+
 export default function Section() {
   const result = asset.read();
 
   console.log({ result });
   console.log({ total: getTotal(result.usage) });
 
-  useEffect(() => {
-    console.log(["mqtt.connect"], MQTT_URL);
-
-    const client = mqtt.connect(MQTT_URL);
-
-    client.on("connect", () => {
-      client.subscribe("presence", (err) => {
-        if (!err) {
-          client.publish("presence", "Hello mqtt");
-        }
-      });
-    });
-
-    client.on("message", (_topic, message) => {
-      // message is Buffer
-      console.log(message.toString());
-      client.end();
-    });
-    return () => {};
-  }, []);
-
   return (
     <section>
       <h2>Status</h2>
+      <Status />
       <h3>databases</h3>
       <table>
         <tbody>

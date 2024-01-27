@@ -20,18 +20,32 @@ console.log({ MQTT_URL });
 const client = mqtt.connect(MQTT_URL);
 
 client.on("connect", () => {
-  client.subscribe("presence", (err) => {
-    if (!err) {
-      client.publish("presence", "Hello mqtt");
-    }
-  });
+  // client.subscribe("presence", (err) => {
+  //   if (!err) {
+  //     client.publish("presence", "Hello mqtt");
+  //   }
+  // });
+  setInterval(() => {
+    client.publish(
+      "status",
+      JSON.stringify({
+        freemem: os.freemem(),
+        totalmem: os.totalmem(),
+        hostname: os.hostname(),
+        loadavg: os.loadavg(),
+        platform: os.platform(),
+        type: os.type(),
+        uptime: os.uptime(),
+      }),
+    );
+  }, 5000);
 });
 
-client.on("message", (_topic, message) => {
-  // message is Buffer
-  console.log(message.toString());
-  client.end();
-});
+// client.on("message", (_topic, message) => {
+//   // message is Buffer
+//   console.log(message.toString());
+//   client.end();
+// });
 
 async function notify(data: { total?: number; ssl?: object[] }) {
   const subject = data.ssl
