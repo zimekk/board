@@ -32,6 +32,7 @@ const manifest = defineManifest({
       run_at: "document_end",
     },
   ],
+  devtools_page: "devtools.html",
   options_page: "options.html",
   permissions: [
     "activeTab",
