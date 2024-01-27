@@ -1,11 +1,37 @@
 import { Router } from "express";
-import { query } from "@dev/sql";
 import { exec } from "child_process";
 import { createTransport } from "nodemailer";
+import { query } from "@dev/sql";
+import { z } from "zod";
+import mqtt from "mqtt";
 import os from "os";
 import sslChecker from "ssl-checker";
 import type { SchemaType } from "../schema";
 import { getTotal } from "../utils";
+
+const { MQTT_URL } = z
+  .object({
+    MQTT_URL: z.string().default("mqtt://mqtt"),
+  })
+  .parse(process.env);
+
+console.log({ MQTT_URL });
+
+const client = mqtt.connect(MQTT_URL);
+
+client.on("connect", () => {
+  client.subscribe("presence", (err) => {
+    if (!err) {
+      client.publish("presence", "Hello mqtt");
+    }
+  });
+});
+
+client.on("message", (_topic, message) => {
+  // message is Buffer
+  console.log(message.toString());
+  client.end();
+});
 
 async function notify(data: { total?: number; ssl?: object[] }) {
   const subject = data.ssl

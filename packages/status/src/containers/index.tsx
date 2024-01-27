@@ -1,4 +1,5 @@
-import React from "react";
+import mqtt from "mqtt";
+import React, { useEffect } from "react";
 import prettyMilliseconds from "pretty-ms";
 import prettyBytes from "pretty-bytes";
 import { createAsset } from "use-asset";
@@ -6,6 +7,15 @@ import type { StatusType } from "../schema";
 import { getTotal } from "../utils";
 
 export const API_URL = process.env.API_URL || "";
+export const MQTT_URL = (({ hostname, protocol }) =>
+  `${protocol}//${hostname}:9001`)(
+  new URL(
+    `${process.env.MQTT_URL || window.location.href}`.replace(
+      /^mqtt:\/\//,
+      "ws://",
+    ),
+  ),
+);
 
 // https://github.com/pmndrs/use-asset
 const asset = createAsset(() =>
@@ -36,6 +46,27 @@ export default function Section() {
 
   console.log({ result });
   console.log({ total: getTotal(result.usage) });
+
+  useEffect(() => {
+    console.log(["mqtt.connect"], MQTT_URL);
+
+    const client = mqtt.connect(MQTT_URL);
+
+    client.on("connect", () => {
+      client.subscribe("presence", (err) => {
+        if (!err) {
+          client.publish("presence", "Hello mqtt");
+        }
+      });
+    });
+
+    client.on("message", (_topic, message) => {
+      // message is Buffer
+      console.log(message.toString());
+      client.end();
+    });
+    return () => {};
+  }, []);
 
   return (
     <section>
