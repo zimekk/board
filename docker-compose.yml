@@ -7,6 +7,7 @@ services:
       - DATABASE_URL=postgres://postgres:password@sql:5432/board
       - REDIS_URL=redis://redis
     links:
+      - mqtt
       - redis
       - sql
     # network_mode: bridge
@@ -17,6 +18,31 @@ services:
     restart: unless-stopped
     volumes:
       - ./share/library:/app/share/library
+  # mqtt:
+  #   image: emqx:5.4
+  #   networks:
+  #     - app_network
+  #   ports:
+  #     - 1883:1883
+  #     - 8083:8083
+  #     - 8084:8084
+  #     - 8883:8883
+  #     - 18083:18083 
+  #   restart: unless-stopped
+  mqtt:
+    image: eclipse-mosquitto:2.0
+    restart: unless-stopped
+    networks:
+      - app_network
+    ports:
+      - 1883:1883
+      - 9001:9001
+    restart: unless-stopped
+    user: 1883:996
+    volumes:
+      - ./mosquitto/config:/mosquitto/config:rw
+      # - ./mosquitto/data:/mosquitto/data
+      # - ./mosquitto/log:/mosquitto/log
   redis:
     image: redis:7.2-alpine
     restart: unless-stopped

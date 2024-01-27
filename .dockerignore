@@ -5,8 +5,11 @@ Dockerfile
 LICENSE
 Makefile
 README.md
+backup
 docker-compose.*
+mosquitto
 packages/*/lib
 packages/*/public
 renovate.json
+share
 **/node_modules
