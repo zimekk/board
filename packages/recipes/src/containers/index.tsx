@@ -5,6 +5,7 @@ import React, {
   useState,
 } from "react";
 import ReactPlayer from "react-player/youtube";
+import { formatQuantity } from "format-quantity";
 import { Spinner } from "@dev/video/components";
 import {
   type BasicInfoType as InfoType,
@@ -17,6 +18,8 @@ interface RecipeType {
   video?: string;
   servings?: number;
   ingredients?: (servings?: number) => string[];
+  instructions?: (servings?: number) => string[];
+  directions?: (servings?: number) => string[];
   preparation?: string[];
   additions?: string[];
 }
@@ -170,9 +173,9 @@ export default function Section() {
         ((rate) =>
           textToList(`${350 * rate}g mąki 00 (W250-280)
       ${200 * rate}-${210 * rate}ml zimnej wody
-      ${10 * rate}g soli (ok ${1.5 * rate} łyżeczki)
-      ${10 * rate}ml oliwy (ok ${2 * rate} łyżeczki)
-      ${1 * rate}g drożdży świeżych
+      ${10 * rate}g soli (ok ${formatQuantity((1 / 2) * rate)} łyżeczki)
+      ${10 * rate}ml oliwy (ok ${formatQuantity(2 * rate)} łyżeczki)
+      ${formatQuantity(1 * rate)}g drożdży świeżych
       `))(servings / 2),
       preparation: textToList(`200ml wody + 1,5 łyżeczki sól + 2 łyżeczki oliwy
       rozetrzeć w wodzie 1g drożdży + wsypać połowę mąki
@@ -214,11 +217,13 @@ export default function Section() {
       servings: 2,
       ingredients: (servings) =>
         ((rate) =>
-          textToList(`${2 * rate} jajka
-      ${0.5 * rate} szklanki mleka (${125 * rate}ml)
-      ${3 * rate} łyżki mąki (${50 * rate}g)
-      ${2 * rate} łyżki oleju (${20 * rate}g)
-      ${0.24 * rate} łyżeczki soli (${1 * rate}g)
+          textToList(`${formatQuantity(2 * rate)} jajka
+      ${formatQuantity((1 / 2) * rate)} szklanki mleka (${125 * rate}ml)
+      ${formatQuantity(3 * rate)} łyżki mąki (${50 * rate}g)
+      ${formatQuantity(2 * rate)} łyżki oleju (${20 * rate}g)
+      ${formatQuantity((1 / 4) * rate)} łyżeczki soli (${formatQuantity(
+        1 * rate,
+      )}g)
       `))(servings / 2),
     },
     {

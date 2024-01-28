@@ -271,6 +271,9 @@ importers:
       '@dev/video':
         specifier: ^1.0.0
         version: link:../video
+      format-quantity:
+        specifier: ^3.0.0
+        version: 3.0.0
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -5982,6 +5985,11 @@ packages:
     dependencies:
       cross-spawn: 7.0.3
       signal-exit: 4.1.0
+    dev: false
+
+  /format-quantity@3.0.0:
+    resolution: {integrity: sha512-rFMqM+RLYVMKDlw6ky3sfHmZnT8FudiPAPq9Hpylr6G3dZb7K42TTtcIKniFQrZZzEZgyT11ktEzJqr6E0uD2w==}
+    engines: {node: '>=16'}
     dev: false
 
   /forwarded@0.2.0:
