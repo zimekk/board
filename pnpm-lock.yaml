@@ -268,12 +268,18 @@ importers:
 
   packages/recipes:
     dependencies:
+      '@dev/video':
+        specifier: ^1.0.0
+        version: link:../video
       react:
         specifier: ^18.2.0
         version: 18.2.0
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
+      react-player:
+        specifier: ^2.13.0
+        version: 2.13.0(react@18.2.0)
       styled-components:
         specifier: ^6.0.5
         version: 6.0.5(react-dom@18.2.0)(react@18.2.0)
