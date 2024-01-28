@@ -35,6 +35,7 @@
     "@babel/preset-typescript": "^7.22.5",
     "@dev/cron": "1.0.0",
     "@dev/ext": "1.0.0",
+    "@dev/recipes": "1.0.0",
     "@dev/scrap": "1.0.0",
     "@dev/status": "1.0.0",
     "@dev/video": "1.0.0",

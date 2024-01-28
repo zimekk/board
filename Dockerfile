@@ -34,6 +34,7 @@ COPY packages/app/package.json packages/app/
 COPY packages/chrome/package.json packages/chrome/
 COPY packages/cron/package.json packages/cron/
 COPY packages/ext/package.json packages/ext/
+COPY packages/recipes/package.json packages/recipes/
 COPY packages/schema/package.json packages/schema/
 COPY packages/scrap/package.json packages/scrap/
 COPY packages/sql/package.json packages/sql/

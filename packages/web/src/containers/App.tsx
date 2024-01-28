@@ -9,6 +9,7 @@ const PAGES = {
   audio: lazy(() => import("./Audio")),
   cron: lazy(() => import("@dev/cron")),
   hello: lazy(() => import("./Hello")),
+  recipes: lazy(() => import("@dev/recipes")),
   scrap: lazy(() => import("@dev/scrap")),
   status: lazy(() => import("@dev/status")),
   video: lazy(() => import("@dev/video")),
