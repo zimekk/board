@@ -15,9 +15,37 @@ interface RecipeType {
   name: string;
   link?: string;
   video?: string;
-  ingredients?: string[];
+  servings?: number;
+  ingredients?: (servings?: number) => string[];
   preparation?: string[];
   additions?: string[];
+}
+
+function Checklist({ list }: { list: string[] }) {
+  const [checked, setChecked] = useState<number[]>([]);
+
+  return (
+    <ol>
+      {list.map((item, index) => (
+        <li key={index}>
+          <label>
+            <input
+              type="checkbox"
+              checked={checked.includes(index)}
+              onChange={({ target }) =>
+                setChecked((checked) =>
+                  target.checked
+                    ? checked.concat(index)
+                    : checked.filter((i) => i !== index),
+                )
+              }
+            />
+            <span>{item}</span>
+          </label>
+        </li>
+      ))}
+    </ol>
+  );
 }
 
 function Recipe({
@@ -28,6 +56,9 @@ function Recipe({
   setVideoId: (video: string) => void;
 }) {
   const [info, setInfo] = useState<InfoType | null>(null);
+  const [servings, setServings] = useState<RecipeType["servings"]>(
+    recipe.servings,
+  );
 
   useEffect(() => {
     fetch(`video/info?videoId=${recipe.video}`)
@@ -70,34 +101,39 @@ function Recipe({
         ) : (
           <Spinner />
         )}
+        {recipe.servings && (
+          <div>
+            <label>
+              <select
+                value={servings}
+                onChange={({ target }) => setServings(Number(target.value))}
+              >
+                {[1, 2, 3, 4, 5, 6].map((servings) => (
+                  <option key={servings} value={servings}>
+                    {servings}
+                  </option>
+                ))}
+              </select>
+              <span>servings</span>
+            </label>
+          </div>
+        )}
         {recipe.ingredients && (
           <div>
             <h4>ingredients</h4>
-            <ul>
-              {recipe.ingredients.map((ingredient, index) => (
-                <li key={index}>{ingredient}</li>
-              ))}
-            </ul>
+            <Checklist list={recipe.ingredients(servings)} />
           </div>
         )}
         {recipe.preparation && (
           <div>
             <h4>preparation</h4>
-            <ul>
-              {recipe.preparation.map((step, index) => (
-                <li key={index}>{step}</li>
-              ))}
-            </ul>
+            <Checklist list={recipe.preparation} />
           </div>
         )}
         {recipe.additions && (
           <div>
             <h4>additions</h4>
-            <ul>
-              {recipe.additions.map((step, index) => (
-                <li key={index}>{step}</li>
-              ))}
-            </ul>
+            <Checklist list={recipe.additions} />
           </div>
         )}
         {recipe.link && (
@@ -129,12 +165,15 @@ export default function Section() {
     {
       name: "Domowa PIZZA lepsza niż z pizzerii - przepis na najlepsze ciasto na pizzę 🍕",
       video: "https://www.youtube.com/watch?v=fvm7uz4IUZ0",
-      ingredients: textToList(`350g mąki 00 (W250-280)
-      200-210ml zimnej wody
-      10g soli (ok 1,5 łyżeczki)
-      10ml oliwy (ok 2 łyżeczki)
-      1g drożdży świeżych
-      `),
+      servings: 2,
+      ingredients: (servings) =>
+        ((rate) =>
+          textToList(`${350 * rate}g mąki 00 (W250-280)
+      ${200 * rate}-${210 * rate}ml zimnej wody
+      ${10 * rate}g soli (ok ${1.5 * rate} łyżeczki)
+      ${10 * rate}ml oliwy (ok ${2 * rate} łyżeczki)
+      ${1 * rate}g drożdży świeżych
+      `))(servings / 2),
       preparation: textToList(`200ml wody + 1,5 łyżeczki sól + 2 łyżeczki oliwy
       rozetrzeć w wodzie 1g drożdży + wsypać połowę mąki
       dosypać resztę mąki
@@ -151,7 +190,8 @@ export default function Section() {
     {
       name: "Ciasto na Napoletanę - Pierwszy TEST miksera planetarnego MAXIMA",
       video: "https://www.youtube.com/watch?v=WS1XryTDFX0",
-      ingredients: textToList(`500g mąki W260 - W280
+      ingredients: () =>
+        textToList(`500g mąki W260 - W280
       300g wody
       13g soli
       1g drożdży świeżych
@@ -171,17 +211,21 @@ export default function Section() {
     {
       name: "Puszysty omlet z 2 jaj 👌 pyszne i szybkie śniadanie w 10 minut 👍",
       video: "https://www.youtube.com/watch?v=3HTbEWhpe9k",
-      ingredients: textToList(`2 jajka
-      1/2 szklanki mleka (125ml)
-      3 łyżki mąki (50g)
-      2 łyżki oleju (20g)
-      1/4 łyżeczki soli (1g)
-      `),
+      servings: 2,
+      ingredients: (servings) =>
+        ((rate) =>
+          textToList(`${2 * rate} jajka
+      ${0.5 * rate} szklanki mleka (${125 * rate}ml)
+      ${3 * rate} łyżki mąki (${50 * rate}g)
+      ${2 * rate} łyżki oleju (${20 * rate}g)
+      ${0.24 * rate} łyżeczki soli (${1 * rate}g)
+      `))(servings / 2),
     },
     {
       name: "Przepis na najlepsze bułki do burgerów - Brioche. Jak je najlepiej zrobić.",
       video: "https://www.youtube.com/watch?v=PILcY1a5amc",
-      ingredients: textToList(`60ml mleka
+      ingredients: () =>
+        textToList(`60ml mleka
       30ml wody
       20g mąki typ 00
       120ml mleka 35st
@@ -195,7 +239,8 @@ export default function Section() {
     {
       name: "Puszyste, maślane BUŁKI DO BURGERÓW! Nigdy nie jedliście lepszych!",
       video: "https://www.youtube.com/watch?v=Nn3rVOEgC7Y",
-      ingredients: textToList(`Przestudzony Tangzhong: 200g wody + 40 mąki
+      ingredients: () =>
+        textToList(`Przestudzony Tangzhong: 200g wody + 40 mąki
       600g mąki pszennej typ 650
       30g świeżych lub 10g suchych drożdży
       40g cukru
@@ -215,7 +260,8 @@ export default function Section() {
       name: "Jak zrobić idealne BUŁKI do HAMBURGERÓW",
       link: "https://policzona-szama.pl/blogs/przepisy/bulka-do-hamburgera-prosta-i-smaczna",
       video: "https://www.youtube.com/watch?v=JL4jyt-LbWI",
-      ingredients: textToList(`na 4 bułki do burgerów:
+      ingredients: () =>
+        textToList(`na 4 bułki do burgerów:
       mąka typ 650 – 400 g
       masło – 40 g
       mleka 1,5% (bez laktozy – słodsze w smaku) – 150 ml
@@ -229,7 +275,7 @@ export default function Section() {
     {
       name: "Najlepszy przepis na BUŁKI do BURGERÓW!",
       video: "https://www.youtube.com/watch?v=apmsMiRddtU",
-      ingredients:
+      ingredients: () =>
         textToList(`300g mąki pszennej (w trakcie dodaliśmy jeszcze ok. 50g)
       100 ml wody
       150 ml mleka
