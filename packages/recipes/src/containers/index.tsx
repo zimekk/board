@@ -20,7 +20,7 @@ interface RecipeType {
   ingredients?: (servings?: number) => string[];
   instructions?: (servings?: number) => string[];
   directions?: (servings?: number) => string[];
-  preparation?: string[];
+  preparation?: (servings?: number) => string[];
   additions?: string[];
 }
 
@@ -111,7 +111,7 @@ function Recipe({
                 value={servings}
                 onChange={({ target }) => setServings(Number(target.value))}
               >
-                {[1, 2, 3, 4, 5, 6].map((servings) => (
+                {[1, 2, 3, 4, 5, 6, 9, 12].map((servings) => (
                   <option key={servings} value={servings}>
                     {servings}
                   </option>
@@ -130,7 +130,7 @@ function Recipe({
         {recipe.preparation && (
           <div>
             <h4>preparation</h4>
-            <Checklist list={recipe.preparation} />
+            <Checklist list={recipe.preparation(servings)} />
           </div>
         )}
         {recipe.additions && (
@@ -177,7 +177,8 @@ export default function Section() {
       ${10 * rate}ml oliwy (ok ${formatQuantity(2 * rate)} łyżeczki)
       ${formatQuantity(1 * rate)}g drożdży świeżych
       `))(servings / 2),
-      preparation: textToList(`200ml wody + 1,5 łyżeczki sól + 2 łyżeczki oliwy
+      preparation: () =>
+        textToList(`200ml wody + 1,5 łyżeczki sól + 2 łyżeczki oliwy
       rozetrzeć w wodzie 1g drożdży + wsypać połowę mąki
       dosypać resztę mąki
       uformować kulkę i przykryć na 20 min wilgotną ściereczką (lub zwilżyć ciasto)
@@ -199,7 +200,8 @@ export default function Section() {
       13g soli
       1g drożdży świeżych
       `),
-      preparation: textToList(`1 min (woda + drożdże + 1/2 mąki)
+      preparation: () =>
+        textToList(`1 min (woda + drożdże + 1/2 mąki)
       10 min (reszta mąki + sól)
       uformować 5-10 min przerwy
       1 min - wyrabianie
@@ -233,13 +235,59 @@ export default function Section() {
         textToList(`60ml mleka
       30ml wody
       20g mąki typ 00
-      120ml mleka 35st
+      120ml mleka 35\u00B0
       9g drożdży suchych
       320g mąki
       1 jajko + 1 żółtko
       35g cukru i 7g soli
       40g miękkiego masła
       `),
+    },
+    {
+      name: "NAJLEPSZE BUŁKI NA ŚWIECIE - chrupiące bułki Maryny z mąki orkiszowej w domowej piekarni.",
+      video: "https://www.youtube.com/watch?v=U2RXIiCXa-M",
+      servings: 9,
+      ingredients: (servings) =>
+        ((rate) =>
+          textToList(`${500 * rate}g mąki orkiszowej TYP 630
+      ${300 * rate}ml zimnej wody
+      ${20 * rate}g oliwy z oliwek lub masła
+      ${10 * rate}g soli
+      kawałek świeżych drożdży
+      `))(servings / 9),
+    },
+    {
+      name: "Bułki z piekarni jak za starych dobrych czasów. Przepis jak zrobić domowe bułeczki. MENU Dorotki",
+      video: "https://www.youtube.com/watch?v=_-0aiXG09wc",
+      servings: 9,
+      ingredients: (servings) =>
+        ((rate) =>
+          textToList(`SKŁADNIKI:
+      ${
+        500 * rate
+      }g mąki pszennej najlepiej typ 550 (można też użyć 450, 650 czy 750)
+      ${30 * rate}g świeżych drożdży (ewentualnie ${formatQuantity(
+        2 * rate,
+      )} opakowania drożdży suszonych po 7g)
+      ${formatQuantity(2 * rate)} łyżeczki soli
+      ${330 * rate}g wody
+      `))(servings / 9),
+      preparation: (servings) =>
+        ((rate) =>
+          textToList(`Z powyższych składników biorę:
+      ${10 * rate}g drożdży
+      ${150 * rate}ml wody
+      ${formatQuantity(3 * rate)} łyżki mąki
+      i przygotowuję rozczyn 
+      
+      dodatkowo mąka do podsypania i ewentualnie ${formatQuantity(
+        2,
+      )} łyżki oleju do posmarowania 
+      
+      PIECZENIE:
+      temperatura piekarnika: 230\u00B0C (górna i dolna grzałka)
+      czas pieczenia: około 20 minut
+      `))(servings / 9),
     },
     {
       name: "Puszyste, maślane BUŁKI DO BURGERÓW! Nigdy nie jedliście lepszych!",
