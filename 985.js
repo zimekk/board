@@ -1,4 +1,4 @@
-"use strict";(self.webpackChunk_dev_web=self.webpackChunk_dev_web||[]).push([[985],{9059:(e,t,n)=>{n.d(t,{$:()=>o});var r=n(2983);const a=n(681).ZP.div`
+"use strict";(self.webpackChunk_dev_web=self.webpackChunk_dev_web||[]).push([[985],{9059:(e,t,n)=>{n.d(t,{$:()=>o});var r=n(2983);const a=n(6373).ZP.div`
   display: inline-block;
   width: 1em;
   height: 1em;
