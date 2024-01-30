@@ -16,11 +16,6 @@
     "build": "NODE_ENV=production tsc",
     "coverage": "type-coverage && tsc --noEmit"
   },
-  "scripts-": {
-    "build": "webpack --mode production",
-    "coverage": "type-coverage && tsc --noEmit",
-    "start": "webpack serve --mode development"
-  },
   "dependencies": {
     "express": "^4.18.2",
     "fluent-ffmpeg": "^2.1.2",
