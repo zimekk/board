@@ -1,3 +1,4 @@
+import mqtt from "mqtt";
 import React, {
   type MouseEventHandler,
   useCallback,
@@ -7,7 +8,17 @@ import React, {
 import { Spinner } from "@dev/video/components";
 import { type PhotoType } from "../schema";
 
-function List({ onSelect }: { onSelect: (name: string) => void }) {
+export const MQTT_URL = (({ hostname, protocol }) =>
+  `${protocol}//${hostname}:9001`)(
+  new URL(
+    `${process.env.MQTT_URL || window.location.href}`.replace(
+      /^mqtt:\/\//,
+      "ws://",
+    ),
+  ),
+);
+
+function List() {
   const [list, setList] = useState<PhotoType[]>(() => null);
 
   useEffect(() => {
@@ -18,7 +29,14 @@ function List({ onSelect }: { onSelect: (name: string) => void }) {
   }, []);
 
   const handleSelect = useCallback<MouseEventHandler<HTMLAnchorElement>>(
-    (e) => (e.preventDefault(), onSelect((e.target as HTMLAnchorElement).href)),
+    (e) => (
+      e.preventDefault(),
+      fetch(
+        `photo/send/${encodeURIComponent(
+          (e.target as HTMLAnchorElement).dataset.name,
+        )}`,
+      )
+    ),
     [],
   );
 
@@ -33,6 +51,7 @@ function List({ onSelect }: { onSelect: (name: string) => void }) {
           <li key={name}>
             <a
               href={`photo/${encodeURIComponent(name)}`}
+              data-name={name}
               target="_blank"
               onClick={handleSelect}
             >
@@ -45,8 +64,33 @@ function List({ onSelect }: { onSelect: (name: string) => void }) {
   );
 }
 
-function Item({ name }: { name: string }) {
-  return (
+function Item() {
+  const [item, setItem] = useState(null);
+
+  useEffect(() => {
+    const client = mqtt.connect(MQTT_URL);
+
+    console.log({ MQTT_URL });
+
+    client.on("connect", () => {
+      client.subscribe("photos", (err) => {
+        // if (!err) {
+        //   client.publish("presence", "Hello mqtt");
+        // }
+      });
+    });
+
+    client.on("message", (_topic, message) => {
+      // message is Buffer
+      setItem(URL.createObjectURL(new Blob([message])));
+    });
+
+    return () => {
+      client.end();
+    };
+  }, []);
+
+  return item ? (
     <div
       style={{
         // position: "fixed",
@@ -59,20 +103,18 @@ function Item({ name }: { name: string }) {
         style={{
           maxWidth: "100%",
         }}
-        src={name}
+        src={item}
       />
     </div>
-  );
+  ) : null;
 }
 
 export default function Section() {
-  const [name, setName] = useState(null);
-
   return (
     <section>
       <h2>Photo</h2>
-      <List onSelect={setName} />
-      {name && <Item name={name} />}
+      <List />
+      <Item />
     </section>
   );
 }
