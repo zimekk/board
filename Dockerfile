@@ -31,6 +31,7 @@ WORKDIR $WORKDIR
 COPY package.json pnpm-*.yaml ./
 COPY packages/api/package.json packages/api/
 COPY packages/app/package.json packages/app/
+COPY packages/audio/package.json packages/audio/
 COPY packages/chrome/package.json packages/chrome/
 COPY packages/cron/package.json packages/cron/
 COPY packages/ext/package.json packages/ext/

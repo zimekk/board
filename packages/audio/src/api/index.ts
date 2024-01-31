@@ -8,11 +8,9 @@ import jimp from "jimp";
 
 const { LIBRARY_PATH = "" } = process.env;
 
-const cwd = resolve(dirname(require.resolve("../../../.env")), LIBRARY_PATH);
+const cwd = resolve(dirname(require.resolve("../../../../.env")), LIBRARY_PATH);
 
-console.log({ LIBRARY_PATH, cwd });
-
-export const stream = () =>
+export const router = () =>
   Router()
     .get("/:name/:size/artwork-:artwork.png", async ({ params }, res, next) =>
       parseFile(`${cwd}/${params.name}`)
@@ -24,11 +22,11 @@ export const stream = () =>
             .then((image) =>
               image
                 .resize(Number(params.size), Number(params.size))
-                .getBufferAsync(jimp.MIME_PNG)
+                .getBufferAsync(jimp.MIME_PNG),
             )
-            .then((data) => res.contentType("image/png").send(data))
+            .then((data) => res.contentType("image/png").send(data)),
         )
-        .catch(next)
+        .catch(next),
     )
     .get("/:name?", async ({ headers, params }, res, next) => {
       const { name } = params;
@@ -46,18 +44,18 @@ export const stream = () =>
             Object.assign(
               ((type) =>
                 type ? { "Content-Type": mime.lookup(filepath) } : {})(
-                mime.lookup(filepath)
+                mime.lookup(filepath),
               ),
               !isNaN(start)
                 ? {
                     "Content-Length": `${end - start + 1}`,
                     "Content-Range": `bytes ${start}-${end}/${size}`,
                   }
-                : {}
-            )
+                : {},
+            ),
           ).forEach(([name, value]) => value && res.setHeader(name, value));
           createReadStream(filepath, !isNaN(start) ? { start, end } : {}).pipe(
-            res.status(isNaN(start) ? 200 : 206)
+            res.status(isNaN(start) ? 200 : 206),
           );
         } catch (e) {
           next(e);
@@ -93,17 +91,17 @@ export const stream = () =>
                       picture: picture?.map(
                         ({ format, data }) =>
                           `data:${format};${encoding},${data.toString(
-                            encoding
-                          )}`
+                            encoding,
+                          )}`,
                       ),
                       // picture: picture?.map(({ format, data }) =>
                       //   URL.createObjectURL(new Blob([data], { type: format }))
                       // ),
                       duration,
-                    })
-                )
+                    }),
+                ),
               ),
-            Promise.resolve([]) as Promise<any>
+            Promise.resolve([]) as Promise<any>,
           )
           .then((data) => res.status(200).json(data));
       }

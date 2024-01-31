@@ -50,33 +50,18 @@ importers:
 
   packages/api:
     dependencies:
-      '@dev/schema':
+      '@dev/audio':
         specifier: 1.0.0
-        version: link:../schema
+        version: link:../audio
       '@dev/sql':
         specifier: 1.0.0
         version: link:../sql
-      body-parser:
-        specifier: ^1.20.2
-        version: 1.20.2
       cors:
         specifier: ^2.8.5
         version: 2.8.5
       express:
         specifier: ^4.18.2
         version: 4.18.2
-      glob:
-        specifier: ^10.3.3
-        version: 10.3.3
-      jimp:
-        specifier: ^0.22.8
-        version: 0.22.8
-      mime-types:
-        specifier: ^2.1.35
-        version: 2.1.35
-      music-metadata:
-        specifier: ^7.13.4
-        version: 7.13.4
       zod:
         specifier: ^3.21.4
         version: 3.21.4
@@ -87,12 +72,6 @@ importers:
       '@types/express':
         specifier: ^4.17.17
         version: 4.17.17
-      '@types/glob':
-        specifier: ^8.1.0
-        version: 8.1.0
-      '@types/mime-types':
-        specifier: ^2.1.1
-        version: 2.1.1
 
   packages/app:
     dependencies:
@@ -178,6 +157,52 @@ importers:
       webpack-node-externals:
         specifier: ^3.0.0
         version: 3.0.0
+
+  packages/audio:
+    dependencies:
+      express:
+        specifier: ^4.18.2
+        version: 4.18.2
+      glob:
+        specifier: ^10.3.3
+        version: 10.3.3
+      jimp:
+        specifier: ^0.22.8
+        version: 0.22.8
+      mime-types:
+        specifier: ^2.1.35
+        version: 2.1.35
+      mqtt:
+        specifier: ^5.3.5
+        version: 5.3.5
+      music-metadata:
+        specifier: ^7.13.4
+        version: 7.13.4
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      rxjs:
+        specifier: ^7.8.1
+        version: 7.8.1
+      styled-components:
+        specifier: ^6.0.5
+        version: 6.0.5(react-dom@18.2.0)(react@18.2.0)
+      suspend-react:
+        specifier: ^0.1.0
+        version: 0.1.0(react@18.2.0)
+      zod:
+        specifier: ^3.21.4
+        version: 3.21.4
+    devDependencies:
+      '@types/express':
+        specifier: ^4.17.17
+        version: 4.17.17
+      '@types/mime-types':
+        specifier: ^2.1.1
+        version: 2.1.1
+      '@types/react':
+        specifier: ^18.2.18
+        version: 18.2.18
 
   packages/chrome:
     dependencies:
@@ -530,6 +555,9 @@ importers:
       '@babel/preset-typescript':
         specifier: ^7.22.5
         version: 7.22.5(@babel/core@7.23.3)
+      '@dev/audio':
+        specifier: 1.0.0
+        version: link:../audio
       '@dev/cron':
         specifier: 1.0.0
         version: link:../cron
@@ -3251,13 +3279,6 @@ packages:
       '@types/node': 20.8.7
     dev: true
 
-  /@types/glob@8.1.0:
-    resolution: {integrity: sha512-IO+MJPVhoqz+28h1qLAcBEH2+xHMK6MTyHJc7MTnnYb6wsoLR29POVGJ7LycmVXIqyy/4/2ShP5sUwTXuOwb/w==}
-    dependencies:
-      '@types/minimatch': 5.1.2
-      '@types/node': 20.8.7
-    dev: true
-
   /@types/har-format@1.2.15:
     resolution: {integrity: sha512-RpQH4rXLuvTXKR0zqHq3go0RVXYv/YVqv4TnPH95VbwUxZdQlK1EtcMvQvMpDngHbt13Csh9Z4qT9AbkiQH5BA==}
     dev: true
@@ -3313,10 +3334,6 @@ packages:
 
   /@types/mime@3.0.1:
     resolution: {integrity: sha512-Y4XFY5VJAuw0FgAqPNd6NNoV44jbq9Bz2L7Rh/J6jLTiHBSBJa9fxqQIvkIld4GsoDOcCbvzOUAbLPsSKKg+uA==}
-    dev: true
-
-  /@types/minimatch@5.1.2:
-    resolution: {integrity: sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==}
     dev: true
 
   /@types/minimist@1.2.2:
@@ -4271,26 +4288,6 @@ packages:
       unpipe: 1.0.0
     transitivePeerDependencies:
       - supports-color
-
-  /body-parser@1.20.2:
-    resolution: {integrity: sha512-ml9pReCu3M61kGlqoTm2umSXTlRTuGTx0bfYj+uIUKKYycG5NtSbeetV3faSU6R7ajOPw0g/J1PvK4qNy7s5bA==}
-    engines: {node: '>= 0.8', npm: 1.2.8000 || >= 1.4.16}
-    dependencies:
-      bytes: 3.1.2
-      content-type: 1.0.5
-      debug: 2.6.9
-      depd: 2.0.0
-      destroy: 1.2.0
-      http-errors: 2.0.0
-      iconv-lite: 0.4.24
-      on-finished: 2.4.1
-      qs: 6.11.0
-      raw-body: 2.5.2
-      type-is: 1.6.18
-      unpipe: 1.0.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
 
   /bonjour-service@1.1.1:
     resolution: {integrity: sha512-Z/5lQRMOG9k7W+FkeGTNjh7htqn/2LMnfOvBZ8pynNZCM9MwkQkI3zeI4oz09uWdcgmgHugVvBqxGg4VQJ5PCg==}
@@ -8742,16 +8739,6 @@ packages:
       http-errors: 2.0.0
       iconv-lite: 0.4.24
       unpipe: 1.0.0
-
-  /raw-body@2.5.2:
-    resolution: {integrity: sha512-8zGqypfENjCIqGhgXToC8aB2r7YrBX+AQAfIPs/Mlk+BtPTztOvTS01NRW/3Eh60J+a48lt8qsCzirQ6loCVfA==}
-    engines: {node: '>= 0.8'}
-    dependencies:
-      bytes: 3.1.2
-      http-errors: 2.0.0
-      iconv-lite: 0.4.24
-      unpipe: 1.0.0
-    dev: false
 
   /rc@1.2.8:
     resolution: {integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==}

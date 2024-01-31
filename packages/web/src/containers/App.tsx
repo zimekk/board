@@ -6,7 +6,7 @@ import styles from "./App.module.scss";
 const Spinner = () => <span>Loading...</span>;
 
 const PAGES = {
-  audio: lazy(() => import("./Audio")),
+  audio: lazy(() => import("@dev/audio")),
   cron: lazy(() => import("@dev/cron")),
   hello: lazy(() => import("./Hello")),
   photo: lazy(() => import("@dev/photo")),

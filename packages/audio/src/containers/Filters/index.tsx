@@ -35,7 +35,7 @@ export default function Filters({
     const subscription = search$
       .pipe(map(stringifyFilters), distinctUntilChanged(), debounceTime(400))
       .subscribe((filters) =>
-        setQueries((queries) => ({ ...queries, ...JSON.parse(filters) }))
+        setQueries((queries) => ({ ...queries, ...JSON.parse(filters) })),
       );
     return () => subscription.unsubscribe();
   }, [search$]);
@@ -55,7 +55,7 @@ export default function Filters({
               ...filters,
               search: target.value,
             })),
-          []
+          [],
         )}
       />
     </div>

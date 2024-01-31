@@ -63,7 +63,7 @@ function Playlist({ version = 1 }) {
   const [meta, setMeta] = useState<MetaType | undefined>();
   const data = suspend(async () => {
     const res = await fetch(
-      `${API_URL ? `${API_URL}/` : ""}api/audio?${version}`
+      `${API_URL ? `${API_URL}/` : ""}api/audio?${version}`,
     );
     return res.json() as Promise<ItemType[]>;
   }, [version]);
@@ -75,9 +75,9 @@ function Playlist({ version = 1 }) {
         setSelected((selected) =>
           target.checked
             ? selected.concat(id)
-            : selected.filter((item) => item !== id)
+            : selected.filter((item) => item !== id),
         ))(target.value),
-    []
+    [],
   );
 
   const list = useMemo(
@@ -87,7 +87,7 @@ function Playlist({ version = 1 }) {
         name,
         href: `${API_URL}/api/audio/${encodeURIComponent(name)}`,
       })),
-    [data]
+    [data],
   );
 
   const handlePlay = useCallback(
@@ -107,15 +107,15 @@ function Playlist({ version = 1 }) {
               artwork: artwork.map(({ src, ...artwork }) => ({
                 src: new URL(
                   `${href}/${src}`,
-                  document.location.origin || ""
+                  document.location.origin || "",
                 ).toString(),
                 ...artwork,
               })),
-            }
-          )
+            },
+          ),
         )
       ))(list.find((item) => item.href === id)),
-    [list]
+    [list],
   );
 
   const handleEnded = useCallback(() => {
@@ -131,9 +131,9 @@ function Playlist({ version = 1 }) {
   const filtered = useMemo(
     () =>
       list.filter((item) =>
-        item.name.toLocaleLowerCase().includes(queries.search)
+        item.name.toLocaleLowerCase().includes(queries.search),
       ),
-    [list, queries]
+    [list, queries],
   );
 
   console.log({ filtered, list, meta });
