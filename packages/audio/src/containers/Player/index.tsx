@@ -1,6 +1,6 @@
 import React, {
-  ComponentProps,
-  MouseEventHandler,
+  type ComponentProps,
+  type MouseEventHandler,
   useEffect,
   useRef,
   useState,

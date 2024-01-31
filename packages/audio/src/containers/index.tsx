@@ -9,6 +9,7 @@ import { suspend } from "suspend-react";
 
 import Filters, { initialQueries } from "./Filters";
 import Player, { MetaType, Link, Text, View } from "./Player";
+import Volume from "./Volume";
 
 function Loading() {
   return (
@@ -194,6 +195,7 @@ export default function Audio() {
   return (
     <View>
       <Text>{`API_URL: ${API_URL}`}</Text>
+      <Volume />
       <Suspense fallback={<Loading />}>
         <Playlist />
       </Suspense>

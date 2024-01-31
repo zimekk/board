@@ -7,6 +7,7 @@ FROM node:20.10.0-alpine3.17
 # https://pptr.dev/troubleshooting#running-on-alpine
 # Installs latest Chromium (100) package.
 RUN apk add --no-cache \
+      alsa-utils \
       chromium \
       nss \
       freetype \

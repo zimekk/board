@@ -1,9 +1,12 @@
 import { createReadStream, statSync } from "fs";
 import { sync } from "glob";
+// https://github.com/Arciiix/easy-volume
+import { getVolume, setVolume } from "./easy-volume";
 import { Router } from "express";
 import { dirname, resolve } from "path";
 import mime from "mime-types";
 import { parseFile } from "music-metadata";
+import { z } from "zod";
 import jimp from "jimp";
 
 const { LIBRARY_PATH = "" } = process.env;
@@ -12,11 +15,23 @@ const cwd = resolve(dirname(require.resolve("../../../../.env")), LIBRARY_PATH);
 
 export const router = () =>
   Router()
+    .get("/volume/:volume?", async (req, res) =>
+      z
+        .object({
+          volume: z.coerce.number().optional(),
+        })
+        .parseAsync(req.params)
+        .then(async ({ volume }) =>
+          volume === undefined
+            ? getVolume().then((volume) => res.send({ volume }))
+            : setVolume(volume).then(() => res.send({ status: "ok" })),
+        ),
+    )
     .get("/:name/:size/artwork-:artwork.png", async ({ params }, res, next) =>
       parseFile(`${cwd}/${params.name}`)
         .then(({ common: { picture } }) => picture[params.artwork])
         // https://github.com/jimp-dev/jimp/tree/main/packages/jimp#basic-usage
-        .then(({ format, data }) =>
+        .then(({ format: _format, data }) =>
           jimp
             .read(data)
             .then((image) =>

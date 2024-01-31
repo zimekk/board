@@ -19,6 +19,8 @@ services:
     restart: unless-stopped
     volumes:
       - ./share/library:/app/share/library
+    devices:
+      - /dev/snd:/dev/snd
   # mqtt:
   #   image: emqx:5.4
   #   networks:
