@@ -13,6 +13,7 @@ const PAGES = {
   recipes: lazy(() => import("@dev/recipes")),
   scrap: lazy(() => import("@dev/scrap")),
   status: lazy(() => import("@dev/status")),
+  stream: lazy(() => import("@dev/stream")),
   video: lazy(() => import("@dev/video")),
 };
 

@@ -65,6 +65,7 @@ export default (_env, { mode }, dev = mode === "development") => ({
   plugins: [
     new webpack.EnvironmentPlugin({
       API_URL: "",
+      MEDIA_URL: "",
       MQTT_URL: "",
     }),
     new webpack.ProvidePlugin({

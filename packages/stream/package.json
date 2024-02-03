@@ -1,0 +1,29 @@
+{
+  "name": "@dev/stream",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "eslintConfig": {
+    "env": {
+      "browser": true
+    }
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production tsc",
+    "coverage": "type-coverage && tsc --noEmit"
+  },
+  "dependencies": {
+    "dashjs": "^4.7.3",
+    "pro-flv.js": "^2.0.2",
+    "react": "^18.2.0",
+    "styled-components": "^6.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.18"
+  }
+}
