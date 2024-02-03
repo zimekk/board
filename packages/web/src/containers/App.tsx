@@ -9,6 +9,7 @@ const PAGES = {
   audio: lazy(() => import("@dev/audio")),
   cron: lazy(() => import("@dev/cron")),
   hello: lazy(() => import("./Hello")),
+  overlay: lazy(() => import("@dev/overlay")),
   photo: lazy(() => import("@dev/photo")),
   recipes: lazy(() => import("@dev/recipes")),
   scrap: lazy(() => import("@dev/scrap")),
@@ -35,15 +36,17 @@ function App() {
 
   return (
     <section className={styles.App}>
-      <h1 className={styles.Nav}>
-        Board
-        {Object.keys(PAGES).map((page) => (
-          <a key={page} href={`#${page}`}>
-            {page}
-          </a>
-        ))}
-        <a href="ext.zip">ext</a>[{page}]
-      </h1>
+      {page !== "overlay" && (
+        <h1 className={styles.Nav}>
+          Board
+          {Object.keys(PAGES).map((page) => (
+            <a key={page} href={`#${page}`}>
+              {page}
+            </a>
+          ))}
+          <a href="ext.zip">ext</a>[{page}]
+        </h1>
+      )}
       <Suspense fallback={<Spinner />}>
         <Page />
       </Suspense>

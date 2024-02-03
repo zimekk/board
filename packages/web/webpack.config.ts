@@ -16,7 +16,7 @@ export default (_env, { mode }, dev = mode === "development") => ({
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.(css|scss)$/,
         use: [
           // Creates `style` nodes from JS strings
           "style-loader",

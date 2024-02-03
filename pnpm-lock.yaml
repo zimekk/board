@@ -294,6 +294,25 @@ importers:
         specifier: ~4.2.2
         version: 4.2.3(@types/node@18.17.1)
 
+  packages/overlay:
+    dependencies:
+      date-fns:
+        specifier: ^3.0.0
+        version: 3.0.0
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      styled-components:
+        specifier: ^6.0.5
+        version: 6.0.5(react-dom@18.2.0)(react@18.2.0)
+      typeface-roboto:
+        specifier: ^1.1.13
+        version: 1.1.13
+    devDependencies:
+      '@types/react':
+        specifier: ^18.2.18
+        version: 18.2.18
+
   packages/photo:
     dependencies:
       '@dev/video':
@@ -586,6 +605,9 @@ importers:
       '@dev/ext':
         specifier: 1.0.0
         version: link:../ext
+      '@dev/overlay':
+        specifier: 1.0.0
+        version: link:../overlay
       '@dev/photo':
         specifier: 1.0.0
         version: link:../photo
@@ -11282,6 +11304,10 @@ packages:
 
   /typedarray@0.0.6:
     resolution: {integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==}
+    dev: false
+
+  /typeface-roboto@1.1.13:
+    resolution: {integrity: sha512-YXvbd3a1QTREoD+FJoEkl0VQNJoEjewR2H11IjVv4bp6ahuIcw0yyw/3udC4vJkHw3T3cUh85FTg8eWef3pSaw==}
     dev: false
 
   /typescript@5.2.2:

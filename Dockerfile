@@ -36,6 +36,7 @@ COPY packages/audio/package.json packages/audio/
 COPY packages/chrome/package.json packages/chrome/
 COPY packages/cron/package.json packages/cron/
 COPY packages/ext/package.json packages/ext/
+COPY packages/overlay/package.json packages/overlay/
 COPY packages/photo/package.json packages/photo/
 COPY packages/recipes/package.json packages/recipes/
 COPY packages/schema/package.json packages/schema/
