@@ -39,6 +39,7 @@ COPY packages/ext/package.json packages/ext/
 COPY packages/overlay/package.json packages/overlay/
 COPY packages/photo/package.json packages/photo/
 COPY packages/recipes/package.json packages/recipes/
+COPY packages/request/package.json packages/request/
 COPY packages/schema/package.json packages/schema/
 COPY packages/scrap/package.json packages/scrap/
 COPY packages/sql/package.json packages/sql/

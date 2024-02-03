@@ -12,6 +12,7 @@ const PAGES = {
   overlay: lazy(() => import("@dev/overlay")),
   photo: lazy(() => import("@dev/photo")),
   recipes: lazy(() => import("@dev/recipes")),
+  request: lazy(() => import("@dev/request")),
   scrap: lazy(() => import("@dev/scrap")),
   status: lazy(() => import("@dev/status")),
   stream: lazy(() => import("@dev/stream")),
