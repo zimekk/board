@@ -24,6 +24,7 @@
     "@dev/api": "1.0.0",
     "@dev/photo": "1.0.0",
     "@dev/request": "1.0.0",
+    "@dev/share": "1.0.0",
     "@dev/status": "1.0.0",
     "@dev/video": "1.0.0",
     "@dev/web": "1.0.0",

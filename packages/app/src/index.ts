@@ -7,6 +7,7 @@ export const router = Router()
   .use("/video", require("@dev/video/api").router())
   .use(require("@dev/photo/api").router())
   .use(require("@dev/request/api").router())
+  .use(require("@dev/share/api").router())
   .use(require("@dev/status/api").router())
   .use(require("@dev/worker").router())
   .use(require("./push").default());

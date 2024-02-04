@@ -14,6 +14,7 @@ const PAGES = {
   recipes: lazy(() => import("@dev/recipes")),
   request: lazy(() => import("@dev/request")),
   scrap: lazy(() => import("@dev/scrap")),
+  share: lazy(() => import("@dev/share")),
   status: lazy(() => import("@dev/status")),
   stream: lazy(() => import("@dev/stream")),
   video: lazy(() => import("@dev/video")),
