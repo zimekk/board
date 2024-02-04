@@ -781,14 +781,17 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
           "g-64/c/2326-kamery-ip.html?producent=2287-hikvision",
           "g-64/c/2326-kamery-ip.html?producent=276-tp-link&producent=628-ubiquiti",
           "g-64/c/2406-inteligentny-dom.html?producent=807-google",
+          "g-64/c/2406-inteligentny-dom.html?producent=3028-nice",
           "g-64/c/2412-gniazda-smart-plug.html?producent=276-tp-link&producent=1023-xiaomi&producent=1311-wiz",
           "g-64/c/2582-gimbale.html?producent=1009-dji&producent=1155-zhiyun",
           // "g-64/c/2582-gimbale.html?producent=1009-dji",
           // "g-64/c/2582-gimbale.html?producent=1155-zhiyun",
           "g-64/c/2684-filtry-do-dronow.html?producent=1009-dji&f5751-kompatybilnosc=246401-dji-mini-3-pro",
+          "g-64/c/3003-inteligentne-sterowniki.html?producent=2421-grenton",
           "g-64/c/3006-inteligentne-lampy.html?producent=2867-twinkly",
           "g-64/c/3037-rejestratory-ip.html?producent=276-tp-link&producent=628-ubiquiti&producent=2287-hikvision",
           "g-64/c/3086-dyski-twarde-do-monitoringu.html",
+          "g-64/c/3451-akcesoria-do-urzadzen-smart.html?producent=2421-grenton",
         ]
           .map((path) => `https://www.x-kom.pl/${path}`)
           .map((url, i) => ({
