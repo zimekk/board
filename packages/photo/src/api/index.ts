@@ -7,19 +7,16 @@ import { dirname, resolve } from "node:path";
 import { z } from "zod";
 import { type PhotoType } from "../schema";
 
-const { LIBRARY_PATH = "" } = process.env;
-
-const cwd = resolve(dirname(require.resolve("../../../../.env")), LIBRARY_PATH);
-
-console.log({ LIBRARY_PATH, cwd });
-
-const { MQTT_URL } = z
+const { LIBRARY_PATH, MQTT_URL } = z
   .object({
+    LIBRARY_PATH: z.string().default(""),
     MQTT_URL: z.string().default("mqtt://mqtt"),
   })
   .parse(process.env);
 
-console.log({ MQTT_URL });
+console.log({ LIBRARY_PATH, MQTT_URL });
+
+const cwd = resolve(dirname(require.resolve("../../../../.env")), LIBRARY_PATH);
 
 const client = mqtt.connect(MQTT_URL);
 

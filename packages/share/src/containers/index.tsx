@@ -1,10 +1,14 @@
 import mqtt from "mqtt";
 import React, {
+  type ChangeEventHandler,
+  type Dispatch,
+  type SetStateAction,
   type MouseEventHandler,
   useCallback,
   useEffect,
   useState,
 } from "react";
+// import { Spinner } from "@dev/video/components";
 import type { DeviceType } from "../schema";
 
 export const API_URL = process.env.API_URL || "";
@@ -18,7 +22,7 @@ export const MQTT_URL = (({ hostname, protocol }) =>
   ),
 );
 
-function Devices() {
+function Devices({ url }: { url: string }) {
   const [list, setList] = useState<DeviceType[]>([]);
 
   useEffect(() => {
@@ -49,6 +53,20 @@ function Devices() {
     };
   }, []);
 
+  const handleClickPlay = useCallback<MouseEventHandler<HTMLButtonElement>>(
+    ({ target }) =>
+      fetch("share/play", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ xml: (target as HTMLButtonElement).value, url }),
+      })
+        .then((res) => res.json())
+        .then(console.info),
+    [url],
+  );
+
   return (
     <div>
       <h3>devices</h3>
@@ -59,6 +77,7 @@ function Devices() {
             <th>name</th>
             <th>xml</th>
             <th>type</th>
+            <th></th>
           </tr>
           {list.map(({ host, name, xml, type }, key) => (
             <tr key={key}>
@@ -70,6 +89,15 @@ function Devices() {
                 </a>
               </td>
               <td>{type}</td>
+              <td>
+                <button
+                  disabled={url === ""}
+                  value={xml}
+                  onClick={handleClickPlay}
+                >
+                  play
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>
@@ -79,7 +107,65 @@ function Devices() {
   );
 }
 
+function Media({
+  url,
+  setUrl,
+}: {
+  url: string;
+  setUrl: Dispatch<SetStateAction<string>>;
+}) {
+  const [list, setList] = useState<string[]>([
+    "http://commondatastorage.googleapis.com/gtv-videos-bucket/big_buck_bunny_1080p.mp4",
+  ]);
+
+  useEffect(() => {
+    fetch("share/list")
+      .then((res) => res.json())
+      .then((data) =>
+        setList((list) =>
+          list.concat(
+            data.map((name) =>
+              (({ origin }) =>
+                `${origin}/api/audio/${encodeURIComponent(name)}`)(
+                new URL(document.location.href),
+              ),
+            ),
+          ),
+        ),
+      );
+  }, []);
+
+  const handleChange = useCallback<ChangeEventHandler<HTMLInputElement>>(
+    ({ target }) => setUrl(target.value),
+    [],
+  );
+
+  return (
+    <div>
+      <h3>media</h3>
+      <ul>
+        {list.map((name, key) => (
+          <li key={key}>
+            <label>
+              <input
+                type="radio"
+                value={name}
+                onChange={handleChange}
+                checked={name === url}
+              />
+              <span>{name}</span>
+            </label>
+          </li>
+        ))}
+      </ul>
+      <pre>{JSON.stringify(list, null, 2)}</pre>
+    </div>
+  );
+}
+
 export default function Section() {
+  const [url, setUrl] = useState("");
+
   const handleClickStart = useCallback<MouseEventHandler<HTMLButtonElement>>(
     (e) =>
       fetch("share/start")
@@ -101,7 +187,8 @@ export default function Section() {
       <h2>Share</h2>
       <button onClick={handleClickStart}>start</button>
       <button onClick={handleClickDestroy}>destroy</button>
-      <Devices />
+      <Devices url={url} />
+      <Media url={url} setUrl={setUrl} />
     </section>
   );
 }

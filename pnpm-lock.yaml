@@ -457,9 +457,15 @@ importers:
 
   packages/share:
     dependencies:
+      '@dev/video':
+        specifier: ^1.0.0
+        version: link:../video
       express:
         specifier: ^4.18.2
         version: 4.18.2
+      glob:
+        specifier: ^10.3.3
+        version: 10.3.3
       mqtt:
         specifier: ^5.3.5
         version: 5.3.5
