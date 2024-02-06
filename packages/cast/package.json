@@ -1,0 +1,34 @@
+{
+  "name": "@dev/cast",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "main": "lib",
+  "files": [
+    "lib/"
+  ],
+  "private": true,
+  "eslintConfig": {
+    "env": {
+      "browser": true
+    }
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "start": "node lib",
+    "build": "tsc",
+    "coverage": "type-coverage && tsc --noEmit"
+  },
+  "dependencies": {
+    "mqtt": "^5.3.5",
+    "nodecast-js": "^1.0.3",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "type-coverage": "^2.26.0",
+    "typescript": "^5.1.6"
+  },
+  "peerDependencies": {}
+}

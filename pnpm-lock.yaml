@@ -210,6 +210,25 @@ importers:
         specifier: ^18.2.18
         version: 18.2.18
 
+  packages/cast:
+    dependencies:
+      mqtt:
+        specifier: ^5.3.5
+        version: 5.3.5
+      nodecast-js:
+        specifier: ^1.0.3
+        version: 1.0.3
+      zod:
+        specifier: ^3.21.4
+        version: 3.21.4
+    devDependencies:
+      type-coverage:
+        specifier: ^2.26.0
+        version: 2.26.0(typescript@5.2.2)
+      typescript:
+        specifier: ^5.1.6
+        version: 5.2.2
+
   packages/chrome:
     dependencies:
       puppeteer:

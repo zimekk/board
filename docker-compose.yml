@@ -11,6 +11,7 @@ services:
       - mqtt
       - redis
       - sql
+    # network_mode: host
     # network_mode: bridge
     networks:
       - app_network
@@ -21,6 +22,12 @@ services:
       - ./share/library:/app/share/library
     devices:
       - /dev/snd:/dev/snd
+  cast:
+    build: packages/cast
+    environment:
+      - MQTT_URL=mqtt://localhost
+    network_mode: host
+    restart: unless-stopped
   # mqtt:
   #   image: emqx:5.4
   #   networks:
