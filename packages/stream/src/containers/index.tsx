@@ -1,6 +1,12 @@
-import React, { useEffect, useRef } from "react";
-// import { MediaPlayer } from "dashjs";
+import React, {
+  ChangeEventHandler,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import flvjs from "pro-flv.js";
+import { StreamsSchema } from "../schema";
 
 export const MEDIA_URL =
   process.env.MEDIA_URL ||
@@ -11,16 +17,8 @@ export const MEDIA_URL =
 console.log({ MEDIA_URL });
 
 // https://github.com/illuspas/Node-Media-Server
-function Stream() {
+function Stream({ stream: url }: { stream: string }) {
   const videoRef = useRef();
-
-  // useEffect(() => {
-  //   const video = videoRef.current;
-  //   const url = "https://dash.akamaized.net/akamai/bbb_30fps/bbb_30fps.mpd";
-  //   // const url = "http://192.168.2.22:7000/live/MAC/index.mpd";
-  //   const player = MediaPlayer().create();
-  //   player.initialize(video, url, false);
-  // }, []);
 
   useEffect(() => {
     // https://github.com/illuspas/pro-fiv.js
@@ -28,13 +26,13 @@ function Stream() {
       const video = videoRef.current;
       const flvPlayer = flvjs.createPlayer({
         type: "flv",
-        url: `${MEDIA_URL}/live/NZXT.flv`,
+        url,
       });
       flvPlayer.attachMediaElement(video);
       flvPlayer.load();
       // flvPlayer.play();
     }
-  }, []);
+  }, [url]);
 
   return (
     <div>
@@ -44,10 +42,43 @@ function Stream() {
 }
 
 export default function Section() {
+  const [list, setList] = useState<string[] | null>(null);
+  const [stream, setStream] = useState(null);
+
+  useEffect(() => {
+    fetch(`${MEDIA_URL}/api/streams`, {
+      headers: {
+        Authorization: `Basic ${btoa(["admin", "admin"].join(":"))}`,
+      },
+    })
+      .then((res) => res.json())
+      .then(StreamsSchema.parseAsync)
+      .then((data) =>
+        Object.keys(data.live || {}).map(
+          (name) => `${MEDIA_URL}/live/${name}.flv`,
+        ),
+      )
+      .then((list) => list.length > 0 && (setList(list), setStream(list[0])));
+  }, []);
+
+  const handleChangeStream = useCallback<ChangeEventHandler<HTMLSelectElement>>(
+    ({ target }) => setStream(target.value),
+    [],
+  );
+
   return (
     <section>
       <h2>Stream</h2>
-      <Stream />
+      {stream && list && (
+        <select value={stream} onChange={handleChangeStream}>
+          {list.map((url) => (
+            <option key={url} value={url}>
+              {url}
+            </option>
+          ))}
+        </select>
+      )}
+      {stream && <Stream stream={stream} />}
       <a href={`${MEDIA_URL}/admin/streams`} target="_blank">
         streams
       </a>
