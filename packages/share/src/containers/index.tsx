@@ -9,7 +9,7 @@ import React, {
   useState,
 } from "react";
 // import { Spinner } from "@dev/video/components";
-import type { DeviceType } from "../schema";
+import type { DeviceType, NetworkType } from "../schema";
 
 export const API_URL = process.env.API_URL || "";
 export const MQTT_URL = (({ hostname, protocol }) =>
@@ -107,6 +107,48 @@ function Devices({ url }: { url: string }) {
   );
 }
 
+function Network() {
+  const [list, setList] = useState<NetworkType[]>([]);
+
+  useEffect(() => {
+    fetch("share/networks")
+      .then((res) => res.json())
+      .then(setList);
+  }, []);
+
+  return (
+    <div>
+      <h3>networks</h3>
+      <table>
+        <tbody>
+          <tr>
+            <th>address</th>
+            <th>family</th>
+            <th>mac</th>
+          </tr>
+          {list.map(({ address, family, mac }, key) => (
+            <tr key={key}>
+              <td>
+                <a
+                  href={(({ hash, pathname, port, protocol }) =>
+                    `${protocol}//${address}:${port}${pathname}${hash}`)(
+                    new URL(document.location.href),
+                  )}
+                >
+                  {address}
+                </a>
+              </td>
+              <td>{family}</td>
+              <td>{mac}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <pre>{JSON.stringify(list, null, 2)}</pre>
+    </div>
+  );
+}
+
 function Media({
   url,
   setUrl,
@@ -189,6 +231,7 @@ export default function Section() {
       <button onClick={handleClickDestroy}>destroy</button>
       <Devices url={url} />
       <Media url={url} setUrl={setUrl} />
+      <Network />
     </section>
   );
 }

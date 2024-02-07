@@ -24,8 +24,10 @@
     "@dev/video": "^1.0.0",
     "express": "^4.18.2",
     "glob": "^10.3.3",
+    "mime-types": "^2.1.35",
     "mqtt": "^5.3.5",
     "nodecast-js": "^1.0.3",
+    "upnp-mediarenderer-client": "0.0.2",
     "zod": "^3.21.4"
   },
   "devDependencies": {

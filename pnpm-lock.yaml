@@ -212,16 +212,25 @@ importers:
 
   packages/cast:
     dependencies:
+      mime-types:
+        specifier: ^2.1.35
+        version: 2.1.35
       mqtt:
         specifier: ^5.3.5
         version: 5.3.5
       nodecast-js:
         specifier: ^1.0.3
         version: 1.0.3
+      upnp-mediarenderer-client:
+        specifier: 0.0.2
+        version: 0.0.2
       zod:
         specifier: ^3.21.4
         version: 3.21.4
     devDependencies:
+      ts-node-dev:
+        specifier: ^2.0.0
+        version: 2.0.0(@types/node@20.8.7)(typescript@5.2.2)
       type-coverage:
         specifier: ^2.26.0
         version: 2.26.0(typescript@5.2.2)
@@ -485,6 +494,9 @@ importers:
       glob:
         specifier: ^10.3.3
         version: 10.3.3
+      mime-types:
+        specifier: ^2.1.35
+        version: 2.1.35
       mqtt:
         specifier: ^5.3.5
         version: 5.3.5
@@ -494,6 +506,9 @@ importers:
       react:
         specifier: ^18.2.0
         version: 18.2.0
+      upnp-mediarenderer-client:
+        specifier: 0.0.2
+        version: 0.0.2
       zod:
         specifier: ^3.21.4
         version: 3.21.4
