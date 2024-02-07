@@ -22,6 +22,12 @@ export const MQTT_URL = (({ hostname, protocol }) =>
   ),
 );
 
+function discover() {
+  fetch("share/discover")
+    .then((res) => res.json())
+    .then(console.info);
+}
+
 function Devices({ url }: { url: string }) {
   const [list, setList] = useState<DeviceType[]>([]);
 
@@ -31,22 +37,26 @@ function Devices({ url }: { url: string }) {
     console.log({ MQTT_URL });
 
     client.on("connect", () => {
-      client.subscribe("device", (err) => {
-        // if (!err) {
-        //   client.publish("presence", "Hello mqtt");
-        // }
-      });
+      client
+        .subscribe("device", (err) => {})
+        .subscribe("device/list", (err) => {});
     });
 
-    client.on("message", (_topic, message) => {
+    client.on("message", (topic, message) => {
       // message is Buffer
-      const item = JSON.parse(message.toString());
-      setList((list) => list.concat(item));
+      switch (topic) {
+        case "device":
+          const item = JSON.parse(message.toString());
+          setList((list) => list.concat(item));
+          break;
+        case "device/list":
+          const list = JSON.parse(message.toString());
+          setList(list);
+          break;
+      }
     });
 
-    fetch("share")
-      .then((res) => res.json())
-      .then(setList);
+    discover();
 
     return () => {
       client.end();
@@ -67,9 +77,15 @@ function Devices({ url }: { url: string }) {
     [url],
   );
 
+  const handleClickDiscover = useCallback<MouseEventHandler<HTMLButtonElement>>(
+    (e) => discover(),
+    [],
+  );
+
   return (
     <div>
       <h3>devices</h3>
+      <button onClick={handleClickDiscover}>discover</button>
       <table>
         <tbody>
           <tr>
@@ -182,9 +198,18 @@ function Media({
     [],
   );
 
+  const handleClickAdd = useCallback<MouseEventHandler<HTMLButtonElement>>(
+    (e) =>
+      Promise.resolve(prompt("Url:")).then(
+        (url) => url && (setList((list) => list.concat(url)), setUrl(url)),
+      ),
+    [],
+  );
+
   return (
     <div>
       <h3>media</h3>
+      <button onClick={handleClickAdd}>add</button>
       <ul>
         {list.map((name, key) => (
           <li key={key}>
@@ -208,27 +233,9 @@ function Media({
 export default function Section() {
   const [url, setUrl] = useState("");
 
-  const handleClickStart = useCallback<MouseEventHandler<HTMLButtonElement>>(
-    (e) =>
-      fetch("share/start")
-        .then((res) => res.json())
-        .then(console.info),
-    [],
-  );
-
-  const handleClickDestroy = useCallback<MouseEventHandler<HTMLButtonElement>>(
-    (e) =>
-      fetch("share/destroy")
-        .then((res) => res.json())
-        .then(console.info),
-    [],
-  );
-
   return (
     <section>
       <h2>Share</h2>
-      <button onClick={handleClickStart}>start</button>
-      <button onClick={handleClickDestroy}>destroy</button>
       <Devices url={url} />
       <Media url={url} setUrl={setUrl} />
       <Network />

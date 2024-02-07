@@ -37,6 +37,10 @@ nodeCast.onDevice((device) => {
 
   console.log(nodeCast.getList()); // list of currently discovered devices
 
+  DeviceSchema.array()
+    .parseAsync(nodeCast.getList())
+    .then((data) => client.publish("device/list", JSON.stringify(data)));
+
   DeviceSchema.parseAsync(device).then((data) =>
     client.publish("device", JSON.stringify(data)),
   );
@@ -50,7 +54,9 @@ client.on("message", (topic, message) => {
 
   switch (topic) {
     case "device/discover":
-      nodeCast.start();
+      DeviceSchema.array()
+        .parseAsync(nodeCast.getList())
+        .then((data) => client.publish("device/list", JSON.stringify(data)));
       break;
     case "device/play":
       const { xml, url } = result;
@@ -62,7 +68,7 @@ client.on("message", (topic, message) => {
       } else {
         // Instanciate a client with a device description URL (discovered by SSDP)
         const client = new MediaRendererClient(xml);
-        const contentType = mime.lookup(url);
+        const contentType = mime.lookup(url) || "audio/mpeg";
         // Load a stream with subtitles and play it immediately
         const options = {
           autoplay: true,
@@ -71,7 +77,7 @@ client.on("message", (topic, message) => {
             title: "Some Movie Title",
             creator: "John Doe",
             type: contentType.split("/")[0], // can be 'video', 'audio' or 'image'
-            subtitlesUrl: "http://url.to.some/subtitles.srt",
+            // subtitlesUrl: "http://url.to.some/subtitles.srt",
           },
         };
         console.log(options);

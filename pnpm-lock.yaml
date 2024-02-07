@@ -485,6 +485,9 @@ importers:
 
   packages/share:
     dependencies:
+      '@dev/cast':
+        specifier: ^1.0.0
+        version: link:../cast
       '@dev/video':
         specifier: ^1.0.0
         version: link:../video
