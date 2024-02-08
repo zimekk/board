@@ -5,6 +5,7 @@ import { api } from "@dev/api/lib";
 export const router = Router()
   .use("/api", api)
   .use("/video", require("@dev/video/api").router())
+  .use(require("@dev/movie/api").router())
   .use(require("@dev/photo/api").router())
   .use(require("@dev/request/api").router())
   .use(require("@dev/share/api").router())

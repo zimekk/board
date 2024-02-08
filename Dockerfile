@@ -37,6 +37,7 @@ COPY packages/cast/package.json packages/cast/
 COPY packages/chrome/package.json packages/chrome/
 COPY packages/cron/package.json packages/cron/
 COPY packages/ext/package.json packages/ext/
+COPY packages/movie/package.json packages/movie/
 COPY packages/overlay/package.json packages/overlay/
 COPY packages/photo/package.json packages/photo/
 COPY packages/recipes/package.json packages/recipes/

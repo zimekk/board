@@ -36,6 +36,7 @@
     "@dev/audio": "1.0.0",
     "@dev/cron": "1.0.0",
     "@dev/ext": "1.0.0",
+    "@dev/movie": "1.0.0",
     "@dev/overlay": "1.0.0",
     "@dev/photo": "1.0.0",
     "@dev/recipes": "1.0.0",

@@ -78,6 +78,9 @@ importers:
       '@dev/api':
         specifier: 1.0.0
         version: link:../api
+      '@dev/movie':
+        specifier: 1.0.0
+        version: link:../movie
       '@dev/photo':
         specifier: 1.0.0
         version: link:../photo
@@ -327,6 +330,40 @@ importers:
       vite:
         specifier: ~4.2.2
         version: 4.2.3(@types/node@18.17.1)
+
+  packages/movie:
+    dependencies:
+      '@dev/video':
+        specifier: ^1.0.0
+        version: link:../video
+      express:
+        specifier: ^4.18.2
+        version: 4.18.2
+      fluent-ffmpeg:
+        specifier: ^2.1.2
+        version: 2.1.2
+      glob:
+        specifier: ^10.3.3
+        version: 10.3.3
+      mqtt:
+        specifier: ^5.3.5
+        version: 5.3.5
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      styled-components:
+        specifier: ^6.0.5
+        version: 6.0.5(react-dom@18.2.0)(react@18.2.0)
+      zod:
+        specifier: ^3.21.4
+        version: 3.21.4
+    devDependencies:
+      '@types/express':
+        specifier: ^4.17.17
+        version: 4.17.17
+      '@types/react':
+        specifier: ^18.2.18
+        version: 18.2.18
 
   packages/overlay:
     dependencies:
@@ -713,6 +750,9 @@ importers:
       '@dev/ext':
         specifier: 1.0.0
         version: link:../ext
+      '@dev/movie':
+        specifier: 1.0.0
+        version: link:../movie
       '@dev/overlay':
         specifier: 1.0.0
         version: link:../overlay
