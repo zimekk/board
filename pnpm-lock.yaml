@@ -222,8 +222,8 @@ importers:
         specifier: ^1.0.3
         version: 1.0.3
       upnp-mediarenderer-client:
-        specifier: 0.0.3
-        version: 0.0.3
+        specifier: 1.4.0
+        version: 1.4.0
       zod:
         specifier: ^3.21.4
         version: 3.21.4
@@ -510,8 +510,8 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0
       upnp-mediarenderer-client:
-        specifier: 0.0.3
-        version: 0.0.3
+        specifier: 1.4.0
+        version: 1.4.0
       zod:
         specifier: ^3.21.4
         version: 3.21.4
@@ -5093,6 +5093,16 @@ packages:
   /concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
+  /concat-stream@1.6.2:
+    resolution: {integrity: sha512-27HBghJxjiZtIk3Ycvn/4kbJk/1uZuJFfuPEns6LaEvpvG1f0hTea8lilrouyo9mVc2GWdcEZ8OLoGmSADlrCw==}
+    engines: {'0': node >= 0.8}
+    dependencies:
+      buffer-from: 1.1.2
+      inherits: 2.0.4
+      readable-stream: 2.3.8
+      typedarray: 0.0.6
+    dev: false
+
   /concat-stream@2.0.0:
     resolution: {integrity: sha512-MWufYdFw53ccGjCA+Ol7XJYpAlW6/prSMzuPOTRnJGcGzuhLn4Scrz7qf6o8bROZ514ltazcIFJZevcfbo0x7A==}
     engines: {'0': node >= 6.0}
@@ -5201,7 +5211,6 @@ packages:
 
   /core-util-is@1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
-    dev: true
 
   /cors@2.8.5:
     resolution: {integrity: sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==}
@@ -7765,7 +7774,6 @@ packages:
 
   /isarray@1.0.0:
     resolution: {integrity: sha512-VLghIWNM6ELQzo7zwmcg0NmTVyWKYjvIeM83yjp0wRDTmUnrM678fQbcKBo6n2CJEF0szoG//ytg+TKla89ALQ==}
-    dev: true
 
   /isarray@2.0.5:
     resolution: {integrity: sha512-xHjhDr3cNBK0BzdUJSPXZntQUx/mwMS5Rw4A7lPJ90XGAO6ISP/ePDNuo0vhqOZU+UD5JoodwCAAoZQd3FeAKw==}
@@ -8798,6 +8806,11 @@ packages:
   /netmask@2.0.2:
     resolution: {integrity: sha512-dBpDMdxv9Irdq66304OLfEmQ9tbNRFnFTuZiLo+bD+r332bBmMJ8GBLXklIXXgxd3+v9+KUnZaUR5PJMa75Gsg==}
     engines: {node: '>= 0.4.0'}
+    dev: false
+
+  /network-address@1.1.2:
+    resolution: {integrity: sha512-Q6878fmvItA1mE7H9Il46lONgFgTzX2f98zkS0c2YlkCACzNjwvum/8Kq693IQpxe9zy+w+Zm/4p0wQreLEtZw==}
+    hasBin: true
     dev: false
 
   /no-case@3.0.4:
@@ -10087,7 +10100,6 @@ packages:
       safe-buffer: 5.1.2
       string_decoder: 1.1.1
       util-deprecate: 1.0.2
-    dev: true
 
   /readable-stream@3.6.2:
     resolution: {integrity: sha512-9u/sniCrY3D5WdsERHzHE4G2YCXqoG5FTHUiCC4SIbr6XcLZBY05ya9EKjYek9O5xOAwjGq+1JdGBAS7Q9ScoA==}
@@ -10969,7 +10981,6 @@ packages:
     resolution: {integrity: sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==}
     dependencies:
       safe-buffer: 5.1.2
-    dev: true
 
   /string_decoder@1.3.0:
     resolution: {integrity: sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==}
@@ -11691,16 +11702,31 @@ packages:
       elementtree: 0.1.7
     dev: false
 
+  /upnp-device-client@1.0.2:
+    resolution: {integrity: sha512-5BcYJJU5wXR6xGko/UuLSavybAA0sZx17Hka4ikOXwA9Ze3fiExmgUDytAXE5qjdbKzARl0lOLC3hPSUwAa3eQ==}
+    dependencies:
+      concat-stream: 1.6.2
+      debug: 2.6.9
+      elementtree: 0.1.7
+      network-address: 1.1.2
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   /upnp-mediarenderer-client@0.0.2:
     resolution: {integrity: sha512-j67ucHFeLAofCSoQgmcHwRCQstYZ+IY0LU4nUuOJG5bvCUzeYq/JauD9KkTkAxlVG5fDV9Sq6WW5EDxyFtTrrQ==}
     dependencies:
       upnp-device-client: 0.0.7
     dev: false
 
-  /upnp-mediarenderer-client@0.0.3:
-    resolution: {integrity: sha512-o2d2jL6+F3NsjMT02okcrArrQZ7A7hPmUgtJkqMmUptR72muU4oclRgXJFFs8KuTXiifkPKECDHMwqeV7YymjQ==}
+  /upnp-mediarenderer-client@1.4.0:
+    resolution: {integrity: sha512-F+C3Yceoz0j3ZWEchz5tpaOEqkbpObRUmeuPGc9+2u2YvC1CDbXGQ6mjbM10MDhnUJ0tTWYTufpj6xsWctnULw==}
     dependencies:
-      upnp-device-client: 0.0.7
+      debug: 2.6.9
+      elementtree: 0.1.7
+      upnp-device-client: 1.0.2
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /uri-js@4.4.1:
