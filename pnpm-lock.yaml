@@ -222,8 +222,8 @@ importers:
         specifier: ^1.0.3
         version: 1.0.3
       upnp-mediarenderer-client:
-        specifier: 0.0.2
-        version: 0.0.2
+        specifier: 0.0.3
+        version: 0.0.3
       zod:
         specifier: ^3.21.4
         version: 3.21.4
@@ -510,8 +510,8 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0
       upnp-mediarenderer-client:
-        specifier: 0.0.2
-        version: 0.0.2
+        specifier: 0.0.3
+        version: 0.0.3
       zod:
         specifier: ^3.21.4
         version: 3.21.4
@@ -11693,6 +11693,12 @@ packages:
 
   /upnp-mediarenderer-client@0.0.2:
     resolution: {integrity: sha512-j67ucHFeLAofCSoQgmcHwRCQstYZ+IY0LU4nUuOJG5bvCUzeYq/JauD9KkTkAxlVG5fDV9Sq6WW5EDxyFtTrrQ==}
+    dependencies:
+      upnp-device-client: 0.0.7
+    dev: false
+
+  /upnp-mediarenderer-client@0.0.3:
+    resolution: {integrity: sha512-o2d2jL6+F3NsjMT02okcrArrQZ7A7hPmUgtJkqMmUptR72muU4oclRgXJFFs8KuTXiifkPKECDHMwqeV7YymjQ==}
     dependencies:
       upnp-device-client: 0.0.7
     dev: false
