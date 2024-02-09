@@ -46,13 +46,20 @@ export default function Section() {
   const [stream, setStream] = useState(null);
 
   useEffect(() => {
-    fetch(`${MEDIA_URL}/api/streams`, {
-      headers: {
-        Authorization: `Basic ${btoa(["admin", "admin"].join(":"))}`,
-      },
-    })
-      .then((res) => res.json())
-      .then(StreamsSchema.parseAsync)
+    (window
+      ? Promise.resolve({
+          live: {
+            NZXT: {},
+          },
+        })
+      : fetch(`${MEDIA_URL}/api/streams`, {
+          headers: {
+            Authorization: `Basic ${btoa(["admin", "admin"].join(":"))}`,
+          },
+        })
+          .then((res) => res.json())
+          .then(StreamsSchema.parseAsync)
+    )
       .then((data) =>
         Object.keys(data.live || {}).map(
           (name) => `${MEDIA_URL}/live/${name}.flv`,

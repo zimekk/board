@@ -9,6 +9,10 @@ export default (_env, { mode }, dev = mode === "development") => ({
   target: "web",
   devtool: dev ? "eval-cheap-source-map" : "source-map",
   entry: {
+    polyfills: [
+      require.resolve("babel-polyfill"),
+      require.resolve("whatwg-fetch"),
+    ],
     main: require.resolve("./src"),
     // : require.resolve("./src"),
     sw: require.resolve("./src/service-worker"),

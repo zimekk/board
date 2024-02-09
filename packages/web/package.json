@@ -16,6 +16,7 @@
     "start": "webpack serve --mode development"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "buffer": "^6.0.3",
     "classnames": "^2.3.2",
     "events": "^3.3.0",
@@ -27,7 +28,8 @@
     "react-dom": "^18.2.0",
     "rxjs": "^7.8.1",
     "suspend-react": "^0.1.0",
-    "use-asset": "^1.0.4"
+    "use-asset": "^1.0.4",
+    "whatwg-fetch": "^3.6.20"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",
