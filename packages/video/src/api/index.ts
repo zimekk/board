@@ -37,7 +37,7 @@ export const router = () =>
         })
         .then((json) => res.json(json)),
     )
-    .get("/download", (req, res) =>
+    .get("/download-video", (req, res) =>
       z
         .object({
           videoId: z.string(),

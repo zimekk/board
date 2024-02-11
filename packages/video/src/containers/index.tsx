@@ -93,7 +93,7 @@ function List() {
     (e) => (
       e.preventDefault(),
       ((videoId) =>
-        fetch(`video/download?videoId=${videoId}`)
+        fetch(`video/download-video?videoId=${videoId}`)
           .then((res) => res.json())
           .then(console.info))(e.currentTarget.href)
     ),
