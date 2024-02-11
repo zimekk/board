@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@dev/api": "1.0.0",
+    "@dev/cast": "1.0.0",
     "@dev/movie": "1.0.0",
     "@dev/photo": "1.0.0",
     "@dev/request": "1.0.0",

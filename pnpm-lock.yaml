@@ -78,6 +78,9 @@ importers:
       '@dev/api':
         specifier: 1.0.0
         version: link:../api
+      '@dev/cast':
+        specifier: 1.0.0
+        version: link:../cast
       '@dev/movie':
         specifier: 1.0.0
         version: link:../movie
@@ -224,6 +227,9 @@ importers:
       nodecast-js:
         specifier: ^1.0.3
         version: 1.0.3
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
       upnp-mediarenderer-client:
         specifier: 1.4.0
         version: 1.4.0
@@ -231,6 +237,15 @@ importers:
         specifier: ^3.21.4
         version: 3.21.4
     devDependencies:
+      '@types/chromecast-caf-receiver':
+        specifier: ^6.0.13
+        version: 6.0.13
+      '@types/chromecast-caf-sender':
+        specifier: ^1.0.8
+        version: 1.0.8
+      '@types/react':
+        specifier: ^18.2.18
+        version: 18.2.18
       ts-node-dev:
         specifier: ^2.0.0
         version: 2.0.0(@types/node@20.8.7)(typescript@5.2.2)
@@ -750,6 +765,9 @@ importers:
       '@dev/audio':
         specifier: 1.0.0
         version: link:../audio
+      '@dev/cast':
+        specifier: 1.0.0
+        version: link:../cast
       '@dev/cron':
         specifier: 1.0.0
         version: link:../cron
@@ -789,6 +807,12 @@ importers:
       '@hot-loader/react-dom':
         specifier: ^17.0.2
         version: 17.0.2(react@18.2.0)
+      '@types/chrome':
+        specifier: ^0.0.260
+        version: 0.0.260
+      '@types/chromecast-caf-sender':
+        specifier: ^1.0.8
+        version: 1.0.8
       '@types/html-webpack-plugin':
         specifier: ^3.2.6
         version: 3.2.6
@@ -3445,6 +3469,16 @@ packages:
     dependencies:
       '@types/filesystem': 0.0.35
       '@types/har-format': 1.2.15
+    dev: true
+
+  /@types/chromecast-caf-receiver@6.0.13:
+    resolution: {integrity: sha512-dDHlhZaWTDJiqGqEHYx/dofJB1xKQg782y7j1LFMvbzMKcGgNzzCEX6pW2XxUhovkjBjTJM9F+yR2Z+KKlwLPg==}
+    dev: true
+
+  /@types/chromecast-caf-sender@1.0.8:
+    resolution: {integrity: sha512-3vByTZptIkYpNz/wErOnpFQ4hWGU1ghO5bcivNButxARbXXKfClLJv6r5Pd622nD/UecjSwrAeIposAIzd4HvA==}
+    dependencies:
+      '@types/chrome': 0.0.260
     dev: true
 
   /@types/clean-css@4.2.6:
@@ -7857,7 +7891,7 @@ packages:
     resolution: {integrity: sha512-qvUtwJ3j6qwsF3jLxkZ72qCgjMysPzDfeV240JHiGZsANBYd+EEuu35v7dfrJ9Up0Ak07D7GGSkGhCHTqg/5wA==}
     dependencies:
       node-fetch: 2.6.12
-      whatwg-fetch: 3.6.2
+      whatwg-fetch: 3.6.20
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -12154,10 +12188,6 @@ packages:
     resolution: {integrity: sha512-2akF8FIyUvbiBBdD+RoHpoTbHMQF2HwjcxfDvgztAX5YwbZNyrtfUMgvfgFVsgDhDPVTlkbb5vyasqDHfIDPQw==}
     dev: false
 
-  /whatwg-fetch@3.6.2:
-    resolution: {integrity: sha512-bJlen0FcuU/0EMLrdbJ7zOnW6ITZLrZMIarMUVmdKtsGvZna8vxKYaexICWPfZ8qwf9fzNq+UEIZrnSaApt6RA==}
-    dev: false
-
   /whatwg-fetch@3.6.20:
     resolution: {integrity: sha512-EqhiFU6daOA8kpjOWTL0olhVOF3i7OrFzSYiGsEMB8GcXS+RrzauAERX65xMeNWVqxA6HXH2m69Z9LaKKdisfg==}
     dev: false
@@ -12305,6 +12335,7 @@ packages:
 
   /workbox-google-analytics@7.0.0:
     resolution: {integrity: sha512-MEYM1JTn/qiC3DbpvP2BVhyIH+dV/5BjHk756u9VbwuAhu0QHyKscTnisQuz21lfRpOwiS9z4XdqeVAKol0bzg==}
+    deprecated: It is not compatible with newer versions of GA starting with v4, as long as you are using GAv3 it should be ok, but the package is not longer being maintained
     dependencies:
       workbox-background-sync: 7.0.0
       workbox-core: 7.0.0
