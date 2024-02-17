@@ -26,7 +26,7 @@ export async function scrap(page: Page) {
               res
                 .url()
                 .match(
-                  "/get/(xkom|alto)/|/v1/(xkom|alto)/hotShots/current|/v1/(xkom|alto)/products/searchHints|/api/\\w+/details"
+                  "/get/(xkom|alto)/|/v1/(xkom|alto)/hotShots/current|/v1/(xkom|alto)/hotShots/\\d+\\?onlyHeader|/v1/(xkom|alto)/products/searchHints|/api/\\w+/details"
                 )
             ) {
               console.log(["resolve.json"], res.url(), headers);

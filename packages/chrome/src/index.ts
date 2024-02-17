@@ -54,7 +54,8 @@ export async function chrome(url = "https://zimekk.github.io/robot/") {
     return Promise.all([
       import("./pl.xkom").then(({ scrap }) => scrap(page)),
       page.goto(url, {
-        waitUntil: "networkidle2",
+        waitUntil: ["load","domcontentloaded"],
+        // waitUntil: "networkidle2",
         timeout: 60_000,
       }),
     ])
