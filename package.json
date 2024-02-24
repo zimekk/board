@@ -49,9 +49,6 @@
     "update:latest": "pnpm -r up -i",
     "prepare": "husky"
   },
-  "workspaces": [
-    "packages/*"
-  ],
   "devDependencies": {
     "@commitlint/cli": "^18.0.0",
     "@commitlint/config-conventional": "^18.0.0",

@@ -28,26 +28,35 @@ export async function launch() {
     // https://stackoverflow.com/questions/47122579/run-puppeteer-on-already-installed-chrome-on-macos
     executablePath: PUPPETEER_EXECUTABLE_PATH,
     // https://developer.chrome.com/articles/new-headless/
-    headless: 'new',
+    headless: true,
     args: WORKDIR
       ? [
           "--no-sandbox",
-          "--headless=new",
+          "--headless",
           "--disable-gpu",
           "--disable-dev-shm-usage",
         ]
       : [],
   } as const;
+  try {
   // Open Chrome with the given command and arguments
+  console.log(["launch"], {config});
   return await puppeteer.launch(config);
+  } catch(e) {
+    console.error(e)
+  }
 }
 
 export async function chrome(url = "https://zimekk.github.io/robot/") {
   console.log(["chrome"], { url });
 
+  console.log(["launch"], {PUPPETEER_EXECUTABLE_PATH});
   const browser = await launch();
+  console.log(["newPage"]);
   const page = await browser.newPage();
+  console.log(["setUserAgent"]);
   await page.setUserAgent((await browser.userAgent()).replace("Headless", ""));
+  console.log(["setRequestInterception"]);
   await page.setRequestInterception(true);
 
   if (url.match("/goracy_strzal|/pl/\\w+/-home|//promocje")) {
