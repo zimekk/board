@@ -28,42 +28,33 @@ export async function launch() {
     // https://stackoverflow.com/questions/47122579/run-puppeteer-on-already-installed-chrome-on-macos
     executablePath: PUPPETEER_EXECUTABLE_PATH,
     // https://developer.chrome.com/articles/new-headless/
-    headless: true,
+    headless: "new",
     args: WORKDIR
       ? [
           "--no-sandbox",
-          "--headless",
+          "--headless=new",
           "--disable-gpu",
           "--disable-dev-shm-usage",
         ]
       : [],
   } as const;
-  try {
   // Open Chrome with the given command and arguments
-  console.log(["launch"], {config});
   return await puppeteer.launch(config);
-  } catch(e) {
-    console.error(e)
-  }
 }
 
 export async function chrome(url = "https://zimekk.github.io/robot/") {
   console.log(["chrome"], { url });
 
-  console.log(["launch"], {PUPPETEER_EXECUTABLE_PATH});
   const browser = await launch();
-  console.log(["newPage"]);
   const page = await browser.newPage();
-  console.log(["setUserAgent"]);
   await page.setUserAgent((await browser.userAgent()).replace("Headless", ""));
-  console.log(["setRequestInterception"]);
   await page.setRequestInterception(true);
 
   if (url.match("/goracy_strzal|/pl/\\w+/-home|//promocje")) {
     return Promise.all([
       import("./pl.xkom").then(({ scrap }) => scrap(page)),
       page.goto(url, {
-        waitUntil: ["load","domcontentloaded"],
+        waitUntil: ["load", "domcontentloaded"],
         // waitUntil: "networkidle2",
         timeout: 60_000,
       }),
@@ -122,7 +113,7 @@ export async function chrome(url = "https://zimekk.github.io/robot/") {
                   res
                     .url()
                     .match(
-                      "/get/(xkom|alto)/|/v1/(xkom|alto)/hotShots/current|/v1/(xkom|alto)/products/searchHints|/api/\\w+/details"
+                      "/get/(xkom|alto)/|/v1/(xkom|alto)/hotShots/current|/v1/(xkom|alto)/products/searchHints|/api/\\w+/details",
                     )
                 ) {
                   console.log(["resolve.json"], res.url(), headers);
@@ -137,7 +128,7 @@ export async function chrome(url = "https://zimekk.github.io/robot/") {
                     ["resolve.html"],
                     res.url(),
                     res.status(),
-                    headers
+                    headers,
                   );
 
                   if (res.status() !== 200) {
@@ -165,7 +156,7 @@ export async function chrome(url = "https://zimekk.github.io/robot/") {
                   } else if (url.match("pierwotny.pl/s/")) {
                     console.log(res.url());
                     await page.evaluate(
-                      `eval(document.querySelector('#root + script').textContent)`
+                      `eval(document.querySelector('#root + script').textContent)`,
                     );
                     const e = "__INITIAL_STATE__";
                     console.log(["page.evaluate"], e);
@@ -194,7 +185,7 @@ export async function chrome(url = "https://zimekk.github.io/robot/") {
                       const e = "APP_INITIALIZATION_STATE[3][4].substr(5)";
                       console.log(["page.evaluate"], e);
                       const json = JSON.parse(
-                        (await page.evaluate(e)) as string
+                        (await page.evaluate(e)) as string,
                       );
                       console.log({ json });
                       resolve({ url: res.url(), json });
@@ -251,7 +242,7 @@ export async function chrome(url = "https://zimekk.github.io/robot/") {
               console.error(e);
               reject(e);
             }
-          })
+          }),
     ),
     page.goto(url, {
       waitUntil: "networkidle2",
