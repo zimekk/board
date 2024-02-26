@@ -625,7 +625,7 @@ importers:
         version: 18.2.0(react@18.2.0)
       ssl-checker:
         specifier: ^2.0.8
-        version: 2.0.8
+        version: 2.0.9
       use-asset:
         specifier: ^1.0.4
         version: 1.0.4(react@18.2.0)
@@ -11614,8 +11614,8 @@ packages:
     resolution: {integrity: sha512-UcjcJOWknrNkF6PLX83qcHM6KHgVKNkV62Y8a5uYDVv9ydGQVwAHMKqHdJje1VTWpljG0WYpCDhrCdAOYH4TWg==}
     engines: {node: '>= 10.x'}
 
-  /ssl-checker@2.0.8:
-    resolution: {integrity: sha512-pIDGxablZowKR/elbm72Wk7T3lEdrcAKT4ltPsdQrpm7N6EIIvuFQpIcMNG+A/wmiymcRwFDzTd83bW6Yy5LKQ==}
+  /ssl-checker@2.0.9:
+    resolution: {integrity: sha512-aKIJBxTqWOPaeCrbuOGTyGtolJH+Yrbatldgj/wPADkoVtZ+7ySHQ///Y4H590MeTWkr1AE0T7iP5YXX/ZXpEw==}
     dev: false
 
   /standard-as-callback@2.1.0:
