@@ -150,7 +150,7 @@ importers:
         version: 14.0.0(sass@1.64.2)(webpack@5.88.2)
       style-loader:
         specifier: ^3.3.3
-        version: 3.3.3(webpack@5.88.2)
+        version: 3.3.4(webpack@5.88.2)
       ts-node:
         specifier: ^10.9.1
         version: 10.9.1(@types/node@20.8.7)(typescript@5.2.2)
@@ -866,7 +866,7 @@ importers:
         version: 3.0.0
       style-loader:
         specifier: ^3.3.3
-        version: 3.3.3(webpack@5.88.2)
+        version: 3.3.4(webpack@5.88.2)
       ts-node:
         specifier: ^10.9.1
         version: 10.9.1(@types/node@20.8.7)(typescript@5.3.3)
@@ -12679,8 +12679,8 @@ packages:
       peek-readable: 4.1.0
     dev: false
 
-  /style-loader@3.3.3(webpack@5.88.2):
-    resolution: {integrity: sha512-53BiGLXAcll9maCYtZi2RCQZKa8NQQai5C4horqKyRmHj9H7QmcUyucrH+4KW/gBQbXM2AsB0axoEcFZPlfPcw==}
+  /style-loader@3.3.4(webpack@5.88.2):
+    resolution: {integrity: sha512-0WqXzrsMTyb8yjZJHDqwmnwRJvhALK9LfRtRc6B4UTWe8AijYLZYZ9thuJTZc2VfQWINADW/j+LiJnfy2RoC1w==}
     engines: {node: '>= 12.13.0'}
     peerDependencies:
       webpack: ^5.0.0
