@@ -827,7 +827,7 @@ importers:
         version: 18.2.7
       '@types/redux-actions':
         specifier: ^2.6.2
-        version: 2.6.2
+        version: 2.6.5
       '@types/webpack':
         specifier: ^5.28.1
         version: 5.28.1(webpack-cli@5.1.4)
@@ -4918,8 +4918,8 @@ packages:
       safe-buffer: 5.1.2
     dev: false
 
-  /@types/redux-actions@2.6.2:
-    resolution: {integrity: sha512-TvcINy8rWFANcpc3EiEQX9Yv3owM3d3KIrqr2ryUIOhYIYzXA/bhDZeGSSSuai62iVR2qMZUgz9tQ5kr0Kl+Tg==}
+  /@types/redux-actions@2.6.5:
+    resolution: {integrity: sha512-RgXOigay5cNweP+xH1ru+Vaaj1xXYLpWIfSVO8cSA8Ii2xvR+HRfWYdLe1UVOA8X0kIklalGOa0DTDyld0obkg==}
     dev: true
 
   /@types/relateurl@0.2.33:
