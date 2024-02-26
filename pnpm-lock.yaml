@@ -920,7 +920,7 @@ importers:
         version: 1.0.3
       node-html-parser:
         specifier: ^6.1.5
-        version: 6.1.5
+        version: 6.1.12
       zod:
         specifier: ^3.21.4
         version: 3.21.4
@@ -10374,8 +10374,8 @@ packages:
     dev: false
     optional: true
 
-  /node-html-parser@6.1.5:
-    resolution: {integrity: sha512-fAaM511feX++/Chnhe475a0NHD8M7AxDInsqQpz6x63GRF7xYNdS8Vo5dKsIVPgsOvG7eioRRTZQnWBrhDHBSg==}
+  /node-html-parser@6.1.12:
+    resolution: {integrity: sha512-/bT/Ncmv+fbMGX96XG9g05vFt43m/+SYKIs9oAemQVYyVcZmDAI2Xq/SbNcpOA35eF0Zk2av3Ksf+Xk8Vt8abA==}
     dependencies:
       css-select: 5.1.0
       he: 1.2.0
