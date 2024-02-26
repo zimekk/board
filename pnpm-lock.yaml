@@ -116,7 +116,7 @@ importers:
         version: 4.18.2
       glob:
         specifier: ^10.3.3
-        version: 10.3.10
+        version: 10.3.3
       morgan:
         specifier: ^1.10.0
         version: 1.10.0
@@ -177,7 +177,7 @@ importers:
         version: 4.18.2
       glob:
         specifier: ^10.3.3
-        version: 10.3.10
+        version: 10.3.3
       jimp:
         specifier: ^0.22.8
         version: 0.22.8
@@ -359,7 +359,7 @@ importers:
         version: 2.1.2
       glob:
         specifier: ^10.3.3
-        version: 10.3.10
+        version: 10.3.3
       mqtt:
         specifier: ^5.3.5
         version: 5.3.5
@@ -409,7 +409,7 @@ importers:
         version: 4.18.2
       glob:
         specifier: ^10.3.3
-        version: 10.3.10
+        version: 10.3.3
       mqtt:
         specifier: ^5.3.5
         version: 5.3.5
@@ -465,7 +465,7 @@ importers:
         version: 4.18.2
       glob:
         specifier: ^10.3.3
-        version: 10.3.10
+        version: 10.3.3
       mqtt:
         specifier: ^5.3.5
         version: 5.3.5
@@ -548,7 +548,7 @@ importers:
         version: 4.18.2
       glob:
         specifier: ^10.3.3
-        version: 10.3.10
+        version: 10.3.3
       mime-types:
         specifier: ^2.1.35
         version: 2.1.35
@@ -7942,6 +7942,19 @@ packages:
       minimatch: 9.0.3
       minipass: 7.0.4
       path-scurry: 1.10.1
+    dev: true
+
+  /glob@10.3.3:
+    resolution: {integrity: sha512-92vPiMb/iqpmEgsOoIDvTjc50wf9CCCvMzsi6W0JLPeUKE8TWP1a73PgqSrqy7iAZxaSD1YdzU7QZR5LF51MJw==}
+    engines: {node: '>=16 || 14 >=14.17'}
+    hasBin: true
+    dependencies:
+      foreground-child: 3.1.1
+      jackspeak: 2.2.1
+      minimatch: 9.0.3
+      minipass: 6.0.2
+      path-scurry: 1.10.1
+    dev: false
 
   /glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
@@ -8772,6 +8785,15 @@ packages:
       set-function-name: 2.0.2
     dev: true
 
+  /jackspeak@2.2.1:
+    resolution: {integrity: sha512-MXbxovZ/Pm42f6cDIDkl3xpwv1AGwObKwfmjs2nQePiy85tP3fatofl3FC1aBsOtP/6fq5SbtgHwWcMsLP+bDw==}
+    engines: {node: '>=14'}
+    dependencies:
+      '@isaacs/cliui': 8.0.2
+    optionalDependencies:
+      '@pkgjs/parseargs': 0.11.0
+    dev: false
+
   /jackspeak@2.3.6:
     resolution: {integrity: sha512-N3yCS/NegsOBokc8GAdM8UcmfsKiSS8cipheD/nivzr700H+nsMOxJjQnvwOcRYVuFkdH0wGUvW2WbXGmrZGbQ==}
     engines: {node: '>=14'}
@@ -8779,6 +8801,7 @@ packages:
       '@isaacs/cliui': 8.0.2
     optionalDependencies:
       '@pkgjs/parseargs': 0.11.0
+    dev: true
 
   /jake@10.8.7:
     resolution: {integrity: sha512-ZDi3aP+fG/LchyBzUM804VjddnwfSfsdeYkwt8NcbKRvo4rFkjhs456iLFn3k2ZUWvNe4i48WACDbza8fhq2+w==}
@@ -9422,8 +9445,8 @@ packages:
   /minimist@1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
 
-  /minipass@7.0.4:
-    resolution: {integrity: sha512-jYofLM5Dam9279rdkWzqHozUo4ybjdZmCsDHePy5V/PbBcVMiSZR97gmAy45aqi8CK1lG2ECd356FU86avfwUQ==}
+  /minipass@6.0.2:
+    resolution: {integrity: sha512-MzWSV5nYVT7mVyWCwn2o7JH13w2TBRmmSqSRCKzTw+lmft9X4z+3wjvs06Tzijo5z4W/kahUCDpRXTF+ZrmF/w==}
     engines: {node: '>=16 || 14 >=14.17'}
 
   /minipass@7.0.4:
@@ -10033,7 +10056,7 @@ packages:
     engines: {node: '>=16 || 14 >=14.17'}
     dependencies:
       lru-cache: 10.2.0
-      minipass: 7.0.4
+      minipass: 6.0.2
 
   /path-to-regexp@0.1.7:
     resolution: {integrity: sha512-5DFkuoqlv1uYQKxy8omFBeJPQcdoE07Kv2sferDCrAq1ohOU+MSDswDIbnx3YAM60qIOnYa53wBhXW0EbMonrQ==}
