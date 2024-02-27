@@ -125,7 +125,7 @@ importers:
         version: 7.8.1
       web-push:
         specifier: ^3.6.4
-        version: 3.6.4
+        version: 3.6.7
     devDependencies:
       '@types/cors':
         specifier: ^2.8.13
@@ -8250,15 +8250,13 @@ packages:
       - debug
     dev: true
 
-  /http_ece@1.1.0:
-    resolution: {integrity: sha512-bptAfCDdPJxOs5zYSe7Y3lpr772s1G346R4Td5LgRUeCwIGpCGDUTJxRrhTNcAXbx37spge0kWEIH7QAYWNTlA==}
-    engines: {node: '>=4'}
-    dependencies:
-      urlsafe-base64: 1.0.0
+  /http_ece@1.2.0:
+    resolution: {integrity: sha512-JrF8SSLVmcvc5NducxgyOrKXe3EsyHMgBFgSaIUGmArKe+rwr0uphRkRXvwiom3I+fpIfoItveHrfudL8/rxuA==}
+    engines: {node: '>=16'}
     dev: false
 
-  /https-proxy-agent@7.0.1:
-    resolution: {integrity: sha512-Eun8zV0kcYS1g19r78osiQLEFIRspRUDd9tIfBCTBPBeMieF/EsJNL8VI3xOIdYRDEkjQnqOYPsZ2DsWsVsFwQ==}
+  /https-proxy-agent@7.0.4:
+    resolution: {integrity: sha512-wlwpilI7YdjSkWaQ/7omYBMTliDcmCN8OLihO6I9B86g06lMyAoqgoDpV0XqoaPOKj+0DIdAvnsWfyAAhmimcg==}
     engines: {node: '>= 14'}
     dependencies:
       agent-base: 7.1.0
@@ -9901,7 +9899,7 @@ packages:
       debug: 4.3.4
       get-uri: 6.0.1
       http-proxy-agent: 7.0.0
-      https-proxy-agent: 7.0.1
+      https-proxy-agent: 7.0.4
       pac-resolver: 7.0.0
       socks-proxy-agent: 8.0.1
     transitivePeerDependencies:
@@ -10414,7 +10412,7 @@ packages:
       agent-base: 7.1.0
       debug: 4.3.4
       http-proxy-agent: 7.0.0
-      https-proxy-agent: 7.0.1
+      https-proxy-agent: 7.0.4
       lru-cache: 7.18.3
       pac-proxy-agent: 7.0.0
       proxy-from-env: 1.1.0
@@ -12517,10 +12515,6 @@ packages:
       punycode: 2.3.0
     dev: true
 
-  /urlsafe-base64@1.0.0:
-    resolution: {integrity: sha512-RtuPeMy7c1UrHwproMZN9gN6kiZ0SvJwRaEzwZY0j9MypEkFqyBaKv176jvlPtg58Zh36bOkS0NFABXMHvvGCA==}
-    dev: false
-
   /use-asset@1.0.4(react@18.2.0):
     resolution: {integrity: sha512-7/hqDrWa0iMnCoET9W1T07EmD4Eg/Wmoj/X8TGBc++ECRK4m5yTsjP4O6s0yagbxfqIOuUkIxe2/sA+VR2GxZA==}
     peerDependencies:
@@ -12614,14 +12608,14 @@ packages:
       minimalistic-assert: 1.0.1
     dev: true
 
-  /web-push@3.6.4:
-    resolution: {integrity: sha512-An4nhiYuCPJkD51hXid7OIO3TACJsSUhj6XWDNvCDiLCS5ucEkhPUnh/s+jOWAJUUDASGHkuU8hFHg+mX+4vLQ==}
+  /web-push@3.6.7:
+    resolution: {integrity: sha512-OpiIUe8cuGjrj3mMBFWY+e4MMIkW3SVT+7vEIjvD9kejGUypv8GPDf84JdPWskK8zMRIJ6xYGm+Kxr8YkPyA0A==}
     engines: {node: '>= 16'}
     hasBin: true
     dependencies:
       asn1.js: 5.4.1
-      http_ece: 1.1.0
-      https-proxy-agent: 7.0.1
+      http_ece: 1.2.0
+      https-proxy-agent: 7.0.4
       jws: 4.0.0
       minimist: 1.2.8
     transitivePeerDependencies:
