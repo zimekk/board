@@ -50,7 +50,7 @@
     "@dev/stream": "1.0.0",
     "@dev/video": "1.0.0",
     "@hot-loader/react-dom": "^17.0.2",
-    "@types/chrome": "^0.0.261",
+    "@types/chrome": "^0.0.262",
     "@types/chromecast-caf-sender": "^1.0.8",
     "@types/html-webpack-plugin": "^3.2.6",
     "@types/node": "^20.0.0",
