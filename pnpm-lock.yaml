@@ -147,7 +147,7 @@ importers:
         version: 2.0.2
       sass-loader:
         specifier: ^14.0.0
-        version: 14.0.0(sass@1.64.2)(webpack@5.88.2)
+        version: 14.0.0(sass@1.71.1)(webpack@5.88.2)
       style-loader:
         specifier: ^3.3.3
         version: 3.3.4(webpack@5.88.2)
@@ -854,10 +854,10 @@ importers:
         version: 4.13.1(@types/react@18.2.59)(react-dom@18.2.0)(react@18.2.0)
       sass:
         specifier: ^1.64.2
-        version: 1.64.2
+        version: 1.71.1
       sass-loader:
         specifier: ^14.0.0
-        version: 14.0.0(sass@1.64.2)(webpack@5.88.2)
+        version: 14.0.0(sass@1.71.1)(webpack@5.88.2)
       serve:
         specifier: ^14.2.0
         version: 14.2.1
@@ -8425,8 +8425,8 @@ packages:
     resolution: {integrity: sha512-Q0QaXjPjwIju/28TsugCHNEASwoCcJSyJV3uO1sOIQGI0jKgm9f41Lvz0DZj3n46cNCyAZTsEYoY4C2bVRUzyQ==}
     dev: false
 
-  /immutable@4.3.0:
-    resolution: {integrity: sha512-0AOCmOip+xgJwEVTQj1EfiDDOkPmuyllDuTuEX+DDXUgapLAsBIfkg3sxCYyCEA8mQqZrrxPUGjcOQ2JS3WLkg==}
+  /immutable@4.3.5:
+    resolution: {integrity: sha512-8eabxkth9gZatlwl5TBuJnCsoTADlL6ftEr7A4qgdaTsPyreilDSnUk57SO+jfKcNtxPa22U5KK6DSeAYhpBJw==}
     dev: true
 
   /import-fresh@3.3.0:
@@ -11228,7 +11228,7 @@ packages:
   /safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  /sass-loader@14.0.0(sass@1.64.2)(webpack@5.88.2):
+  /sass-loader@14.0.0(sass@1.71.1)(webpack@5.88.2):
     resolution: {integrity: sha512-oceP9wWbep/yRJ2+sMbCzk0UsXsDzdNis+N8nu9i5GwPXjy6v3DNB6TqfJLSpPO9k4+B8x8p/CEgjA9ZLkoLug==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
@@ -11245,17 +11245,17 @@ packages:
         optional: true
     dependencies:
       neo-async: 2.6.2
-      sass: 1.64.2
+      sass: 1.71.1
       webpack: 5.88.2(webpack-cli@5.1.4)
     dev: true
 
-  /sass@1.64.2:
-    resolution: {integrity: sha512-TnDlfc+CRnUAgLO9D8cQLFu/GIjJIzJCGkE7o4ekIGQOH7T3GetiRR/PsTWJUHhkzcSPrARkPI+gNWn5alCzDg==}
+  /sass@1.71.1:
+    resolution: {integrity: sha512-wovtnV2PxzteLlfNzbgm1tFXPLoZILYAMJtvoXXkD7/+1uP41eKkIt1ypWq5/q2uT94qHjXehEYfmjKOvjL9sg==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
-      chokidar: 3.5.3
-      immutable: 4.3.0
+      chokidar: 3.6.0
+      immutable: 4.3.5
       source-map-js: 1.0.2
     dev: true
 
