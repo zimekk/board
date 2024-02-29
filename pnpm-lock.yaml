@@ -165,7 +165,7 @@ importers:
         version: 7.0.0(quill-delta@5.1.0)(rxjs@7.8.1)(tslib@2.6.2)(webpack@5.90.3)
       webpack-hot-middleware:
         specifier: ^2.25.4
-        version: 2.25.4
+        version: 2.26.1
       webpack-node-externals:
         specifier: ^3.0.0
         version: 3.0.0
@@ -8173,10 +8173,6 @@ packages:
     resolution: {integrity: sha512-8nxjcBcd8wovbeKx7h3wTji4e6+rhaVuPNpMqwWgnHh+N9ToqsCs6XztWRBPQ+UtzsoMAdKZtUENoVzU/EMtZA==}
     dev: false
 
-  /html-entities@2.3.6:
-    resolution: {integrity: sha512-9o0+dcpIw2/HxkNuYKxSJUF/MMRZQECK4GnF+oQOmJ83yCVHTWgCH5aOXxK5bozNRmM8wtgryjHD3uloPBDEGw==}
-    dev: true
-
   /html-entities@2.4.0:
     resolution: {integrity: sha512-igBTJcNNNhvZFRtm8uA6xMY6xYleeDwn3PeBCkDz7tHttv4F2hsDI2aPgNERWzvRcNYHNT3ymRaQzllmXj4YsQ==}
     dev: true
@@ -12736,11 +12732,11 @@ packages:
       - utf-8-validate
     dev: true
 
-  /webpack-hot-middleware@2.25.4:
-    resolution: {integrity: sha512-IRmTspuHM06aZh98OhBJtqLpeWFM8FXJS5UYpKYxCJzyFoyWj1w6VGFfomZU7OPA55dMLrQK0pRT1eQ3PACr4w==}
+  /webpack-hot-middleware@2.26.1:
+    resolution: {integrity: sha512-khZGfAeJx6I8K9zKohEWWYN6KDlVw2DHownoe+6Vtwj1LP9WFgegXnVMSkZ/dBEBtXFwrkkydsaPFlB7f8wU2A==}
     dependencies:
       ansi-html-community: 0.0.8
-      html-entities: 2.3.6
+      html-entities: 2.4.0
       strip-ansi: 6.0.1
     dev: true
 
