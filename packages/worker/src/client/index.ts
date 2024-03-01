@@ -93,7 +93,7 @@ export const client = () => {
       },
     ) {
       await queue.add(NAME_SCRAP, data, {
-        attempts: 3, // 5 - If job fails it will retry till 5 times
+        attempts: 2, // 5 - If job fails it will retry till 5 times
         backoff: seconds(30), // 5000 - static 5 sec delay between retry
         delay: seconds(15),
         removeOnComplete: 3, // 3 - A number specified the amount of jobs to keep.
