@@ -189,7 +189,7 @@ importers:
         version: 5.3.6
       music-metadata:
         specifier: ^7.13.4
-        version: 7.13.4
+        version: 7.14.0
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -9441,8 +9441,8 @@ packages:
       thunky: 1.1.0
     dev: true
 
-  /music-metadata@7.13.4:
-    resolution: {integrity: sha512-eRRoEMhhYdth2Ws24FmkvIqrtkIBE9sqjHbrRNpkg2Iux3zc37PQKRv2/r/mTtELb7XlB1uWC2UcKKX7BzNMGA==}
+  /music-metadata@7.14.0:
+    resolution: {integrity: sha512-xrm3w7SV0Wk+OythZcSbaI8mcr/KHd0knJieu8bVpaPfMv/Agz5EooCAPz3OR5hbYMiUG6dgAPKZKnMzV+3amA==}
     engines: {node: '>=10'}
     dependencies:
       '@tokenizer/token': 0.3.0
