@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunk_dev_web=self.webpackChunk_dev_web||[]).push([[455],{9455:(e,a,t)=>{t.r(a),t.d(a,{default:()=>n});var r=t(1855);function n(){return r.createElement("section",null,r.createElement("h2",null,"Waveform"),r.createElement("a",{href:"https://www.kaggle.com/datasets/aanhari/alexa-dataset",target:"_blank",rel:"noopener noreferrer"},"alexa-dataset"))}}}]);
+//# sourceMappingURL=455.js.map
