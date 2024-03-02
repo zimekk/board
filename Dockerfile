@@ -49,6 +49,8 @@ COPY packages/sql/package.json packages/sql/
 COPY packages/status/package.json packages/status/
 COPY packages/stream/package.json packages/stream/
 COPY packages/video/package.json packages/video/
+COPY packages/wakeword/package.json packages/wakeword/
+COPY packages/waveform/package.json packages/waveform/
 COPY packages/web/package.json packages/web/
 COPY packages/worker/package.json packages/worker/
 # RUN yarn --frozen-lockfile

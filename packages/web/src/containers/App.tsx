@@ -20,6 +20,7 @@ const PAGES = {
   status: lazy(() => import("@dev/status")),
   stream: lazy(() => import("@dev/stream")),
   video: lazy(() => import("@dev/video")),
+  waveform: lazy(() => import("@dev/waveform")),
 };
 
 const getPage = (location: { hash: string }) => {

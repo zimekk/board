@@ -49,6 +49,7 @@
     "@dev/status": "1.0.0",
     "@dev/stream": "1.0.0",
     "@dev/video": "1.0.0",
+    "@dev/waveform": "1.0.0",
     "@hot-loader/react-dom": "^17.0.2",
     "@types/chrome": "^0.0.262",
     "@types/chromecast-caf-sender": "^1.0.8",

@@ -1,0 +1,37 @@
+{
+  "name": "@dev/wakeword",
+  "version": "1.0.0",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "lib",
+  "files": [
+    "bin/",
+    "lib/"
+  ],
+  "bin": {
+    "wakeword": "bin/wakeword.js"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production tsc",
+    "wakeword": "bin/wakeword.js",
+    "coverage": "type-coverage && tsc --noEmit"
+  },
+  "dependencies": {
+    "mic": "^2.1.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0"
+  },
+  "optionalDependencies": {
+    "@mathquis/node-personal-wakeword": "^1.1.1"
+  }
+}
