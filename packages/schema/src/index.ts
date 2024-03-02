@@ -112,7 +112,7 @@ export const DelayedSchema = z
     stacktrace: z.array(z.unknown()),
     returnvalue: z.null(),
     failedReason: z.string().optional(),
-    finishedOn: z.null(),
+    finishedOn: z.number().nullable(),
     processedOn: z.number().nullable(),
   })
   .strict()
@@ -127,3 +127,5 @@ export const EntriesSchema = ReturnSchema.extend({
   type: z.string().optional(),
   returnvalue: z.any({}),
 });
+
+export const FailedSchema = DelayedSchema;

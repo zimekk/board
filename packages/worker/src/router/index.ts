@@ -44,9 +44,9 @@ export const router = () => {
             //   }
             //   return returnvalue;
             // })
-            .then((returnvalue) => res.json({ id, data, returnvalue }))
+            .then((returnvalue) => res.json({ id, data, returnvalue })),
         )
-        .catch(next)
+        .catch(next),
     )
     .post("/parse", json({ limit: "10mb" }), async (req, res, next) =>
       z
@@ -58,7 +58,7 @@ export const router = () => {
         .parseAsync(req.body)
         .then(parse)
         .then((data) => res.json(data))
-        .catch(next)
+        .catch(next),
     )
     .post("/process", json(), async (req, res) => {
       const { data, opts } = await z
@@ -82,10 +82,10 @@ export const router = () => {
           selected
             .reduce(
               (promise, id) => promise.then(() => worker.queue.removeJobs(id)),
-              Promise.resolve()
+              Promise.resolve(),
             )
-            .then(() => res.json({ status: "ok" }))
-        )
+            .then(() => res.json({ status: "ok" })),
+        ),
     )
     .post("/entries", json(), async (req, res, next) =>
       z
@@ -100,16 +100,16 @@ export const router = () => {
         .then(async ({ start, limit, type }) => {
           const list = await worker.queue.getCompleted(
             start,
-            start + limit - 1
+            start + limit - 1,
           );
           return EntrySchema.array()
             .parseAsync(list)
             .then((list) =>
-              list.filter((item) => type === "" || item.type === type)
+              list.filter((item) => type === "" || item.type === type),
             );
         })
         .then((entries) => res.json(entries))
-        .catch(next)
+        .catch(next),
     )
     .post("/delayed", json(), async (req, res) =>
       z
@@ -119,20 +119,48 @@ export const router = () => {
           const list = await worker.queue.getDelayed();
           return z.object({}).passthrough().array().parseAsync(list);
         })
-        .then((entries) => res.json(entries))
+        .then((entries) => res.json(entries)),
+    )
+    .post("/failed/retry", json(), async (req, res) =>
+      z
+        .object({
+          selected: z.string().array(),
+        })
+        .parseAsync(req.body)
+        .then(async ({ selected }) =>
+          selected
+            .reduce(
+              (promise, id) =>
+                promise
+                  .then(() => worker.queue.getJob(id))
+                  .then((job) => job.retry()),
+              Promise.resolve(),
+            )
+            .then(() => res.json({ status: "ok" })),
+        ),
+    )
+    .post("/failed", json(), async (req, res) =>
+      z
+        .object({})
+        .parseAsync(req.body)
+        .then(async () => {
+          const list = await worker.queue.getFailed();
+          return z.object({}).passthrough().array().parseAsync(list);
+        })
+        .then((entries) => res.json(entries)),
     )
     .get("/entry/:id", async (req, res) =>
       Promise.resolve(req.params).then(({ id }) =>
         worker.queue
           .getJob(id)
           .then((item) => EntrySchema.parseAsync(item))
-          .then((json) => res.send(json))
-      )
+          .then((json) => res.send(json)),
+      ),
     )
     .get("/delete/:id", async (req, res) =>
       Promise.resolve(req.params).then(({ id }) =>
-        worker.queue.removeJobs(id).then(() => res.json({ status: "ok" }))
-      )
+        worker.queue.removeJobs(id).then(() => res.json({ status: "ok" })),
+      ),
     )
     .get("/:type/:id/", async (req, res) =>
       Promise.resolve(req.params).then(({ id, type = "" }) =>
@@ -149,22 +177,20 @@ export const router = () => {
                   returnvalue: z.any(),
                 }),
               ])
-              .parseAsync(job)
+              .parseAsync(job),
           )
           .then((item) => (item ? item.returnvalue[type] || item : null))
-          .then((json) => (type === "html" ? res.send(json) : res.json(json)))
-      )
+          .then((json) => (type === "html" ? res.send(json) : res.json(json))),
+      ),
     )
     .post("/cleanup", async (_req, res) => {
       const queue = worker.queue;
       await Promise.all(
-        (
-          await queue.getRepeatableJobs()
-        ).map(
+        (await queue.getRepeatableJobs()).map(
           async ({ key }) =>
             Boolean(console.log(["cleanup"], { key })) ||
-            (await queue.removeRepeatableByKey(key))
-        )
+            (await queue.removeRepeatableByKey(key)),
+        ),
       );
       return res.json({ status: "ok" });
     })
