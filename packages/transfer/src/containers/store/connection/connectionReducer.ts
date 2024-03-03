@@ -1,4 +1,3 @@
-import { Reducer } from "redux";
 import { ConnectionActionType, ConnectionState } from "./connectionTypes";
 
 export const initialState: ConnectionState = {
@@ -8,10 +7,7 @@ export const initialState: ConnectionState = {
   selectedId: undefined,
 };
 
-export const ConnectionReducer: Reducer<ConnectionState> = (
-  state = initialState,
-  action,
-) => {
+export const ConnectionReducer = (state = initialState, action) => {
   if (action.type === ConnectionActionType.CONNECTION_INPUT_CHANGE) {
     const { id } = action;
     return { ...state, id };
