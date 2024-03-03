@@ -48,6 +48,7 @@
     "@dev/share": "1.0.0",
     "@dev/status": "1.0.0",
     "@dev/stream": "1.0.0",
+    "@dev/transfer": "1.0.0",
     "@dev/video": "1.0.0",
     "@dev/waveform": "1.0.0",
     "@dev/webrtc": "1.0.0",

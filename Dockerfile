@@ -48,6 +48,7 @@ COPY packages/share/package.json packages/share/
 COPY packages/sql/package.json packages/sql/
 COPY packages/status/package.json packages/status/
 COPY packages/stream/package.json packages/stream/
+COPY packages/transfer/package.json packages/transfer/
 COPY packages/video/package.json packages/video/
 COPY packages/wakeword/package.json packages/wakeword/
 COPY packages/waveform/package.json packages/waveform/

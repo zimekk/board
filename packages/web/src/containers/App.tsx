@@ -19,6 +19,7 @@ const PAGES = {
   share: lazy(() => import("@dev/share")),
   status: lazy(() => import("@dev/status")),
   stream: lazy(() => import("@dev/stream")),
+  transfer: lazy(() => import("@dev/transfer")),
   video: lazy(() => import("@dev/video")),
   waveform: lazy(() => import("@dev/waveform")),
   webrtc: lazy(() => import("@dev/webrtc")),

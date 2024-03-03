@@ -54,7 +54,7 @@ export default (_env, { mode }, dev = mode === "development") => ({
     extensions: [".tsx", ".ts", ".js"],
     alias: {
       events: "events",
-      "react-dom": "@hot-loader/react-dom",
+      // "react-dom": "@hot-loader/react-dom",
     },
     // https://webpack.js.org/configuration/resolve/#resolvefallback
     fallback: {
