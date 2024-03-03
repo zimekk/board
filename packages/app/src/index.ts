@@ -10,6 +10,7 @@ export const router = Router()
   .use(require("@dev/request/api").router())
   .use(require("@dev/share/api").router())
   .use(require("@dev/status/api").router())
+  .use(require("@dev/webrtc/api").router())
   .use(require("@dev/worker").router())
   .use(require("./push").default());
 

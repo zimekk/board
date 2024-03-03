@@ -21,11 +21,12 @@ const PAGES = {
   stream: lazy(() => import("@dev/stream")),
   video: lazy(() => import("@dev/video")),
   waveform: lazy(() => import("@dev/waveform")),
+  webrtc: lazy(() => import("@dev/webrtc")),
 };
 
 const getPage = (location: { hash: string }) => {
   const [, hash = Object.keys(PAGES)[0]] =
-    decodeURI(location.hash).match(/^#(.+)/) || [];
+    decodeURI(location.hash).match(/^#([^:]+)/) || [];
   return hash;
 };
 

@@ -52,6 +52,7 @@ COPY packages/video/package.json packages/video/
 COPY packages/wakeword/package.json packages/wakeword/
 COPY packages/waveform/package.json packages/waveform/
 COPY packages/web/package.json packages/web/
+COPY packages/webrtc/package.json packages/webrtc/
 COPY packages/worker/package.json packages/worker/
 # RUN yarn --frozen-lockfile
 # RUN yarn add -W music-metadata@7 strtok3 token-types
