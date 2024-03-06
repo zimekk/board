@@ -1,5 +1,6 @@
 {
   "name": "@dev/worker",
+  "type": "module",
   "version": "1.0.0",
   "license": "MIT",
   "publishConfig": {
@@ -14,6 +15,7 @@
     "broker": "bin/broker.js",
     "chrome": "bin/chrome.js",
     "parser": "bin/parser.js",
+    "prompt": "bin/prompt.js",
     "status": "bin/status.js",
     "worker": "bin/worker.js"
   },
@@ -24,7 +26,8 @@
   "scripts": {
     "build": "NODE_ENV=production tsc",
     "chrome": "bin/chrome.js",
-    "coverage": "type-coverage && tsc --noEmit"
+    "coverage": "type-coverage && tsc --noEmit",
+    "prompt": "node --import 'data:text/javascript,import{register}from\"node:module\";import{pathToFileURL}from\"node:url\";register(\"ts-node/esm\",pathToFileURL(\"./\"));' bin/prompt"
   },
   "dependencies": {
     "@bull-board/api": "^5.2.0",
@@ -45,6 +48,7 @@
     "@types/express": "^4.17.17",
     "@types/milliseconds": "^0.0.33",
     "@types/node": "^20.0.0",
+    "node-llama-cpp": "^2.8.8",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0"
   }
