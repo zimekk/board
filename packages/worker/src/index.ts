@@ -4,6 +4,8 @@ export { chrome } from "./client";
 
 export { parser } from "./parser";
 
+// export { prompt } from "./prompt";
+
 export { router } from "./router";
 
 export const broker = async (
@@ -30,8 +32,8 @@ export const status = async (...args: string[]) => {
         name,
         data,
         returnvalue,
-      }))
-    )
+      })),
+    ),
   );
 
   await queue
