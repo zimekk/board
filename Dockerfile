@@ -25,6 +25,9 @@ ENV TZ=Europe/Warsaw
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
     PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
+# https://withcatai.github.io/node-llama-cpp/guide/#installation
+ENV NODE_LLAMA_CPP_SKIP_DOWNLOAD=true
+
 ENV WORKDIR=/app
 RUN npm i -g pnpm
 
