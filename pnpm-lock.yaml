@@ -81,6 +81,9 @@ importers:
       '@dev/cast':
         specifier: 1.0.0
         version: link:../cast
+      '@dev/llama':
+        specifier: 1.0.0
+        version: link:../llama
       '@dev/movie':
         specifier: 1.0.0
         version: link:../movie
@@ -351,6 +354,25 @@ importers:
       vite:
         specifier: ~4.2.2
         version: 4.2.3(@types/node@20.11.24)
+
+  packages/llama:
+    dependencies:
+      express:
+        specifier: ^4.18.2
+        version: 4.18.3
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      zod:
+        specifier: ^3.21.4
+        version: 3.22.4
+    devDependencies:
+      '@types/express':
+        specifier: ^4.17.17
+        version: 4.17.21
+      '@types/react':
+        specifier: ^18.2.6
+        version: 18.2.63
 
   packages/movie:
     dependencies:
@@ -856,6 +878,9 @@ importers:
       '@dev/ext':
         specifier: 1.0.0
         version: link:../ext
+      '@dev/llama':
+        specifier: 1.0.0
+        version: link:../llama
       '@dev/movie':
         specifier: 1.0.0
         version: link:../movie
