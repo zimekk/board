@@ -1,5 +1,6 @@
 {
   "name": "@dev/worker",
+  "-type": "module",
   "version": "1.0.0",
   "license": "MIT",
   "publishConfig": {
@@ -26,7 +27,8 @@
     "build": "NODE_ENV=production tsc",
     "chrome": "bin/chrome.js",
     "coverage": "type-coverage && tsc --noEmit",
-    "prompt": "node --import 'data:text/javascript,import{register}from\"node:module\";import{pathToFileURL}from\"node:url\";register(\"ts-node/esm\",pathToFileURL(\"./\"));' bin/prompt"
+    "prompt": "node --import 'data:text/javascript,import{register}from\"node:module\";import{pathToFileURL}from\"node:url\";register(\"ts-node/esm\",pathToFileURL(\"./\"));' bin/prompt",
+    "whisper": "node bin/whisper"
   },
   "dependencies": {
     "@bull-board/api": "^5.2.0",
@@ -47,8 +49,13 @@
     "@types/express": "^4.17.17",
     "@types/milliseconds": "^0.0.33",
     "@types/node": "^20.0.0",
-    "node-llama-cpp": "^2.8.8",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0"
+  },
+  "-optionalDependencies": {
+    "@llama-node/llama-cpp": "^0.1.6",
+    "llama-node": "^0.1.6",
+    "llamaindex-whisper": "^0.0.5",
+    "node-llama-cpp": "^2.8.8"
   }
 }

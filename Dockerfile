@@ -55,10 +55,12 @@ COPY packages/stream/package.json packages/stream/
 COPY packages/transfer/package.json packages/transfer/
 COPY packages/video/package.json packages/video/
 COPY packages/wakeword/package.json packages/wakeword/
+COPY packages/wakeword/bin/ packages/wakeword/bin/
 COPY packages/waveform/package.json packages/waveform/
 COPY packages/web/package.json packages/web/
 COPY packages/webrtc/package.json packages/webrtc/
 COPY packages/worker/package.json packages/worker/
+COPY packages/worker/bin/ packages/worker/bin/
 # RUN yarn --frozen-lockfile
 # RUN yarn add -W music-metadata@7 strtok3 token-types
 RUN pnpm i

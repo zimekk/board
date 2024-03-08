@@ -7,6 +7,7 @@ export { parser } from "./parser";
 // export { prompt } from "./prompt";
 
 export { router } from "./router";
+export { whisper } from "./whisper";
 
 export const broker = async (
   url = "https://zimekk.github.io/board/",
