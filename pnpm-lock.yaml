@@ -195,7 +195,7 @@ importers:
         version: 2.1.35
       mqtt:
         specifier: ^5.3.5
-        version: 5.3.6
+        version: 5.4.0
       music-metadata:
         specifier: ^7.13.4
         version: 7.14.0
@@ -232,7 +232,7 @@ importers:
         version: 2.1.35
       mqtt:
         specifier: ^5.3.5
-        version: 5.3.6
+        version: 5.4.0
       nodecast-js:
         specifier: ^1.0.3
         version: 1.0.3
@@ -390,7 +390,7 @@ importers:
         version: 10.3.10
       mqtt:
         specifier: ^5.3.5
-        version: 5.3.6
+        version: 5.4.0
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -440,7 +440,7 @@ importers:
         version: 10.3.10
       mqtt:
         specifier: ^5.3.5
-        version: 5.3.6
+        version: 5.4.0
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -493,7 +493,7 @@ importers:
         version: 10.3.10
       mqtt:
         specifier: ^5.3.5
-        version: 5.3.6
+        version: 5.4.0
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -579,7 +579,7 @@ importers:
         version: 2.1.35
       mqtt:
         specifier: ^5.3.5
-        version: 5.3.6
+        version: 5.4.0
       nodecast-js:
         specifier: ^1.0.3
         version: 1.0.3
@@ -632,7 +632,7 @@ importers:
         version: 4.18.3
       mqtt:
         specifier: ^5.3.5
-        version: 5.3.6
+        version: 5.4.0
       nodemailer:
         specifier: ^6.9.2
         version: 6.9.12
@@ -5160,8 +5160,8 @@ packages:
     dev: false
     optional: true
 
-  /bl@6.0.11:
-    resolution: {integrity: sha512-Ok/NWrEA0mlEEbWzckkZVLq6Nv1m2xZ+i9Jq5hZ9Ph/YEcP5dExqls9wUzpluhQRPzdeT8oZNOXAytta6YN8pQ==}
+  /bl@6.0.12:
+    resolution: {integrity: sha512-EnEYHilP93oaOa2MnmNEjAcovPS3JlQZOyzGXi3EyEpPhm9qWvdDp7BmAVEVusGzp8LlwQK56Av+OkDoRjzE0w==}
     dependencies:
       '@types/readable-stream': 4.0.10
       buffer: 6.0.3
@@ -6811,9 +6811,9 @@ packages:
     resolution: {integrity: sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==}
     dev: true
 
-  /fast-unique-numbers@9.0.0:
-    resolution: {integrity: sha512-lgIjiflW23W7qgagregmo5FFzM+m4/dWaDUVneRi2AV7o2k5npggeEX7srSKlYfJU9fKXvQV2Gzk3272fJT65w==}
-    engines: {node: '>=18.2.0'}
+  /fast-unique-numbers@8.0.13:
+    resolution: {integrity: sha512-7OnTFAVPefgw2eBJ1xj2PGGR9FwYzSUso9decayHgCDX4sJkHLdcsYTytTg+tYv+wKF3U8gJuSBz2jJpQV4u/g==}
+    engines: {node: '>=16.1.0'}
     dependencies:
       '@babel/runtime': 7.24.0
       tslib: 2.6.2
@@ -8767,15 +8767,15 @@ packages:
   /mqtt-packet@9.0.0:
     resolution: {integrity: sha512-8v+HkX+fwbodsWAZIZTI074XIoxVBOmPeggQuDFCGg1SqNcC+uoRMWu7J6QlJPqIUIJXmjNYYHxBBLr1Y/Df4w==}
     dependencies:
-      bl: 6.0.11
+      bl: 6.0.12
       debug: 4.3.4
       process-nextick-args: 2.0.1
     transitivePeerDependencies:
       - supports-color
     dev: false
 
-  /mqtt@5.3.6:
-    resolution: {integrity: sha512-3XeyCdHRFf3zZdUUBt/pqprKPtUABc8O4ZGPGs2QPO4sPNTnJels8U2UtBtMt09QCgpUmw8gLTLy2R7verR7kQ==}
+  /mqtt@5.4.0:
+    resolution: {integrity: sha512-vU03lqX+IpMuHlPSRNl3+HSMNrz5vN5yyZ6wWyv23mDQj/1Lm1JlAT4pvQCfZq9jvsnmSwMqSkB5mm2WUOJw6Q==}
     engines: {node: '>=16.0.0'}
     hasBin: true
     dependencies:
@@ -8793,7 +8793,7 @@ packages:
       reinterval: 1.1.0
       rfdc: 1.3.1
       split2: 4.2.0
-      worker-timers: 7.1.2
+      worker-timers: 7.1.4
       ws: 8.16.0
     transitivePeerDependencies:
       - bufferutil
@@ -12797,29 +12797,29 @@ packages:
       workbox-core: 7.0.0
     dev: true
 
-  /worker-timers-broker@6.1.2:
-    resolution: {integrity: sha512-slFupigW5vtkGJ1VBCxYPwXFFRmvfioh02bCltBhbMkt3fFnkAbKBCg61pNTetlD0RAsP09mqx/FB0f4UMoHNw==}
+  /worker-timers-broker@6.1.4:
+    resolution: {integrity: sha512-y3D+Yfj37lrItEMIlcfCm/IRueYtYKgpLlTG2wgTIZ9PSw0n/K4kweilgk3gTC4ahbQNVGT90lU+Rf7W4M5bsw==}
     dependencies:
       '@babel/runtime': 7.24.0
-      fast-unique-numbers: 9.0.0
+      fast-unique-numbers: 8.0.13
       tslib: 2.6.2
-      worker-timers-worker: 7.0.66
+      worker-timers-worker: 7.0.67
     dev: false
 
-  /worker-timers-worker@7.0.66:
-    resolution: {integrity: sha512-VCLa0H5K9fE2DVI/9r5zDuFrMQIpNL3UD/h4Ui49fIiRBTgv1Sqe0RM12brr83anBsm103aUQkvKvCBL+KpNtg==}
+  /worker-timers-worker@7.0.67:
+    resolution: {integrity: sha512-0ZP2+v2fyiiiGaCEdWxMRUk5YxGFwWdRGB12ZfQy13vw8/27Xd+MW3ua56qlcM30nzjpddXXzLuEpHhGW+Pz7w==}
     dependencies:
       '@babel/runtime': 7.24.0
       tslib: 2.6.2
     dev: false
 
-  /worker-timers@7.1.2:
-    resolution: {integrity: sha512-iqhXt5+Mc3u2nHj3G/w/E9pXqhlueniA2NlyelB/MQSHQuuW2fmmZGkveAv6yi4SSZvrpbveBBlqPSZ0MDCLww==}
+  /worker-timers@7.1.4:
+    resolution: {integrity: sha512-8PRtiPAyeYukrY+iOUL+0tq4Zn5qyCHrTqFTtHxcESfIxGyulxNwyzQkybrYBKhnMWmx0bku3wxRfE1hts5R6Q==}
     dependencies:
       '@babel/runtime': 7.24.0
       tslib: 2.6.2
-      worker-timers-broker: 6.1.2
-      worker-timers-worker: 7.0.66
+      worker-timers-broker: 6.1.4
+      worker-timers-worker: 7.0.67
     dev: false
 
   /wrap-ansi@7.0.0:
