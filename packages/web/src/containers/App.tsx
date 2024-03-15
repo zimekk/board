@@ -10,6 +10,7 @@ const PAGES = {
   cast: lazy(() => import("@dev/cast")),
   cron: lazy(() => import("@dev/cron")),
   hello: lazy(() => import("./Hello")),
+  lan: lazy(() => import("@dev/lan")),
   llama: lazy(() => import("@dev/llama")),
   movie: lazy(() => import("@dev/movie")),
   overlay: lazy(() => import("@dev/overlay")),

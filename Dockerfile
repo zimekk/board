@@ -34,12 +34,15 @@ RUN npm i -g pnpm
 WORKDIR $WORKDIR
 COPY package.json pnpm-*.yaml ./
 COPY packages/api/package.json packages/api/
+COPY packages/api-graphql/package.json packages/api-graphql/
 COPY packages/app/package.json packages/app/
 COPY packages/audio/package.json packages/audio/
 COPY packages/cast/package.json packages/cast/
 COPY packages/chrome/package.json packages/chrome/
+COPY packages/client/package.json packages/client/
 COPY packages/cron/package.json packages/cron/
 COPY packages/ext/package.json packages/ext/
+COPY packages/lan/package.json packages/lan/
 COPY packages/llama/package.json packages/llama/
 COPY packages/movie/package.json packages/movie/
 COPY packages/overlay/package.json packages/overlay/

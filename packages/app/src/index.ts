@@ -5,6 +5,7 @@ import { api } from "@dev/api/lib";
 export const router = Router()
   .use("/api", api)
   .use("/video", require("@dev/video/api").router())
+  .use(require("@dev/api-graphql").router())
   .use(require("@dev/llama/api").router())
   .use(require("@dev/movie/api").router())
   .use(require("@dev/photo/api").router())
@@ -172,6 +173,9 @@ if (process.mainModule.filename === __filename) {
       if (!devServer) {
         throw new Error("webpack-dev-server is not defined");
       }
+
+      // https://github.com/websockets/ws#client-authentication
+      require("@dev/api-graphql").useServer(devServer.server);
 
       const port = devServer.server.address().port;
       console.log(`Listening on port: ${port}`);
