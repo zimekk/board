@@ -5,7 +5,8 @@
   "private": true,
   "main": "lib",
   "scripts": {
-    "build": "NODE_ENV=production tsc --declaration"
+    "build": "NODE_ENV=production tsc --declaration",
+    "coverage": "type-coverage && tsc --noEmit"
   },
   "dependencies": {
     "@dev/client": "1.0.0",
@@ -18,6 +19,7 @@
   },
   "devDependencies": {
     "@types/node-wifi": "^2.0.0",
+    "@types/react": "^18.2.18",
     "graphql": "^16.6.0",
     "graphql-ws": "^5.12.1",
     "typescript": "^5.0.4"
