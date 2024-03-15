@@ -1,0 +1,14 @@
+"use strict";(self.webpackChunk_dev_web=self.webpackChunk_dev_web||[]).push([[257],{74257:(e,n,t)=>{t.r(n),t.d(n,{default:()=>q});var l=t(11855),a=t(14407),s=t(85045),c=t(66548),r=t(47527);const o=new a.l4(`${location.pathname}graphql`,{headers:{}}),u=(0,r.UU)({url:`${{"https:":"wss:"}[location.protocol]||"ws:"}//${location.host}${location.pathname}subscriptions`});var i=t(59019),d=t.n(i),h=t(90528),A=t.n(h),m=t(88108),E=t.n(m),b=t(72555),p=t.n(b),C=t(12735),g=t.n(C),k=t(85884),y=t.n(k),w=t(88896),f={};f.styleTagTransform=y(),f.setAttributes=p(),f.insert=E().bind(null,"head"),f.domAPI=A(),f.insertStyleElement=g(),d()(w.A,f);const _=w.A&&w.A.locals?w.A.locals:void 0;class v{client=o;subscriptions=u}const T=a.J1`
+  query ScanQuery {
+    lan {
+      scan
+    }
+  }
+`,B=a.J1`
+  query GetCurrentConnectionsQuery {
+    lan {
+      currentConnections
+    }
+  }
+`,J=new class extends v{scan(){return(0,s.H)(this.client.request(T)).pipe((0,c.T)((({lan:{scan:e}})=>e)))}getCurrentConnections(){return(0,s.H)(this.client.request(B)).pipe((0,c.T)((({lan:{currentConnections:e}})=>e)))}};function q(){const{data:e,scan:n}=function(){const[e,n]=(0,l.useState)((()=>[]));return(0,l.useEffect)((()=>{J.getCurrentConnections().subscribe((e=>n(e)))}),[]),{data:e,scan:(0,l.useCallback)((()=>J.scan().subscribe((e=>n(e)))),[])}}();return l.createElement("div",{className:_.Section},l.createElement("h2",null,"Lan"),e&&l.createElement("table",null,l.createElement("tbody",null,l.createElement("tr",null,l.createElement("th",null,"ssid"),l.createElement("th",null,"mac"),l.createElement("th",null,"channel"),l.createElement("th",null,"signal_level"),l.createElement("th",null,"quality"),l.createElement("th",null,"security")),e.map(((e,n)=>l.createElement("tr",{key:n},l.createElement("td",null,e.ssid),l.createElement("td",null,e.mac),l.createElement("td",null,e.channel),l.createElement("td",null,e.signal_level),l.createElement("td",null,e.quality),l.createElement("td",null,e.security)))))),l.createElement("button",{onClick:()=>n()},"scan"),l.createElement("pre",null,JSON.stringify(e,null,2)))}},88896:(e,n,t)=>{t.d(n,{A:()=>r});var l=t(78996),a=t.n(l),s=t(84428),c=t.n(s)()(a());c.push([e.id,".jnL5aDk4hheBE_J1TFdb{color:green}.jnL5aDk4hheBE_J1TFdb table{border-collapse:collapse;width:100%}.jnL5aDk4hheBE_J1TFdb th,.jnL5aDk4hheBE_J1TFdb td{padding:.25em;text-align:left}","",{version:3,sources:["webpack://./../lan/src/containers/styles.module.scss"],names:[],mappings:"AAAA,sBACE,WAAA,CAEA,4BACE,wBAAA,CACA,UAAA,CAEF,kDAEE,aAAA,CACA,eAAA",sourcesContent:[".Section {\n  color: green;\n\n  table {\n    border-collapse: collapse;\n    width: 100%;\n  }\n  th,\n  td {\n    padding: 0.25em;\n    text-align: left;\n  }\n}\n"],sourceRoot:""}]),c.locals={Section:"jnL5aDk4hheBE_J1TFdb"};const r=c}}]);
+//# sourceMappingURL=257.js.map
