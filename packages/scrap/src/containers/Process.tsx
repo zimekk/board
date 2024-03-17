@@ -1,17 +1,17 @@
+import { DataSchema, OptsSchema } from "@dev/schema";
+import chunk from "chunk";
+import { seconds } from "milliseconds";
 import React, {
-  type ChangeEventHandler,
   useCallback,
   useEffect,
   // useId,
   useMemo,
   useState,
+  type ChangeEventHandler,
 } from "react";
-import chunk from "chunk";
-import { seconds } from "milliseconds";
 import { Subject } from "rxjs";
 import { debounceTime, distinctUntilChanged, map } from "rxjs/operators";
 import { z } from "zod";
-import { DataSchema, OptsSchema } from "@dev/schema";
 import { Fieldset } from "../components/Fieldset";
 import { Link } from "../components/Link";
 import { Spinner } from "../components/Spinner";
@@ -766,10 +766,12 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
           "g-6/c/421-urzadzenia-sieciowe.html?producent=628-ubiquiti&hide_unavailable=1",
           "g-6/c/425-switche.html?producent=276-tp-link&f3303-typ-obudowy=45868-do-szaf-rack&hide_unavailable=1",
           "g-6/c/456-access-pointy.html?producent=276-tp-link&hide_unavailable=1",
+          "g-6/c/459-drukarki-do-zdjec.html",
           "g-6/c/1215-sluchawki.html?producent=357-apple&producent=1214-marshall&producent=2334-shure",
           "g-6/c/1295-monitory-led-32-i-wieksze.html?producent=396-dell",
           "g-6/c/1407-manipulatory.html",
           "g-6/c/1544-drukarki-etykiet.html",
+          "g-6/c/1749-projektory.html?f1809-technologia-wyswietlania=126474-laser&f1809-technologia-wyswietlania=157709-led",
           "g-6/c/1751-prezentery.html",
           "g-6/c/2280-szafy-rack.html?producent=1278-lanberg",
           "g-6/c/2326-kamery-ip.html?producent=276-tp-link&producent=2287-hikvision",
