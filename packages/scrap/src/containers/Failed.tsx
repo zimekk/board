@@ -1,16 +1,16 @@
+import { FailedSchema } from "@dev/schema";
 import React, {
-  type ChangeEventHandler,
-  type Dispatch,
-  type SetStateAction,
   useCallback,
   useEffect,
   useMemo,
   useState,
+  type ChangeEventHandler,
+  type Dispatch,
+  type SetStateAction,
 } from "react";
 import { Subject } from "rxjs";
 import { debounceTime, distinctUntilChanged, map } from "rxjs/operators";
 import { z } from "zod";
-import { FailedSchema } from "@dev/schema";
 import { Fieldset } from "../components/Fieldset";
 import { Spinner } from "../components/Spinner";
 import { API_URL, post } from "./Process";
@@ -84,7 +84,8 @@ function Failed({
       failed.filter(
         (item) =>
           // (filters.type === "" || filters.type === item.type) &&
-          filters.query === "" || item.data.url.includes(filters.query),
+          filters.query === "" ||
+          (item.data.url && item.data.url.includes(filters.query)),
       )
     ),
     [failed, filters],
@@ -193,11 +194,22 @@ function Failed({
                 : z
                     .object({
                       id: z.string(),
-                      // name: z.string(),
+                      name: z.string(),
                       data: z
-                        .object({ url: z.string() })
+                        .object({ url: z.string().optional() })
                         .transform(({ url }) => url),
                     })
+                    .transform(({ data, name, ...rest }) =>
+                      data
+                        ? {
+                            ...rest,
+                            data,
+                          }
+                        : {
+                            ...rest,
+                            name,
+                          },
+                    )
                     .parse(item),
               null,
               2,
