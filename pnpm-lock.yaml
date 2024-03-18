@@ -229,7 +229,7 @@ importers:
         version: 2.1.35
       mqtt:
         specifier: ^5.3.5
-        version: 5.4.0
+        version: 5.5.0
       music-metadata:
         specifier: ^7.13.4
         version: 7.14.0
@@ -266,7 +266,7 @@ importers:
         version: 2.1.35
       mqtt:
         specifier: ^5.3.5
-        version: 5.4.0
+        version: 5.5.0
       nodecast-js:
         specifier: ^1.0.3
         version: 1.0.3
@@ -480,7 +480,7 @@ importers:
         version: 10.3.10
       mqtt:
         specifier: ^5.3.5
-        version: 5.4.0
+        version: 5.5.0
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -530,7 +530,7 @@ importers:
         version: 10.3.10
       mqtt:
         specifier: ^5.3.5
-        version: 5.4.0
+        version: 5.5.0
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -583,7 +583,7 @@ importers:
         version: 10.3.10
       mqtt:
         specifier: ^5.3.5
-        version: 5.4.0
+        version: 5.5.0
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -669,7 +669,7 @@ importers:
         version: 2.1.35
       mqtt:
         specifier: ^5.3.5
-        version: 5.4.0
+        version: 5.5.0
       nodecast-js:
         specifier: ^1.0.3
         version: 1.0.3
@@ -722,7 +722,7 @@ importers:
         version: 4.18.3
       mqtt:
         specifier: ^5.3.5
-        version: 5.4.0
+        version: 5.5.0
       nodemailer:
         specifier: ^6.9.2
         version: 6.9.12
@@ -4268,8 +4268,8 @@ packages:
       '@types/scheduler': 0.16.8
       csstype: 3.1.3
 
-  /@types/readable-stream@4.0.10:
-    resolution: {integrity: sha512-AbUKBjcC8SHmImNi4yK2bbjogQlkFSg7shZCcicxPQapniOlajG8GCc39lvXzCWX4lLRRs7DM3VAeSlqmEVZUA==}
+  /@types/readable-stream@4.0.11:
+    resolution: {integrity: sha512-R3eUMUTTKoIoaz7UpYLxvZCrOmCRPRbAmoDDHKcimTEySltaJhF8hLzj4+EzyDifiX5eK6oDQGSfmNnXjxZzYQ==}
     dependencies:
       '@types/node': 20.11.28
       safe-buffer: 5.1.2
@@ -5304,7 +5304,7 @@ packages:
   /bl@6.0.12:
     resolution: {integrity: sha512-EnEYHilP93oaOa2MnmNEjAcovPS3JlQZOyzGXi3EyEpPhm9qWvdDp7BmAVEVusGzp8LlwQK56Av+OkDoRjzE0w==}
     dependencies:
-      '@types/readable-stream': 4.0.10
+      '@types/readable-stream': 4.0.11
       buffer: 6.0.3
       inherits: 2.0.4
       readable-stream: 4.5.2
@@ -9113,12 +9113,12 @@ packages:
       - supports-color
     dev: false
 
-  /mqtt@5.4.0:
-    resolution: {integrity: sha512-vU03lqX+IpMuHlPSRNl3+HSMNrz5vN5yyZ6wWyv23mDQj/1Lm1JlAT4pvQCfZq9jvsnmSwMqSkB5mm2WUOJw6Q==}
+  /mqtt@5.5.0:
+    resolution: {integrity: sha512-8WGQpjEzABcCh/UwLj7XaEoLsSLHJrJK3YLu57fJoLUBdz6zPGFdxWK3i1YYdPqKDu0sU6YHt+tly/qdLsLiyg==}
     engines: {node: '>=16.0.0'}
     hasBin: true
     dependencies:
-      '@types/readable-stream': 4.0.10
+      '@types/readable-stream': 4.0.11
       '@types/ws': 8.5.10
       commist: 3.2.0
       concat-stream: 2.0.0
