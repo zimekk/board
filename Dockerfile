@@ -13,6 +13,7 @@ RUN apk add --no-cache \
       freetype \
       harfbuzz \
       ca-certificates \
+      networkmanager-cli \
       ttf-freefont \
       tzdata \
       zip

@@ -1,5 +1,5 @@
-import gql from "graphql-tag";
 import { makeExecutableSchema } from "@graphql-tools/schema";
+import gql from "graphql-tag";
 import wifi from "node-wifi";
 
 // Initialize wifi module
@@ -25,6 +25,9 @@ export default makeExecutableSchema({
     LanQueries: {
       // https://github.com/friedrith/node-wifi#getting-started
       currentConnections: async (_) => {
+        if (process.platform !== "darwin") {
+          return [];
+        }
         // List the current wifi connections
         return wifi.getCurrentConnections();
       },
