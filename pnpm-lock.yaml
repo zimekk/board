@@ -205,7 +205,7 @@ importers:
         version: 5.91.0(webpack-cli@5.1.4)
       webpack-dev-middleware:
         specifier: ^7.0.0
-        version: 7.1.0(webpack@5.91.0)
+        version: 7.1.1(webpack@5.91.0)
       webpack-hot-middleware:
         specifier: ^2.25.4
         version: 2.26.1
@@ -12874,8 +12874,8 @@ packages:
       webpack-merge: 5.9.0
     dev: true
 
-  /webpack-dev-middleware@7.1.0(webpack@5.91.0):
-    resolution: {integrity: sha512-+RYhGOyviHkKdMi1aaT8WZBQW033YgyBgtQHF2kMWo3mYA9z7W2AjsyY/DIzvp2Bhzys4UgHXFsIyTiL5qRBVw==}
+  /webpack-dev-middleware@7.1.1(webpack@5.91.0):
+    resolution: {integrity: sha512-NmRVq4AvRQs66dFWyDR4GsFDJggtSi2Yn38MXLk0nffgF9n/AIP4TFBg2TQKYaRAN4sHuKOTiz9BnNCENDLEVA==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
       webpack: ^5.0.0
@@ -12935,7 +12935,7 @@ packages:
       spdy: 4.0.2
       webpack: 5.91.0(webpack-cli@5.1.4)
       webpack-cli: 5.1.4(webpack-dev-server@5.0.4)(webpack@5.91.0)
-      webpack-dev-middleware: 7.1.0(webpack@5.91.0)
+      webpack-dev-middleware: 7.1.1(webpack@5.91.0)
       ws: 8.16.0
     transitivePeerDependencies:
       - bufferutil
