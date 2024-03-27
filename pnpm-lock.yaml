@@ -98,7 +98,7 @@ importers:
         version: 2.0.0(graphql@16.8.1)
       graphql-ws:
         specifier: ^5.12.1
-        version: 5.15.0(graphql@16.8.1)
+        version: 5.16.0(graphql@16.8.1)
     devDependencies:
       '@types/express':
         specifier: ^4.17.17
@@ -325,7 +325,7 @@ importers:
         version: 6.1.0(graphql@16.8.1)
       graphql-ws:
         specifier: ^5.12.1
-        version: 5.15.0(graphql@16.8.1)
+        version: 5.16.0(graphql@16.8.1)
     devDependencies:
       typescript:
         specifier: ^5.0.4
@@ -443,7 +443,7 @@ importers:
         version: 16.8.1
       graphql-ws:
         specifier: ^5.12.1
-        version: 5.15.0(graphql@16.8.1)
+        version: 5.16.0(graphql@16.8.1)
       typescript:
         specifier: ^5.0.4
         version: 5.4.3
@@ -7580,8 +7580,8 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /graphql-ws@5.15.0(graphql@16.8.1):
-    resolution: {integrity: sha512-xWGAtm3fig9TIhSaNsg0FaDZ8Pyn/3re3RFlP4rhQcmjRDIPpk1EhRuNB+YSJtLzttyuToaDiNhwT1OMoGnJnw==}
+  /graphql-ws@5.16.0(graphql@16.8.1):
+    resolution: {integrity: sha512-Ju2RCU2dQMgSKtArPbEtsK5gNLnsQyTNIo/T7cZNp96niC1x0KdJNZV0TIoilceBPQwfb5itrGl8pkFeOUMl4A==}
     engines: {node: '>=10'}
     peerDependencies:
       graphql: '>=0.11 <=16'
