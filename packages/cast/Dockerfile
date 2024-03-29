@@ -13,7 +13,6 @@ COPY package.json ./
 RUN pnpm i --config.ignore-scripts=true
 
 COPY . ./
-# RUN pnpm build && pnpm prune --prod --config.ignore-scripts=true
-RUN pnpm build
+RUN pnpm build && pnpm prune --prod --config.ignore-scripts=true
 
 CMD ["pnpm", "start"]
