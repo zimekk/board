@@ -24,10 +24,14 @@ services:
       - /dev/snd:/dev/snd
   cast:
     build: packages/cast
+    cap_add:
+      - SYS_ADMIN
+      - NET_ADMIN
     environment:
       - MQTT_URL=mqtt://localhost
     network_mode: host
-    restart: unless-stopped
+    volumes:
+      - /var/run/dbus:/var/run/dbus
   # mqtt:
   #   image: emqx:5.4
   #   networks:

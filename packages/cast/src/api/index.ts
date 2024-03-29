@@ -1,6 +1,6 @@
-import { z } from "zod";
-import mqtt from "mqtt";
-import { DeviceSchema } from "../schema";
+// import { z } from "zod";
+// import mqtt from "mqtt";
+// import { DeviceSchema } from "../schema";
 
 var Client = require("castv2").Client;
 var mdns = require("mdns");
