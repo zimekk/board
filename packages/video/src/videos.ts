@@ -71,9 +71,12 @@ export default [
   "https://www.youtube.com/watch?v=A3I8BISQfWc",
   "https://www.youtube.com/watch?v=ePNUSmH3dMI",
   "https://www.youtube.com/watch?v=ePwwMgrPMW8",
-  "https://www.youtube.com/watch?v=ghk3ETIy_ww",
+  "https://www.youtube.com/watch?v=mQQKZ5cgybU",
   "https://www.youtube.com/watch?v=ypbjIwbTR8c",
   "https://www.youtube.com/watch?v=238Z4YaAr1g",
   "https://www.youtube.com/watch?v=GZ3zL7kT6_c",
   "https://www.youtube.com/watch?v=RF0HhrwIwp0",
+  "https://www.youtube.com/watch?v=_YZdxlQHLeA",
+  "https://www.youtube.com/watch?v=Bv9fkbj3Rug",
+  "https://www.youtube.com/watch?v=5vheNbQlsyU",
 ];
