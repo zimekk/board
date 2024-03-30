@@ -856,6 +856,9 @@ importers:
       react-player:
         specifier: ^2.13.0
         version: 2.15.1(react@18.2.0)
+      rxjs:
+        specifier: ^7.8.1
+        version: 7.8.1
       styled-components:
         specifier: ^6.0.5
         version: 6.1.8(react-dom@18.2.0)(react@18.2.0)

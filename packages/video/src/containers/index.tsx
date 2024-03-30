@@ -1,22 +1,23 @@
 import React, {
+  useCallback,
+  useEffect,
+  useState,
   type ChangeEventHandler,
   type MouseEventHandler,
-  useCallback,
-  useState,
-  useEffect,
 } from "react";
 import ReactPlayer from "react-player/youtube";
+import { LazyImage, LazyImageProvider } from "../components/Image";
 import { Spinner } from "../components/Spinner";
 import {
-  type BasicInfoType as InfoType,
   BasicInfoSchema as InfoSchema,
+  type BasicInfoType as InfoType,
 } from "../schema";
 import videos from "../videos";
 
 function Data({ data }: { data: object }) {
   const [show, setShow] = useState(false);
 
-  const handleClick = useCallback(
+  const handleClick = useCallback<MouseEventHandler<HTMLAnchorElement>>(
     (e) => (e.preventDefault(), setShow((show) => !show)),
     [],
   );
@@ -51,12 +52,7 @@ function Info({
         .map(({ url, width, height }, key) => (
           <div key={key}>
             <a href={link} onClick={handleClick}>
-              <img
-                src={url}
-                width={width}
-                height={height}
-                referrerPolicy="no-referrer"
-              />
+              <LazyImage src={url} width={width} height={height} />
             </a>
             <div>
               <strong>{info.videoDetails.title}</strong>
@@ -196,7 +192,9 @@ export default function Section() {
   return (
     <section>
       <h2>Video</h2>
-      <List />
+      <LazyImageProvider>
+        <List />
+      </LazyImageProvider>
     </section>
   );
 }

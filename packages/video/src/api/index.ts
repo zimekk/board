@@ -1,9 +1,9 @@
 import { Router } from "express";
+import ffmpeg from "fluent-ffmpeg";
+import { LocalStorage } from "node-localstorage";
 import fs from "node:fs";
 import { dirname, resolve } from "node:path";
-import { LocalStorage } from "node-localstorage";
 import ytdl from "ytdl-core";
-import ffmpeg from "fluent-ffmpeg";
 import { z } from "zod";
 
 const { LIBRARY_PATH = "" } = process.env;
@@ -12,7 +12,7 @@ const cwd = resolve(dirname(require.resolve("../../../../.env")), LIBRARY_PATH);
 
 // console.log({ LIBRARY_PATH, cwd });
 
-const STORAGE_QUOTA = 15 * 1024 * 1024;
+const STORAGE_QUOTA = 32 * 1024 * 1024;
 
 const storage = new LocalStorage(resolve(cwd, `storage`), STORAGE_QUOTA);
 
