@@ -1,7 +1,7 @@
-import path from "path";
-import webpack from "webpack";
 import env from "dotenv";
 import { dirname } from "node:path";
+import path from "path";
+import webpack from "webpack";
 
 env.config({ path: path.resolve(__dirname, "../../.env") });
 
@@ -25,7 +25,16 @@ export default (_env, { mode }, dev = mode === "development") => ({
           // Creates `style` nodes from JS strings
           "style-loader",
           // Translates CSS into CommonJS
-          "css-loader",
+          {
+            loader: "css-loader",
+            options: {
+              esModule: false,
+              // https://github.com/webpack-contrib/css-loader?tab=readme-ov-file#modules
+              modules: {
+                exportLocalsConvention: "asIs",
+              },
+            },
+          },
           // Compiles Sass to CSS
           {
             loader: "sass-loader",
@@ -36,7 +45,7 @@ export default (_env, { mode }, dev = mode === "development") => ({
         ],
       },
       {
-        test: /\.(mp3|ogg|png|avi)$/,
+        test: /\.(mp3|ogg|png|avi|woff2?)$/,
         use: ["file-loader"],
       },
       {
