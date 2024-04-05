@@ -1,3 +1,4 @@
+import flvjs from "pro-flv.js";
 import React, {
   ChangeEventHandler,
   useCallback,
@@ -5,7 +6,6 @@ import React, {
   useRef,
   useState,
 } from "react";
-import flvjs from "pro-flv.js";
 import { StreamsSchema } from "../schema";
 
 export const MEDIA_URL =
@@ -18,6 +18,7 @@ console.log({ MEDIA_URL });
 
 // https://github.com/illuspas/Node-Media-Server
 function Stream({ stream: url }: { stream: string }) {
+  const [error, setError] = useState<object>(null);
   const videoRef = useRef();
 
   useEffect(() => {
@@ -29,6 +30,7 @@ function Stream({ stream: url }: { stream: string }) {
         url,
       });
       flvPlayer.attachMediaElement(video);
+      flvPlayer.on(flvjs.Events.ERROR, setError);
       flvPlayer.load();
       // flvPlayer.play();
     }
@@ -37,6 +39,18 @@ function Stream({ stream: url }: { stream: string }) {
   return (
     <div>
       <video ref={videoRef} width="480" height="270" autoPlay controls></video>
+      {error && (
+        <pre
+          style={{
+            background: "crimson",
+            color: "white",
+            margin: ".5em",
+            padding: "1em",
+          }}
+        >
+          {JSON.stringify(error)}
+        </pre>
+      )}
     </div>
   );
 }
@@ -89,6 +103,19 @@ export default function Section() {
       <a href={`${MEDIA_URL}/admin/streams`} target="_blank">
         streams
       </a>
+      <pre style={{ background: "linen", margin: ".5em", padding: "1em" }}>
+        {`
+~ $ git clone https://github.com/illuspas/Node-Media-Server
+
+~/Node-Media-Server $ docker build . -t nms
+~/Node-Media-Server $ docker run --name nms -d -p 1935:1935 -p 7000:8000 -p 8443:8443 nms
+`}
+      </pre>
+      <pre style={{ background: "linen", margin: ".5em", padding: "1em" }}>
+        {`
+ffmpeg -stream_loop -1 -re -i share/library/BilaShsQphM.mp4 -c copy -f flv rtmp://${MEDIA_URL}/live/STREAM_NAME
+`}
+      </pre>
     </section>
   );
 }
