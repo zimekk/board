@@ -14,8 +14,6 @@ export const MEDIA_URL =
     new URL(window.location.href),
   );
 
-console.log({ MEDIA_URL });
-
 // https://github.com/illuspas/Node-Media-Server
 function Stream({ stream: url }: { stream: string }) {
   const [error, setError] = useState<object>(null);
@@ -104,18 +102,18 @@ export default function Section() {
         streams
       </a>
       <pre style={{ background: "linen", margin: ".5em", padding: "1em" }}>
-        {`
-~ $ git clone https://github.com/illuspas/Node-Media-Server
+        {`~ $ git clone https://github.com/illuspas/Node-Media-Server
 
 ~/Node-Media-Server $ docker build . -t nms
 ~/Node-Media-Server $ docker run --name nms -d -p 1935:1935 -p 7000:8000 -p 8443:8443 nms
 `}
       </pre>
-      <pre style={{ background: "linen", margin: ".5em", padding: "1em" }}>
-        {`
-ffmpeg -stream_loop -1 -re -i share/library/BilaShsQphM.mp4 -c copy -f flv rtmp://${MEDIA_URL}/live/STREAM_NAME
+      {stream && (
+        <pre style={{ background: "linen", margin: ".5em", padding: "1em" }}>
+          {`ffmpeg -stream_loop -1 -re -i share/library/BilaShsQphM.mp4 -c copy -f flv ${((url) => `rtmp://${url.hostname}${url.pathname.split(".")[0]}`)(new URL(stream))}
 `}
-      </pre>
+        </pre>
+      )}
     </section>
   );
 }
