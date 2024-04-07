@@ -39,6 +39,7 @@
     "@dev/cast": "1.0.0",
     "@dev/cron": "1.0.0",
     "@dev/ext": "1.0.0",
+    "@dev/gphoto": "1.0.0",
     "@dev/lan": "1.0.0",
     "@dev/llama": "1.0.0",
     "@dev/movie": "1.0.0",

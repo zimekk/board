@@ -77,6 +77,10 @@ export default (env, argv) =>
       ...config,
       devServer: {
         ...devServer,
+        headers: {
+          "Cross-Origin-Opener-Policy": "same-origin",
+          "Cross-Origin-Embedder-Policy": "require-corp",
+        },
         setupMiddlewares: (middlewares, devServer) => {
           if (!devServer) {
             throw new Error("webpack-dev-server is not defined");
