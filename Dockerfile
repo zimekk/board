@@ -43,6 +43,7 @@ COPY packages/chrome/package.json packages/chrome/
 COPY packages/client/package.json packages/client/
 COPY packages/cron/package.json packages/cron/
 COPY packages/ext/package.json packages/ext/
+COPY packages/gphoto/package.json packages/gphoto/
 COPY packages/lan/package.json packages/lan/
 COPY packages/llama/package.json packages/llama/
 COPY packages/movie/package.json packages/movie/
