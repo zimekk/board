@@ -232,7 +232,7 @@ importers:
         version: 2.1.35
       mqtt:
         specifier: ^5.3.5
-        version: 5.5.1
+        version: 5.5.2
       music-metadata:
         specifier: ^7.13.4
         version: 7.14.0
@@ -272,7 +272,7 @@ importers:
         version: 0.4.2
       mqtt:
         specifier: ^5.3.5
-        version: 5.5.1
+        version: 5.5.2
       nodecast-js:
         specifier: ^1.0.3
         version: 1.0.3
@@ -431,7 +431,7 @@ importers:
         version: 10.3.12
       mqtt:
         specifier: ^5.3.5
-        version: 5.5.1
+        version: 5.5.2
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -533,7 +533,7 @@ importers:
         version: 10.3.12
       mqtt:
         specifier: ^5.3.5
-        version: 5.5.1
+        version: 5.5.2
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -583,7 +583,7 @@ importers:
         version: 10.3.12
       mqtt:
         specifier: ^5.3.5
-        version: 5.5.1
+        version: 5.5.2
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -636,7 +636,7 @@ importers:
         version: 10.3.12
       mqtt:
         specifier: ^5.3.5
-        version: 5.5.1
+        version: 5.5.2
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -722,7 +722,7 @@ importers:
         version: 2.1.35
       mqtt:
         specifier: ^5.3.5
-        version: 5.5.1
+        version: 5.5.2
       nodecast-js:
         specifier: ^1.0.3
         version: 1.0.3
@@ -775,7 +775,7 @@ importers:
         version: 4.19.2
       mqtt:
         specifier: ^5.3.5
-        version: 5.5.1
+        version: 5.5.2
       nodemailer:
         specifier: ^6.9.2
         version: 6.9.13
@@ -9239,8 +9239,8 @@ packages:
       - supports-color
     dev: false
 
-  /mqtt@5.5.1:
-    resolution: {integrity: sha512-jVRUzzI68aNVxi8Jas861AF01Ycw7NCngsvur8VEopdvGI+Temo9BUGRI6lRTkQhZH+fF/88XRJ9a5FJL9e1JA==}
+  /mqtt@5.5.2:
+    resolution: {integrity: sha512-dlKxINBrrorgMp1A5UHQVf5GAkn1m/dY12W2Sp6LAY794RxQ0OPo0Q9N2S3qrNRjjC1WETA/9oYR6yadhR3siw==}
     engines: {node: '>=16.0.0'}
     hasBin: true
     dependencies:
