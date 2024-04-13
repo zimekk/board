@@ -260,7 +260,7 @@ importers:
         version: 2.1.4
       '@types/react':
         specifier: ^18.2.18
-        version: 18.2.77
+        version: 18.2.78
 
   packages/cast:
     dependencies:
@@ -301,7 +301,7 @@ importers:
         version: 20.12.1
       '@types/react':
         specifier: ^18.2.18
-        version: 18.2.77
+        version: 18.2.78
       ts-node-dev:
         specifier: ^2.0.0
         version: 2.0.0(@types/node@20.12.1)(typescript@5.4.5)
@@ -388,7 +388,7 @@ importers:
     devDependencies:
       '@types/react':
         specifier: ^18.2.18
-        version: 18.2.77
+        version: 18.2.78
 
   packages/ext:
     dependencies:
@@ -407,7 +407,7 @@ importers:
         version: 0.0.266
       '@types/react':
         specifier: ^18.2.18
-        version: 18.2.77
+        version: 18.2.78
       '@vitejs/plugin-react':
         specifier: ^4.2.0
         version: 4.2.1(vite@4.2.3)
@@ -450,7 +450,7 @@ importers:
         version: 4.17.21
       '@types/react':
         specifier: ^18.2.18
-        version: 18.2.77
+        version: 18.2.78
 
   packages/lan:
     dependencies:
@@ -487,7 +487,7 @@ importers:
         version: 2.0.2
       '@types/react':
         specifier: ^18.2.18
-        version: 18.2.77
+        version: 18.2.78
       graphql:
         specifier: ^16.6.0
         version: 16.8.1
@@ -515,7 +515,7 @@ importers:
         version: 4.17.21
       '@types/react':
         specifier: ^18.2.6
-        version: 18.2.77
+        version: 18.2.78
 
   packages/movie:
     dependencies:
@@ -549,7 +549,7 @@ importers:
         version: 4.17.21
       '@types/react':
         specifier: ^18.2.18
-        version: 18.2.77
+        version: 18.2.78
 
   packages/overlay:
     dependencies:
@@ -568,7 +568,7 @@ importers:
     devDependencies:
       '@types/react':
         specifier: ^18.2.18
-        version: 18.2.77
+        version: 18.2.78
 
   packages/photo:
     dependencies:
@@ -599,7 +599,7 @@ importers:
         version: 4.17.21
       '@types/react':
         specifier: ^18.2.18
-        version: 18.2.77
+        version: 18.2.78
 
   packages/recipes:
     dependencies:
@@ -621,7 +621,7 @@ importers:
     devDependencies:
       '@types/react':
         specifier: ^18.2.18
-        version: 18.2.77
+        version: 18.2.78
 
   packages/request:
     dependencies:
@@ -652,7 +652,7 @@ importers:
         version: 4.17.21
       '@types/react':
         specifier: ^18.2.18
-        version: 18.2.77
+        version: 18.2.78
 
   packages/schema:
     dependencies:
@@ -701,7 +701,7 @@ importers:
     devDependencies:
       '@types/react':
         specifier: ^18.2.18
-        version: 18.2.77
+        version: 18.2.78
 
   packages/share:
     dependencies:
@@ -741,7 +741,7 @@ importers:
         version: 4.17.21
       '@types/react':
         specifier: ^18.2.6
-        version: 18.2.77
+        version: 18.2.78
       '@types/styled-components':
         specifier: ^5.1.26
         version: 5.1.34
@@ -809,7 +809,7 @@ importers:
         version: 6.4.14
       '@types/react':
         specifier: ^18.2.6
-        version: 18.2.77
+        version: 18.2.78
       '@types/styled-components':
         specifier: ^5.1.26
         version: 5.1.34
@@ -837,7 +837,7 @@ importers:
         version: 20.12.1
       '@types/react':
         specifier: ^18.2.18
-        version: 18.2.77
+        version: 18.2.78
 
   packages/transfer:
     dependencies:
@@ -864,7 +864,7 @@ importers:
         version: 18.2.0
       react-redux:
         specifier: ^9.1.0
-        version: 9.1.0(@types/react@18.2.77)(react@18.2.0)(redux@5.0.1)
+        version: 9.1.0(@types/react@18.2.78)(react@18.2.0)(redux@5.0.1)
       redux:
         specifier: ^5.0.1
         version: 5.0.1
@@ -877,7 +877,7 @@ importers:
         version: 4.17.21
       '@types/react':
         specifier: ^18.2.6
-        version: 18.2.77
+        version: 18.2.78
 
   packages/video:
     dependencies:
@@ -917,7 +917,7 @@ importers:
         version: 2.1.24
       '@types/react':
         specifier: ^18.2.18
-        version: 18.2.77
+        version: 18.2.78
 
   packages/wakeword:
     dependencies:
@@ -956,7 +956,7 @@ importers:
     devDependencies:
       '@types/react':
         specifier: ^18.2.18
-        version: 18.2.77
+        version: 18.2.78
 
   packages/web:
     dependencies:
@@ -1089,7 +1089,7 @@ importers:
         version: 20.12.1
       '@types/react':
         specifier: ^18.2.18
-        version: 18.2.77
+        version: 18.2.78
       '@types/react-dom':
         specifier: ^18.2.7
         version: 18.2.25
@@ -1119,7 +1119,7 @@ importers:
         version: 5.6.0(webpack@5.91.0)
       react-hot-loader:
         specifier: ^4.13.1
-        version: 4.13.1(@types/react@18.2.77)(react-dom@18.2.0)(react@18.2.0)
+        version: 4.13.1(@types/react@18.2.78)(react-dom@18.2.0)(react@18.2.0)
       sass:
         specifier: ^1.64.2
         version: 1.75.0
@@ -1174,7 +1174,7 @@ importers:
         version: 4.17.21
       '@types/react':
         specifier: ^18.2.6
-        version: 18.2.77
+        version: 18.2.78
       peer:
         specifier: ^1.0.2
         version: 1.0.2
@@ -3986,7 +3986,7 @@ packages:
     dependencies:
       immer: 10.0.4
       react: 18.2.0
-      react-redux: 9.1.0(@types/react@18.2.77)(react@18.2.0)(redux@5.0.1)
+      react-redux: 9.1.0(@types/react@18.2.78)(react@18.2.0)(redux@5.0.1)
       redux: 5.0.1
       redux-thunk: 3.1.0(redux@5.0.1)
       reselect: 5.1.0
@@ -4259,7 +4259,7 @@ packages:
   /@types/hoist-non-react-statics@3.3.5:
     resolution: {integrity: sha512-SbcrWzkKBw2cdwRTwQAswfpB9g9LJWfjtUeW/jvNwbhC8cpmmNYVePa+ncbUe0rGTQ7G3Ff6mYUN2VMfLVr+Sg==}
     dependencies:
-      '@types/react': 18.2.77
+      '@types/react': 18.2.78
       hoist-non-react-statics: 3.3.2
     dev: true
 
@@ -4391,11 +4391,11 @@ packages:
   /@types/react-dom@18.2.25:
     resolution: {integrity: sha512-o/V48vf4MQh7juIKZU2QGDfli6p1+OOi5oXx36Hffpc9adsHeXjVp8rHuPkjd8VT8sOJ2Zp05HR7CdpGTIUFUA==}
     dependencies:
-      '@types/react': 18.2.77
+      '@types/react': 18.2.78
     dev: true
 
-  /@types/react@18.2.77:
-    resolution: {integrity: sha512-CUT9KUUF+HytDM7WiXKLF9qUSg4tGImwy4FXTlfEDPEkkNUzJ7rVFolYweJ9fS1ljoIaP7M7Rdjc5eUm/Yu5AA==}
+  /@types/react@18.2.78:
+    resolution: {integrity: sha512-qOwdPnnitQY4xKlKayt42q5W5UQrSHjgoXNVEtxeqdITJ99k4VXJOP3vt8Rkm9HmgJpH50UNU+rlqfkfWOqp0A==}
     dependencies:
       '@types/prop-types': 15.7.12
       csstype: 3.1.3
@@ -4476,7 +4476,7 @@ packages:
     resolution: {integrity: sha512-mmiVvwpYklFIv9E8qfxuPyIt/OuyIrn6gMOAMOFUO3WJfSrSE+sGUoa4PiZj77Ut7bKZpaa6o1fBKS/4TOEvnA==}
     dependencies:
       '@types/hoist-non-react-statics': 3.3.5
-      '@types/react': 18.2.77
+      '@types/react': 18.2.78
       csstype: 3.1.3
     dev: true
 
@@ -11060,7 +11060,7 @@ packages:
     resolution: {integrity: sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==}
     dev: false
 
-  /react-hot-loader@4.13.1(@types/react@18.2.77)(react-dom@18.2.0)(react@18.2.0):
+  /react-hot-loader@4.13.1(@types/react@18.2.78)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-ZlqCfVRqDJmMXTulUGic4lN7Ic1SXgHAFw7y/Jb7t25GBgTR0fYAJ8uY4mrpxjRyWGWmqw77qJQGnYbzCvBU7g==}
     engines: {node: '>= 6'}
     peerDependencies:
@@ -11071,7 +11071,7 @@ packages:
       '@types/react':
         optional: true
     dependencies:
-      '@types/react': 18.2.77
+      '@types/react': 18.2.78
       fast-levenshtein: 2.0.6
       global: 4.4.0
       hoist-non-react-statics: 3.3.2
@@ -11108,7 +11108,7 @@ packages:
       react-fast-compare: 3.2.2
     dev: false
 
-  /react-redux@9.1.0(@types/react@18.2.77)(react@18.2.0)(redux@5.0.1):
+  /react-redux@9.1.0(@types/react@18.2.78)(react@18.2.0)(redux@5.0.1):
     resolution: {integrity: sha512-6qoDzIO+gbrza8h3hjMA9aq4nwVFCKFtY2iLxCtVT38Swyy2C/dJCGBXHeHLtx6qlg/8qzc2MrhOeduf5K32wQ==}
     peerDependencies:
       '@types/react': ^18.2.25
@@ -11123,7 +11123,7 @@ packages:
       redux:
         optional: true
     dependencies:
-      '@types/react': 18.2.77
+      '@types/react': 18.2.78
       '@types/use-sync-external-store': 0.0.3
       react: 18.2.0
       redux: 5.0.1
