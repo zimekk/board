@@ -1183,10 +1183,10 @@ importers:
     dependencies:
       '@bull-board/api':
         specifier: ^5.2.0
-        version: 5.15.3(@bull-board/ui@5.15.3)
+        version: 5.15.5(@bull-board/ui@5.15.5)
       '@bull-board/express':
-        specifier: ^5.2.0
-        version: 5.15.4
+        specifier: ^5.15.5
+        version: 5.15.5
       '@dev/chrome':
         specifier: ^1.0.0
         version: link:../chrome
@@ -2667,45 +2667,30 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@bull-board/api@5.15.3(@bull-board/ui@5.15.3):
-    resolution: {integrity: sha512-tlEYOI6Hp0ZGozDCtKQEFgvzTKXj+drKStHJm86s1TcUZlsnMjzR0BUxu5CW6EB3tS3MtPLJH5RQCmUq0UEiiQ==}
+  /@bull-board/api@5.15.5(@bull-board/ui@5.15.5):
+    resolution: {integrity: sha512-s3x0f+0s4nwndBM+QSROMVKiDyE/vaaouQCsxRWOFqneLCkM+Ro2wF6fkhmFkZMjouoBbS8rCFGaIZ+8uttYtg==}
     peerDependencies:
-      '@bull-board/ui': 5.15.3
+      '@bull-board/ui': 5.15.5
     dependencies:
-      '@bull-board/ui': 5.15.3
+      '@bull-board/ui': 5.15.5
       redis-info: 3.1.0
     dev: false
 
-  /@bull-board/api@5.15.4(@bull-board/ui@5.15.4):
-    resolution: {integrity: sha512-8hXalrJhoEywfvAb5R75+yovyqmx3ihGKoxF5QuuHBQaH+FKrm6asdmxZWlku3TcPPdn6uvd7/D2EU0It8Arqw==}
-    peerDependencies:
-      '@bull-board/ui': 5.15.4
+  /@bull-board/express@5.15.5:
+    resolution: {integrity: sha512-vnoWyjkHgMDfAZkriGd3chf/1g08Gc5Bz0SGb08eaQEjlzIRps1mYPp0YKYCcm0d9U0vOZa038X5xPKCRPpnZg==}
     dependencies:
-      '@bull-board/ui': 5.15.4
-      redis-info: 3.1.0
-    dev: false
-
-  /@bull-board/express@5.15.4:
-    resolution: {integrity: sha512-u2mV53P+l0xlQhOi8wjmJIpLfI6z+bl/jVWZZNeOFC8XPyFhIo9B3D8ouojGl/bnkhvylbMO/FHwv0X7Vtp7nw==}
-    dependencies:
-      '@bull-board/api': 5.15.4(@bull-board/ui@5.15.4)
-      '@bull-board/ui': 5.15.4
+      '@bull-board/api': 5.15.5(@bull-board/ui@5.15.5)
+      '@bull-board/ui': 5.15.5
       ejs: 3.1.10
       express: 4.19.2
     transitivePeerDependencies:
       - supports-color
     dev: false
 
-  /@bull-board/ui@5.15.3:
-    resolution: {integrity: sha512-wCXk+s4cSszZe0p0sYYxZPLSKafFQNPsUypTvpAh3IC2p4fr6F/wUBGb1kBMspRkFC19l5yFCD5qPHVlAR0QKw==}
+  /@bull-board/ui@5.15.5:
+    resolution: {integrity: sha512-TSXgqBDI3ig6ez6yHArGzpwCuA/rhQewv0KOUAvPzssgX4HqfkatrV7gTuTM+XJe7/sLiXnBiryV7SRV0hgRMg==}
     dependencies:
-      '@bull-board/api': 5.15.3(@bull-board/ui@5.15.3)
-    dev: false
-
-  /@bull-board/ui@5.15.4:
-    resolution: {integrity: sha512-BcjPGGkBkPTm6XdZPxau1Rcmx4ZmGIZK/eqEVLaZKFiaO6OU2r+371dIOqeh4dHlSyDJwsxl7sF4zyq9Y9139Q==}
-    dependencies:
-      '@bull-board/api': 5.15.4(@bull-board/ui@5.15.4)
+      '@bull-board/api': 5.15.5(@bull-board/ui@5.15.5)
     dev: false
 
   /@cbor-extract/cbor-extract-darwin-arm64@2.2.0:
