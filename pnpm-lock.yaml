@@ -1186,7 +1186,7 @@ importers:
         version: 5.15.3(@bull-board/ui@5.15.3)
       '@bull-board/express':
         specifier: ^5.2.0
-        version: 5.15.3
+        version: 5.15.4
       '@dev/chrome':
         specifier: ^1.0.0
         version: link:../chrome
@@ -2676,12 +2676,21 @@ packages:
       redis-info: 3.1.0
     dev: false
 
-  /@bull-board/express@5.15.3:
-    resolution: {integrity: sha512-2xoXOHh8XhRGMc+APt8/i1F645St9vpgndItY2WGTXieJroHNtTwH0CuDrItLlWPVsg1KRN5BCAhexbJkC3a2w==}
+  /@bull-board/api@5.15.4(@bull-board/ui@5.15.4):
+    resolution: {integrity: sha512-8hXalrJhoEywfvAb5R75+yovyqmx3ihGKoxF5QuuHBQaH+FKrm6asdmxZWlku3TcPPdn6uvd7/D2EU0It8Arqw==}
+    peerDependencies:
+      '@bull-board/ui': 5.15.4
     dependencies:
-      '@bull-board/api': 5.15.3(@bull-board/ui@5.15.3)
-      '@bull-board/ui': 5.15.3
-      ejs: 3.1.9
+      '@bull-board/ui': 5.15.4
+      redis-info: 3.1.0
+    dev: false
+
+  /@bull-board/express@5.15.4:
+    resolution: {integrity: sha512-u2mV53P+l0xlQhOi8wjmJIpLfI6z+bl/jVWZZNeOFC8XPyFhIo9B3D8ouojGl/bnkhvylbMO/FHwv0X7Vtp7nw==}
+    dependencies:
+      '@bull-board/api': 5.15.4(@bull-board/ui@5.15.4)
+      '@bull-board/ui': 5.15.4
+      ejs: 3.1.10
       express: 4.19.2
     transitivePeerDependencies:
       - supports-color
@@ -2691,6 +2700,12 @@ packages:
     resolution: {integrity: sha512-wCXk+s4cSszZe0p0sYYxZPLSKafFQNPsUypTvpAh3IC2p4fr6F/wUBGb1kBMspRkFC19l5yFCD5qPHVlAR0QKw==}
     dependencies:
       '@bull-board/api': 5.15.3(@bull-board/ui@5.15.3)
+    dev: false
+
+  /@bull-board/ui@5.15.4:
+    resolution: {integrity: sha512-BcjPGGkBkPTm6XdZPxau1Rcmx4ZmGIZK/eqEVLaZKFiaO6OU2r+371dIOqeh4dHlSyDJwsxl7sF4zyq9Y9139Q==}
+    dependencies:
+      '@bull-board/api': 5.15.4(@bull-board/ui@5.15.4)
     dev: false
 
   /@cbor-extract/cbor-extract-darwin-arm64@2.2.0:
@@ -4062,7 +4077,7 @@ packages:
   /@surma/rollup-plugin-off-main-thread@2.2.3:
     resolution: {integrity: sha512-lR8q/9W7hZpMWweNiAKU7NQerBnzQQLvi8qnTDU/fxItPhtZVMbPV3lbCwjhIlNBe9Bbr5V+KHshvWmVSG9cxQ==}
     dependencies:
-      ejs: 3.1.9
+      ejs: 3.1.10
       json5: 2.2.3
       magic-string: 0.25.9
       string.prototype.matchall: 4.0.10
@@ -5506,7 +5521,7 @@ packages:
     dependencies:
       ansi-align: 3.0.1
       camelcase: 7.0.1
-      chalk: 5.3.0
+      chalk: 5.0.1
       cli-boxes: 3.0.0
       string-width: 5.1.2
       type-fest: 2.19.0
@@ -6648,8 +6663,8 @@ packages:
   /ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
 
-  /ejs@3.1.9:
-    resolution: {integrity: sha512-rC+QVNMJWv+MtPgkt0y+0rVEIdbtxVADApW9JXrUVlzHetgcyczP/E7DJmWJ4fJCZF2cPcBk0laWO9ZHMG3DmQ==}
+  /ejs@3.1.10:
+    resolution: {integrity: sha512-UeJmFfOrAQS8OJWPZ4qtgHyWExa088/MtK5UEyoJGFH67cDEXkZSviOiKRCZ4Xij0zxI3JECgYs3oKx+AizQBA==}
     engines: {node: '>=0.10.0'}
     hasBin: true
     dependencies:
