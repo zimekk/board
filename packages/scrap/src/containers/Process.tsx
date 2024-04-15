@@ -767,6 +767,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
           "g-6/c/425-switche.html?producent=276-tp-link&f3303-typ-obudowy=45868-do-szaf-rack&hide_unavailable=1",
           "g-6/c/456-access-pointy.html?producent=276-tp-link&hide_unavailable=1",
           "g-6/c/459-drukarki-do-zdjec.html",
+          "g-6/c/1119-przelaczniki-kvm.html?producent=832-unitek",
           "g-6/c/1215-sluchawki.html?producent=357-apple&producent=1214-marshall&producent=2334-shure",
           "g-6/c/1295-monitory-led-32-i-wieksze.html?producent=396-dell",
           "g-6/c/1407-manipulatory.html",
@@ -853,6 +854,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
       )
       .concat(
         [
+          "category=akcesoria-do-drukarek-3&__=3doodler&_n=1",
           "category=akcesoria-do-ipada-i-tabletow-multimedialnych&__=Apple",
           "category=archiwizacja-danych1&__=WD",
           "category=czysciki-parowe&__=Karcher",
