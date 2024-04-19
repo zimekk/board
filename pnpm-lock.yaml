@@ -130,6 +130,9 @@ importers:
       '@dev/share':
         specifier: 1.0.0
         version: link:../share
+      '@dev/speed':
+        specifier: 1.0.0
+        version: link:../speed
       '@dev/status':
         specifier: 1.0.0
         version: link:../status
@@ -746,6 +749,34 @@ importers:
         specifier: ^5.1.26
         version: 5.1.34
 
+  packages/speed:
+    dependencies:
+      express:
+        specifier: ^4.18.2
+        version: 4.19.2
+      glob:
+        specifier: ^10.3.3
+        version: 10.3.12
+      network-speed:
+        specifier: ^2.1.1
+        version: 2.1.1
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      styled-components:
+        specifier: ^6.0.5
+        version: 6.1.8(react-dom@18.2.0)(react@18.2.0)
+      zod:
+        specifier: ^3.21.4
+        version: 3.22.4
+    devDependencies:
+      '@types/express':
+        specifier: ^4.17.17
+        version: 4.17.21
+      '@types/react':
+        specifier: ^18.2.18
+        version: 18.2.79
+
   packages/sql:
     dependencies:
       dotenv:
@@ -1054,6 +1085,9 @@ importers:
       '@dev/share':
         specifier: 1.0.0
         version: link:../share
+      '@dev/speed':
+        specifier: 1.0.0
+        version: link:../speed
       '@dev/status':
         specifier: 1.0.0
         version: link:../status
@@ -4131,7 +4165,7 @@ packages:
   /@types/bonjour@3.5.13:
     resolution: {integrity: sha512-z9fJ5Im06zvUL548KvYNecEVlA7cVDkGUi6kZusb04mpyEFKCIZJvloCcmpmLaIahDpOQGHaHmG6imtPMmPXGQ==}
     dependencies:
-      '@types/node': 20.12.1
+      '@types/node': 20.12.7
     dev: true
 
   /@types/chrome@0.0.263:
@@ -4169,7 +4203,7 @@ packages:
     resolution: {integrity: sha512-n6Cr2xS1h4uAulPRdlw6Jl6s1oG8KrVilPN2yUITEs+K48EzMJJ3W1xy8K5eWuFvjp3R74AOIGSmp2UfBJ8HFw==}
     dependencies:
       '@types/express-serve-static-core': 4.17.43
-      '@types/node': 20.12.1
+      '@types/node': 20.12.7
     dev: true
 
   /@types/connect@3.4.38:
@@ -4290,7 +4324,7 @@ packages:
   /@types/http-proxy@1.17.14:
     resolution: {integrity: sha512-SSrD0c1OQzlFX7pGu1eXxSEjemej64aaNPRhhVYUGqXh0BtldAAx37MG8btcumvpgKyZp1F5Gn3JkktdxiFv6w==}
     dependencies:
-      '@types/node': 20.12.1
+      '@types/node': 20.12.7
     dev: true
 
   /@types/json-schema@7.0.15:
@@ -4324,7 +4358,7 @@ packages:
   /@types/node-forge@1.3.11:
     resolution: {integrity: sha512-FQx220y22OKNTqaByeBGqHWYz4cl94tpcxeFdvBo3wjG6XPBuZ0BNgNZRV5J5TFmmcsJ4IzsLkmGRiQbnYsBEQ==}
     dependencies:
-      '@types/node': 20.12.1
+      '@types/node': 20.12.7
     dev: true
 
   /@types/node-wifi@2.0.2:
@@ -4422,7 +4456,7 @@ packages:
   /@types/resolve@1.17.1:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
     dependencies:
-      '@types/node': 20.12.1
+      '@types/node': 20.12.7
     dev: true
 
   /@types/retry@0.12.2:
@@ -4457,7 +4491,7 @@ packages:
   /@types/sockjs@0.3.36:
     resolution: {integrity: sha512-MK9V6NzAS1+Ud7JV9lJLFqW85VbC9dq3LmwZCuBe4wBDgKC0Kj/jd8Xl+nSviU+Qc3+m7umHHyHg//2KSa0a0Q==}
     dependencies:
-      '@types/node': 20.12.1
+      '@types/node': 20.12.7
     dev: true
 
   /@types/source-list-map@0.1.6:
@@ -8557,7 +8591,7 @@ packages:
     resolution: {integrity: sha512-KWYVV1c4i+jbMpaBC+U++4Va0cp8OisU185o73T1vo99hqi7w8tSJfUXYswwqqrjzwxa6KpRK54WhPvwf5w6PQ==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 20.12.1
+      '@types/node': 20.12.7
       merge-stream: 2.0.0
       supports-color: 7.2.0
     dev: true
@@ -8566,7 +8600,7 @@ packages:
     resolution: {integrity: sha512-7vuh85V5cdDofPyxn58nrPjBktZo0u9x1g8WtjQol+jZDaE+fhN+cIvTj11GndBnMnyfrUOG1sZQxCdjKh+DKg==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 20.12.1
+      '@types/node': 20.12.7
       merge-stream: 2.0.0
       supports-color: 8.1.1
     dev: true
@@ -9359,6 +9393,10 @@ packages:
   /network-address@1.1.2:
     resolution: {integrity: sha512-Q6878fmvItA1mE7H9Il46lONgFgTzX2f98zkS0c2YlkCACzNjwvum/8Kq693IQpxe9zy+w+Zm/4p0wQreLEtZw==}
     hasBin: true
+    dev: false
+
+  /network-speed@2.1.1:
+    resolution: {integrity: sha512-NDr8h55toVE5Gy/CZI5nUAl+57DX1xl3PyhcXWacUiUttOJ2JsKkm5JzyVaoJ5psR9KUhi9y4EKc+atnWarkOg==}
     dev: false
 
   /no-case@3.0.4:

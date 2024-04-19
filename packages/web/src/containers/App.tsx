@@ -1,6 +1,6 @@
+import history from "history/browser";
 import React, { Suspense, lazy, useEffect, useState } from "react";
 import { hot } from "react-hot-loader/root";
-import history from "history/browser";
 import styles from "./App.module.scss";
 
 const Spinner = () => <span>Loading...</span>;
@@ -19,6 +19,7 @@ const PAGES = {
   request: lazy(() => import("@dev/request")),
   scrap: lazy(() => import("@dev/scrap")),
   share: lazy(() => import("@dev/share")),
+  speed: lazy(() => import("@dev/speed")),
   status: lazy(() => import("@dev/status")),
   stream: lazy(() => import("@dev/stream")),
   transfer: lazy(() => import("@dev/transfer")),

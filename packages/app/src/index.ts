@@ -1,6 +1,6 @@
-import path from "path";
-import express, { Router } from "express";
 import { api } from "@dev/api/lib";
+import express, { Router } from "express";
+import path from "path";
 
 export const router = Router()
   .use("/api", api)
@@ -11,6 +11,7 @@ export const router = Router()
   .use(require("@dev/photo/api").router())
   .use(require("@dev/request/api").router())
   .use(require("@dev/share/api").router())
+  .use(require("@dev/speed/api").router())
   .use(require("@dev/status/api").router())
   .use(require("@dev/transfer/api").router())
   .use(require("@dev/webrtc/api").router())

@@ -54,6 +54,7 @@ COPY packages/request/package.json packages/request/
 COPY packages/schema/package.json packages/schema/
 COPY packages/scrap/package.json packages/scrap/
 COPY packages/share/package.json packages/share/
+COPY packages/speed/package.json packages/speed/
 COPY packages/sql/package.json packages/sql/
 COPY packages/status/package.json packages/status/
 COPY packages/stream/package.json packages/stream/
