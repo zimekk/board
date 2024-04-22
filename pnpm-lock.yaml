@@ -1162,7 +1162,7 @@ importers:
         version: 14.2.1(sass@1.75.0)(webpack@5.91.0)
       serve:
         specifier: ^14.2.0
-        version: 14.2.1
+        version: 14.2.2
       stream-browserify:
         specifier: ^3.0.0
         version: 3.0.0
@@ -5019,15 +5019,6 @@ packages:
       fast-deep-equal: 3.1.3
       fast-json-stable-stringify: 2.1.0
       json-schema-traverse: 0.4.1
-      uri-js: 4.4.1
-    dev: true
-
-  /ajv@8.11.0:
-    resolution: {integrity: sha512-wGgprdCvMalC0BztXvitD2hC04YffAvtsUn93JbGXYLAtCUO4xd17mCCZQxUOItiBwZvJScWo8NIvQMQ71rdpg==}
-    dependencies:
-      fast-deep-equal: 3.1.3
-      json-schema-traverse: 1.0.0
-      require-from-string: 2.0.2
       uri-js: 4.4.1
     dev: true
 
@@ -11732,13 +11723,13 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /serve@14.2.1:
-    resolution: {integrity: sha512-48er5fzHh7GCShLnNyPBRPEjs2I6QBozeGr02gaacROiyS/8ARADlj595j39iZXAqBbJHH/ivJJyPRWY9sQWZA==}
+  /serve@14.2.2:
+    resolution: {integrity: sha512-MktTGv3ooijGxd67iQVocNdiHaOdNnEApGj7At4qHUN44XDaLFfrqbEtj5mXf+QNqyig/VdHYMRTXWRQj6TEbw==}
     engines: {node: '>= 14'}
     hasBin: true
     dependencies:
       '@zeit/schemas': 2.29.0
-      ajv: 8.11.0
+      ajv: 8.12.0
       arg: 5.0.2
       boxen: 7.0.0
       chalk: 5.0.1
