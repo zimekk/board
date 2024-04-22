@@ -295,7 +295,7 @@ importers:
     devDependencies:
       '@types/chromecast-caf-receiver':
         specifier: ^6.0.13
-        version: 6.0.13
+        version: 6.0.14
       '@types/chromecast-caf-sender':
         specifier: ^1.0.8
         version: 1.0.9
@@ -4187,8 +4187,8 @@ packages:
       '@types/har-format': 1.2.15
     dev: true
 
-  /@types/chromecast-caf-receiver@6.0.13:
-    resolution: {integrity: sha512-dDHlhZaWTDJiqGqEHYx/dofJB1xKQg782y7j1LFMvbzMKcGgNzzCEX6pW2XxUhovkjBjTJM9F+yR2Z+KKlwLPg==}
+  /@types/chromecast-caf-receiver@6.0.14:
+    resolution: {integrity: sha512-qvN4uE4MlYCEtniTtjxG4D+KeEXfs/Sgqex9sSZdPVh5rffdifINYzKH3z3QRl+0mk41vD6vYZ8s8ZfW/8iFoQ==}
     dev: true
 
   /@types/chromecast-caf-sender@1.0.9:
