@@ -22,6 +22,15 @@ function skipVideo() {
     video.currentTime = video.duration - 0.1;
     return;
   }
+
+  const consent = Array.from(
+    document.querySelectorAll("ytd-consent-bump-v2-lightbox button"),
+  ).find((button) => button.getAttribute("aria-label")?.match(/^Nie /));
+  console.log({ consent });
+  if (consent && consent instanceof HTMLButtonElement) {
+    consent.click();
+    return;
+  }
 }
 
 export default function App() {
