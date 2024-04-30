@@ -10,19 +10,6 @@ function skipVideo() {
     return;
   }
 
-  const ads = document.querySelector("div.video-ads div");
-  console.log({ ads });
-  if (!ads) {
-    return;
-  }
-
-  const video = document.querySelector("video");
-  console.log({ video });
-  if (video) {
-    video.currentTime = video.duration - 0.1;
-    return;
-  }
-
   const consent = Array.from(
     document.querySelectorAll("ytd-consent-bump-v2-lightbox button"),
   ).find((button) => button.getAttribute("aria-label")?.match(/^Nie /));
@@ -30,6 +17,17 @@ function skipVideo() {
   if (consent && consent instanceof HTMLButtonElement) {
     consent.click();
     return;
+  }
+
+  const ads = document.querySelector("div.video-ads div");
+  console.log({ ads });
+  if (ads) {
+    const video = document.querySelector("video");
+    console.log({ video });
+    if (video) {
+      video.currentTime = video.duration - 0.1;
+      return;
+    }
   }
 }
 
