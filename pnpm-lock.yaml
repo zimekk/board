@@ -235,7 +235,7 @@ importers:
         version: 2.1.35
       mqtt:
         specifier: ^5.3.5
-        version: 5.5.4
+        version: 5.5.5
       music-metadata:
         specifier: ^7.13.4
         version: 7.14.0
@@ -275,7 +275,7 @@ importers:
         version: 0.4.2
       mqtt:
         specifier: ^5.3.5
-        version: 5.5.4
+        version: 5.5.5
       nodecast-js:
         specifier: ^1.0.3
         version: 1.0.3
@@ -434,7 +434,7 @@ importers:
         version: 10.3.12
       mqtt:
         specifier: ^5.3.5
-        version: 5.5.4
+        version: 5.5.5
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -536,7 +536,7 @@ importers:
         version: 10.3.12
       mqtt:
         specifier: ^5.3.5
-        version: 5.5.4
+        version: 5.5.5
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -586,7 +586,7 @@ importers:
         version: 10.3.12
       mqtt:
         specifier: ^5.3.5
-        version: 5.5.4
+        version: 5.5.5
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -639,7 +639,7 @@ importers:
         version: 10.3.12
       mqtt:
         specifier: ^5.3.5
-        version: 5.5.4
+        version: 5.5.5
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -725,7 +725,7 @@ importers:
         version: 2.1.35
       mqtt:
         specifier: ^5.3.5
-        version: 5.5.4
+        version: 5.5.5
       nodecast-js:
         specifier: ^1.0.3
         version: 1.0.3
@@ -806,7 +806,7 @@ importers:
         version: 4.19.2
       mqtt:
         specifier: ^5.3.5
-        version: 5.5.4
+        version: 5.5.5
       nodemailer:
         specifier: ^6.9.2
         version: 6.9.13
@@ -2738,6 +2738,13 @@ packages:
 
   /@babel/runtime@7.24.4:
     resolution: {integrity: sha512-dkxf7+hn8mFBwKjs9bvBlArzLVxVbS8usaPUDd5p2a9JCL9tB8OaOVN1isD4+Xyk4ns89/xeOmbQvgdK7IIVdA==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: 0.14.1
+    dev: false
+
+  /@babel/runtime@7.24.5:
+    resolution: {integrity: sha512-Nms86NXrsaeU9vbBJKni6gXiEXZ4CVpYVzEjDH9Sb8vmZ3UljyA1GSOJl/6LGPO8EHLuSF9H+IxNXHPX8QHJ4g==}
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.14.1
@@ -7450,7 +7457,7 @@ packages:
     resolution: {integrity: sha512-7OnTFAVPefgw2eBJ1xj2PGGR9FwYzSUso9decayHgCDX4sJkHLdcsYTytTg+tYv+wKF3U8gJuSBz2jJpQV4u/g==}
     engines: {node: '>=16.1.0'}
     dependencies:
-      '@babel/runtime': 7.24.4
+      '@babel/runtime': 7.24.5
       tslib: 2.6.2
     dev: false
 
@@ -9169,11 +9176,6 @@ packages:
       tslib: 2.6.2
     dev: true
 
-  /lru-cache@10.2.1:
-    resolution: {integrity: sha512-tS24spDe/zXhWbNPErCHs/AGOzbKGHT+ybSBqmdLm8WZ1xXLWvH8Qn71QPAlqVhd0qUTWjy+Kl9JmISgDdEjsA==}
-    engines: {node: 14 || >=16.14}
-    dev: false
-
   /lru-cache@10.2.2:
     resolution: {integrity: sha512-9hp3Vp2/hFQUiIwKo8XCeFVnrg8Pk3TYNPIR7tJADKi5YfcF7vEaK7avFHTlSy3kOKYaJQaalfEo6YuXdceBOQ==}
     engines: {node: 14 || >=16.14}
@@ -9466,8 +9468,8 @@ packages:
       - supports-color
     dev: false
 
-  /mqtt@5.5.4:
-    resolution: {integrity: sha512-odO09EheOHFo8Bv6yM2iEtsM75t06tGZfyq5TrQboQmOYEzX053WqvygNPCCxqQ+iSYAuQxGpsx1f5WUtF8bCw==}
+  /mqtt@5.5.5:
+    resolution: {integrity: sha512-vWglkVfumjnI53/tV+RMWbDuQL4ldGqc/wFX2EHkMy9sSV7Q0TQK+HcAtmg2QupI8DpcyNpoe2mNhaO/H4ILUg==}
     engines: {node: '>=16.0.0'}
     hasBin: true
     dependencies:
@@ -9477,7 +9479,7 @@ packages:
       concat-stream: 2.0.0
       debug: 4.3.4
       help-me: 5.0.0
-      lru-cache: 10.2.1
+      lru-cache: 10.2.2
       minimist: 1.2.8
       mqtt-packet: 9.0.0
       number-allocator: 1.0.14
@@ -9486,7 +9488,7 @@ packages:
       rfdc: 1.3.1
       split2: 4.2.0
       worker-timers: 7.1.7
-      ws: 8.16.0
+      ws: 8.17.0
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -11522,7 +11524,7 @@ packages:
   /regenerator-transform@0.15.2:
     resolution: {integrity: sha512-hfMp2BoF0qOk3uc5V20ALGDS2ddjQaLrdl7xrGXvAIow7qeWRM2VA2HuCHkUKk9slq3VwEwLNK3DFBqDfPGYtg==}
     dependencies:
-      '@babel/runtime': 7.24.4
+      '@babel/runtime': 7.24.5
     dev: true
 
   /regexp.prototype.flags@1.5.2:
@@ -13492,7 +13494,7 @@ packages:
       '@apideck/better-ajv-errors': 0.3.6(ajv@8.12.0)
       '@babel/core': 7.24.5
       '@babel/preset-env': 7.24.4(@babel/core@7.24.5)
-      '@babel/runtime': 7.24.4
+      '@babel/runtime': 7.24.5
       '@rollup/plugin-babel': 5.3.1(@babel/core@7.24.5)(rollup@2.79.1)
       '@rollup/plugin-node-resolve': 15.2.3(rollup@2.79.1)
       '@rollup/plugin-replace': 2.4.2(rollup@2.79.1)
@@ -13638,7 +13640,7 @@ packages:
   /worker-timers-broker@6.1.7:
     resolution: {integrity: sha512-8hb4lSMAijDY/Dp/MOw9Hc2x6uU59XWFYjcWQgC4bai+sxcLXjeexd9aYKdYMFZPiPoieGzMYIs9WGpv2Co3eA==}
     dependencies:
-      '@babel/runtime': 7.24.4
+      '@babel/runtime': 7.24.5
       fast-unique-numbers: 8.0.13
       tslib: 2.6.2
       worker-timers-worker: 7.0.70
@@ -13647,14 +13649,14 @@ packages:
   /worker-timers-worker@7.0.70:
     resolution: {integrity: sha512-lemWEME0RHB78hzGkkQcKfF6L82gqVhV3T9iY14jHBhbLxLq9t1RRCLmPDBZV7sdnUoW6Khkfn6coqPjgEK6cw==}
     dependencies:
-      '@babel/runtime': 7.24.4
+      '@babel/runtime': 7.24.5
       tslib: 2.6.2
     dev: false
 
   /worker-timers@7.1.7:
     resolution: {integrity: sha512-Dr4La61d94SjOA8P57h2LN8W3MXOVe/m1P7jER8cmuIy+JaDMqPttSwo6QRJFSK6YnG9cD6SU7J8m7CVlu8jlw==}
     dependencies:
-      '@babel/runtime': 7.24.4
+      '@babel/runtime': 7.24.5
       tslib: 2.6.2
       worker-timers-broker: 6.1.7
       worker-timers-worker: 7.0.70
@@ -13721,6 +13723,20 @@ packages:
         optional: true
       utf-8-validate:
         optional: true
+    dev: true
+
+  /ws@8.17.0:
+    resolution: {integrity: sha512-uJq6108EgZMAl20KagGkzCKfMEjxmKvZHG7Tlq0Z6nOky7YF7aq4mOx6xK8TJ/i1LeK4Qus7INktacctDgY8Ow==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: '>=5.0.2'
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+    dev: false
 
   /xhr@2.6.0:
     resolution: {integrity: sha512-/eCGLb5rxjx5e3mF1A7s+pLlR6CGyqWN91fv1JgER5mVWg1MZmlhBvy9kjcsOdRk8RrIujotWyJamfyrp+WIcA==}
