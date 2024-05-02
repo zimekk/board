@@ -877,7 +877,7 @@ importers:
         version: 5.3.6(react-dom@18.3.1)(react@18.3.1)
       '@reduxjs/toolkit':
         specifier: ^2.2.1
-        version: 2.2.3(react-redux@9.1.1)(react@18.3.1)
+        version: 2.2.3(react-redux@9.1.2)(react@18.3.1)
       antd:
         specifier: ^5.4.2
         version: 5.16.5(react-dom@18.3.1)(react@18.3.1)
@@ -895,7 +895,7 @@ importers:
         version: 18.3.1
       react-redux:
         specifier: ^9.1.0
-        version: 9.1.1(@types/react@18.3.1)(react@18.3.1)(redux@5.0.1)
+        version: 9.1.2(@types/react@18.3.1)(react@18.3.1)(redux@5.0.1)
       redux:
         specifier: ^5.0.1
         version: 5.0.1
@@ -4123,7 +4123,7 @@ packages:
       react-dom: 18.3.1(react@18.3.1)
     dev: false
 
-  /@reduxjs/toolkit@2.2.3(react-redux@9.1.1)(react@18.3.1):
+  /@reduxjs/toolkit@2.2.3(react-redux@9.1.2)(react@18.3.1):
     resolution: {integrity: sha512-76dll9EnJXg4EVcI5YNxZA/9hSAmZsFqzMmNRHvIlzw2WS/twfcVX3ysYrWGJMClwEmChQFC4yRq74tn6fdzRA==}
     peerDependencies:
       react: ^16.9.0 || ^17.0.0 || ^18
@@ -4136,7 +4136,7 @@ packages:
     dependencies:
       immer: 10.0.4
       react: 18.3.1
-      react-redux: 9.1.1(@types/react@18.3.1)(react@18.3.1)(redux@5.0.1)
+      react-redux: 9.1.2(@types/react@18.3.1)(react@18.3.1)(redux@5.0.1)
       redux: 5.0.1
       redux-thunk: 3.1.0(redux@5.0.1)
       reselect: 5.1.0
@@ -11357,17 +11357,14 @@ packages:
       react-fast-compare: 3.2.2
     dev: false
 
-  /react-redux@9.1.1(@types/react@18.3.1)(react@18.3.1)(redux@5.0.1):
-    resolution: {integrity: sha512-5ynfGDzxxsoV73+4czQM56qF43vsmgJsO22rmAvU5tZT2z5Xow/A2uhhxwXuGTxgdReF3zcp7A80gma2onRs1A==}
+  /react-redux@9.1.2(@types/react@18.3.1)(react@18.3.1)(redux@5.0.1):
+    resolution: {integrity: sha512-0OA4dhM1W48l3uzmv6B7TXPCGmokUU4p1M44DGN2/D9a1FjVPukVjER1PcPX97jIg6aUeLq1XJo1IpfbgULn0w==}
     peerDependencies:
       '@types/react': ^18.2.25
       react: ^18.0
-      react-native: '>=0.69'
       redux: ^5.0.0
     peerDependenciesMeta:
       '@types/react':
-        optional: true
-      react-native:
         optional: true
       redux:
         optional: true
@@ -11376,7 +11373,7 @@ packages:
       '@types/use-sync-external-store': 0.0.3
       react: 18.3.1
       redux: 5.0.1
-      use-sync-external-store: 1.2.0(react@18.3.1)
+      use-sync-external-store: 1.2.2(react@18.3.1)
     dev: false
 
   /react-refresh@0.13.0:
@@ -13030,8 +13027,8 @@ packages:
       react: 18.3.1
     dev: false
 
-  /use-sync-external-store@1.2.0(react@18.3.1):
-    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
+  /use-sync-external-store@1.2.2(react@18.3.1):
+    resolution: {integrity: sha512-PElTlVMwpblvbNqQ82d2n6RjStvdSoNe9FG28kNfz3WiXilJm4DdNkEzRhCZuIDwY8U08WVihhGR5iRqAwfDiw==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
