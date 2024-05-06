@@ -21,11 +21,13 @@ export const scrap = async (page: Page, url: string) =>
       console.log(res.url());
     })
     .goto(url, {
-      waitUntil: "networkidle2",
+      waitUntil: "networkidle0",
+      // waitUntil: "networkidle2",
       // timeout: 60_000,
     })
     .then(async () => {
-      const e = `[document.querySelector('script#__NEXT_DATA__')].map(e => JSON.parse(unescape(e.textContent)))[0]`;
+      // const e = `[document.querySelector('script#__NEXT_DATA__')].map(e => JSON.parse(unescape(e.textContent)))[0]`;
+      const e = `[document.querySelector('script#__NEXT_DATA__')].map(e => JSON.parse(e.textContent))[0]`;
       console.log(["page.evaluate"], e);
       const json = (await page.evaluate(e)) as object;
       console.log({ json });
