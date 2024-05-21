@@ -1229,7 +1229,7 @@ importers:
         version: link:../schema
       bull:
         specifier: ^4.10.4
-        version: 4.12.6
+        version: 4.12.7
       chunk:
         specifier: ^0.0.3
         version: 0.0.3
@@ -5709,8 +5709,8 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /bull@4.12.6:
-    resolution: {integrity: sha512-QViK1i938moggAtlwhmJ8RmLadswgWKlqOFX9w+WBIAuV2L8qrte1XOIs7KUrRc9fbIfJTziaq7NZEpuaMO4Lw==}
+  /bull@4.12.7:
+    resolution: {integrity: sha512-z4UTpIfjYdQ2SO+6nE51bEqcr2/72vpIOKZTo0+ZHxQWro0JttwDy+/uTEZVm4YTPv6iwv/iqD7D9T1dg8C4mw==}
     engines: {node: '>=12'}
     dependencies:
       cron-parser: 4.9.0
