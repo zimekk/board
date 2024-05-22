@@ -1,8 +1,7 @@
-import { json } from "express";
-import { Router } from "express";
 import { createBullBoard } from "@bull-board/api";
 import { BullAdapter } from "@bull-board/api/bullAdapter";
 import { ExpressAdapter } from "@bull-board/express";
+import { Router, json } from "express";
 import { z } from "zod";
 import {
   DataSchema,
@@ -16,7 +15,7 @@ import {
 export const router = () => {
   const BASE_PATH = "/board";
 
-  const serverAdapter = new ExpressAdapter();
+  const serverAdapter: any = new ExpressAdapter();
   serverAdapter.setBasePath(BASE_PATH);
 
   const worker = client();
