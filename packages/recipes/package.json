@@ -17,7 +17,7 @@
     "coverage": "type-coverage && tsc --noEmit"
   },
   "dependencies": {
-    "@dev/video": "^1.0.0",
+    "@dev/video": "workspace:*",
     "format-quantity": "^3.0.0",
     "react": "^18.2.0",
     "react-player": "^2.13.0",

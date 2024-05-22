@@ -9,7 +9,7 @@
     "coverage": "type-coverage && tsc --noEmit"
   },
   "dependencies": {
-    "@dev/client": "1.0.0",
+    "@dev/client": "workspace:*",
     "@graphql-tools/schema": "^10.0.0",
     "graphql-request": "^6.0.0",
     "graphql-tag": "^2.12.6",

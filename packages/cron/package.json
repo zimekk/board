@@ -17,7 +17,7 @@
     "coverage": "type-coverage && tsc --noEmit"
   },
   "dependencies": {
-    "@dev/schema": "^1.0.0",
+    "@dev/schema": "workspace:*",
     "chunk": "^0.0.3",
     "cron-parser": "^4.9.0",
     "date-fns": "^3.0.0",

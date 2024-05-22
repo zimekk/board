@@ -14,7 +14,7 @@
     "coverage": "type-coverage && tsc --noEmit"
   },
   "dependencies": {
-    "@dev/lan": "1.0.0",
+    "@dev/lan": "workspace:*",
     "@graphql-tools/schema": "^10.0.0",
     "express": "^4.18.2",
     "express-graphql": "^0.12.0",

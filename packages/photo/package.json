@@ -17,7 +17,7 @@
     "coverage": "type-coverage && tsc --noEmit"
   },
   "dependencies": {
-    "@dev/video": "^1.0.0",
+    "@dev/video": "workspace:*",
     "express": "^4.18.2",
     "glob": "^10.3.3",
     "mqtt": "^5.3.5",
