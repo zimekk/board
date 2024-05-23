@@ -1,7 +1,7 @@
 // https://github.com/calebj0seph/stock-checker/blob/master/src/chrome.js
-import type { HTTPRequest, HTTPResponse } from "puppeteer";
 import { config } from "dotenv";
 import { resolve } from "path";
+import type { HTTPRequest, HTTPResponse } from "puppeteer";
 import puppeteer from "puppeteer";
 // import puppeteer from "puppeteer-extra";
 // import StealthPlugin from "puppeteer-extra-plugin-stealth";
@@ -28,11 +28,13 @@ export async function launch() {
     // https://stackoverflow.com/questions/47122579/run-puppeteer-on-already-installed-chrome-on-macos
     executablePath: PUPPETEER_EXECUTABLE_PATH,
     // https://developer.chrome.com/articles/new-headless/
-    headless: "new",
+    // headless: "new",
+    // headless: true,
     args: WORKDIR
       ? [
           "--no-sandbox",
-          "--headless=new",
+          // "--headless=new",
+          "--headless",
           "--disable-gpu",
           "--disable-dev-shm-usage",
         ]

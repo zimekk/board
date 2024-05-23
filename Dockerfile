@@ -9,6 +9,8 @@ FROM node:20.10.0-alpine3.17
 RUN apk add --no-cache \
       alsa-utils \
       chromium \
+      dbus \
+      grep \
       nss \
       freetype \
       harfbuzz \
@@ -16,7 +18,10 @@ RUN apk add --no-cache \
       networkmanager-cli \
       ttf-freefont \
       tzdata \
-      zip
+      zip \
+      zlib-dev
+# https://github.com/nodejs/help/issues/3220
+RUN dbus-daemon --system
 
 # https://stackoverflow.com/questions/68996420/how-to-set-timezone-inside-alpine-base-docker-image
 # https://docs.diladele.com/docker/timezones.html
