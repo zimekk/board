@@ -235,7 +235,7 @@ importers:
         version: 2.1.35
       mqtt:
         specifier: ^5.3.5
-        version: 5.6.1
+        version: 5.6.2
       music-metadata:
         specifier: ^7.13.4
         version: 7.14.0
@@ -275,7 +275,7 @@ importers:
         version: 0.4.2
       mqtt:
         specifier: ^5.3.5
-        version: 5.6.1
+        version: 5.6.2
       nodecast-js:
         specifier: ^1.0.3
         version: 1.0.3
@@ -431,7 +431,7 @@ importers:
         version: 10.3.13
       mqtt:
         specifier: ^5.3.5
-        version: 5.6.1
+        version: 5.6.2
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -533,7 +533,7 @@ importers:
         version: 10.3.13
       mqtt:
         specifier: ^5.3.5
-        version: 5.6.1
+        version: 5.6.2
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -583,7 +583,7 @@ importers:
         version: 10.3.13
       mqtt:
         specifier: ^5.3.5
-        version: 5.6.1
+        version: 5.6.2
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -633,7 +633,7 @@ importers:
         version: 10.3.13
       mqtt:
         specifier: ^5.3.5
-        version: 5.6.1
+        version: 5.6.2
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -719,7 +719,7 @@ importers:
         version: 2.1.35
       mqtt:
         specifier: ^5.3.5
-        version: 5.6.1
+        version: 5.6.2
       nodecast-js:
         specifier: ^1.0.3
         version: 1.0.3
@@ -800,7 +800,7 @@ importers:
         version: 4.19.2
       mqtt:
         specifier: ^5.3.5
-        version: 5.6.1
+        version: 5.6.2
       nodemailer:
         specifier: ^6.9.2
         version: 6.9.13
@@ -4771,6 +4771,7 @@ packages:
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
 
   inherits@2.0.3:
     resolution: {integrity: sha512-x00IRNXNy63jwGkJmzPigoySHbaqpNuzKbBOmzK+g2OdZpQ9w+sxCN+VSB3ja7IAge2OP2qpfxTjeNcyjmW1uw==}
@@ -5462,8 +5463,8 @@ packages:
   mqtt-packet@9.0.0:
     resolution: {integrity: sha512-8v+HkX+fwbodsWAZIZTI074XIoxVBOmPeggQuDFCGg1SqNcC+uoRMWu7J6QlJPqIUIJXmjNYYHxBBLr1Y/Df4w==}
 
-  mqtt@5.6.1:
-    resolution: {integrity: sha512-0av+NmA7flOg5YZLZnh2Ytg56nvtiiAQJ70ziTUOCt4om5zodzYPbAeXIWtLXSJctmeuplxRB7mDdNwTr6CKhg==}
+  mqtt@5.6.2:
+    resolution: {integrity: sha512-bbmR8b4luc4UedbteHJ5Idc5zngJglVyogrJcE2buu+5Iipk5e3du3doBr+HCqKJt/OfuLQ9v0SfVgs6zOGZlg==}
     engines: {node: '>=16.0.0'}
     hasBin: true
 
@@ -12573,7 +12574,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  mqtt@5.6.1:
+  mqtt@5.6.2:
     dependencies:
       '@types/readable-stream': 4.0.14
       '@types/ws': 8.5.10
