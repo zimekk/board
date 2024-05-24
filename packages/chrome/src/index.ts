@@ -28,13 +28,11 @@ export async function launch() {
     // https://stackoverflow.com/questions/47122579/run-puppeteer-on-already-installed-chrome-on-macos
     executablePath: PUPPETEER_EXECUTABLE_PATH,
     // https://developer.chrome.com/articles/new-headless/
-    // headless: "new",
-    // headless: true,
+    headless: "new",
     args: WORKDIR
       ? [
           "--no-sandbox",
-          // "--headless=new",
-          "--headless",
+          "--headless=new",
           "--disable-gpu",
           "--disable-dev-shm-usage",
         ]
