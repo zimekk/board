@@ -263,7 +263,7 @@ importers:
         version: 2.1.4
       '@types/react':
         specifier: ^18.2.18
-        version: 18.3.2
+        version: 18.3.3
 
   packages/cast:
     dependencies:
@@ -304,7 +304,7 @@ importers:
         version: 20.12.12
       '@types/react':
         specifier: ^18.2.18
-        version: 18.3.2
+        version: 18.3.3
       ts-node-dev:
         specifier: ^2.0.0
         version: 2.0.0(@types/node@20.12.12)(typescript@5.4.5)
@@ -391,7 +391,7 @@ importers:
     devDependencies:
       '@types/react':
         specifier: ^18.2.18
-        version: 18.3.2
+        version: 18.3.3
 
   packages/ext:
     dependencies:
@@ -410,7 +410,7 @@ importers:
         version: 0.0.268
       '@types/react':
         specifier: ^18.2.18
-        version: 18.3.2
+        version: 18.3.3
       '@vitejs/plugin-react':
         specifier: ^4.2.0
         version: 4.3.0(vite@4.2.3(@types/node@20.12.12)(sass@1.77.2)(terser@5.30.4))
@@ -450,7 +450,7 @@ importers:
         version: 4.17.21
       '@types/react':
         specifier: ^18.2.18
-        version: 18.3.2
+        version: 18.3.3
 
   packages/lan:
     dependencies:
@@ -487,7 +487,7 @@ importers:
         version: 2.0.2
       '@types/react':
         specifier: ^18.2.18
-        version: 18.3.2
+        version: 18.3.3
       graphql:
         specifier: ^16.6.0
         version: 16.8.1
@@ -515,7 +515,7 @@ importers:
         version: 4.17.21
       '@types/react':
         specifier: ^18.2.6
-        version: 18.3.2
+        version: 18.3.3
 
   packages/movie:
     dependencies:
@@ -549,7 +549,7 @@ importers:
         version: 4.17.21
       '@types/react':
         specifier: ^18.2.18
-        version: 18.3.2
+        version: 18.3.3
 
   packages/overlay:
     dependencies:
@@ -568,7 +568,7 @@ importers:
     devDependencies:
       '@types/react':
         specifier: ^18.2.18
-        version: 18.3.2
+        version: 18.3.3
 
   packages/photo:
     dependencies:
@@ -599,7 +599,7 @@ importers:
         version: 4.17.21
       '@types/react':
         specifier: ^18.2.18
-        version: 18.3.2
+        version: 18.3.3
 
   packages/recipes:
     dependencies:
@@ -621,7 +621,7 @@ importers:
     devDependencies:
       '@types/react':
         specifier: ^18.2.18
-        version: 18.3.2
+        version: 18.3.3
 
   packages/request:
     dependencies:
@@ -649,7 +649,7 @@ importers:
         version: 4.17.21
       '@types/react':
         specifier: ^18.2.18
-        version: 18.3.2
+        version: 18.3.3
 
   packages/schema:
     dependencies:
@@ -698,7 +698,7 @@ importers:
     devDependencies:
       '@types/react':
         specifier: ^18.2.18
-        version: 18.3.2
+        version: 18.3.3
 
   packages/share:
     dependencies:
@@ -738,7 +738,7 @@ importers:
         version: 4.17.21
       '@types/react':
         specifier: ^18.2.6
-        version: 18.3.2
+        version: 18.3.3
       '@types/styled-components':
         specifier: ^5.1.26
         version: 5.1.34
@@ -769,7 +769,7 @@ importers:
         version: 4.17.21
       '@types/react':
         specifier: ^18.2.18
-        version: 18.3.2
+        version: 18.3.3
 
   packages/sql:
     dependencies:
@@ -834,7 +834,7 @@ importers:
         version: 6.4.15
       '@types/react':
         specifier: ^18.2.6
-        version: 18.3.2
+        version: 18.3.3
       '@types/styled-components':
         specifier: ^5.1.26
         version: 5.1.34
@@ -862,7 +862,7 @@ importers:
         version: 20.12.12
       '@types/react':
         specifier: ^18.2.18
-        version: 18.3.2
+        version: 18.3.3
 
   packages/transfer:
     dependencies:
@@ -871,7 +871,7 @@ importers:
         version: 5.3.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@reduxjs/toolkit':
         specifier: ^2.2.1
-        version: 2.2.5(react-redux@9.1.2(@types/react@18.3.2)(react@18.3.1)(redux@5.0.1))(react@18.3.1)
+        version: 2.2.5(react-redux@9.1.2(@types/react@18.3.3)(react@18.3.1)(redux@5.0.1))(react@18.3.1)
       antd:
         specifier: ^5.4.2
         version: 5.17.1(date-fns@3.6.0)(luxon@3.4.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -889,7 +889,7 @@ importers:
         version: 18.3.1
       react-redux:
         specifier: ^9.1.0
-        version: 9.1.2(@types/react@18.3.2)(react@18.3.1)(redux@5.0.1)
+        version: 9.1.2(@types/react@18.3.3)(react@18.3.1)(redux@5.0.1)
       redux:
         specifier: ^5.0.1
         version: 5.0.1
@@ -902,7 +902,7 @@ importers:
         version: 4.17.21
       '@types/react':
         specifier: ^18.2.6
-        version: 18.3.2
+        version: 18.3.3
 
   packages/video:
     dependencies:
@@ -942,7 +942,7 @@ importers:
         version: 2.1.24
       '@types/react':
         specifier: ^18.2.18
-        version: 18.3.2
+        version: 18.3.3
 
   packages/wakeword:
     dependencies:
@@ -981,7 +981,7 @@ importers:
     devDependencies:
       '@types/react':
         specifier: ^18.2.18
-        version: 18.3.2
+        version: 18.3.3
 
   packages/web:
     dependencies:
@@ -1117,7 +1117,7 @@ importers:
         version: 20.12.12
       '@types/react':
         specifier: ^18.2.18
-        version: 18.3.2
+        version: 18.3.3
       '@types/react-dom':
         specifier: ^18.2.7
         version: 18.3.0
@@ -1147,7 +1147,7 @@ importers:
         version: 5.6.0(webpack@5.91.0(webpack-cli@5.1.4(webpack-dev-server@5.0.4)(webpack@5.91.0)))
       react-hot-loader:
         specifier: ^4.13.1
-        version: 4.13.1(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 4.13.1(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       sass:
         specifier: ^1.64.2
         version: 1.77.2
@@ -1202,7 +1202,7 @@ importers:
         version: 4.17.21
       '@types/react':
         specifier: ^18.2.6
-        version: 18.3.2
+        version: 18.3.3
       peer:
         specifier: ^1.0.2
         version: 1.0.2
@@ -2828,8 +2828,8 @@ packages:
   '@types/react-dom@18.3.0':
     resolution: {integrity: sha512-EhwApuTmMBmXuFOikhQLIBUn6uFg81SwLMOAUgodJF14SOBOCMdU04gDoYi0WOJJHD144TL32z4yDqCW3dnkQg==}
 
-  '@types/react@18.3.2':
-    resolution: {integrity: sha512-Btgg89dAnqD4vV7R3hlwOxgqobUQKgx3MmrQRi0yYbs/P0ym8XozIAlkqVilPqHQwXs4e9Tf63rrCgl58BcO4w==}
+  '@types/react@18.3.3':
+    resolution: {integrity: sha512-hti/R0pS0q1/xx+TsI73XIqk26eBsISZ2R0wUijXIngRK9R/e7Xw/cXVxQK7R5JjW+SV4zGcn5hXjudkN/pLIw==}
 
   '@types/readable-stream@4.0.14':
     resolution: {integrity: sha512-xZn/AuUbCMShGsqH/ehZtGDwQtbx00M9rZ2ENLe4tOjFZ/JFeWMhEZkk2fEe1jAUqqEAURIkFJ7Az/go8mM1/w==}
@@ -9293,7 +9293,7 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@reduxjs/toolkit@2.2.5(react-redux@9.1.2(@types/react@18.3.2)(react@18.3.1)(redux@5.0.1))(react@18.3.1)':
+  '@reduxjs/toolkit@2.2.5(react-redux@9.1.2(@types/react@18.3.3)(react@18.3.1)(redux@5.0.1))(react@18.3.1)':
     dependencies:
       immer: 10.1.1
       redux: 5.0.1
@@ -9301,7 +9301,7 @@ snapshots:
       reselect: 5.1.0
     optionalDependencies:
       react: 18.3.1
-      react-redux: 9.1.2(@types/react@18.3.2)(react@18.3.1)(redux@5.0.1)
+      react-redux: 9.1.2(@types/react@18.3.3)(react@18.3.1)(redux@5.0.1)
 
   '@rollup/plugin-babel@5.3.1(@babel/core@7.24.5)(@types/babel__core@7.20.5)(rollup@2.79.1)':
     dependencies:
@@ -9487,7 +9487,7 @@ snapshots:
 
   '@types/hoist-non-react-statics@3.3.5':
     dependencies:
-      '@types/react': 18.3.2
+      '@types/react': 18.3.3
       hoist-non-react-statics: 3.3.2
 
   '@types/html-minifier-terser@6.1.0': {}
@@ -9554,9 +9554,9 @@ snapshots:
 
   '@types/react-dom@18.3.0':
     dependencies:
-      '@types/react': 18.3.2
+      '@types/react': 18.3.3
 
-  '@types/react@18.3.2':
+  '@types/react@18.3.3':
     dependencies:
       '@types/prop-types': 15.7.12
       csstype: 3.1.3
@@ -9606,7 +9606,7 @@ snapshots:
   '@types/styled-components@5.1.34':
     dependencies:
       '@types/hoist-non-react-statics': 3.3.5
-      '@types/react': 18.3.2
+      '@types/react': 18.3.3
       csstype: 3.1.3
 
   '@types/stylis@4.2.5': {}
@@ -13659,7 +13659,7 @@ snapshots:
 
   react-fast-compare@3.2.2: {}
 
-  react-hot-loader@4.13.1(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-hot-loader@4.13.1(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       fast-levenshtein: 2.0.6
       global: 4.4.0
@@ -13672,7 +13672,7 @@ snapshots:
       shallowequal: 1.1.0
       source-map: 0.7.4
     optionalDependencies:
-      '@types/react': 18.3.2
+      '@types/react': 18.3.3
 
   react-is@16.13.1: {}
 
@@ -13689,13 +13689,13 @@ snapshots:
       react: 18.3.1
       react-fast-compare: 3.2.2
 
-  react-redux@9.1.2(@types/react@18.3.2)(react@18.3.1)(redux@5.0.1):
+  react-redux@9.1.2(@types/react@18.3.3)(react@18.3.1)(redux@5.0.1):
     dependencies:
       '@types/use-sync-external-store': 0.0.3
       react: 18.3.1
       use-sync-external-store: 1.2.2(react@18.3.1)
     optionalDependencies:
-      '@types/react': 18.3.2
+      '@types/react': 18.3.3
       redux: 5.0.1
 
   react-refresh@0.13.0: {}
