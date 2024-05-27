@@ -3,7 +3,9 @@ import { SKIP_ACTION } from "../constants";
 import styles from "./App.module.scss";
 
 function skipVideo() {
-  const button = document.querySelector("button.ytp-ad-skip-button-modern");
+  const button =
+    document.querySelector("button.ytp-ad-skip-button-modern") ||
+    document.querySelector("button.ytp-ad-skip-button");
   console.log({ button });
   if (button && button instanceof HTMLButtonElement) {
     button.click();
@@ -19,7 +21,9 @@ function skipVideo() {
     return;
   }
 
-  const ads = document.querySelector("div.video-ads div");
+  const ads =
+    document.querySelector("div.video-ads div") ||
+    document.querySelector("div.ytp-preview-ad");
   console.log({ ads });
   if (ads) {
     const video = document.querySelector("video");
