@@ -30,7 +30,7 @@ function skipVideo() {
     console.log({ video });
     if (video) {
       video.currentTime = video.duration - 0.1;
-      return;
+      return true;
     }
   }
 }
@@ -54,8 +54,10 @@ export default function App() {
     const onLoadedMetadata = ({ target }) => {
       console.log(["loadedmetadata"], { target });
       setTimeout(() => {
-        autoSkipVideo();
-      }, 1000);
+        if (autoSkipVideo()) {
+          setTimeout(() => autoSkipVideo(), 200);
+        }
+      }, 200);
     };
 
     const video = document.querySelector("video");
