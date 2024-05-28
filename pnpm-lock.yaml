@@ -1211,10 +1211,10 @@ importers:
     dependencies:
       '@bull-board/api':
         specifier: ^5.2.0
-        version: 5.18.3(@bull-board/ui@5.18.3)
+        version: 5.18.3(@bull-board/ui@5.19.0)
       '@bull-board/express':
         specifier: ^5.15.5
-        version: 5.18.3
+        version: 5.19.0
       '@dev/chrome':
         specifier: workspace:*
         version: link:../chrome
@@ -2039,11 +2039,16 @@ packages:
     peerDependencies:
       '@bull-board/ui': 5.18.3
 
-  '@bull-board/express@5.18.3':
-    resolution: {integrity: sha512-jicqumVCXapwGUqBvVHQfhdbS9giIX7JkKbC1YyuNd+RR+I43ozsDsT7XjhYZLhi46aFhrd+5Y3q/VwVWms0Qg==}
+  '@bull-board/api@5.19.0':
+    resolution: {integrity: sha512-eX0L0JFyGK3E0bxWt+zDRYt89xUKUNRk/7dALiFK2jtMSHTMFguyAx86S9d4wo3jGKAdK89MFCTcTeTiQLb3EQ==}
+    peerDependencies:
+      '@bull-board/ui': 5.19.0
 
-  '@bull-board/ui@5.18.3':
-    resolution: {integrity: sha512-cy46YzbcHxDdR24462ZLI74R4N6WVRNSZKqk3T900kKt2uR2QbAiwlOpCCdxciGWFLe4Avk1J/Bf7ygB27a2kw==}
+  '@bull-board/express@5.19.0':
+    resolution: {integrity: sha512-3kFHzNnoxZuln1svRPrXOb6Q0JNW3NGQsS9yWX0jSYDdf9xy+zrXpB4S2tQeMvXIh0uD+5v63QJjIIAIFak3Bg==}
+
+  '@bull-board/ui@5.19.0':
+    resolution: {integrity: sha512-OjIJTSr6L39d13sIVIjfaOd5i6xyNJxjZXZjWDUfl9ODhwZiIkhzjE/dCzxBj0BSNUm2w1KwwEeF7B7AAYseDg==}
 
   '@commitlint/cli@19.3.0':
     resolution: {integrity: sha512-LgYWOwuDR7BSTQ9OLZ12m7F/qhNY+NpAyPBgo4YNMkACE7lGuUnuQq1yi9hz1KA4+3VqpOYl8H1rY/LYK43v7g==}
@@ -8791,23 +8796,28 @@ snapshots:
       '@babel/helper-validator-identifier': 7.24.6
       to-fast-properties: 2.0.0
 
-  '@bull-board/api@5.18.3(@bull-board/ui@5.18.3)':
+  '@bull-board/api@5.18.3(@bull-board/ui@5.19.0)':
     dependencies:
-      '@bull-board/ui': 5.18.3
+      '@bull-board/ui': 5.19.0
       redis-info: 3.1.0
 
-  '@bull-board/express@5.18.3':
+  '@bull-board/api@5.19.0(@bull-board/ui@5.19.0)':
     dependencies:
-      '@bull-board/api': 5.18.3(@bull-board/ui@5.18.3)
-      '@bull-board/ui': 5.18.3
+      '@bull-board/ui': 5.19.0
+      redis-info: 3.1.0
+
+  '@bull-board/express@5.19.0':
+    dependencies:
+      '@bull-board/api': 5.19.0(@bull-board/ui@5.19.0)
+      '@bull-board/ui': 5.19.0
       ejs: 3.1.10
       express: 4.19.2
     transitivePeerDependencies:
       - supports-color
 
-  '@bull-board/ui@5.18.3':
+  '@bull-board/ui@5.19.0':
     dependencies:
-      '@bull-board/api': 5.18.3(@bull-board/ui@5.18.3)
+      '@bull-board/api': 5.19.0(@bull-board/ui@5.19.0)
 
   '@commitlint/cli@19.3.0(@types/node@20.12.12)(typescript@5.4.5)':
     dependencies:
