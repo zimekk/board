@@ -196,7 +196,7 @@ importers:
         version: 2.0.2
       sass-loader:
         specifier: ^14.0.0
-        version: 14.2.1(sass@1.77.5)(webpack@5.92.0)
+        version: 14.2.1(sass@1.77.6)(webpack@5.92.0)
       style-loader:
         specifier: ^4.0.0
         version: 4.0.0(webpack@5.92.0)
@@ -404,7 +404,7 @@ importers:
     devDependencies:
       '@crxjs/vite-plugin':
         specifier: ^1.0.14
-        version: 1.0.14(vite@4.2.3(@types/node@20.14.4)(sass@1.77.5)(terser@5.31.1))
+        version: 1.0.14(vite@4.2.3(@types/node@20.14.4)(sass@1.77.6)(terser@5.31.1))
       '@types/chrome':
         specifier: ^0.0.268
         version: 0.0.268
@@ -413,10 +413,10 @@ importers:
         version: 18.3.3
       '@vitejs/plugin-react':
         specifier: ^4.2.0
-        version: 4.3.1(vite@4.2.3(@types/node@20.14.4)(sass@1.77.5)(terser@5.31.1))
+        version: 4.3.1(vite@4.2.3(@types/node@20.14.4)(sass@1.77.6)(terser@5.31.1))
       vite:
         specifier: ~4.2.2
-        version: 4.2.3(@types/node@20.14.4)(sass@1.77.5)(terser@5.31.1)
+        version: 4.2.3(@types/node@20.14.4)(sass@1.77.6)(terser@5.31.1)
 
   packages/gphoto:
     dependencies:
@@ -1150,10 +1150,10 @@ importers:
         version: 4.13.1(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       sass:
         specifier: ^1.64.2
-        version: 1.77.5
+        version: 1.77.6
       sass-loader:
         specifier: ^14.0.0
-        version: 14.2.1(sass@1.77.5)(webpack@5.92.0(webpack-cli@5.1.4))
+        version: 14.2.1(sass@1.77.6)(webpack@5.92.0(webpack-cli@5.1.4))
       serve:
         specifier: ^14.2.0
         version: 14.2.3
@@ -6739,8 +6739,8 @@ packages:
       webpack:
         optional: true
 
-  sass@1.77.5:
-    resolution: {integrity: sha512-oDfX1mukIlxacPdQqNb6mV2tVCrnE+P3nVYioy72V5tlk56CPNcO4TCuFcaCRKKfJ1M3lH95CleRS+dVKL2qMg==}
+  sass@1.77.6:
+    resolution: {integrity: sha512-ByXE1oLD79GVq9Ht1PeHWCPMPB8XHpBuz1r85oByKHjZY6qV6rWnQovQzXJXuQ/XyE1Oj3iPk3lo28uzaRA2/Q==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -8807,7 +8807,7 @@ snapshots:
       '@types/conventional-commits-parser': 5.0.0
       chalk: 5.3.0
 
-  '@crxjs/vite-plugin@1.0.14(vite@4.2.3(@types/node@20.14.4)(sass@1.77.5)(terser@5.31.1))':
+  '@crxjs/vite-plugin@1.0.14(vite@4.2.3(@types/node@20.14.4)(sass@1.77.6)(terser@5.31.1))':
     dependencies:
       '@rollup/pluginutils': 4.2.1
       '@webcomponents/custom-elements': 1.6.0
@@ -8823,9 +8823,9 @@ snapshots:
       picocolors: 1.0.1
       react-refresh: 0.13.0
       rollup: 2.79.1
-      vite: 4.2.3(@types/node@20.14.4)(sass@1.77.5)(terser@5.31.1)
+      vite: 4.2.3(@types/node@20.14.4)(sass@1.77.6)(terser@5.31.1)
     optionalDependencies:
-      '@vitejs/plugin-react': 4.3.1(vite@4.2.3(@types/node@20.14.4)(sass@1.77.5)(terser@5.31.1))
+      '@vitejs/plugin-react': 4.3.1(vite@4.2.3(@types/node@20.14.4)(sass@1.77.6)(terser@5.31.1))
     transitivePeerDependencies:
       - supports-color
 
@@ -9863,14 +9863,14 @@ snapshots:
       '@typescript-eslint/types': 7.3.0
       eslint-visitor-keys: 3.4.3
 
-  '@vitejs/plugin-react@4.3.1(vite@4.2.3(@types/node@20.14.4)(sass@1.77.5)(terser@5.31.1))':
+  '@vitejs/plugin-react@4.3.1(vite@4.2.3(@types/node@20.14.4)(sass@1.77.6)(terser@5.31.1))':
     dependencies:
       '@babel/core': 7.24.7
       '@babel/plugin-transform-react-jsx-self': 7.24.7(@babel/core@7.24.7)
       '@babel/plugin-transform-react-jsx-source': 7.24.7(@babel/core@7.24.7)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 4.2.3(@types/node@20.14.4)(sass@1.77.5)(terser@5.31.1)
+      vite: 4.2.3(@types/node@20.14.4)(sass@1.77.6)(terser@5.31.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -14067,21 +14067,21 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sass-loader@14.2.1(sass@1.77.5)(webpack@5.92.0(webpack-cli@5.1.4)):
+  sass-loader@14.2.1(sass@1.77.6)(webpack@5.92.0(webpack-cli@5.1.4)):
     dependencies:
       neo-async: 2.6.2
     optionalDependencies:
-      sass: 1.77.5
+      sass: 1.77.6
       webpack: 5.92.0(webpack-cli@5.1.4)
 
-  sass-loader@14.2.1(sass@1.77.5)(webpack@5.92.0):
+  sass-loader@14.2.1(sass@1.77.6)(webpack@5.92.0):
     dependencies:
       neo-async: 2.6.2
     optionalDependencies:
-      sass: 1.77.5
+      sass: 1.77.6
       webpack: 5.92.0
 
-  sass@1.77.5:
+  sass@1.77.6:
     dependencies:
       chokidar: 3.6.0
       immutable: 4.3.6
@@ -14852,7 +14852,7 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite@4.2.3(@types/node@20.14.4)(sass@1.77.5)(terser@5.31.1):
+  vite@4.2.3(@types/node@20.14.4)(sass@1.77.6)(terser@5.31.1):
     dependencies:
       esbuild: 0.17.19
       postcss: 8.4.38
@@ -14861,7 +14861,7 @@ snapshots:
     optionalDependencies:
       '@types/node': 20.14.4
       fsevents: 2.3.3
-      sass: 1.77.5
+      sass: 1.77.6
       terser: 5.31.1
 
   watchpack@2.4.1:
