@@ -235,7 +235,7 @@ importers:
         version: 2.1.35
       mqtt:
         specifier: ^5.3.5
-        version: 5.7.1
+        version: 5.7.2
       music-metadata:
         specifier: ^7.13.4
         version: 7.14.0
@@ -275,7 +275,7 @@ importers:
         version: 0.4.2
       mqtt:
         specifier: ^5.3.5
-        version: 5.7.1
+        version: 5.7.2
       nodecast-js:
         specifier: ^1.0.3
         version: 1.0.3
@@ -431,7 +431,7 @@ importers:
         version: 10.3.13
       mqtt:
         specifier: ^5.3.5
-        version: 5.7.1
+        version: 5.7.2
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -533,7 +533,7 @@ importers:
         version: 10.3.13
       mqtt:
         specifier: ^5.3.5
-        version: 5.7.1
+        version: 5.7.2
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -583,7 +583,7 @@ importers:
         version: 10.3.13
       mqtt:
         specifier: ^5.3.5
-        version: 5.7.1
+        version: 5.7.2
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -633,7 +633,7 @@ importers:
         version: 10.3.13
       mqtt:
         specifier: ^5.3.5
-        version: 5.7.1
+        version: 5.7.2
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -719,7 +719,7 @@ importers:
         version: 2.1.35
       mqtt:
         specifier: ^5.3.5
-        version: 5.7.1
+        version: 5.7.2
       nodecast-js:
         specifier: ^1.0.3
         version: 1.0.3
@@ -800,7 +800,7 @@ importers:
         version: 4.19.2
       mqtt:
         specifier: ^5.3.5
-        version: 5.7.1
+        version: 5.7.2
       nodemailer:
         specifier: ^6.9.2
         version: 6.9.13
@@ -2821,9 +2821,6 @@ packages:
 
   '@types/node@20.14.4':
     resolution: {integrity: sha512-1ChboN+57suCT2t/f8lwtPY/k3qTpuD/qnqQuYoBg6OQOcPyaw7PiZVdGpaZYAvhDDtqrt0oAaM8+oSu1xsUGw==}
-
-  '@types/node@20.14.5':
-    resolution: {integrity: sha512-aoRR+fJkZT2l0aGOJhuA8frnCSoNX6W7U2mpNq63+BxBIj5BQFt8rHy627kijCmm63ijdSdwvGgpUsU6MBsZZA==}
 
   '@types/node@20.14.6':
     resolution: {integrity: sha512-JbA0XIJPL1IiNnU7PFxDXyfAwcwVVrOoqyzzyQTyMeVhBzkJVMSkC1LlVsRQ2lpqiY4n6Bb9oCS6lzDKVQxbZw==}
@@ -5504,8 +5501,8 @@ packages:
   mqtt-packet@9.0.0:
     resolution: {integrity: sha512-8v+HkX+fwbodsWAZIZTI074XIoxVBOmPeggQuDFCGg1SqNcC+uoRMWu7J6QlJPqIUIJXmjNYYHxBBLr1Y/Df4w==}
 
-  mqtt@5.7.1:
-    resolution: {integrity: sha512-6Gf5NH9/WxwGKkkXTyTI1lsM7S3s3zqSJe61Qp5w3B45BAOkOjM8p1GwNvgLE28+WO4d9OwrJzV8DWOMtWfy6w==}
+  mqtt@5.7.2:
+    resolution: {integrity: sha512-b5xIA9J/K1LTubSWKaNYYLxYIusQdip6o9/8bRWad2TelRr8xLifjQt+SnamDAwMp3O6NdvR9E8ae7VMuN02kg==}
     engines: {node: '>=16.0.0'}
     hasBin: true
 
@@ -9568,7 +9565,7 @@ snapshots:
 
   '@types/conventional-commits-parser@5.0.0':
     dependencies:
-      '@types/node': 20.14.5
+      '@types/node': 20.14.6
 
   '@types/cors@2.8.17':
     dependencies:
@@ -9673,10 +9670,6 @@ snapshots:
     dependencies:
       undici-types: 5.26.5
 
-  '@types/node@20.14.5':
-    dependencies:
-      undici-types: 5.26.5
-
   '@types/node@20.14.6':
     dependencies:
       undici-types: 5.26.5
@@ -9708,7 +9701,7 @@ snapshots:
 
   '@types/readable-stream@4.0.14':
     dependencies:
-      '@types/node': 20.14.5
+      '@types/node': 20.14.6
       safe-buffer: 5.1.2
 
   '@types/redux-actions@2.6.5': {}
@@ -9794,7 +9787,7 @@ snapshots:
 
   '@types/ws@8.5.10':
     dependencies:
-      '@types/node': 20.14.5
+      '@types/node': 20.14.6
 
   '@types/yauzl@2.10.3':
     dependencies:
@@ -12740,7 +12733,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  mqtt@5.7.1:
+  mqtt@5.7.2:
     dependencies:
       '@types/readable-stream': 4.0.14
       '@types/ws': 8.5.10
