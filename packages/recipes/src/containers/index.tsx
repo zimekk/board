@@ -156,12 +156,6 @@ function Recipe({
   );
 }
 
-const textToList = (text: string) =>
-  text
-    .split("\n")
-    .map((s) => s.trim())
-    .filter(Boolean);
-
 export default function Section() {
   const [videoId, setVideoId] = useState("");
   const [recipes] = useState<RecipeType[]>(() => data);
