@@ -1223,7 +1223,7 @@ importers:
         version: link:../schema
       bull:
         specifier: ^4.10.4
-        version: 4.15.0
+        version: 4.15.1
       chunk:
         specifier: ^0.0.3
         version: 0.0.3
@@ -3439,8 +3439,8 @@ packages:
     resolution: {integrity: sha512-zhaCDicdLuWN5UbN5IMnFqNMhNfo919sH85y2/ea+5Yg9TsTkeZxpL+JLbp6cgYFS4sRLp3YV4S6yDuqVWHYOw==}
     engines: {node: '>=6'}
 
-  bull@4.15.0:
-    resolution: {integrity: sha512-nOEAfUXwUXtFbRPQP3bWCwpQ/NAerAu2Nym/ucv5C1E+Qh2x6RGdKKsYIfZam4mYncayTynTUN/HLhRgGi2N8w==}
+  bull@4.15.1:
+    resolution: {integrity: sha512-knVKiZdrXbRkB+fWqNryDz85b3JfsT3dBrZexkztwvTH/AFmpHvsC933VB3JX18aJCz47E+xdO57xbDvxljoAg==}
     engines: {node: '>=12'}
 
   bundle-name@4.1.0:
@@ -10478,7 +10478,7 @@ snapshots:
 
   builtin-modules@3.3.0: {}
 
-  bull@4.15.0:
+  bull@4.15.1:
     dependencies:
       cron-parser: 4.9.0
       get-port: 5.1.1
