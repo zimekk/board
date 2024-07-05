@@ -235,7 +235,7 @@ importers:
         version: 2.1.35
       mqtt:
         specifier: ^5.3.5
-        version: 5.7.3
+        version: 5.8.0
       music-metadata:
         specifier: ^7.13.4
         version: 7.14.0
@@ -275,7 +275,7 @@ importers:
         version: 0.4.2
       mqtt:
         specifier: ^5.3.5
-        version: 5.7.3
+        version: 5.8.0
       nodecast-js:
         specifier: ^1.0.3
         version: 1.0.3
@@ -431,7 +431,7 @@ importers:
         version: 10.3.13
       mqtt:
         specifier: ^5.3.5
-        version: 5.7.3
+        version: 5.8.0
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -533,7 +533,7 @@ importers:
         version: 10.3.13
       mqtt:
         specifier: ^5.3.5
-        version: 5.7.3
+        version: 5.8.0
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -583,7 +583,7 @@ importers:
         version: 10.3.13
       mqtt:
         specifier: ^5.3.5
-        version: 5.7.3
+        version: 5.8.0
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -633,7 +633,7 @@ importers:
         version: 10.3.13
       mqtt:
         specifier: ^5.3.5
-        version: 5.7.3
+        version: 5.8.0
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -719,7 +719,7 @@ importers:
         version: 2.1.35
       mqtt:
         specifier: ^5.3.5
-        version: 5.7.3
+        version: 5.8.0
       nodecast-js:
         specifier: ^1.0.3
         version: 1.0.3
@@ -800,7 +800,7 @@ importers:
         version: 4.19.2
       mqtt:
         specifier: ^5.3.5
-        version: 5.7.3
+        version: 5.8.0
       nodemailer:
         specifier: ^6.9.2
         version: 6.9.14
@@ -5318,6 +5318,10 @@ packages:
     resolution: {integrity: sha512-9hp3Vp2/hFQUiIwKo8XCeFVnrg8Pk3TYNPIR7tJADKi5YfcF7vEaK7avFHTlSy3kOKYaJQaalfEo6YuXdceBOQ==}
     engines: {node: 14 || >=16.14}
 
+  lru-cache@10.3.0:
+    resolution: {integrity: sha512-CQl19J/g+Hbjbv4Y3mFNNXFEL/5t/KCg8POCuUqd4rMKjGG+j1ybER83hxV58zL+dFI1PTkt3GNFSHRt+d8qEQ==}
+    engines: {node: 14 || >=16.14}
+
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
@@ -5501,8 +5505,8 @@ packages:
   mqtt-packet@9.0.0:
     resolution: {integrity: sha512-8v+HkX+fwbodsWAZIZTI074XIoxVBOmPeggQuDFCGg1SqNcC+uoRMWu7J6QlJPqIUIJXmjNYYHxBBLr1Y/Df4w==}
 
-  mqtt@5.7.3:
-    resolution: {integrity: sha512-v+5la6Q6zjl0AWsI7ICDA/K3hclkNj7CMa0khMugCC+LKPLrQF+sSQb/9ckezZLMvcBC1tXhRzqmcagQoDl9fQ==}
+  mqtt@5.8.0:
+    resolution: {integrity: sha512-/+H04mv6goy6K5gHMNH3uS0icBzXapS+4uUf4yZyQWXi72APPZNb81bQhvkm99poEQettXVT8XETB0mPxl5Wjg==}
     engines: {node: '>=16.0.0'}
     hasBin: true
 
@@ -7712,8 +7716,8 @@ packages:
       utf-8-validate:
         optional: true
 
-  ws@8.17.1:
-    resolution: {integrity: sha512-6XQFvXTkbfUOZOKKILFG1PDK2NDQs4azKQl26T0YS5CxqWLgXajbPZ+h4gZekJyRqFU8pvnbAbbs/3TgRPy+GQ==}
+  ws@8.18.0:
+    resolution: {integrity: sha512-8VbfWfHLbbwu3+N6OKsOMpBdT4kXPDDB9cJk2bJ6mh9ucxdlnNvH1e+roYkKmN9Nxw2yjz7VzeO9oOz2zJ04Pw==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -12568,6 +12572,8 @@ snapshots:
 
   lru-cache@10.2.2: {}
 
+  lru-cache@10.3.0: {}
+
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
@@ -12733,7 +12739,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  mqtt@5.7.3:
+  mqtt@5.8.0:
     dependencies:
       '@types/readable-stream': 4.0.14
       '@types/ws': 8.5.10
@@ -12741,7 +12747,7 @@ snapshots:
       concat-stream: 2.0.0
       debug: 4.3.5
       help-me: 5.0.0
-      lru-cache: 10.2.2
+      lru-cache: 10.3.0
       minimist: 1.2.8
       mqtt-packet: 9.0.0
       number-allocator: 1.0.14
@@ -12750,7 +12756,7 @@ snapshots:
       rfdc: 1.4.1
       split2: 4.2.0
       worker-timers: 7.1.8
-      ws: 8.17.1
+      ws: 8.18.0
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -15343,7 +15349,7 @@ snapshots:
 
   ws@8.17.0: {}
 
-  ws@8.17.1: {}
+  ws@8.18.0: {}
 
   xhr@2.6.0:
     dependencies:
