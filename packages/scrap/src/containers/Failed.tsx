@@ -98,6 +98,25 @@ function Failed({
 
   return (
     <Fieldset legend="failed">
+      <div style={{ float: "right" }}>
+        {["otodom", "olx"].map((query, index) => (
+          <span key={index}>
+            {index > 0 ? ` | ` : ``}
+            <a
+              href="#"
+              onClick={(e) => (
+                e.preventDefault(),
+                setMatch((match) => ({
+                  ...match,
+                  query,
+                }))
+              )}
+            >
+              {query}
+            </a>
+          </span>
+        ))}
+      </div>
       {/* <pre>{JSON.stringify(failed, null, 2)}</pre> */}
       <div>
         <label>
