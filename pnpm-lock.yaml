@@ -1211,7 +1211,7 @@ importers:
     dependencies:
       '@bull-board/api':
         specifier: ^5.2.0
-        version: 5.20.5(@bull-board/ui@5.20.5)
+        version: 5.21.0(@bull-board/ui@5.20.5)
       '@bull-board/express':
         specifier: ^5.15.5
         version: 5.20.5
@@ -1951,6 +1951,11 @@ packages:
     resolution: {integrity: sha512-YI95JK5A4/K4KB5VWbQn/CYNB+AO5cZ/BnZ77LxAhsaJ3ssHBN3Au0n3Z4wD7O+78+W3ON9uqGjKnHV6rXBGcQ==}
     peerDependencies:
       '@bull-board/ui': 5.20.5
+
+  '@bull-board/api@5.21.0':
+    resolution: {integrity: sha512-27tjptwgRgP1G5jT+POjiZZOP3LgdIM4XdfEWfa6t5E0CYImL4EjmdiFo5lhbHhYKZ842VhIpHuNcPk8nY3K9A==}
+    peerDependencies:
+      '@bull-board/ui': 5.21.0
 
   '@bull-board/express@5.20.5':
     resolution: {integrity: sha512-ncgSAVFZk3gpFrN87dIPjRKs72FQqC+Jos4529u0Xu+603aX0f7EKgdfBAtZbFhrzhyEt6anrbNxmYX7+K4oXg==}
@@ -8700,6 +8705,11 @@ snapshots:
       to-fast-properties: 2.0.0
 
   '@bull-board/api@5.20.5(@bull-board/ui@5.20.5)':
+    dependencies:
+      '@bull-board/ui': 5.20.5
+      redis-info: 3.1.0
+
+  '@bull-board/api@5.21.0(@bull-board/ui@5.20.5)':
     dependencies:
       '@bull-board/ui': 5.20.5
       redis-info: 3.1.0
