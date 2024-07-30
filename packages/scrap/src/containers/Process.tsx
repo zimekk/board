@@ -872,10 +872,12 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
           "category=lodowki-do-zabudowy&__=Siemens",
           "category=lokowko-suszarki&__=Babyliss,Dyson,Remington",
           "category=miksery-kielichowe&__=Bosch,KitchenAid,Tefal,wmf",
+          "category=mopy-elektryczne&__=Karcher,Vileda",
           // "category=obiektywy&__=Canon",
           // "category=obiektywy&__=Sigma&_h=32",
           "category=obiektywy&_h=2",
           "category=odkurzacze-pionowe&__=Bosch,Dyson,Karcher,Tefal",
+          "category=parownice-do-ubran&__=Tefal",
           "category=pendrive-pamieci-usb&__=Kingston,SanDisk&_h=2,3",
           "category=piekarniki-do-zabudowy&__=Siemens",
           "category=plyty-do-zabudowy&__=Siemens",
@@ -892,6 +894,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
           "category=wyposazenie-do-ekspresow&__=Siemens",
           "category=wyposazenie-do-robotow-kuchennych&__=Bosch",
           "category=zelazka-systemowe&__=Philips",
+          "category=zelazka-systemowe&__=Tefal",
           "category=zmywarki-do-zabudowy&__=Siemens",
         ]
           .map(
