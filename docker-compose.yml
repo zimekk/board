@@ -57,7 +57,7 @@ services:
       # - ./mosquitto/data:/mosquitto/data
       # - ./mosquitto/log:/mosquitto/log
   redis:
-    image: redis:7.2-alpine
+    image: redis:7.4-alpine
     restart: unless-stopped
     networks:
       - app_network
