@@ -2,11 +2,11 @@
   "name": "@dev/llama",
   "version": "1.0.0",
   "license": "UNLICENSED",
+  "private": true,
   "main": "lib",
   "files": [
     "lib/"
   ],
-  "private": true,
   "eslintConfig": {
     "env": {
       "browser": true
