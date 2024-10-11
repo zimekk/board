@@ -1,4 +1,5 @@
 export default [
+  "https://www.youtube.com/watch?v=G7KNmW9a75Y",
   "https://www.youtube.com/watch?v=yxW5yuzVi8w",
   "https://www.youtube.com/watch?v=BilaShsQphM",
   "https://www.youtube.com/watch?v=Fp_P_e1cPOE",
@@ -114,4 +115,7 @@ export default [
   "https://www.youtube.com/watch?v=_CL6n0FJZpk",
   "https://www.youtube.com/watch?v=fPO76Jlnz6c",
   "https://www.youtube.com/watch?v=NKMtZm2YuBE",
+  "https://www.youtube.com/watch?v=Tt6LzbcNJP0",
+  "https://www.youtube.com/watch?v=EWMY-JKFhL4",
+  "https://www.youtube.com/watch?v=4Cc1R1QSPuE",
 ];
