@@ -972,6 +972,19 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
           })),
       )
       .concat(
+        ["akcesoria/akcesoria-do-odkurzaczy", "pielegnacja-podlog"]
+          .map((path) => `https://www.dyson.pl/produkty/${path}`)
+          .map((url, i) => ({
+            blocked: true,
+            data: {
+              url,
+            },
+            opts: {
+              repeat: { cron: `${i + 1} 7 * * *` },
+            },
+          })),
+      )
+      .concat(
         chunk(
           [
             // "592143",

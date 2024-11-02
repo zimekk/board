@@ -65,6 +65,10 @@ export async function chrome(url = "https://zimekk.github.io/robot/") {
         await page.close();
         await browser.close();
       });
+  } else if (url.match("son.pl/produkty/")) {
+    return import("./pl.dyson")
+      .then(({ scrap }) => scrap(page, url))
+      .finally(() => browser.close());
   } else if (url.match("dom.pl/pl/")) {
     return import("./pl.otodom")
       .then(({ scrap }) => scrap(page, url))
