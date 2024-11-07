@@ -679,8 +679,12 @@ export const records = [
       })),
   )
   .concat(
-    ["akcesoria/akcesoria-do-odkurzaczy", "pielegnacja-podlog"]
-      .map((path) => `https://www.dyson.pl/produkty/${path}`)
+    [
+      "black-friday",
+      "produkty/akcesoria/akcesoria-do-odkurzaczy",
+      // "produkty/pielegnacja-podlog",
+    ]
+      .map((path) => `https://www.dyson.pl/${path}`)
       .map((url, i) => ({
         blocked: true,
         data: {
