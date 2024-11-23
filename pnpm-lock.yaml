@@ -1259,8 +1259,8 @@ importers:
         specifier: ^4.17.17
         version: 4.17.21
       '@types/milliseconds':
-        specifier: ^0.0.33
-        version: 0.0.33
+        specifier: ^1.0.0
+        version: 1.0.0
       '@types/node':
         specifier: ^20.0.0
         version: 20.14.4
@@ -2946,8 +2946,8 @@ packages:
   '@types/long@4.0.2':
     resolution: {integrity: sha512-MqTGEo5bj5t157U6fA/BiDynNkn0YknVdh48CMPkTSpFTVmvao5UQmm7uEF6xBEo7qIMAlY/JSleYaE6VOdpaA==}
 
-  '@types/milliseconds@0.0.33':
-    resolution: {integrity: sha512-RMJhntbMMTZ5VHJYuMiMjF6zM9lkpq+SCHwLaiCdBq38wkp9L+iEFRAmQuHi+aTsO62VBu5HRPodr1pWFiQpqA==}
+  '@types/milliseconds@1.0.0':
+    resolution: {integrity: sha512-ATdXRf6Nu5Du6tSUKxjKCvu1ch0k5Zgr8IxkRyOf38Yc2N4V/tkbyKJJLAign+CQDljoOP+7P9UQpKTzqilgrQ==}
 
   '@types/mime-types@2.1.4':
     resolution: {integrity: sha512-lfU4b34HOri+kAY5UheuFMWPDOI+OPceBSHZKp69gEyTL/mmJ4cnU6Y/rlme3UL3GyOn6Y42hyIEw0/q8sWx5w==}
@@ -10158,7 +10158,7 @@ snapshots:
 
   '@types/long@4.0.2': {}
 
-  '@types/milliseconds@0.0.33': {}
+  '@types/milliseconds@1.0.0': {}
 
   '@types/mime-types@2.1.4': {}
 
