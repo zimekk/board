@@ -20,11 +20,11 @@
     "dashjs": "^4.7.3",
     "pro-flv.js": "^2.0.2",
     "react": "^18.2.0",
-    "styled-components": "^6.0.5",
-    "zod": "^3.21.4"
+    "styled-components": "^6.1.13",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
-    "@types/react": "^18.2.18"
+    "@types/react": "^18.3.12"
   }
 }
