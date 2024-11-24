@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@bull-board/api": "^6.0.0",
-    "@bull-board/express": "^5.15.5",
+    "@bull-board/express": "^6.0.0",
     "@dev/chrome": "workspace:*",
     "@dev/schema": "workspace:*",
     "bull": "^4.16.4",
