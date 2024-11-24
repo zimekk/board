@@ -1216,8 +1216,8 @@ importers:
   packages/worker:
     dependencies:
       '@bull-board/api':
-        specifier: ^5.2.0
-        version: 5.21.3(@bull-board/ui@5.23.0)
+        specifier: ^6.0.0
+        version: 6.5.3(@bull-board/ui@5.23.0)
       '@bull-board/express':
         specifier: ^5.15.5
         version: 5.23.0
@@ -1876,15 +1876,15 @@ packages:
     resolution: {integrity: sha512-Z/yiTPj+lDVnF7lWeKCIJzaIkI0vYO87dMpZ4bg4TDrFe4XXLFWL1TbXU27gBP3QccxV9mZICCrnjnYlJjXHOA==}
     engines: {node: '>=6.9.0'}
 
-  '@bull-board/api@5.21.3':
-    resolution: {integrity: sha512-d3feBl7L1A6gwtIPpeVwsF3DNJmN5ilmFeiuEFsdtLSCrXWvBfIemaUXDH67cQCpQZcefmuwsWkg9cJbEegoUA==}
-    peerDependencies:
-      '@bull-board/ui': 5.21.3
-
   '@bull-board/api@5.23.0':
     resolution: {integrity: sha512-ZZGsWJ+XBG49GAlNgAL9tTEV6Ms7gMkQnZDbzwUhjGChCKWy62RWuPoZSefNXau9QH9+QzlzHRUeFvt4xr5wiw==}
     peerDependencies:
       '@bull-board/ui': 5.23.0
+
+  '@bull-board/api@6.5.3':
+    resolution: {integrity: sha512-k58OlCheALXaoN+5l8U0VfLo9jQvl2nSR3/6vUmFQV8wcNBPfRtQRxUBh9/SbTDmFvtvmzvMkc+J3yWGMCDrAw==}
+    peerDependencies:
+      '@bull-board/ui': 6.5.3
 
   '@bull-board/express@5.23.0':
     resolution: {integrity: sha512-t/mHzJMlZBtSKD8v81kbZoexOmtQxKVnHZfHJ0um5vrkHNJJuzKuwbR+n9nf1u89AGdyXoWxqDhBDslxv3zrrQ==}
@@ -8880,12 +8880,12 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
-  '@bull-board/api@5.21.3(@bull-board/ui@5.23.0)':
+  '@bull-board/api@5.23.0(@bull-board/ui@5.23.0)':
     dependencies:
       '@bull-board/ui': 5.23.0
       redis-info: 3.1.0
 
-  '@bull-board/api@5.23.0(@bull-board/ui@5.23.0)':
+  '@bull-board/api@6.5.3(@bull-board/ui@5.23.0)':
     dependencies:
       '@bull-board/ui': 5.23.0
       redis-info: 3.1.0

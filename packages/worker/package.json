@@ -31,7 +31,7 @@
     "whisper": "node bin/whisper"
   },
   "dependencies": {
-    "@bull-board/api": "^5.2.0",
+    "@bull-board/api": "^6.0.0",
     "@bull-board/express": "^5.15.5",
     "@dev/chrome": "workspace:*",
     "@dev/schema": "workspace:*",
