@@ -317,10 +317,12 @@ export const records = [
       // "audi/q8",
       "bmw/seria-5?search%5Bfilter_enum_generation%5D%5B0%5D=gen-g30-2017&search%5Bfilter_enum_generation%5D%5B1%5D=gen-g60-2023",
       "bmw/x3?search%5Bfilter_enum_generation%5D=gen-g01-2017",
+      "bmw/x3?search%5Bfilter_enum_generation%5D=gen-g45-2024",
       "honda/accord/seg-combi?search%5Bfilter_enum_generation%5D=gen-viii-2008",
       // "honda/jazz?search%5Bfilter_enum_generation%5D=gen-ii-2002-2008-jazz",
       "mini/cooper-s--john-cooper-works",
       "porsche/macan",
+      "volvo/ex90?search%5Border%5D=relevance_web",
       "volvo/xc-60?search%5Bfilter_enum_generation%5D=gen-ii-2017",
     ]
       .map((cat) => `https://www.otomoto.pl/osobowe/${cat}`)
