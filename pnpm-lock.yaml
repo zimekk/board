@@ -13,7 +13,7 @@ importers:
         version: 2.27.10
       '@commitlint/cli':
         specifier: ^19.6.0
-        version: 19.6.0(@types/node@22.9.3)(typescript@5.7.2)
+        version: 19.6.0(@types/node@22.10.0)(typescript@5.7.2)
       '@commitlint/config-conventional':
         specifier: ^19.6.0
         version: 19.6.0
@@ -241,7 +241,7 @@ importers:
         version: 2.1.35
       mqtt:
         specifier: ^5.10.2
-        version: 5.10.2
+        version: 5.10.3
       music-metadata:
         specifier: ^7.13.4
         version: 7.14.0
@@ -281,7 +281,7 @@ importers:
         version: 0.4.2
       mqtt:
         specifier: ^5.10.2
-        version: 5.10.2
+        version: 5.10.3
       nodecast-js:
         specifier: ^1.0.3
         version: 1.0.3
@@ -410,7 +410,7 @@ importers:
     devDependencies:
       '@crxjs/vite-plugin':
         specifier: ^1.0.14
-        version: 1.0.14(vite@4.2.3(@types/node@22.9.3)(sass@1.81.0)(terser@5.36.0))
+        version: 1.0.14(vite@4.2.3(@types/node@22.10.0)(sass@1.81.0)(terser@5.36.0))
       '@types/chrome':
         specifier: ^0.0.287
         version: 0.0.287
@@ -419,10 +419,10 @@ importers:
         version: 18.3.12
       '@vitejs/plugin-react':
         specifier: ^4.3.3
-        version: 4.3.4(vite@4.2.3(@types/node@22.9.3)(sass@1.81.0)(terser@5.36.0))
+        version: 4.3.4(vite@4.2.3(@types/node@22.10.0)(sass@1.81.0)(terser@5.36.0))
       vite:
         specifier: ~4.2.2
-        version: 4.2.3(@types/node@22.9.3)(sass@1.81.0)(terser@5.36.0)
+        version: 4.2.3(@types/node@22.10.0)(sass@1.81.0)(terser@5.36.0)
 
   packages/gphoto:
     dependencies:
@@ -437,7 +437,7 @@ importers:
         version: 10.3.13
       mqtt:
         specifier: ^5.10.2
-        version: 5.10.2
+        version: 5.10.3
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -539,7 +539,7 @@ importers:
         version: 10.3.13
       mqtt:
         specifier: ^5.10.2
-        version: 5.10.2
+        version: 5.10.3
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -589,7 +589,7 @@ importers:
         version: 10.3.13
       mqtt:
         specifier: ^5.10.2
-        version: 5.10.2
+        version: 5.10.3
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -639,7 +639,7 @@ importers:
         version: 10.3.13
       mqtt:
         specifier: ^5.10.2
-        version: 5.10.2
+        version: 5.10.3
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -725,7 +725,7 @@ importers:
         version: 2.1.35
       mqtt:
         specifier: ^5.10.2
-        version: 5.10.2
+        version: 5.10.3
       nodecast-js:
         specifier: ^1.0.3
         version: 1.0.3
@@ -806,7 +806,7 @@ importers:
         version: 4.21.1
       mqtt:
         specifier: ^5.10.2
-        version: 5.10.2
+        version: 5.10.3
       nodemailer:
         specifier: ^6.9.16
         version: 6.9.16
@@ -2967,6 +2967,9 @@ packages:
 
   '@types/node@16.9.1':
     resolution: {integrity: sha512-QpLcX9ZSsq3YYUUnD3nFDY8H7wctAhQj/TFKL8Ya8v5fMm3CFXxo8zStsLAl780ltoYoo1WvKUVGBQK+1ifr7g==}
+
+  '@types/node@22.10.0':
+    resolution: {integrity: sha512-XC70cRZVElFHfIUB40FgZOBbgJYFKKMa5nb9lxcwYstFG/Mi+/Y0bGS+rs6Dmhmkpq4pnNiLiuZAbc02YCOnmA==}
 
   '@types/node@22.9.3':
     resolution: {integrity: sha512-F3u1fs/fce3FFk+DAxbxc78DF8x0cY09RRL8GnXLmkJ1jvx3TtPdWoTT5/NiYfI5ASqXBmfqJi9dZ3gxMx4lzw==}
@@ -5707,8 +5710,8 @@ packages:
   mqtt-packet@9.0.1:
     resolution: {integrity: sha512-koZF1V/X2RZUI6uD9wN5OK1JxxcG1ofAR4H3LjCw1FkeKzruZQ26aAA6v2m1lZyWONZIR5wMMJFrZJDRNzbiQw==}
 
-  mqtt@5.10.2:
-    resolution: {integrity: sha512-Q8NrMXB6FwQ2DulGONeDb6BtFHxyQHmXWzDrSC724iyofxLleq/wuZmztV3kg1Kda9I7l0oHP+FKesowoFxyUg==}
+  mqtt@5.10.3:
+    resolution: {integrity: sha512-hA/6YrUS4fywhBGCjH/XXUuLeueJiPqruVVWjK2A24Ma4KcWfZ/x8x07aoesBV+HXDWBC08tbT4IWfSXNW0Jtw==}
     engines: {node: '>=16.0.0'}
     hasBin: true
 
@@ -7588,6 +7591,9 @@ packages:
   undici-types@6.19.8:
     resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
 
+  undici-types@6.20.0:
+    resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
+
   unicode-canonical-property-names-ecmascript@2.0.1:
     resolution: {integrity: sha512-dA8WbNeb2a6oQzAQ55YlT5vQAWGV9WXOsi3SskE3bcCdM0P4SDd+24zS/OCacdRq5BkdsRj9q3Pg6YyQoxIGqg==}
     engines: {node: '>=4'}
@@ -9073,11 +9079,11 @@ snapshots:
       human-id: 1.0.2
       prettier: 2.8.8
 
-  '@commitlint/cli@19.6.0(@types/node@22.9.3)(typescript@5.7.2)':
+  '@commitlint/cli@19.6.0(@types/node@22.10.0)(typescript@5.7.2)':
     dependencies:
       '@commitlint/format': 19.5.0
       '@commitlint/lint': 19.6.0
-      '@commitlint/load': 19.5.0(@types/node@22.9.3)(typescript@5.7.2)
+      '@commitlint/load': 19.5.0(@types/node@22.10.0)(typescript@5.7.2)
       '@commitlint/read': 19.5.0
       '@commitlint/types': 19.5.0
       tinyexec: 0.3.1
@@ -9124,7 +9130,7 @@ snapshots:
       '@commitlint/rules': 19.6.0
       '@commitlint/types': 19.5.0
 
-  '@commitlint/load@19.5.0(@types/node@22.9.3)(typescript@5.7.2)':
+  '@commitlint/load@19.5.0(@types/node@22.10.0)(typescript@5.7.2)':
     dependencies:
       '@commitlint/config-validator': 19.5.0
       '@commitlint/execute-rule': 19.5.0
@@ -9132,7 +9138,7 @@ snapshots:
       '@commitlint/types': 19.5.0
       chalk: 5.3.0
       cosmiconfig: 9.0.0(typescript@5.7.2)
-      cosmiconfig-typescript-loader: 5.1.0(@types/node@22.9.3)(cosmiconfig@9.0.0(typescript@5.7.2))(typescript@5.7.2)
+      cosmiconfig-typescript-loader: 5.1.0(@types/node@22.10.0)(cosmiconfig@9.0.0(typescript@5.7.2))(typescript@5.7.2)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -9183,7 +9189,7 @@ snapshots:
       '@types/conventional-commits-parser': 5.0.0
       chalk: 5.3.0
 
-  '@crxjs/vite-plugin@1.0.14(vite@4.2.3(@types/node@22.9.3)(sass@1.81.0)(terser@5.36.0))':
+  '@crxjs/vite-plugin@1.0.14(vite@4.2.3(@types/node@22.10.0)(sass@1.81.0)(terser@5.36.0))':
     dependencies:
       '@rollup/pluginutils': 4.2.1
       '@webcomponents/custom-elements': 1.6.0
@@ -9199,9 +9205,9 @@ snapshots:
       picocolors: 1.1.1
       react-refresh: 0.13.0
       rollup: 2.79.2
-      vite: 4.2.3(@types/node@22.9.3)(sass@1.81.0)(terser@5.36.0)
+      vite: 4.2.3(@types/node@22.10.0)(sass@1.81.0)(terser@5.36.0)
     optionalDependencies:
-      '@vitejs/plugin-react': 4.3.4(vite@4.2.3(@types/node@22.9.3)(sass@1.81.0)(terser@5.36.0))
+      '@vitejs/plugin-react': 4.3.4(vite@4.2.3(@types/node@22.10.0)(sass@1.81.0)(terser@5.36.0))
     transitivePeerDependencies:
       - supports-color
 
@@ -10061,7 +10067,7 @@ snapshots:
 
   '@types/conventional-commits-parser@5.0.0':
     dependencies:
-      '@types/node': 22.9.3
+      '@types/node': 22.10.0
 
   '@types/cors@2.8.17':
     dependencies:
@@ -10165,6 +10171,10 @@ snapshots:
 
   '@types/node@16.9.1': {}
 
+  '@types/node@22.10.0':
+    dependencies:
+      undici-types: 6.20.0
+
   '@types/node@22.9.3':
     dependencies:
       undici-types: 6.19.8
@@ -10196,7 +10206,7 @@ snapshots:
 
   '@types/readable-stream@4.0.18':
     dependencies:
-      '@types/node': 22.9.3
+      '@types/node': 22.10.0
       safe-buffer: 5.1.2
 
   '@types/redux-actions@2.6.5': {}
@@ -10280,11 +10290,11 @@ snapshots:
 
   '@types/ws@8.5.13':
     dependencies:
-      '@types/node': 22.9.3
+      '@types/node': 22.10.0
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 22.9.3
+      '@types/node': 22.10.0
     optional: true
 
   '@typescript-eslint/eslint-plugin@8.16.0(@typescript-eslint/parser@8.16.0(eslint@9.15.0(jiti@1.21.6))(typescript@5.7.2))(eslint@9.15.0(jiti@1.21.6))(typescript@5.7.2)':
@@ -10369,14 +10379,14 @@ snapshots:
       '@typescript-eslint/types': 8.16.0
       eslint-visitor-keys: 4.2.0
 
-  '@vitejs/plugin-react@4.3.4(vite@4.2.3(@types/node@22.9.3)(sass@1.81.0)(terser@5.36.0))':
+  '@vitejs/plugin-react@4.3.4(vite@4.2.3(@types/node@22.10.0)(sass@1.81.0)(terser@5.36.0))':
     dependencies:
       '@babel/core': 7.26.0
       '@babel/plugin-transform-react-jsx-self': 7.25.9(@babel/core@7.26.0)
       '@babel/plugin-transform-react-jsx-source': 7.25.9(@babel/core@7.26.0)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 4.2.3(@types/node@22.9.3)(sass@1.81.0)(terser@5.36.0)
+      vite: 4.2.3(@types/node@22.10.0)(sass@1.81.0)(terser@5.36.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -11316,9 +11326,9 @@ snapshots:
       object-assign: 4.1.1
       vary: 1.1.2
 
-  cosmiconfig-typescript-loader@5.1.0(@types/node@22.9.3)(cosmiconfig@9.0.0(typescript@5.7.2))(typescript@5.7.2):
+  cosmiconfig-typescript-loader@5.1.0(@types/node@22.10.0)(cosmiconfig@9.0.0(typescript@5.7.2))(typescript@5.7.2):
     dependencies:
-      '@types/node': 22.9.3
+      '@types/node': 22.10.0
       cosmiconfig: 9.0.0(typescript@5.7.2)
       jiti: 1.21.6
       typescript: 5.7.2
@@ -12021,7 +12031,7 @@ snapshots:
 
   extract-zip@2.0.1:
     dependencies:
-      debug: 4.3.7
+      debug: 4.3.4
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
@@ -12282,7 +12292,7 @@ snapshots:
     dependencies:
       basic-ftp: 5.0.3
       data-uri-to-buffer: 5.0.1
-      debug: 4.3.7
+      debug: 4.3.4
       fs-extra: 8.1.0
     transitivePeerDependencies:
       - supports-color
@@ -12506,7 +12516,7 @@ snapshots:
   http-proxy-agent@7.0.0:
     dependencies:
       agent-base: 7.1.0
-      debug: 4.3.7
+      debug: 4.3.4
     transitivePeerDependencies:
       - supports-color
 
@@ -13258,7 +13268,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  mqtt@5.10.2:
+  mqtt@5.10.3:
     dependencies:
       '@types/readable-stream': 4.0.18
       '@types/ws': 8.5.13
@@ -13576,7 +13586,7 @@ snapshots:
     dependencies:
       '@tootallnate/quickjs-emscripten': 0.23.0
       agent-base: 7.1.0
-      debug: 4.3.7
+      debug: 4.3.4
       get-uri: 6.0.1
       http-proxy-agent: 7.0.0
       https-proxy-agent: 7.0.4
@@ -13900,7 +13910,7 @@ snapshots:
   proxy-agent@6.3.0:
     dependencies:
       agent-base: 7.1.0
-      debug: 4.3.7
+      debug: 4.3.4
       http-proxy-agent: 7.0.0
       https-proxy-agent: 7.0.4
       lru-cache: 7.18.3
@@ -14847,7 +14857,7 @@ snapshots:
   socks-proxy-agent@8.0.1:
     dependencies:
       agent-base: 7.1.0
-      debug: 4.3.7
+      debug: 4.3.4
       socks: 2.7.1
     transitivePeerDependencies:
       - supports-color
@@ -15332,6 +15342,8 @@ snapshots:
 
   undici-types@6.19.8: {}
 
+  undici-types@6.20.0: {}
+
   unicode-canonical-property-names-ecmascript@2.0.1: {}
 
   unicode-match-property-ecmascript@2.0.0:
@@ -15427,14 +15439,14 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite@4.2.3(@types/node@22.9.3)(sass@1.81.0)(terser@5.36.0):
+  vite@4.2.3(@types/node@22.10.0)(sass@1.81.0)(terser@5.36.0):
     dependencies:
       esbuild: 0.17.19
       postcss: 8.4.38
       resolve: 1.22.8
       rollup: 3.29.4
     optionalDependencies:
-      '@types/node': 22.9.3
+      '@types/node': 22.10.0
       fsevents: 2.3.3
       sass: 1.81.0
       terser: 5.36.0
