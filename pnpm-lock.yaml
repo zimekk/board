@@ -241,7 +241,7 @@ importers:
         version: 2.1.35
       mqtt:
         specifier: ^5.10.2
-        version: 5.10.2
+        version: 5.10.3
       music-metadata:
         specifier: ^7.13.4
         version: 7.14.0
@@ -281,7 +281,7 @@ importers:
         version: 0.4.2
       mqtt:
         specifier: ^5.10.2
-        version: 5.10.2
+        version: 5.10.3
       nodecast-js:
         specifier: ^1.0.3
         version: 1.0.3
@@ -437,7 +437,7 @@ importers:
         version: 10.3.13
       mqtt:
         specifier: ^5.10.2
-        version: 5.10.2
+        version: 5.10.3
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -539,7 +539,7 @@ importers:
         version: 10.3.13
       mqtt:
         specifier: ^5.10.2
-        version: 5.10.2
+        version: 5.10.3
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -589,7 +589,7 @@ importers:
         version: 10.3.13
       mqtt:
         specifier: ^5.10.2
-        version: 5.10.2
+        version: 5.10.3
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -639,7 +639,7 @@ importers:
         version: 10.3.13
       mqtt:
         specifier: ^5.10.2
-        version: 5.10.2
+        version: 5.10.3
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -725,7 +725,7 @@ importers:
         version: 2.1.35
       mqtt:
         specifier: ^5.10.2
-        version: 5.10.2
+        version: 5.10.3
       nodecast-js:
         specifier: ^1.0.3
         version: 1.0.3
@@ -806,7 +806,7 @@ importers:
         version: 4.21.1
       mqtt:
         specifier: ^5.10.2
-        version: 5.10.2
+        version: 5.10.3
       nodemailer:
         specifier: ^6.9.16
         version: 6.9.16
@@ -5710,8 +5710,8 @@ packages:
   mqtt-packet@9.0.1:
     resolution: {integrity: sha512-koZF1V/X2RZUI6uD9wN5OK1JxxcG1ofAR4H3LjCw1FkeKzruZQ26aAA6v2m1lZyWONZIR5wMMJFrZJDRNzbiQw==}
 
-  mqtt@5.10.2:
-    resolution: {integrity: sha512-Q8NrMXB6FwQ2DulGONeDb6BtFHxyQHmXWzDrSC724iyofxLleq/wuZmztV3kg1Kda9I7l0oHP+FKesowoFxyUg==}
+  mqtt@5.10.3:
+    resolution: {integrity: sha512-hA/6YrUS4fywhBGCjH/XXUuLeueJiPqruVVWjK2A24Ma4KcWfZ/x8x07aoesBV+HXDWBC08tbT4IWfSXNW0Jtw==}
     engines: {node: '>=16.0.0'}
     hasBin: true
 
@@ -12031,7 +12031,7 @@ snapshots:
 
   extract-zip@2.0.1:
     dependencies:
-      debug: 4.3.7
+      debug: 4.3.4
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
@@ -12292,7 +12292,7 @@ snapshots:
     dependencies:
       basic-ftp: 5.0.3
       data-uri-to-buffer: 5.0.1
-      debug: 4.3.7
+      debug: 4.3.4
       fs-extra: 8.1.0
     transitivePeerDependencies:
       - supports-color
@@ -12516,7 +12516,7 @@ snapshots:
   http-proxy-agent@7.0.0:
     dependencies:
       agent-base: 7.1.0
-      debug: 4.3.7
+      debug: 4.3.4
     transitivePeerDependencies:
       - supports-color
 
@@ -13268,7 +13268,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  mqtt@5.10.2:
+  mqtt@5.10.3:
     dependencies:
       '@types/readable-stream': 4.0.18
       '@types/ws': 8.5.13
@@ -13586,7 +13586,7 @@ snapshots:
     dependencies:
       '@tootallnate/quickjs-emscripten': 0.23.0
       agent-base: 7.1.0
-      debug: 4.3.7
+      debug: 4.3.4
       get-uri: 6.0.1
       http-proxy-agent: 7.0.0
       https-proxy-agent: 7.0.4
@@ -13910,7 +13910,7 @@ snapshots:
   proxy-agent@6.3.0:
     dependencies:
       agent-base: 7.1.0
-      debug: 4.3.7
+      debug: 4.3.4
       http-proxy-agent: 7.0.0
       https-proxy-agent: 7.0.4
       lru-cache: 7.18.3
@@ -14857,7 +14857,7 @@ snapshots:
   socks-proxy-agent@8.0.1:
     dependencies:
       agent-base: 7.1.0
-      debug: 4.3.7
+      debug: 4.3.4
       socks: 2.7.1
     transitivePeerDependencies:
       - supports-color
