@@ -1,4 +1,4 @@
-import React from "react";
+import { CopyOutlined, UploadOutlined } from "@ant-design/icons";
 import {
   Button,
   Card,
@@ -13,12 +13,13 @@ import {
   Upload,
   UploadFile,
 } from "antd";
-import { CopyOutlined, UploadOutlined } from "@ant-design/icons";
+import React from "react";
+import QrCode from "../components/QrCode";
+import { useAsyncState } from "./helpers/hooks";
+import { DataType, PeerConnection } from "./helpers/peer";
+import * as connectionAction from "./store/connection/connectionActions";
 import { useAppDispatch, useAppSelector } from "./store/hooks";
 import { startPeer, stopPeerSession } from "./store/peer/peerActions";
-import * as connectionAction from "./store/connection/connectionActions";
-import { DataType, PeerConnection } from "./helpers/peer";
-import { useAsyncState } from "./helpers/hooks";
 
 const { Title } = Typography;
 type MenuItem = Required<MenuProps>["items"][number];
@@ -91,6 +92,31 @@ export const App: React.FC = () => {
     }
   };
 
+  const [hash, initialId] = React.useMemo(
+    () =>
+      ((m) => [m[1], m[3]])(
+        decodeURI(location.hash).match(/^#([^:]+)(:(.+))?/) || [],
+      ),
+    [],
+  );
+
+  const url = React.useMemo(
+    () =>
+      String(
+        ((url) =>
+          Object.assign(url, {
+            hash: `#${hash}:${peer.id}`,
+          }))(new URL(document.location.href)),
+      ),
+    [hash, peer.id],
+  );
+
+  const [id, setId] = React.useState(() => initialId || "");
+
+  React.useEffect(() => {
+    dispatch(connectionAction.changeConnectionInput(id));
+  }, [id]);
+
   return (
     <Row justify={"center"} align={"top"}>
       <Col xs={24} sm={24} md={20} lg={16} xl={12}>
@@ -116,6 +142,7 @@ export const App: React.FC = () => {
               <Button danger onClick={handleStopSession}>
                 Stop
               </Button>
+              <div>{url && <QrCode>{url}</QrCode>}</div>
             </Space>
           </Card>
           <div hidden={!peer.started}>
@@ -123,11 +150,8 @@ export const App: React.FC = () => {
               <Space direction="horizontal">
                 <Input
                   placeholder={"ID"}
-                  onChange={(e) =>
-                    dispatch(
-                      connectionAction.changeConnectionInput(e.target.value),
-                    )
-                  }
+                  value={id}
+                  onChange={(e) => setId(e.target.value)}
                   required={true}
                 />
                 <Button
