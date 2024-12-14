@@ -156,6 +156,7 @@ export const records = [
     },
   },
   {
+    blocked: true,
     data: {
       url: "https://www.al.to/promocje",
     },
@@ -174,6 +175,7 @@ export const records = [
     },
   },
   {
+    blocked: true,
     data: {
       url: "https://www.al.to/goracy_strzal",
     },
@@ -564,17 +566,27 @@ export const records = [
       "g-19/c/2471-akcesoria-roboty-kuchenne.html?producent=539-bosch&producent=1977-wmf",
       "g-19/c/2880-generatory-pary.html",
       "g-19/c/3519-parownice-do-sprzatania.html?producent=546-karcher",
+      "g-19/c/3664-akcesoria-do-grilla.html?producent=2375-weber",
+      "g-25/c/2953-dzwonki-do-drzwi.html?producent=628-ubiquiti",
       "g-25/c/3038-inteligentne-kamery.html?producent=1023-xiaomi",
+      "g-27/c/1950-zamrazarki.html?producent=464-siemens&producent=539-bosch",
       "g-63/c/2073-klocki-lego.html?producent=629-lego&f833-seria=8890-lego-technic&f833-seria=161664-lego-dots",
+      "g-65/c/3047-grille-ogrodowe.html?producent=2375-weber",
+      "g-65/c/3059-narzedzia.html?producent=2354-gardena",
+      "g-65/c/3349-pompy-i-akcesoria.html",
+      "g-70/c/3496-okapy-kuchenne.html?producent=464-siemens",
       "g-70/c/3503-zmywarki-do-zabudowy-60-cm.html?producent=464-siemens",
     ]
       .map((path) => `https://www.al.to/${path}`)
       .map((url, i) => ({
+        blocked: true,
         data: {
           url,
         },
         opts: {
-          repeat: { cron: `${i + 1} 8,15 * * *` },
+          repeat: {
+            cron: `${(i + 1) % 60} ${7 + Math.floor((i + 1) / 60)},${15 + Math.floor((i + 1) / 60)} * * *`,
+          },
         },
       })),
   )
@@ -683,7 +695,8 @@ export const records = [
   )
   .concat(
     [
-      "black-friday",
+      // "black-friday",
+      "dyson-na-prezent",
       "produkty/akcesoria/akcesoria-do-odkurzaczy",
       // "produkty/pielegnacja-podlog",
     ]
