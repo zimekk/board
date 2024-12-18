@@ -492,7 +492,7 @@ export const BasicInfoSchema = z.object({
           serverEnvironment: z.number(),
         }),
       }),
-    }),
+    }).optional(),
     // adPlacements: z.array(
     //   z.object({
     //     // adPlacementRenderer: z.object({
