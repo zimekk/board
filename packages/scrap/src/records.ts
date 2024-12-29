@@ -560,6 +560,7 @@ export const records = [
       "g-19/c/1800-suszarko-lokowki.html?producent=567-babyliss&producent=569-remington",
       "g-19/c/1803-roboty-kuchenne.html?producent=539-bosch&producent=1977-wmf",
       "g-19/c/1820-wentylatory.html?producent=1023-xiaomi",
+      "g-19/c/1913-spieniacze-do-mleka.html",
       "g-19/c/2354-agd-do-kuchni.html?producent=1977-wmf",
       "g-19/c/2362-akcesoria-do-kuchni.html?producent=3035-girmi",
       "g-19/c/2362-akcesoria-do-kuchni.html?producent=1977-wmf",
@@ -567,13 +568,20 @@ export const records = [
       "g-19/c/2880-generatory-pary.html",
       "g-19/c/3519-parownice-do-sprzatania.html?producent=546-karcher",
       "g-19/c/3664-akcesoria-do-grilla.html?producent=2375-weber",
+      "g-25/c/1117-telewizory.html?producent=16-sony&f1411-rozdzielczosc=21788-uhd-4k-3840-x-2160",
+      "g-25/c/1215-sluchawki.html?producent=1212-beyerdynamic",
+      "g-25/c/2406-inteligentny-dom.html?producent=1982-sonoff",
+      // "g-25/c/2407-czujniki.html?producent=1982-sonoff&producent=3315-shelly",
+      // "g-25/c/2590-inteligentne-wlaczniki-swiatla.html?producent=1982-sonoff",
       "g-25/c/2953-dzwonki-do-drzwi.html?producent=628-ubiquiti",
+      "g-25/c/3003-inteligentne-sterowniki.html?producent=3315-shelly",
       "g-25/c/3038-inteligentne-kamery.html?producent=1023-xiaomi",
       "g-27/c/1950-zamrazarki.html?producent=464-siemens&producent=539-bosch",
       "g-63/c/2073-klocki-lego.html?producent=629-lego&f833-seria=8890-lego-technic&f833-seria=161664-lego-dots",
       "g-65/c/3047-grille-ogrodowe.html?producent=2375-weber",
       "g-65/c/3059-narzedzia.html?producent=2354-gardena",
       "g-65/c/3349-pompy-i-akcesoria.html",
+      "g-68/c/1749-projektory.html?f1813-kontrast=77178-od-100-0001&f1915-rozdzielczosc-natywna=78689-3840-x-2160-4k",
       "g-70/c/3496-okapy-kuchenne.html?producent=464-siemens",
       "g-70/c/3503-zmywarki-do-zabudowy-60-cm.html?producent=464-siemens",
     ]
@@ -696,8 +704,9 @@ export const records = [
   .concat(
     [
       // "black-friday",
-      "dyson-na-prezent",
+      // "dyson-na-prezent",
       "produkty/akcesoria/akcesoria-do-odkurzaczy",
+      "promocje",
       // "produkty/pielegnacja-podlog",
     ]
       .map((path) => `https://www.dyson.pl/${path}`)
