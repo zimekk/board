@@ -34,7 +34,7 @@ importers:
         version: 9.18.0(jiti@2.4.2)
       eslint-plugin-prettier:
         specifier: ^5.0.0
-        version: 5.2.1(@types/eslint@9.6.1)(eslint@9.18.0(jiti@2.4.2))(prettier@3.4.2)
+        version: 5.2.2(@types/eslint@9.6.1)(eslint@9.18.0(jiti@2.4.2))(prettier@3.4.2)
       eslint-plugin-react:
         specifier: ^7.37.2
         version: 7.37.4(eslint@9.18.0(jiti@2.4.2))
@@ -4389,8 +4389,8 @@ packages:
     engines: {node: '>=6.0'}
     hasBin: true
 
-  eslint-plugin-prettier@5.2.1:
-    resolution: {integrity: sha512-gH3iR3g4JfF+yYPaJYkN7jEl9QbweL/YfkoRlNnuIEHEz1vHVlCmWOS+eGGiRuzHQXdJFCOTxRgvju9b8VUmrw==}
+  eslint-plugin-prettier@5.2.2:
+    resolution: {integrity: sha512-1yI3/hf35wmlq66C8yOyrujQnel+v5l1Vop5Cl2I6ylyNTT1JbuUUnV3/41PzwTzcyDp/oF0jWE3HXvcH5AQOQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       '@types/eslint': '>=8.0.0'
@@ -7461,8 +7461,8 @@ packages:
     peerDependencies:
       react: '>=17.0'
 
-  synckit@0.9.1:
-    resolution: {integrity: sha512-7gr8p9TQP6RAHusBOSLs46F4564ZrjV8xFmw5zCmgmhGUcw2hxsShhJ6CEiHQMgPDwAQ1fWHPM0ypc4RMAig4A==}
+  synckit@0.9.2:
+    resolution: {integrity: sha512-vrozgXDQwYO72vHjUb/HnFbQx1exDjoKzqx23aXEg2a9VIg2TSFZ8FmeZpTjUCFMYw7mpX4BE2SFu8wI7asYsw==}
     engines: {node: ^14.18.0 || >=16.0.0}
 
   table-layout@1.0.2:
@@ -12015,12 +12015,12 @@ snapshots:
     optionalDependencies:
       source-map: 0.6.1
 
-  eslint-plugin-prettier@5.2.1(@types/eslint@9.6.1)(eslint@9.18.0(jiti@2.4.2))(prettier@3.4.2):
+  eslint-plugin-prettier@5.2.2(@types/eslint@9.6.1)(eslint@9.18.0(jiti@2.4.2))(prettier@3.4.2):
     dependencies:
       eslint: 9.18.0(jiti@2.4.2)
       prettier: 3.4.2
       prettier-linter-helpers: 1.0.0
-      synckit: 0.9.1
+      synckit: 0.9.2
     optionalDependencies:
       '@types/eslint': 9.6.1
 
@@ -15378,7 +15378,7 @@ snapshots:
     dependencies:
       react: 18.3.1
 
-  synckit@0.9.1:
+  synckit@0.9.2:
     dependencies:
       '@pkgr/core': 0.1.1
       tslib: 2.8.1
