@@ -12,7 +12,7 @@ const context = {
 };
 
 export const useServer = (server) =>
-  require("graphql-ws/lib/use/ws").useServer(
+  require("graphql-ws/use/ws").useServer(
     {
       schema,
       context,
