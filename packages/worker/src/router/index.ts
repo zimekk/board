@@ -144,7 +144,7 @@ export const router = () => {
         .parseAsync(req.body)
         .then(async () => {
           const list = await worker.queue.getFailed();
-          return z.object({}).passthrough().array().parseAsync(list);
+          return z.object({}).passthrough().array().parseAsync(list.filter(Boolean));
         })
         .then((entries) => res.json(entries)),
     )
