@@ -343,8 +343,8 @@ importers:
   packages/client:
     dependencies:
       graphql-request:
-        specifier: ^6.0.0
-        version: 6.1.0(graphql@16.10.0)
+        specifier: ^7.0.0
+        version: 7.1.2(graphql@16.10.0)
       graphql-ws:
         specifier: ^6.0.0
         version: 6.0.1(graphql@16.10.0)(ws@8.18.0)
@@ -467,8 +467,8 @@ importers:
         specifier: ^10.0.9
         version: 10.0.16(graphql@16.10.0)
       graphql-request:
-        specifier: ^6.0.0
-        version: 6.1.0(graphql@16.10.0)
+        specifier: ^7.0.0
+        version: 7.1.2(graphql@16.10.0)
       graphql-tag:
         specifier: ^2.12.6
         version: 2.12.6(graphql@16.10.0)
@@ -3939,9 +3939,6 @@ packages:
     resolution: {integrity: sha512-p0SaNjrHOnQeR8/VnfGbmg9te2kfyYSQ7Sc/j/6DtPL3JQvKxmjO9TSjNFpujqV3vEYYBvNNvXSxzyksBWAx1Q==}
     engines: {node: '>=12.0.0'}
 
-  cross-fetch@3.1.8:
-    resolution: {integrity: sha512-cvA+JwZoU0Xq+h6WkMvAUqPEYy92Obet6UdKLfW60qn99ftItKjB5T+BkyWOFWe2pUyfQ+IJHmpOTznqk1M6Kg==}
-
   cross-fetch@4.0.0:
     resolution: {integrity: sha512-e4a5N8lVvuLgAWgnCrLr2PP0YyDOTHa9H/Rj54dirp61qXnNq46m82bRhNqIA5VccJtWBvPTFRV3TtvHUKPB1g==}
 
@@ -4840,8 +4837,8 @@ packages:
   graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
 
-  graphql-request@6.1.0:
-    resolution: {integrity: sha512-p+XPfS4q7aIpKVcgmnZKhMNqhltk20hfXtkaIkTfjjmiKMJ5xrt5c743cL03y/K7y1rg3WrIC49xGiEQ4mxdNw==}
+  graphql-request@7.1.2:
+    resolution: {integrity: sha512-+XE3iuC55C2di5ZUrB4pjgwe+nIQBuXVIK9J98wrVwojzDW3GMdSBZfxUk8l4j9TieIpjpggclxhNEU9ebGF8w==}
     peerDependencies:
       graphql: 14 - 16
 
@@ -11550,12 +11547,6 @@ snapshots:
     dependencies:
       luxon: 3.4.0
 
-  cross-fetch@3.1.8:
-    dependencies:
-      node-fetch: 2.7.0
-    transitivePeerDependencies:
-      - encoding
-
   cross-fetch@4.0.0:
     dependencies:
       node-fetch: 2.7.0
@@ -12620,13 +12611,10 @@ snapshots:
 
   graphemer@1.4.0: {}
 
-  graphql-request@6.1.0(graphql@16.10.0):
+  graphql-request@7.1.2(graphql@16.10.0):
     dependencies:
       '@graphql-typed-document-node/core': 3.2.0(graphql@16.10.0)
-      cross-fetch: 3.1.8
       graphql: 16.10.0
-    transitivePeerDependencies:
-      - encoding
 
   graphql-subscriptions@3.0.0(graphql@16.10.0):
     dependencies:
