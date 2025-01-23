@@ -79,4 +79,4 @@ services:
 
 networks:
   app_network:
-    external: true
+    # external: true

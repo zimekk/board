@@ -28,6 +28,7 @@ curl http://localhost:8080 # <!DOCTYPE html>
 ## docker
 
 ```sh
+# docker network create app_network
 docker-compose config # services:
 docker-compose up --build # app_1  | ⚡️[server]: Server is running at http://localhost:8080
 ```
