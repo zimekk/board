@@ -1,6 +1,6 @@
 up:
 	git fetch origin main && git reset --hard origin
-	docker-compose -f docker-compose.yml up --build -d && docker system prune -f
+	docker-compose -f docker-compose.yml up --build -d && docker system prune
 
 restart:
 	docker-compose -f docker-compose.yml restart
