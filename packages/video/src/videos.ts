@@ -131,4 +131,7 @@ export default [
   "https://www.youtube.com/watch?v=Se6csDteIUY",
   "https://www.youtube.com/watch?v=TBsKCT4rsPw",
   "https://www.youtube.com/watch?v=HhZaHf8RP6g",
+  "https://www.youtube.com/watch?v=u0sp-2dF3ME",
+  "https://www.youtube.com/watch?v=ztnCnXE8MJ4",
+  "https://www.youtube.com/watch?v=k-k2_Liofy8",
 ];
