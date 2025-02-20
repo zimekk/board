@@ -1226,7 +1226,7 @@ importers:
     dependencies:
       '@bull-board/api':
         specifier: ^6.0.0
-        version: 6.7.7(@bull-board/ui@6.7.7)
+        version: 6.7.8(@bull-board/ui@6.7.7)
       '@bull-board/express':
         specifier: ^6.0.0
         version: 6.7.7
@@ -1893,6 +1893,11 @@ packages:
     resolution: {integrity: sha512-jSBe+aeNs41T/BUJNutKSM17hJigDLoOaAzUZyFwT63/Yt00hiqQo90THXmDi3vGdXtTruGlkrC9OhVxBKo1eQ==}
     peerDependencies:
       '@bull-board/ui': 6.7.7
+
+  '@bull-board/api@6.7.8':
+    resolution: {integrity: sha512-M8itsaEUFdQxEl0D6FbaygIWp7wSAao7VXc2rjV5y5HtcwbgxYDQc/9Kq3+L+ngMRDZpZ7sPfR2lLNqkx9QbyA==}
+    peerDependencies:
+      '@bull-board/ui': 6.7.8
 
   '@bull-board/express@6.7.7':
     resolution: {integrity: sha512-41jeENKW7jo3PQS8z/fv3kJ4dfoljzrSRftA6rPtTvaoMxmBQXqHEdMjUGw+/bTwqmCw7t3g+Of6q0cWou8AsQ==}
@@ -6068,6 +6073,10 @@ packages:
     resolution: {integrity: sha512-Z5FnLVVZSnX7WjBg0mhDtydeRZ1xMcATZThjySQUHqr+0ksP8kqaw23fNKkaaN/Z8gwLUs/W7xdl0I75eP2Xyw==}
     engines: {node: '>= 14'}
 
+  pac-proxy-agent@7.2.0:
+    resolution: {integrity: sha512-TEB8ESquiLMc0lV8vcd5Ql/JAKAoyzHFXaStwjkzpOpC5Yv+pIzLfHvjTSdf3vpa2bMiUQrg9i6276yn8666aA==}
+    engines: {node: '>= 14'}
+
   pac-resolver@7.0.1:
     resolution: {integrity: sha512-5NPgf87AT2STgwa2ntRMr45jTKrYBGkVU36yT0ig/n/GMAa3oPqhZfIQ2kMEimReg0+t9kZViDVZ83qfVUlckg==}
     engines: {node: '>= 14'}
@@ -9041,6 +9050,11 @@ snapshots:
       '@babel/helper-validator-identifier': 7.25.9
 
   '@bull-board/api@6.7.7(@bull-board/ui@6.7.7)':
+    dependencies:
+      '@bull-board/ui': 6.7.7
+      redis-info: 3.1.0
+
+  '@bull-board/api@6.7.8(@bull-board/ui@6.7.7)':
     dependencies:
       '@bull-board/ui': 6.7.7
       redis-info: 3.1.0
@@ -13862,6 +13876,20 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  pac-proxy-agent@7.2.0:
+    dependencies:
+      '@tootallnate/quickjs-emscripten': 0.23.0
+      agent-base: 7.1.3
+      debug: 4.3.4
+      get-uri: 6.0.4
+      http-proxy-agent: 7.0.2
+      https-proxy-agent: 7.0.6
+      pac-resolver: 7.0.1
+      socks-proxy-agent: 8.0.5
+    transitivePeerDependencies:
+      - supports-color
+    optional: true
+
   pac-resolver@7.0.1:
     dependencies:
       degenerator: 5.0.1
@@ -14193,11 +14221,11 @@ snapshots:
   proxy-agent@6.3.1:
     dependencies:
       agent-base: 7.1.3
-      debug: 4.4.0
+      debug: 4.3.4
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.6
       lru-cache: 7.18.3
-      pac-proxy-agent: 7.1.0
+      pac-proxy-agent: 7.2.0
       proxy-from-env: 1.1.0
       socks-proxy-agent: 8.0.5
     transitivePeerDependencies:
