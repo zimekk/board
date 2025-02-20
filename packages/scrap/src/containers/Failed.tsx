@@ -202,7 +202,14 @@ function Failed({
                     failed.filter(({ id }) => !topIds.includes(id)),
                   ),
                 )
-                .then(() => setLoading(false)),
+                .then(
+                  () => (
+                    setLoading(false),
+                    setSelected((selected) =>
+                      selected.filter((id) => !topIds.includes(id)),
+                    )
+                  ),
+                ),
             [topIds],
           )}
         >
