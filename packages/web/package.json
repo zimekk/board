@@ -57,7 +57,7 @@
     "@dev/waveform": "workspace:*",
     "@dev/webrtc": "workspace:*",
     "@hot-loader/react-dom": "^17.0.2",
-    "@types/chrome": "^0.0.305",
+    "@types/chrome": "^0.0.306",
     "@types/chromecast-caf-sender": "^1.0.11",
     "@types/html-webpack-plugin": "^3.2.6",
     "@types/node": "^22.0.0",
