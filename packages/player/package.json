@@ -1,0 +1,36 @@
+{
+  "name": "@dev/player",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "eslintConfig": {
+    "env": {
+      "browser": true
+    }
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production tsc",
+    "coverage": "type-coverage && tsc --noEmit"
+  },
+  "dependencies": {
+    "express": "^4.21.1",
+    "mqtt": "^5.10.2",
+    "music-metadata": "^7.13.4",
+    "play-sound": "^1.1.6",
+    "react": "^18.2.0",
+    "rxjs": "^7.8.1",
+    "styled-components": "^6.1.13",
+    "suspend-react": "^0.1.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/mime-types": "^2.1.1",
+    "@types/play-sound": "^1.1.2",
+    "@types/react": "^18.3.12"
+  }
+}

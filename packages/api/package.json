@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@dev/audio": "workspace:*",
+    "@dev/player": "workspace:*",
     "@dev/sql": "workspace:*",
     "cors": "^2.8.5",
     "express": "^4.21.1",

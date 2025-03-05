@@ -15,6 +15,7 @@
     "broker": "bin/broker.js",
     "chrome": "bin/chrome.js",
     "parser": "bin/parser.js",
+    "player": "bin/player.js",
     "prompt": "bin/prompt.js",
     "status": "bin/status.js",
     "worker": "bin/worker.js"
@@ -27,6 +28,7 @@
     "build": "NODE_ENV=production tsc",
     "chrome": "bin/chrome.js",
     "coverage": "type-coverage && tsc --noEmit",
+    "player": "bin/player.js",
     "prompt": "node --import 'data:text/javascript,import{register}from\"node:module\";import{pathToFileURL}from\"node:url\";register(\"ts-node/esm\",pathToFileURL(\"./\"));' bin/prompt",
     "whisper": "node bin/whisper"
   },
@@ -43,6 +45,7 @@
     "express": "^4.21.1",
     "milliseconds": "^1.0.3",
     "node-html-parser": "^7.0.0",
+    "play-sound": "^1.1.6",
     "zod": "^3.23.8"
   },
   "devDependencies": {

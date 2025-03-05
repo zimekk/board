@@ -9,6 +9,7 @@ FROM node:20.10.0-alpine3.17
 RUN apk add --no-cache \
       alsa-utils \
       chromium \
+      mpg123 \
       nss \
       freetype \
       harfbuzz \
@@ -49,6 +50,7 @@ COPY packages/llama/package.json packages/llama/
 COPY packages/movie/package.json packages/movie/
 COPY packages/overlay/package.json packages/overlay/
 COPY packages/photo/package.json packages/photo/
+COPY packages/player/package.json packages/player/
 COPY packages/recipes/package.json packages/recipes/
 COPY packages/request/package.json packages/request/
 COPY packages/schema/package.json packages/schema/

@@ -22,4 +22,5 @@ export const api = Router()
   .all("/data.json", (_req, res) =>
     query(`select * from contact`).then(({ rows }) => res.json(rows)),
   )
-  .use("/audio/", require("@dev/audio/api").router());
+  .use("/audio/", require("@dev/audio/api").router())
+  .use("/player/", require("@dev/player/api").router());

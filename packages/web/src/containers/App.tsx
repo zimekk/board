@@ -15,6 +15,7 @@ const PAGES = {
   movie: lazy(() => import("@dev/movie")),
   overlay: lazy(() => import("@dev/overlay")),
   photo: lazy(() => import("@dev/photo")),
+  player: lazy(() => import("@dev/player")),
   recipes: lazy(() => import("@dev/recipes")),
   request: lazy(() => import("@dev/request")),
   scrap: lazy(() => import("@dev/scrap")),

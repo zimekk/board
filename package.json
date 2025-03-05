@@ -45,6 +45,7 @@
   "scripts": {
     "build": "pnpm -r run build",
     "chrome": "pnpm --filter=@dev/worker run chrome",
+    "player": "pnpm --filter=@dev/worker run player",
     "clean": "rm -rf packages/*/dist packages/*/lib packages/*/node_modules/.vite packages/*/public",
     "coverage": "pnpm -r run coverage",
     "lint": "eslint . --ext .json,.js,.jsx,.ts,.tsx",

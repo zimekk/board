@@ -45,6 +45,7 @@
     "@dev/movie": "workspace:*",
     "@dev/overlay": "workspace:*",
     "@dev/photo": "workspace:*",
+    "@dev/player": "workspace:*",
     "@dev/recipes": "workspace:*",
     "@dev/request": "workspace:*",
     "@dev/scrap": "workspace:*",
