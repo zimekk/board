@@ -50,7 +50,7 @@ export async function chrome(url = "https://zimekk.github.io/robot/") {
   await page.setUserAgent((await browser.userAgent()).replace("Headless", ""));
   await page.setRequestInterception(true);
 
-  if (url.match("/goracy_strzal|/pl/\\w+/-home|//promocje")) {
+  if (false && url.match("/goracy_strzal|/pl/\\w+/-home|//promocje")) {
     return Promise.all([
       import("./pl.xkom").then(({ scrap }) => scrap(page)),
       page.goto(url, {
@@ -65,6 +65,14 @@ export async function chrome(url = "https://zimekk.github.io/robot/") {
         await page.close();
         await browser.close();
       });
+  } else if (url.match("/goracy_strzal|/pl/\\w+/-home|//promocje")) {
+    return import("./pl.xkom2")
+      .then(({ scrap }) => scrap(page, url))
+      .finally(() => browser.close());
+  } else if (url.match("(al.to|kom.pl)/.+/c/")) {
+    return import("./pl.xkom2")
+      .then(({ scrap }) => scrap(page, url))
+      .finally(() => browser.close());
   } else if (url.match("dyson.pl/")) {
     return import("./pl.dyson")
       .then(({ scrap }) => scrap(page, url))
