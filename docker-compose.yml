@@ -2,6 +2,12 @@ version: "3"
 services:
   app:
     build: .
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          # memory: 100M
+          # pids: 1
     environment:
       - PORT
       - DATABASE_URL=postgres://postgres:password@sql:5432/board
@@ -15,6 +21,7 @@ services:
     # network_mode: bridge
     networks:
       - app_network
+    # pids_limit: 5
     ports:
       - $PORT:$PORT
     restart: unless-stopped
@@ -22,16 +29,16 @@ services:
       - ./share/library:/app/share/library
     devices:
       - /dev/snd:/dev/snd
-  cast:
-    build: packages/cast
-    cap_add:
-      - SYS_ADMIN
-      - NET_ADMIN
-    environment:
-      - MQTT_URL=mqtt://localhost
-    network_mode: host
-    volumes:
-      - /var/run/dbus:/var/run/dbus
+  # cast:
+  #   build: packages/cast
+  #   cap_add:
+  #     - SYS_ADMIN
+  #     - NET_ADMIN
+  #   environment:
+  #     - MQTT_URL=mqtt://localhost
+  #   network_mode: host
+  #   volumes:
+  #     - /var/run/dbus:/var/run/dbus
   # mqtt:
   #   image: emqx:5.4
   #   networks:
@@ -58,6 +65,13 @@ services:
       # - ./mosquitto/log:/mosquitto/log
   redis:
     image: redis:7.4-alpine
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          # memory: 100M
+          # pids: 1
+    # pids_limit: 20
     restart: unless-stopped
     networks:
       - app_network
