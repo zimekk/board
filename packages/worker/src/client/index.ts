@@ -1,9 +1,9 @@
+import { Type, getTypeByUrl } from "@dev/schema";
 import Queue from "bull";
 import { config } from "dotenv";
 import { seconds } from "milliseconds";
 import { resolve } from "path";
 import { z } from "zod";
-import { Type, getTypeByUrl } from "@dev/schema";
 import PromoTransform from "./promo";
 
 config({ path: resolve(__dirname, "../../../.env") });
@@ -125,7 +125,7 @@ export const client = () => {
                     ),
                   },
                   {
-                    attempts: 3, // 5 - If job fails it will retry till 5 times
+                    attempts: 2, // 5 - If job fails it will retry till 5 times
                     backoff: seconds(30), // 5000 - static 5 sec delay between retry
                     delay: seconds(15),
                     // ...opts,
@@ -166,7 +166,7 @@ export const client = () => {
                 (promise, data) =>
                   promise.then(() =>
                     queue.add(NAME_SCRAP, data, {
-                      attempts: 3, // 5 - If job fails it will retry till 5 times
+                      attempts: 2, // 5 - If job fails it will retry till 5 times
                       backoff: seconds(30), // 5000 - static 5 sec delay between retry
                       delay: seconds(15),
                       // ...opts,

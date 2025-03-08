@@ -51,20 +51,13 @@ export async function chrome(url = "https://zimekk.github.io/robot/") {
   await page.setRequestInterception(true);
 
   if (url.match("/goracy_strzal|/pl/\\w+/-home|//promocje")) {
-    return Promise.all([
-      import("./pl.xkom").then(({ scrap }) => scrap(page)),
-      page.goto(url, {
-        waitUntil: ["load", "domcontentloaded"],
-        // waitUntil: "networkidle2",
-        timeout: 60_000,
-      }),
-    ])
-      .then(([returnvalue]) => returnvalue)
-      .finally(async () => {
-        await delay();
-        await page.close();
-        await browser.close();
-      });
+    return import("./pl.xkom-shot")
+      .then(({ scrap }) => scrap(page, url))
+      .finally(() => browser.close());
+  } else if (url.match("(al.to|kom.pl)/.+/c/")) {
+    return import("./pl.xkom-prod")
+      .then(({ scrap }) => scrap(page, url))
+      .finally(() => browser.close());
   } else if (url.match("dyson.pl/")) {
     return import("./pl.dyson")
       .then(({ scrap }) => scrap(page, url))
