@@ -136,7 +136,7 @@ function List() {
           <span>select all</span>{" "}
         </label>
       </div>
-      <ul>
+      <ul style={{ paddingBottom: "1em" }}>
         {list.map((link) => (
           <li key={link}>
             <input
@@ -145,7 +145,11 @@ function List() {
               checked={selected.includes(link)}
               onChange={handleSelect}
             />
-            <a href={link} onClick={handleClick}>
+            <a
+              href={link}
+              onClick={handleClick}
+              style={link === videoId ? { color: "purple" } : {}}
+            >
               {link}
             </a>
             [
