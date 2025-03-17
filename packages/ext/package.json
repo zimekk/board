@@ -15,13 +15,13 @@
     "dev": "vite"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@crxjs/vite-plugin": "^1.0.14",
     "@types/chrome": "^0.0.309",
-    "@types/react": "^18.3.12",
+    "@types/react": "^19.0.0",
     "@vitejs/plugin-react": "^4.3.3",
     "vite": "~4.2.2"
   }
