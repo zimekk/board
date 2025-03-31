@@ -23,7 +23,7 @@
   "dependencies": {
     "@dev/cast": "workspace:*",
     "@dev/video": "workspace:*",
-    "express": "^4.21.1",
+    "express": "^5.0.0",
     "glob": "^10.3.3",
     "mime-types": "^2.1.35",
     "mqtt": "^5.10.2",
@@ -32,7 +32,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@types/express": "^4.17.17",
+    "@types/express": "^5.0.0",
     "@types/react": "^18.3.12",
     "@types/styled-components": "^5.1.26"
   },
