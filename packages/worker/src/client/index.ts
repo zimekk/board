@@ -139,6 +139,7 @@ export const client = () => {
                     attempts: 1, // 5 - If job fails it will retry till 5 times
                     backoff: seconds(15), // 5000 - static 5 sec delay between retry
                     delay: seconds(1),
+                    priority: 1,
                     // ...opts,
                   },
                 );
