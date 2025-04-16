@@ -23,6 +23,6 @@
     "@types/chrome": "^0.0.309",
     "@types/react": "^18.3.12",
     "@vitejs/plugin-react": "^4.3.3",
-    "vite": "~4.2.2"
+    "vite": "~6.3.0"
   }
 }
