@@ -24,7 +24,7 @@
     "@dev/cast": "workspace:*",
     "@dev/video": "workspace:*",
     "express": "^4.21.1",
-    "glob": "^10.3.3",
+    "glob": "^11.0.0",
     "mime-types": "^2.1.35",
     "mqtt": "^5.10.2",
     "nodecast-js": "^1.0.3",
