@@ -152,4 +152,8 @@ export default [
   "https://www.youtube.com/watch?v=oYqTeQJbAPk",
   "https://www.youtube.com/watch?v=S2fSojJqyNY",
   "https://www.youtube.com/watch?v=LXuSOkf2M3c",
+  "https://www.youtube.com/watch?v=UfiYPq7-M3E",
+  "https://www.youtube.com/watch?v=bZxrIoCPsOc",
+  "https://www.youtube.com/watch?v=M97vR2V4vTs",
+  "https://www.youtube.com/watch?v=pjTj-_55WZ8",
 ];
