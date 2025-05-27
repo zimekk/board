@@ -506,6 +506,8 @@ export const records = [
       "g-6/c/2280-szafy-rack.html?producent=1278-lanberg",
       "g-6/c/2326-kamery-ip.html?producent=276-tp-link&producent=2287-hikvision",
       "g-6/c/2506-glosniki-przenosne.html?producent=374-jbl&f1872-moc-glosnikow-rms=71075-10-49-w",
+      "g-6/c/2511-drukarki-3d.html?producent=3499-bambu-lab",
+      "g-6/c/2512-filamenty-do-drukarek-3d.html?producent=3499-bambu-lab",
       // "g-6/c/2511-drukarki-3d.html?producent=2367-creality",
       // "g-6/c/2512-filamenty-do-drukarek-3d.html",
       // "g-6/c/2673-etykiety-do-drukarek.html",
