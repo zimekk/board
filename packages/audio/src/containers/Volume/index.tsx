@@ -51,16 +51,21 @@ export default function Volume() {
   const listId = useId();
 
   return (
-    <div>
+    <div style={{ display: "flex" }}>
       {!Number.isNaN(volume) && (
-        <input
-          type="range"
-          list={listId}
-          min="0"
-          max="100"
-          value={volume}
-          onChange={handleChange}
-        />
+        <div style={{ display: "flex", alignItems: "center", flex: "auto" }}>
+          <span>volume</span>
+          <input
+            style={{ flex: "auto" }}
+            type="range"
+            list={listId}
+            min="0"
+            max="100"
+            value={volume}
+            onChange={handleChange}
+          />
+          <span>{`${volume}%`}</span>
+        </div>
       )}
       <datalist id={listId}>
         {[...Array(10 + 1)].map((_, index, array) => (
