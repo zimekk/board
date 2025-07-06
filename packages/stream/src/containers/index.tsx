@@ -53,6 +53,21 @@ function Stream({ stream: url }: { stream: string }) {
   );
 }
 
+function MJPEGStream({ stream: url }: { stream: string }) {
+  return (
+    <div>
+      <video
+        crossOrigin="anonymous"
+        src={url}
+        width="480"
+        height="270"
+        autoPlay
+        controls
+      ></video>
+    </div>
+  );
+}
+
 export default function Section() {
   const [list, setList] = useState<string[] | null>(null);
   const [stream, setStream] = useState(null);
@@ -77,6 +92,7 @@ export default function Section() {
           (name) => `${MEDIA_URL}/live/${name}.flv`,
         ),
       )
+      .then((list) => ["http://192.168.2.23:8080/feed.flv", ...list])
       .then((list) => list.length > 0 && (setList(list), setStream(list[0])));
   }, []);
 
@@ -114,6 +130,13 @@ export default function Section() {
 `}
         </pre>
       )}
+      <h2>MJPEGStream</h2>
+      <MJPEGStream stream="//192.168.2.23:8080/feed.mjpg" />
+      <pre style={{ background: "linen", margin: ".5em", padding: "1em" }}>
+        {`gphoto2 --set-config viewfinder=1
+gphoto2 --capture-movie --stdout | ffmpeg -re -i pipe:0 -pix_fmt yuv420p -s:v 1920x1080 -listen 1 -headers "Access-Control-Allow-Origin: *" -f mjpeg http://192.168.2.23:8080/feed.mjpg
+`}
+      </pre>
     </section>
   );
 }
