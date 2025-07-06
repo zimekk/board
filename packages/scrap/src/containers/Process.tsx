@@ -377,6 +377,7 @@ export default function Process({ getDelayed }: { getDelayed: () => void }) {
                   whiteSpace: "nowrap",
                   overflow: "auto",
                 }}
+                onClick={(e) => e.preventDefault()}
               >
                 {item.id}
               </Link>
