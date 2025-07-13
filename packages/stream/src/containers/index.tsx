@@ -1,4 +1,5 @@
-import flvjs from "pro-flv.js";
+// import flvjs from "pro-flv.js";
+import flvjs from "mpegts.js";
 import React, {
   ChangeEventHandler,
   useCallback,
@@ -92,7 +93,7 @@ export default function Section() {
           (name) => `${MEDIA_URL}/live/${name}.flv`,
         ),
       )
-      .then((list) => ["http://192.168.2.23:8080/feed.flv", ...list])
+      // .then((list) => ["http://192.168.2.23:8080/feed.flv", ...list])
       .then((list) => list.length > 0 && (setList(list), setStream(list[0])));
   }, []);
 
