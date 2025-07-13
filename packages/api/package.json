@@ -19,12 +19,12 @@
     "@dev/player": "workspace:*",
     "@dev/sql": "workspace:*",
     "cors": "^2.8.5",
-    "express": "^4.21.1",
+    "express": "^5.0.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",
-    "@types/express": "^4.17.17",
+    "@types/express": "^5.0.0",
     "@types/node": "^22.0.0"
   }
 }

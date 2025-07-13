@@ -39,7 +39,7 @@
     "@dev/worker": "workspace:*",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
-    "express": "^4.21.1",
+    "express": "^5.0.0",
     "glob": "^10.3.3",
     "morgan": "^1.10.0",
     "rxjs": "^7.8.1",
@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",
-    "@types/express": "^4.17.17",
+    "@types/express": "^5.0.0",
     "@types/node": "^22.0.0",
     "babel-loader": "^10.0.0",
     "css-loader": "^7.0.0",
