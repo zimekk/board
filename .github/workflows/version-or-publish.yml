@@ -23,7 +23,7 @@ jobs:
       - name: Ensure access
         run: pnpm whoami --registry https://npm.pkg.github.com/
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --ignore-scripts
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1

@@ -19,7 +19,7 @@ jobs:
           version: 9
           run_install: false
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --ignore-scripts
       - name: Check type coverage
         run: pnpm coverage
       - name: Build application
