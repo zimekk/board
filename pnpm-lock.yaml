@@ -898,7 +898,7 @@ importers:
     dependencies:
       dashjs:
         specifier: ^5.0.0
-        version: 5.0.0
+        version: 5.0.3
       mpegts.js:
         specifier: ^1.8.0
         version: 1.8.0
@@ -2888,8 +2888,8 @@ packages:
   '@surma/rollup-plugin-off-main-thread@2.2.3':
     resolution: {integrity: sha512-lR8q/9W7hZpMWweNiAKU7NQerBnzQQLvi8qnTDU/fxItPhtZVMbPV3lbCwjhIlNBe9Bbr5V+KHshvWmVSG9cxQ==}
 
-  '@svta/common-media-library@0.7.4':
-    resolution: {integrity: sha512-9E01gxhdwdA601GUa+SQ8Q3erQhQaA8X1xJdrrPiQxrNT6gakKfCPMM8zUhu91FpruuHzYeTV8qJz+PedS81hQ==}
+  '@svta/common-media-library@0.12.4':
+    resolution: {integrity: sha512-9EuOoaNmz7JrfGwjsrD9SxF9otU5TNMnbLu1yU4BeLK0W5cDxVXXR58Z89q9u2AnHjIctscjMTYdlqQ1gojTuw==}
 
   '@tokenizer/token@0.3.0':
     resolution: {integrity: sha512-OvjF+z51L3ov0OyAU0duzsYuvO01PH7x4t6DJx+guahgTnBHkhJdG7soQeTSFLWN3efnHyibZ4Z8l2EuWwJN3A==}
@@ -4094,8 +4094,8 @@ packages:
     resolution: {integrity: sha512-wAV9QHOsNbwnWdNW2FYvE1P56wtgSbM+3SZcdGiWQILwVjACCXDCI3Ai8QlCjMDB8YK5zySiXZYBiwGmNY3lnw==}
     engines: {node: '>=12'}
 
-  dashjs@5.0.0:
-    resolution: {integrity: sha512-2WHZbTwpVhzAaaUErERI0U46SSKEWBlt94kT1yzxn83musvK/PSKA/dWS+MmagtVYdZdhRI6aaQp9KeTofsEUA==}
+  dashjs@5.0.3:
+    resolution: {integrity: sha512-TXndNnCUjFjF2nYBxDVba+hWRpVkadkQ8flLp7kHkem+5+wZTfRShJCnVkPUosmjS0YPE9fVNLbYPJxHBeQZvA==}
 
   data-uri-to-buffer@4.0.1:
     resolution: {integrity: sha512-0R9ikRb668HB7QDxT1vkpuUBtqc53YyAwMwGeUFKRojY/NWKvdZ+9UYtRfGmhqNbRkTSVpMbmyhXipFFv2cb/A==}
@@ -5031,6 +5031,9 @@ packages:
 
   html-entities@2.5.2:
     resolution: {integrity: sha512-K//PSRMQk4FZ78Kyau+mZurHn3FH0Vwr+H36eE0rPbeYkRRi9YxceYPhuN60UwWorxyKHhqoAJl2OFKa4BVtaA==}
+
+  html-entities@2.6.0:
+    resolution: {integrity: sha512-kig+rMn/QOVRvr7c86gQ8lWXq+Hkv6CbAH1hLu+RG338StTpE8Z0b44SDVaqVu7HGKf27frdmUYEs9hTUX/cLQ==}
 
   html-minifier-terser@6.1.0:
     resolution: {integrity: sha512-YXxSlJBZTP7RS3tWnQw74ooKa6L9b9i9QYXY21eUEvhZ3u9XLfv6OnFsQq6RxkhHygsaUMvYsZRV5rU/OVNZxw==}
@@ -7247,6 +7250,9 @@ packages:
   sax@1.3.0:
     resolution: {integrity: sha512-0s+oAmw9zLl1V1cS9BtZN7JAd0cW5e0QH4W3LWEK6a4LaLEA2OTpGYWDY+6XasBLtz6wkm3u1xRw95mRuJ59WA==}
 
+  sax@1.4.1:
+    resolution: {integrity: sha512-+aWOz7yVScEGoKNd4PA10LZ8sk0A/z5+nXQG5giUO5rprX9jgYsTdov9qCchZiPIZezbZH+jRut8nPodFAX4Jg==}
+
   scheduler@0.20.2:
     resolution: {integrity: sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==}
 
@@ -7872,8 +7878,9 @@ packages:
     resolution: {integrity: sha512-dvdQgNDNJo+8B2uBQoqdb11eUCE1JQXhvjC/CZtgvZseVd5TYMXnq0+vuUemXbd/Se29cTaUuPX3YIc2xgbvIg==}
     engines: {node: '>=8'}
 
-  ua-parser-js@1.0.37:
-    resolution: {integrity: sha512-bhTyI94tZofjo+Dn8SN6Zv8nBDvyXTymAdM3LDI/0IboIUwTu1rEhW7v2TfiVsoYWgkQ4kOVqnI8APUFbIQIFQ==}
+  ua-parser-js@1.0.40:
+    resolution: {integrity: sha512-z6PJ8Lml+v3ichVojCiB8toQJBuwR42ySM4ezjXIqXK3M0HczmKQ3LF4rhU55PfD99KEEXQG6yb7iOMyvYuHew==}
+    hasBin: true
 
   unbox-primitive@1.1.0:
     resolution: {integrity: sha512-nWJ91DjeOkej/TA8pXQ3myruKpKEYgqvpw9lz4OPHj/NWFNluYrjbz9j01CJ8yKQd2g4jFoOkINCTW2I5LEEyw==}
@@ -10350,7 +10357,7 @@ snapshots:
       magic-string: 0.25.9
       string.prototype.matchall: 4.0.12
 
-  '@svta/common-media-library@0.7.4': {}
+  '@svta/common-media-library@0.12.4': {}
 
   '@tokenizer/token@0.3.0': {}
 
@@ -11859,18 +11866,18 @@ snapshots:
 
   dargs@8.1.0: {}
 
-  dashjs@5.0.0:
+  dashjs@5.0.3:
     dependencies:
-      '@svta/common-media-library': 0.7.4
+      '@svta/common-media-library': 0.12.4
       bcp-47-match: 2.0.3
       bcp-47-normalize: 2.3.0
       codem-isoboxer: 0.3.10
       fast-deep-equal: 3.1.3
-      html-entities: 2.5.2
+      html-entities: 2.6.0
       imsc: 1.1.5
       localforage: 1.10.0
       path-browserify: 1.0.1
-      ua-parser-js: 1.0.37
+      ua-parser-js: 1.0.40
 
   data-uri-to-buffer@4.0.1: {}
 
@@ -12952,6 +12959,8 @@ snapshots:
       wbuf: 1.7.3
 
   html-entities@2.5.2: {}
+
+  html-entities@2.6.0: {}
 
   html-minifier-terser@6.1.0:
     dependencies:
@@ -15286,6 +15295,8 @@ snapshots:
 
   sax@1.3.0: {}
 
+  sax@1.4.1: {}
+
   scheduler@0.20.2:
     dependencies:
       loose-envify: 1.4.0
@@ -16036,7 +16047,7 @@ snapshots:
 
   typical@5.2.0: {}
 
-  ua-parser-js@1.0.37: {}
+  ua-parser-js@1.0.40: {}
 
   unbox-primitive@1.1.0:
     dependencies:
@@ -16618,7 +16629,7 @@ snapshots:
 
   xml2js@0.5.0:
     dependencies:
-      sax: 1.3.0
+      sax: 1.4.1
       xmlbuilder: 11.0.1
 
   xmlbuilder@11.0.1: {}
