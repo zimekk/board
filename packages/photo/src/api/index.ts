@@ -1,6 +1,6 @@
-import mqtt from "mqtt";
 import { Router } from "express";
 import { sync } from "glob";
+import mqtt from "mqtt";
 import { createReadStream } from "node:fs";
 import { readFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
@@ -44,7 +44,7 @@ export const router = () =>
             .then(() => res.send({ status: "ok" }));
         }),
     )
-    .get("/photo/:name?", async (req, res) =>
+    .get("/photo/{:name}", async (req, res) =>
       z
         .object({
           name: z.string().optional(),

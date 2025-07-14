@@ -1,5 +1,5 @@
-import mqtt from "mqtt";
 import { Router, json } from "express";
+import mqtt from "mqtt";
 import { dirname, resolve } from "node:path";
 import { z } from "zod";
 
@@ -28,7 +28,7 @@ client.on("connect", () => {
 });
 
 export const router = () =>
-  Router().all("/request/:name?", json(), async (req, res) =>
+  Router().all("/request/{:name}", json(), async (req, res) =>
     z
       .object({
         name: z.string().default("default"),

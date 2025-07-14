@@ -1,13 +1,13 @@
 import { createReadStream, statSync } from "fs";
 import { sync } from "glob";
 // https://github.com/Arciiix/easy-volume
-import { getVolume, setVolume } from "./easy-volume";
 import { Router } from "express";
-import { dirname, resolve } from "path";
+import jimp from "jimp";
 import mime from "mime-types";
 import { parseFile } from "music-metadata";
+import { dirname, resolve } from "path";
 import { z } from "zod";
-import jimp from "jimp";
+import { getVolume, setVolume } from "./easy-volume";
 
 const { LIBRARY_PATH = "" } = process.env;
 
@@ -15,7 +15,7 @@ const cwd = resolve(dirname(require.resolve("../../../../.env")), LIBRARY_PATH);
 
 export const router = () =>
   Router()
-    .get("/volume/:volume?", async (req, res) =>
+    .get("/volume/{:volume}", async (req, res) =>
       z
         .object({
           volume: z.coerce.number().optional(),
@@ -43,7 +43,7 @@ export const router = () =>
         )
         .catch(next),
     )
-    .get("/:name?", async ({ headers, params }, res, next) => {
+    .get("/{:name}", async ({ headers, params }, res, next) => {
       const { name } = params;
       if (name) {
         try {

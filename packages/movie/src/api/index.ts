@@ -16,7 +16,7 @@ console.log({ LIBRARY_PATH });
 const cwd = resolve(dirname(require.resolve("../../../../.env")), LIBRARY_PATH);
 
 export const router = () =>
-  Router().get("/movie/:name?", async (req, res) =>
+  Router().get("/movie/{:name}", async (req, res) =>
     z
       .object({
         name: z.string().optional(),

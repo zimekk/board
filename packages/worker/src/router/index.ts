@@ -144,7 +144,11 @@ export const router = () => {
         .parseAsync(req.body)
         .then(async () => {
           const list = await worker.queue.getFailed();
-          return z.object({}).passthrough().array().parseAsync(list.filter(Boolean));
+          return z
+            .object({})
+            .passthrough()
+            .array()
+            .parseAsync(list.filter(Boolean));
         })
         .then((entries) => res.json(entries)),
     )
@@ -161,7 +165,7 @@ export const router = () => {
         worker.queue.removeJobs(id).then(() => res.json({ status: "ok" })),
       ),
     )
-    .get("/:type/:id/", async (req, res) =>
+    .get("/:type/:id", async (req, res) =>
       Promise.resolve(req.params).then(({ id, type = "" }) =>
         worker.queue
           .getJob(id)
