@@ -21,11 +21,11 @@
     "glob": "^10.3.3",
     "jimp": "^0.22.8",
     "mime-types": "^2.1.35",
-    "mqtt": "^5.10.2",
+    "mqtt": "^5.13.2",
     "music-metadata": "^7.13.4",
     "react": "^18.2.0",
     "rxjs": "^7.8.1",
-    "styled-components": "^6.1.13",
+    "styled-components": "^6.1.19",
     "suspend-react": "^0.1.0",
     "zod": "^3.23.8"
   },

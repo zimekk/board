@@ -26,7 +26,7 @@
     "express": "^5.0.0",
     "glob": "^10.3.3",
     "mime-types": "^2.1.35",
-    "mqtt": "^5.10.2",
+    "mqtt": "^5.13.2",
     "nodecast-js": "^1.0.3",
     "upnp-mediarenderer-client": "1.4.0",
     "zod": "^3.23.8"

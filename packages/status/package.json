@@ -24,7 +24,7 @@
     "@dev/sql": "workspace:*",
     "dayjs": "^1.11.13",
     "express": "^5.0.0",
-    "mqtt": "^5.10.2",
+    "mqtt": "^5.13.2",
     "nodemailer": "^6.9.16",
     "pretty-bytes": "^6.1.0",
     "pretty-ms": "^9.2.0",

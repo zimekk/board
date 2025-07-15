@@ -18,12 +18,12 @@
   },
   "dependencies": {
     "express": "^5.0.0",
-    "mqtt": "^5.10.2",
+    "mqtt": "^5.13.2",
     "music-metadata": "^7.13.4",
     "play-sound": "^1.1.6",
     "react": "^18.2.0",
     "rxjs": "^7.8.1",
-    "styled-components": "^6.1.13",
+    "styled-components": "^6.1.19",
     "suspend-react": "^0.1.0",
     "zod": "^3.23.8"
   },

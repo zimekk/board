@@ -32,9 +32,9 @@
     "whatwg-fetch": "^3.6.20"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.0",
-    "@babel/preset-react": "^7.25.9",
-    "@babel/preset-typescript": "^7.26.0",
+    "@babel/core": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
+    "@babel/preset-typescript": "^7.27.1",
     "@dev/audio": "workspace:*",
     "@dev/cast": "workspace:*",
     "@dev/cron": "workspace:*",
@@ -73,15 +73,15 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.6.3",
     "react-hot-loader": "^4.13.1",
-    "sass": "^1.81.0",
+    "sass": "^1.89.2",
     "sass-loader": "^16.0.3",
     "serve": "^14.2.4",
     "stream-browserify": "^3.0.0",
     "style-loader": "^4.0.0",
     "ts-node": "^10.9.1",
-    "webpack": "^5.96.1",
+    "webpack": "^5.100.2",
     "webpack-cli": "^6.0.0",
-    "webpack-dev-server": "^5.1.0",
+    "webpack-dev-server": "^5.2.2",
     "workbox-webpack-plugin": "^7.3.0"
   }
 }
