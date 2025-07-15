@@ -669,7 +669,7 @@ importers:
         version: 18.3.1
       react-player:
         specifier: ^2.13.0
-        version: 2.16.0(react@18.3.1)
+        version: 2.16.1(react@18.3.1)
       styled-components:
         specifier: ^6.1.13
         version: 6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -981,7 +981,7 @@ importers:
         version: 18.3.1
       react-player:
         specifier: ^2.13.0
-        version: 2.16.0(react@18.3.1)
+        version: 2.16.1(react@18.3.1)
       rxjs:
         specifier: ^7.8.1
         version: 7.8.2
@@ -6963,8 +6963,8 @@ packages:
   react-lifecycles-compat@3.0.4:
     resolution: {integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==}
 
-  react-player@2.16.0:
-    resolution: {integrity: sha512-mAIPHfioD7yxO0GNYVFD1303QFtI3lyyQZLY229UEAp/a10cSW+hPcakg0Keq8uWJxT2OiT/4Gt+Lc9bD6bJmQ==}
+  react-player@2.16.1:
+    resolution: {integrity: sha512-mxP6CqjSWjidtyDoMOSHVPdhX0pY16aSvw5fVr44EMaT7X5Xz46uQ4b/YBm1v2x+3hHkB9PmjEEkmbHb9PXQ4w==}
     peerDependencies:
       react: '>=16.6.0'
 
@@ -15006,7 +15006,7 @@ snapshots:
 
   react-lifecycles-compat@3.0.4: {}
 
-  react-player@2.16.0(react@18.3.1):
+  react-player@2.16.1(react@18.3.1):
     dependencies:
       deepmerge: 4.3.1
       load-script: 1.0.0
