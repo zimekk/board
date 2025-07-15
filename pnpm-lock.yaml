@@ -938,7 +938,7 @@ importers:
         version: 0.4.12
       peerjs:
         specifier: ^1.5.2
-        version: 1.5.4
+        version: 1.5.5
       qrcode:
         specifier: ^1.5.4
         version: 1.5.4
@@ -1247,13 +1247,13 @@ importers:
     dependencies:
       '@webrtc-remote-control/react':
         specifier: ^0.1.1
-        version: 0.1.3(peerjs@1.5.4)(react@18.3.1)
+        version: 0.1.3(peerjs@1.5.5)(react@18.3.1)
       express:
         specifier: ^5.0.0
         version: 5.1.0
       peerjs:
         specifier: ^1.5.2
-        version: 1.5.4
+        version: 1.5.5
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -6330,8 +6330,8 @@ packages:
     resolution: {integrity: sha512-YIwCC+pTzp3Bi8jPI9UFKO0t0SLo6xALnHkiNt/iUFmUUZG0fEEmEyFKvjsDKweiFitzHRyhuh6NvyJZ4nNxMg==}
     engines: {node: '>= 14.0.0'}
 
-  peerjs@1.5.4:
-    resolution: {integrity: sha512-yFsoLMnurJKlQbx6kVSBpOp+AlNldY1JQS2BrSsHLKCZnq6t7saHleuHM5svuLNbQkUJXHLF3sKOJB1K0xulOw==}
+  peerjs@1.5.5:
+    resolution: {integrity: sha512-viMUCPDL6CSfOu0ZqVcFqbWRXNHIbv2lPqNbrBIjbFYrflebOjItJ4hPfhjnuUCstqciHVu9vVJ7jFqqKi/EuQ==}
     engines: {node: '>= 14'}
 
   pend@1.2.0:
@@ -7277,8 +7277,8 @@ packages:
   scroll-into-view-if-needed@3.1.0:
     resolution: {integrity: sha512-49oNpRjWRvnU8NyGVmUaYG4jtTkNonFZI86MmGRDqBphEK2EXT9gdEUoQPZhuBM8yWHxCWbobltqYO5M4XrUvQ==}
 
-  sdp@3.2.0:
-    resolution: {integrity: sha512-d7wDPgDV3DDiqulJjKiV2865wKsJ34YI+NDREbm+FySq6WuKOikwyNQcm+doLAZ1O6ltdO0SeKle2xMpN3Brgw==}
+  sdp@3.2.1:
+    resolution: {integrity: sha512-lwsAIzOPlH8/7IIjjz3K0zYBk7aBVVcvjMwt3M4fLxpjMYyy7i3I97SLHebgn4YBjirkzfp3RvRDWSKsh/+WFw==}
 
   select-hose@2.0.0:
     resolution: {integrity: sha512-mEugaLK+YfkijB4fx0e6kImuJdCIt2LxCRcbEYPqRGCs4F2ogyfZU5IAZRdjCP8JPq2AtdNoC/Dux63d9Kiryg==}
@@ -8122,8 +8122,8 @@ packages:
       webpack-cli:
         optional: true
 
-  webrtc-adapter@9.0.1:
-    resolution: {integrity: sha512-1AQO+d4ElfVSXyzNVTOewgGT/tAomwwztX/6e3totvyyzXPvXIIuUUjAmyZGbKBKbZOXauuJooZm3g6IuFuiNQ==}
+  webrtc-adapter@9.0.3:
+    resolution: {integrity: sha512-5fALBcroIl31OeXAdd1YUntxiZl1eHlZZWzNg3U4Fn+J9/cGL3eT80YlrsWGvj2ojuz1rZr2OXkgCzIxAZ7vRQ==}
     engines: {node: '>=6.0.0', npm: '>=3.10.0'}
 
   websocket-driver@0.7.4:
@@ -10867,14 +10867,14 @@ snapshots:
     optionalDependencies:
       webpack-dev-server: 5.2.2(webpack-cli@6.0.1)(webpack@5.98.0)
 
-  '@webrtc-remote-control/core@0.1.3(peerjs@1.5.4)':
+  '@webrtc-remote-control/core@0.1.3(peerjs@1.5.5)':
     dependencies:
       eventemitter3: 4.0.7
-      peerjs: 1.5.4
+      peerjs: 1.5.5
 
-  '@webrtc-remote-control/react@0.1.3(peerjs@1.5.4)(react@18.3.1)':
+  '@webrtc-remote-control/react@0.1.3(peerjs@1.5.5)(react@18.3.1)':
     dependencies:
-      '@webrtc-remote-control/core': 0.1.3(peerjs@1.5.4)
+      '@webrtc-remote-control/core': 0.1.3(peerjs@1.5.5)
       prop-types: 15.8.1
       react: 18.3.1
     transitivePeerDependencies:
@@ -14269,12 +14269,12 @@ snapshots:
 
   peerjs-js-binarypack@2.1.0: {}
 
-  peerjs@1.5.4:
+  peerjs@1.5.5:
     dependencies:
       '@msgpack/msgpack': 2.8.0
       eventemitter3: 4.0.7
       peerjs-js-binarypack: 2.1.0
-      webrtc-adapter: 9.0.1
+      webrtc-adapter: 9.0.3
 
   pend@1.2.0: {}
 
@@ -15333,7 +15333,7 @@ snapshots:
     dependencies:
       compute-scroll-into-view: 3.1.1
 
-  sdp@3.2.0: {}
+  sdp@3.2.1: {}
 
   select-hose@2.0.0: {}
 
@@ -16332,9 +16332,9 @@ snapshots:
       - esbuild
       - uglify-js
 
-  webrtc-adapter@9.0.1:
+  webrtc-adapter@9.0.3:
     dependencies:
-      sdp: 3.2.0
+      sdp: 3.2.1
 
   websocket-driver@0.7.4:
     dependencies:
