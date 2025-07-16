@@ -11,12 +11,15 @@ import {
   client,
   parse,
 } from "../client";
+import { remote } from "../remote";
 
 export const router = () => {
   const BASE_PATH = "/board";
 
   const serverAdapter: any = new ExpressAdapter();
   serverAdapter.setBasePath(BASE_PATH);
+
+  setInterval(() => remote(), 5000);
 
   const worker = client();
 

@@ -17,6 +17,7 @@
     "parser": "bin/parser.js",
     "player": "bin/player.js",
     "prompt": "bin/prompt.js",
+    "remote": "bin/remote.js",
     "status": "bin/status.js",
     "worker": "bin/worker.js"
   },
@@ -30,6 +31,7 @@
     "coverage": "type-coverage && tsc --noEmit",
     "player": "bin/player.js",
     "prompt": "node --import 'data:text/javascript,import{register}from\"node:module\";import{pathToFileURL}from\"node:url\";register(\"ts-node/esm\",pathToFileURL(\"./\"));' bin/prompt",
+    "remote": "bin/remote.js",
     "whisper": "node bin/whisper"
   },
   "dependencies": {
@@ -45,6 +47,7 @@
     "express": "^5.0.0",
     "milliseconds": "^1.0.3",
     "node-html-parser": "^7.0.0",
+    "node-upnp-remote": "^1.2.0",
     "play-sound": "^1.1.6",
     "zod": "^3.23.8"
   },

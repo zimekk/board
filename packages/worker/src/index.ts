@@ -4,6 +4,8 @@ export { chrome } from "./client";
 
 export { parser } from "./parser";
 
+export { remote } from "./remote";
+
 // export { prompt } from "./prompt";
 
 export { router } from "./router";
