@@ -86,7 +86,7 @@ importers:
         version: 5.0.3
       '@types/node':
         specifier: ^22.0.0
-        version: 22.13.10
+        version: 22.16.4
 
   packages/api-graphql:
     dependencies:
@@ -193,7 +193,7 @@ importers:
         version: 5.0.3
       '@types/node':
         specifier: ^22.0.0
-        version: 22.13.10
+        version: 22.16.4
       babel-loader:
         specifier: ^10.0.0
         version: 10.0.0(@babel/core@7.28.0)(webpack@5.100.2)
@@ -214,7 +214,7 @@ importers:
         version: 4.0.0(webpack@5.100.2)
       ts-node:
         specifier: ^10.9.1
-        version: 10.9.2(@types/node@22.13.10)(typescript@5.8.3)
+        version: 10.9.2(@types/node@22.16.4)(typescript@5.8.3)
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
@@ -309,13 +309,13 @@ importers:
         version: 1.0.11
       '@types/node':
         specifier: ^22.0.0
-        version: 22.13.10
+        version: 22.16.4
       '@types/react':
         specifier: ^18.3.12
         version: 18.3.23
       ts-node-dev:
         specifier: ^2.0.0
-        version: 2.0.0(@types/node@22.13.10)(typescript@5.8.3)
+        version: 2.0.0(@types/node@22.16.4)(typescript@5.8.3)
       type-coverage:
         specifier: ^2.29.7
         version: 2.29.7(typescript@5.8.3)
@@ -493,7 +493,7 @@ importers:
     devDependencies:
       '@types/node':
         specifier: ^22.0.0
-        version: 22.13.10
+        version: 22.16.4
       '@types/node-wifi':
         specifier: ^2.0.0
         version: 2.0.2
@@ -914,7 +914,7 @@ importers:
     devDependencies:
       '@types/node':
         specifier: ^22.0.0
-        version: 22.13.10
+        version: 22.16.4
       '@types/react':
         specifier: ^18.3.12
         version: 18.3.23
@@ -1016,13 +1016,13 @@ importers:
         version: 5.0.3
       '@types/node':
         specifier: ^22.0.0
-        version: 22.13.10
+        version: 22.16.4
       ts-node:
         specifier: ^10.9.1
-        version: 10.9.2(@types/node@22.13.10)(typescript@5.8.3)
+        version: 10.9.2(@types/node@22.16.4)(typescript@5.8.3)
       ts-node-dev:
         specifier: ^2.0.0
-        version: 2.0.0(@types/node@22.13.10)(typescript@5.8.3)
+        version: 2.0.0(@types/node@22.16.4)(typescript@5.8.3)
     optionalDependencies:
       '@mathquis/node-personal-wakeword':
         specifier: ^1.1.1
@@ -1178,7 +1178,7 @@ importers:
         version: 3.2.9
       '@types/node':
         specifier: ^22.0.0
-        version: 22.13.10
+        version: 22.16.4
       '@types/react':
         specifier: ^18.3.12
         version: 18.3.23
@@ -1229,7 +1229,7 @@ importers:
         version: 4.0.0(webpack@5.100.2)
       ts-node:
         specifier: ^10.9.1
-        version: 10.9.2(@types/node@22.13.10)(typescript@5.8.3)
+        version: 10.9.2(@types/node@22.16.4)(typescript@5.8.3)
       webpack:
         specifier: ^5.100.2
         version: 5.100.2(webpack-cli@6.0.1)
@@ -1327,13 +1327,13 @@ importers:
         version: 1.0.0
       '@types/node':
         specifier: ^22.0.0
-        version: 22.13.10
+        version: 22.16.4
       ts-node:
         specifier: ^10.9.1
-        version: 10.9.2(@types/node@22.13.10)(typescript@5.8.3)
+        version: 10.9.2(@types/node@22.16.4)(typescript@5.8.3)
       ts-node-dev:
         specifier: ^2.0.0
-        version: 2.0.0(@types/node@22.13.10)(typescript@5.8.3)
+        version: 2.0.0(@types/node@22.16.4)(typescript@5.8.3)
 
 packages:
 
@@ -3054,8 +3054,8 @@ packages:
   '@types/node@16.9.1':
     resolution: {integrity: sha512-QpLcX9ZSsq3YYUUnD3nFDY8H7wctAhQj/TFKL8Ya8v5fMm3CFXxo8zStsLAl780ltoYoo1WvKUVGBQK+1ifr7g==}
 
-  '@types/node@22.13.10':
-    resolution: {integrity: sha512-I6LPUvlRH+O6VRUqYOcMudhaIdUVWfsjnZavnsraHvpBwaEyMN29ry+0UVJhImYL16xsscu0aske3yA+uPOWfw==}
+  '@types/node@22.16.4':
+    resolution: {integrity: sha512-PYRhNtZdm2wH/NT2k/oAJ6/f2VD2N2Dag0lGlx2vWgMSJXGNmlce5MiTQzoWAiIJtso30mjnfQCOKVH+kAQC/g==}
 
   '@types/node@24.0.14':
     resolution: {integrity: sha512-4zXMWD91vBLGRtHK3YbIoFMia+1nqEz72coM42C5ETjnNCa/heoj7NT1G67iAfOqMmcfhuCZ4uNpyz8EjlAejw==}
@@ -7921,8 +7921,8 @@ packages:
   unbzip2-stream@1.4.3:
     resolution: {integrity: sha512-mlExGW4w71ebDJviH16lQLtZS32VKqsSfk80GCfUlwT/4/hNRFsoscrF/c++9xinkMzECL1uL9DDwXqFWkruPg==}
 
-  undici-types@6.20.0:
-    resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
+  undici-types@6.21.0:
+    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
 
   undici-types@7.8.0:
     resolution: {integrity: sha512-9UJ2xGDvQ43tYyVMpuHlsgApydB8ZKfVYTsLDhXkFL/6gfkp+U8xTGdh8pMJv1SpZna0zxG1DwsKZsreLbXBxw==}
@@ -10424,17 +10424,17 @@ snapshots:
   '@types/body-parser@1.19.6':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 22.13.10
+      '@types/node': 22.16.4
 
   '@types/bonjour@3.5.13':
     dependencies:
-      '@types/node': 22.13.10
+      '@types/node': 22.16.4
 
   '@types/cacheable-request@6.0.3':
     dependencies:
       '@types/http-cache-semantics': 4.0.4
       '@types/keyv': 3.1.4
-      '@types/node': 22.13.10
+      '@types/node': 22.16.4
       '@types/responselike': 1.0.3
 
   '@types/chrome@0.1.0':
@@ -10450,25 +10450,25 @@ snapshots:
 
   '@types/clean-css@4.2.11':
     dependencies:
-      '@types/node': 22.13.10
+      '@types/node': 22.16.4
       source-map: 0.6.1
 
   '@types/connect-history-api-fallback@1.5.4':
     dependencies:
       '@types/express-serve-static-core': 5.0.7
-      '@types/node': 22.13.10
+      '@types/node': 22.16.4
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 22.13.10
+      '@types/node': 22.16.4
 
   '@types/conventional-commits-parser@5.0.1':
     dependencies:
-      '@types/node': 22.13.10
+      '@types/node': 24.0.14
 
   '@types/cors@2.8.19':
     dependencies:
-      '@types/node': 22.13.10
+      '@types/node': 22.16.4
 
   '@types/debug@4.1.8':
     dependencies:
@@ -10490,14 +10490,14 @@ snapshots:
 
   '@types/express-serve-static-core@4.19.6':
     dependencies:
-      '@types/node': 22.13.10
+      '@types/node': 22.16.4
       '@types/qs': 6.14.0
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.5
 
   '@types/express-serve-static-core@5.0.7':
     dependencies:
-      '@types/node': 22.13.10
+      '@types/node': 22.16.4
       '@types/qs': 6.14.0
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.5
@@ -10523,7 +10523,7 @@ snapshots:
 
   '@types/fluent-ffmpeg@2.1.27':
     dependencies:
-      '@types/node': 22.13.10
+      '@types/node': 24.0.14
 
   '@types/har-format@1.2.16': {}
 
@@ -10552,13 +10552,13 @@ snapshots:
 
   '@types/http-proxy@1.17.16':
     dependencies:
-      '@types/node': 22.13.10
+      '@types/node': 22.16.4
 
   '@types/json-schema@7.0.15': {}
 
   '@types/keyv@3.1.4':
     dependencies:
-      '@types/node': 22.13.10
+      '@types/node': 22.16.4
 
   '@types/long@4.0.2': {}
 
@@ -10572,7 +10572,7 @@ snapshots:
 
   '@types/node-forge@1.3.13':
     dependencies:
-      '@types/node': 22.13.10
+      '@types/node': 22.16.4
 
   '@types/node-wifi@2.0.2': {}
 
@@ -10580,9 +10580,9 @@ snapshots:
 
   '@types/node@16.9.1': {}
 
-  '@types/node@22.13.10':
+  '@types/node@22.16.4':
     dependencies:
-      undici-types: 6.20.0
+      undici-types: 6.21.0
 
   '@types/node@24.0.14':
     dependencies:
@@ -10590,23 +10590,23 @@ snapshots:
 
   '@types/nodemailer@6.4.17':
     dependencies:
-      '@types/node': 22.13.10
+      '@types/node': 24.0.14
 
   '@types/pg@8.15.4':
     dependencies:
-      '@types/node': 22.13.10
+      '@types/node': 24.0.14
       pg-protocol: 1.10.3
       pg-types: 2.2.0
 
   '@types/play-sound@1.1.2':
     dependencies:
-      '@types/node': 22.13.10
+      '@types/node': 24.0.14
 
   '@types/prop-types@15.7.15': {}
 
   '@types/qrcode@1.5.5':
     dependencies:
-      '@types/node': 22.13.10
+      '@types/node': 24.0.14
 
   '@types/qs@6.14.0': {}
 
@@ -10623,7 +10623,7 @@ snapshots:
 
   '@types/readable-stream@4.0.21':
     dependencies:
-      '@types/node': 22.13.10
+      '@types/node': 24.0.14
 
   '@types/redux-actions@2.6.5': {}
 
@@ -10635,14 +10635,14 @@ snapshots:
 
   '@types/responselike@1.0.3':
     dependencies:
-      '@types/node': 22.13.10
+      '@types/node': 22.16.4
 
   '@types/retry@0.12.2': {}
 
   '@types/send@0.17.5':
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 22.13.10
+      '@types/node': 22.16.4
 
   '@types/serve-index@1.9.4':
     dependencies:
@@ -10651,12 +10651,12 @@ snapshots:
   '@types/serve-static@1.15.8':
     dependencies:
       '@types/http-errors': 2.0.5
-      '@types/node': 22.13.10
+      '@types/node': 22.16.4
       '@types/send': 0.17.5
 
   '@types/sockjs@0.3.36':
     dependencies:
-      '@types/node': 22.13.10
+      '@types/node': 22.16.4
 
   '@types/source-list-map@0.1.6': {}
 
@@ -10684,13 +10684,13 @@ snapshots:
 
   '@types/webpack-sources@3.2.3':
     dependencies:
-      '@types/node': 22.13.10
+      '@types/node': 22.16.4
       '@types/source-list-map': 0.1.6
       source-map: 0.7.4
 
   '@types/webpack@4.41.38':
     dependencies:
-      '@types/node': 22.13.10
+      '@types/node': 22.16.4
       '@types/tapable': 1.0.12
       '@types/uglify-js': 3.17.4
       '@types/webpack-sources': 3.2.3
@@ -10699,7 +10699,7 @@ snapshots:
 
   '@types/webpack@5.28.5(webpack-cli@6.0.1)':
     dependencies:
-      '@types/node': 22.13.10
+      '@types/node': 22.16.4
       tapable: 2.2.2
       webpack: 5.100.2(webpack-cli@6.0.1)
     transitivePeerDependencies:
@@ -10710,11 +10710,11 @@ snapshots:
 
   '@types/ws@8.18.1':
     dependencies:
-      '@types/node': 22.13.10
+      '@types/node': 24.0.14
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 22.13.10
+      '@types/node': 24.0.14
     optional: true
 
   '@typescript-eslint/eslint-plugin@8.37.0(@typescript-eslint/parser@8.37.0(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3)':
@@ -13492,7 +13492,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.13.10
+      '@types/node': 22.16.4
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -14568,7 +14568,7 @@ snapshots:
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
       '@types/long': 4.0.2
-      '@types/node': 22.13.10
+      '@types/node': 22.16.4
       long: 4.0.0
 
   proxy-addr@2.0.7:
@@ -16007,7 +16007,7 @@ snapshots:
     dependencies:
       typescript: 5.8.3
 
-  ts-node-dev@2.0.0(@types/node@22.13.10)(typescript@5.8.3):
+  ts-node-dev@2.0.0(@types/node@22.16.4)(typescript@5.8.3):
     dependencies:
       chokidar: 3.6.0
       dynamic-dedupe: 0.3.0
@@ -16017,7 +16017,7 @@ snapshots:
       rimraf: 2.7.1
       source-map-support: 0.5.21
       tree-kill: 1.2.2
-      ts-node: 10.9.2(@types/node@22.13.10)(typescript@5.8.3)
+      ts-node: 10.9.2(@types/node@22.16.4)(typescript@5.8.3)
       tsconfig: 7.0.0
       typescript: 5.8.3
     transitivePeerDependencies:
@@ -16025,14 +16025,14 @@ snapshots:
       - '@swc/wasm'
       - '@types/node'
 
-  ts-node@10.9.2(@types/node@22.13.10)(typescript@5.8.3):
+  ts-node@10.9.2(@types/node@22.16.4)(typescript@5.8.3):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.9
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 22.13.10
+      '@types/node': 22.16.4
       acorn: 8.15.0
       acorn-walk: 8.3.4
       arg: 4.1.3
@@ -16156,7 +16156,7 @@ snapshots:
       buffer: 5.7.1
       through: 2.3.8
 
-  undici-types@6.20.0: {}
+  undici-types@6.21.0: {}
 
   undici-types@7.8.0: {}
 
