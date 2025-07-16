@@ -19,11 +19,11 @@
   "dependencies": {
     "@dev/video": "workspace:*",
     "format-quantity": "^3.0.0",
-    "react": "^18.2.0",
+    "react": "^19.0.0",
     "react-player": "^2.13.0",
     "styled-components": "^6.1.19"
   },
   "devDependencies": {
-    "@types/react": "^18.3.12"
+    "@types/react": "^19.0.0"
   }
 }
