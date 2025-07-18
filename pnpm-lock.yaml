@@ -247,7 +247,7 @@ importers:
         version: 2.1.35
       mqtt:
         specifier: ^5.13.2
-        version: 5.13.2
+        version: 5.13.3
       music-metadata:
         specifier: ^7.13.4
         version: 7.14.0
@@ -287,7 +287,7 @@ importers:
         version: 0.4.2
       mqtt:
         specifier: ^5.13.2
-        version: 5.13.2
+        version: 5.13.3
       nodecast-js:
         specifier: ^1.0.3
         version: 1.0.3
@@ -443,7 +443,7 @@ importers:
         version: 10.4.5
       mqtt:
         specifier: ^5.13.2
-        version: 5.13.2
+        version: 5.13.3
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -545,7 +545,7 @@ importers:
         version: 10.4.5
       mqtt:
         specifier: ^5.13.2
-        version: 5.13.2
+        version: 5.13.3
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -595,7 +595,7 @@ importers:
         version: 10.4.5
       mqtt:
         specifier: ^5.13.2
-        version: 5.13.2
+        version: 5.13.3
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -620,7 +620,7 @@ importers:
         version: 5.1.0
       mqtt:
         specifier: ^5.13.2
-        version: 5.13.2
+        version: 5.13.3
       music-metadata:
         specifier: ^7.13.4
         version: 7.14.0
@@ -688,7 +688,7 @@ importers:
         version: 10.4.5
       mqtt:
         specifier: ^5.13.2
-        version: 5.13.2
+        version: 5.13.3
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -774,7 +774,7 @@ importers:
         version: 2.1.35
       mqtt:
         specifier: ^5.13.2
-        version: 5.13.2
+        version: 5.13.3
       nodecast-js:
         specifier: ^1.0.3
         version: 1.0.3
@@ -855,7 +855,7 @@ importers:
         version: 5.1.0
       mqtt:
         specifier: ^5.13.2
-        version: 5.13.2
+        version: 5.13.3
       nodemailer:
         specifier: ^6.9.16
         version: 6.10.1
@@ -6107,8 +6107,8 @@ packages:
   mqtt-packet@9.0.2:
     resolution: {integrity: sha512-MvIY0B8/qjq7bKxdN1eD+nrljoeaai+qjLJgfRn3TiMuz0pamsIWY2bFODPZMSNmabsLANXsLl4EMoWvlaTZWA==}
 
-  mqtt@5.13.2:
-    resolution: {integrity: sha512-21E15qjFMNEddowGtLiMw4wXfzZxd3Iv+q+zC+tJSmY0flEreNgov+8SKrYcapA+pjClaqj+IgJW0jsJsHkmVQ==}
+  mqtt@5.13.3:
+    resolution: {integrity: sha512-91x03kh1+vBBA51OMNbEw2fymXfaUjpHkC0NcMckg9Vf6ee/GrM/HXfE8XeeziHQpJL8adr+9ThTbN5v/WmrRA==}
     engines: {node: '>=16.0.0'}
     hasBin: true
 
@@ -14197,7 +14197,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  mqtt@5.13.2:
+  mqtt@5.13.3:
     dependencies:
       '@types/readable-stream': 4.0.21
       '@types/ws': 8.18.1
