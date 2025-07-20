@@ -43,9 +43,12 @@
     "glob": "^10.3.3",
     "morgan": "^1.10.0",
     "rxjs": "^7.8.1",
-    "web-push": "^3.6.4"
+    "web-push": "^3.6.4",
+    "ws": "^8.18.3"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.27.1",
+    "@babel/preset-typescript": "^7.27.1",
     "@types/cors": "^2.8.13",
     "@types/express": "^5.0.0",
     "@types/node": "^22.0.0",

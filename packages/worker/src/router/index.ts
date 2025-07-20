@@ -19,7 +19,7 @@ export const router = () => {
   const serverAdapter: any = new ExpressAdapter();
   serverAdapter.setBasePath(BASE_PATH);
 
-  setInterval(() => remote(), 5000);
+  setInterval(() => remote(), 10_000);
 
   const worker = client();
 
