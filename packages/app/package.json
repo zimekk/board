@@ -38,7 +38,7 @@
     "@dev/webrtc": "workspace:*",
     "@dev/worker": "workspace:*",
     "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
+    "dotenv": "^17.0.0",
     "express": "^5.0.0",
     "glob": "^10.3.3",
     "morgan": "^1.10.0",
