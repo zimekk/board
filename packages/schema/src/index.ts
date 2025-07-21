@@ -71,7 +71,7 @@ export const ReturnSchema = z.object({
 export const CompletedSchema = z
   .object({
     data: z.object({ url: z.string() }),
-    opts: OptsSchema.default({}),
+    opts: OptsSchema.default({ delay: 0 }),
   })
   .transform(({ data: { url }, opts: { timestamp = Date.now() } }) => ({
     timestamp,
@@ -126,7 +126,7 @@ export const EntriesSchema = ReturnSchema.extend({
     })
     .passthrough(),
   type: z.string().optional(),
-  returnvalue: z.any({}),
+  returnvalue: z.any(),
 });
 
 export const FailedSchema = DelayedSchema;
