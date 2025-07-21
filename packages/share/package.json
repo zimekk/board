@@ -29,7 +29,7 @@
     "mqtt": "^5.13.2",
     "nodecast-js": "^1.0.3",
     "upnp-mediarenderer-client": "1.4.0",
-    "zod": "^3.23.8"
+    "zod": "^4.0.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",

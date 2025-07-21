@@ -30,7 +30,7 @@
     "pretty-ms": "^9.2.0",
     "ssl-checker": "^2.0.8",
     "use-asset": "^1.0.4",
-    "zod": "^3.23.8"
+    "zod": "^4.0.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",

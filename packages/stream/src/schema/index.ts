@@ -3,6 +3,7 @@ import { z } from "zod";
 export const StreamsSchema = z.object({
   live: z
     .record(
+      z.string(),
       z.object({
         publisher: z.object({
           app: z.string(),

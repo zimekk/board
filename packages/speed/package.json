@@ -22,7 +22,7 @@
     "network-speed": "^2.1.1",
     "react": "^18.2.0",
     "styled-components": "^6.1.19",
-    "zod": "^3.23.8"
+    "zod": "^4.0.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",

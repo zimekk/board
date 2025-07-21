@@ -100,10 +100,9 @@ export const router = () => {
         })
         .parseAsync(req.body)
         .then(async ({ start, limit, type }) => {
-          const list = await worker.queue.getCompleted(
-            start,
-            start + limit - 1,
-          );
+          const list = (
+            await worker.queue.getCompleted(start, start + limit - 1)
+          ).map((job) => job.toJSON());
           return EntrySchema.array()
             .parseAsync(list)
             .then((list) =>
@@ -118,8 +117,10 @@ export const router = () => {
         .object({})
         .parseAsync(req.body)
         .then(async () => {
-          const list = await worker.queue.getDelayed();
-          return z.object({}).passthrough().array().parseAsync(list);
+          const list = (await worker.queue.getDelayed()).map((job) =>
+            job.toJSON(),
+          );
+          return z.looseObject({}).array().parseAsync(list);
         })
         .then((entries) => res.json(entries)),
     )
@@ -146,12 +147,10 @@ export const router = () => {
         .object({})
         .parseAsync(req.body)
         .then(async () => {
-          const list = await worker.queue.getFailed();
-          return z
-            .object({})
-            .passthrough()
-            .array()
-            .parseAsync(list.filter(Boolean));
+          const list = (await worker.queue.getFailed()).map((job) =>
+            job.toJSON(),
+          );
+          return z.looseObject({}).array().parseAsync(list.filter(Boolean));
         })
         .then((entries) => res.json(entries)),
     )
