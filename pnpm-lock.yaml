@@ -259,7 +259,7 @@ importers:
         version: 3.0.1
       mqtt:
         specifier: ^5.13.2
-        version: 5.13.3
+        version: 5.14.0
       music-metadata:
         specifier: ^7.13.4
         version: 7.14.0
@@ -299,7 +299,7 @@ importers:
         version: 0.4.2
       mqtt:
         specifier: ^5.13.2
-        version: 5.13.3
+        version: 5.14.0
       nodecast-js:
         specifier: ^1.0.3
         version: 1.0.3
@@ -455,7 +455,7 @@ importers:
         version: 10.4.5
       mqtt:
         specifier: ^5.13.2
-        version: 5.13.3
+        version: 5.14.0
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -557,7 +557,7 @@ importers:
         version: 10.4.5
       mqtt:
         specifier: ^5.13.2
-        version: 5.13.3
+        version: 5.14.0
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -607,7 +607,7 @@ importers:
         version: 10.4.5
       mqtt:
         specifier: ^5.13.2
-        version: 5.13.3
+        version: 5.14.0
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -632,7 +632,7 @@ importers:
         version: 5.1.0
       mqtt:
         specifier: ^5.13.2
-        version: 5.13.3
+        version: 5.14.0
       music-metadata:
         specifier: ^7.13.4
         version: 7.14.0
@@ -700,7 +700,7 @@ importers:
         version: 10.4.5
       mqtt:
         specifier: ^5.13.2
-        version: 5.13.3
+        version: 5.14.0
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -786,7 +786,7 @@ importers:
         version: 3.0.1
       mqtt:
         specifier: ^5.13.2
-        version: 5.13.3
+        version: 5.14.0
       nodecast-js:
         specifier: ^1.0.3
         version: 1.0.3
@@ -867,7 +867,7 @@ importers:
         version: 5.1.0
       mqtt:
         specifier: ^5.13.2
-        version: 5.13.3
+        version: 5.14.0
       nodemailer:
         specifier: ^7.0.0
         version: 7.0.5
@@ -3840,6 +3840,9 @@ packages:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
     engines: {node: '>=8'}
 
+  broker-factory@3.1.8:
+    resolution: {integrity: sha512-xmVnYN0FZtynhPUmAnN+/MFRdbDi3syCuxWV7o7s78FcIN0pjDtn9mUrVqEgdjQkbfojRhlPWbYbXJkMCyddrg==}
+
   browserslist@4.25.1:
     resolution: {integrity: sha512-KGj0KoOMXLpSNkkEI6Z6mShmQy0bc1I+T7K9N81k4WWMrfz+6fQ6es80B/YLAeRoKvjYE1YSHHOW1qe9xIVzHw==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
@@ -4851,9 +4854,9 @@ packages:
   fast-levenshtein@2.0.6:
     resolution: {integrity: sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==}
 
-  fast-unique-numbers@8.0.13:
-    resolution: {integrity: sha512-7OnTFAVPefgw2eBJ1xj2PGGR9FwYzSUso9decayHgCDX4sJkHLdcsYTytTg+tYv+wKF3U8gJuSBz2jJpQV4u/g==}
-    engines: {node: '>=16.1.0'}
+  fast-unique-numbers@9.0.22:
+    resolution: {integrity: sha512-dBR+30yHAqBGvOuxxQdnn2lTLHCO6r/9B+M4yF8mNrzr3u1yiF+YVJ6u3GTyPN/VRWqaE1FcscZDdBgVKmrmQQ==}
+    engines: {node: '>=18.2.0'}
 
   fast-uri@3.0.6:
     resolution: {integrity: sha512-Atfo14OibSv5wAp4VWNsFYE1AchQRTv9cBGWET4pZWHzYshFSS9NQI6I57rdKn9croWVMbYFbLhJ+yJvmZIIHw==}
@@ -6142,8 +6145,8 @@ packages:
   mqtt-packet@9.0.2:
     resolution: {integrity: sha512-MvIY0B8/qjq7bKxdN1eD+nrljoeaai+qjLJgfRn3TiMuz0pamsIWY2bFODPZMSNmabsLANXsLl4EMoWvlaTZWA==}
 
-  mqtt@5.13.3:
-    resolution: {integrity: sha512-91x03kh1+vBBA51OMNbEw2fymXfaUjpHkC0NcMckg9Vf6ee/GrM/HXfE8XeeziHQpJL8adr+9ThTbN5v/WmrRA==}
+  mqtt@5.14.0:
+    resolution: {integrity: sha512-H7EmeCJhbGblbWjm6APF5sAH3SkdI7lxHw/UkblZp8fjSNl8b2MsLcdAkIaQKxvZYmiORkdAjffvKjqQWPkd6w==}
     engines: {node: '>=16.0.0'}
     hasBin: true
 
@@ -8497,14 +8500,17 @@ packages:
   workbox-window@7.3.0:
     resolution: {integrity: sha512-qW8PDy16OV1UBaUNGlTVcepzrlzyzNW/ZJvFQQs2j2TzGsg6IKjcpZC1RSquqQnTOafl5pCj5bGfAHlCjOOjdA==}
 
-  worker-timers-broker@6.1.8:
-    resolution: {integrity: sha512-FUCJu9jlK3A8WqLTKXM9E6kAmI/dR1vAJ8dHYLMisLNB/n3GuaFIjJ7pn16ZcD1zCOf7P6H62lWIEBi+yz/zQQ==}
+  worker-factory@7.0.44:
+    resolution: {integrity: sha512-08AuUfWi+KeZI+KC7nU4pU/9tDeAFvE5NSWk+K9nIfuQc6UlOsZtjjeGVYVEn+DEchyXNJ5i10HCn0xRzFXEQA==}
 
-  worker-timers-worker@7.0.71:
-    resolution: {integrity: sha512-ks/5YKwZsto1c2vmljroppOKCivB/ma97g9y77MAAz2TBBjPPgpoOiS1qYQKIgvGTr2QYPT3XhJWIB6Rj2MVPQ==}
+  worker-timers-broker@8.0.9:
+    resolution: {integrity: sha512-WJsd7aIvu2GBTXp7IBGT1NKnt3ZbiJ2wqb7Pl4nFJXC8pek84+X68TJGVvvrqwHgHPNxSlzpU1nadhcW4PDD7A==}
 
-  worker-timers@7.1.8:
-    resolution: {integrity: sha512-R54psRKYVLuzff7c1OTFcq/4Hue5Vlz4bFtNEIarpSiCYhpifHU3aIQI29S84o1j87ePCYqbmEJPqwBTf+3sfw==}
+  worker-timers-worker@9.0.9:
+    resolution: {integrity: sha512-OOKTMdHbzx7FaXCW40RS8RxAqLF/R8xU5/YA7CFasDy+jBA5yQWUusSQJUFFTV2Z9ZOpnR+ZWgte/IuAqOAEVw==}
+
+  worker-timers@8.0.23:
+    resolution: {integrity: sha512-1BnWHNNiu5YEutgF7eVZEqNntAsij2oG0r66xDdScoY3fKGFrok2y0xA8OgG6FA+3srrmAplSY6JN5h9jV5D0w==}
 
   wrap-ansi@6.2.0:
     resolution: {integrity: sha512-r6lPcBGxZXlIcymEu7InxDMhdW0KDxpLgoFLcguasxCaJ/SOIZwINatK9KY/tf+ZrlywOKU0UDj3ATXUBfxJXA==}
@@ -11708,6 +11714,13 @@ snapshots:
     dependencies:
       fill-range: 7.1.1
 
+  broker-factory@3.1.8:
+    dependencies:
+      '@babel/runtime': 7.28.2
+      fast-unique-numbers: 9.0.22
+      tslib: 2.8.1
+      worker-factory: 7.0.44
+
   browserslist@4.25.1:
     dependencies:
       caniuse-lite: 1.0.30001727
@@ -12947,9 +12960,9 @@ snapshots:
 
   fast-levenshtein@2.0.6: {}
 
-  fast-unique-numbers@8.0.13:
+  fast-unique-numbers@9.0.22:
     dependencies:
-      '@babel/runtime': 7.27.6
+      '@babel/runtime': 7.28.2
       tslib: 2.8.1
 
   fast-uri@3.0.6: {}
@@ -14240,7 +14253,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  mqtt@5.13.3:
+  mqtt@5.14.0:
     dependencies:
       '@types/readable-stream': 4.0.21
       '@types/ws': 8.18.1
@@ -14256,7 +14269,7 @@ snapshots:
       rfdc: 1.4.1
       socks: 2.8.6
       split2: 4.2.0
-      worker-timers: 7.1.8
+      worker-timers: 8.0.23
       ws: 8.18.3
     transitivePeerDependencies:
       - bufferutil
@@ -17018,24 +17031,32 @@ snapshots:
       '@types/trusted-types': 2.0.7
       workbox-core: 7.3.0
 
-  worker-timers-broker@6.1.8:
+  worker-factory@7.0.44:
     dependencies:
-      '@babel/runtime': 7.27.6
-      fast-unique-numbers: 8.0.13
-      tslib: 2.8.1
-      worker-timers-worker: 7.0.71
-
-  worker-timers-worker@7.0.71:
-    dependencies:
-      '@babel/runtime': 7.27.6
+      '@babel/runtime': 7.28.2
+      fast-unique-numbers: 9.0.22
       tslib: 2.8.1
 
-  worker-timers@7.1.8:
+  worker-timers-broker@8.0.9:
     dependencies:
-      '@babel/runtime': 7.27.6
+      '@babel/runtime': 7.28.2
+      broker-factory: 3.1.8
+      fast-unique-numbers: 9.0.22
       tslib: 2.8.1
-      worker-timers-broker: 6.1.8
-      worker-timers-worker: 7.0.71
+      worker-timers-worker: 9.0.9
+
+  worker-timers-worker@9.0.9:
+    dependencies:
+      '@babel/runtime': 7.28.2
+      tslib: 2.8.1
+      worker-factory: 7.0.44
+
+  worker-timers@8.0.23:
+    dependencies:
+      '@babel/runtime': 7.28.2
+      tslib: 2.8.1
+      worker-timers-broker: 8.0.9
+      worker-timers-worker: 9.0.9
 
   wrap-ansi@6.2.0:
     dependencies:
