@@ -1,11 +1,11 @@
+import { Spinner } from "@dev/video/components";
 import mqtt from "mqtt";
 import React, {
   type MouseEventHandler,
   useCallback,
-  useState,
   useEffect,
+  useState,
 } from "react";
-import { Spinner } from "@dev/video/components";
 import { type PhotoType } from "../schema";
 
 export const MQTT_URL = (({ hostname, protocol }) =>
@@ -82,7 +82,7 @@ function Item() {
 
     client.on("message", (_topic, message) => {
       // message is Buffer
-      setItem(URL.createObjectURL(new Blob([message])));
+      setItem(URL.createObjectURL(new Blob([message as BlobPart])));
     });
 
     return () => {
