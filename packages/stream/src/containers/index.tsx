@@ -1,7 +1,8 @@
 // import flvjs from "pro-flv.js";
 import flvjs from "mpegts.js";
 import React, {
-  ChangeEventHandler,
+  type ChangeEventHandler,
+  type FormEvent,
   useCallback,
   useEffect,
   useRef,
@@ -70,6 +71,10 @@ function MJPEGStream({ stream: url }: { stream: string }) {
 }
 
 export default function Section() {
+  const [item, setItem] = useState(() => ({
+    value: "",
+    error: "",
+  }));
   const [list, setList] = useState<string[] | null>(null);
   const [stream, setStream] = useState(null);
 
@@ -102,19 +107,82 @@ export default function Section() {
     [],
   );
 
+  const handleSubmit = useCallback(
+    (e: FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      try {
+        const url = new URL(item.value).toString();
+        console.log({ url });
+        setList((list) => list.filter((item) => item !== url).concat(url));
+        setItem((item) => ({ ...item, value: "" }));
+        setStream(url);
+      } catch (e) {
+        setItem((item) => ({ ...item, error: e.toString() }));
+      }
+    },
+    [item.value],
+  );
+
   return (
     <section>
       <h2>Stream</h2>
-      {stream && list && (
-        <select value={stream} onChange={handleChangeStream}>
-          {list.map((url) => (
-            <option key={url} value={url}>
-              {url}
-            </option>
-          ))}
-        </select>
-      )}
-      {stream && <Stream stream={stream} />}
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          width: 480,
+        }}
+      >
+        <form onSubmit={handleSubmit}>
+          <div
+            style={{
+              display: "flex",
+              flex: "1 auto",
+            }}
+          >
+            <input
+              style={{ flexGrow: 1, margin: ".25em" }}
+              type="text"
+              value={item.value}
+              onChange={({ target }) =>
+                setItem((item) => ({ ...item, value: target.value, error: "" }))
+              }
+            />
+            <button
+              style={{ margin: ".25em", height: "2em" }}
+              disabled={item.value.length <= 0}
+            >
+              add
+            </button>
+          </div>
+          {item.error && (
+            <pre
+              style={{
+                background: "crimson",
+                color: "white",
+                margin: ".5em",
+                padding: "1em",
+              }}
+            >
+              {item.error}
+            </pre>
+          )}
+        </form>
+        {stream && list && (
+          <select
+            style={{ margin: ".25em", height: "2em" }}
+            value={stream}
+            onChange={handleChangeStream}
+          >
+            {list.map((url) => (
+              <option key={url} value={url}>
+                {url}
+              </option>
+            ))}
+          </select>
+        )}
+        {stream && <Stream stream={stream} />}
+      </div>
       <a href={`${MEDIA_URL}/admin/streams`} target="_blank">
         streams
       </a>
