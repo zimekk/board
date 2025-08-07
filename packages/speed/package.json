@@ -20,12 +20,12 @@
     "express": "^5.0.0",
     "glob": "^10.3.3",
     "network-speed": "^2.1.1",
-    "react": "^18.2.0",
+    "react": "^19.0.0",
     "styled-components": "^6.1.19",
     "zod": "^4.0.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
-    "@types/react": "^18.3.12"
+    "@types/react": "^19.0.0"
   }
 }
