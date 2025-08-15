@@ -21,7 +21,7 @@
     "mqtt": "^5.13.2",
     "music-metadata": "^7.13.4",
     "play-sound": "^1.1.6",
-    "react": "^18.2.0",
+    "react": "^19.0.0",
     "rxjs": "^7.8.1",
     "styled-components": "^6.1.19",
     "suspend-react": "^0.1.0",
@@ -31,6 +31,6 @@
     "@types/express": "^5.0.0",
     "@types/mime-types": "^3.0.0",
     "@types/play-sound": "^1.1.2",
-    "@types/react": "^18.3.12"
+    "@types/react": "^19.0.0"
   }
 }

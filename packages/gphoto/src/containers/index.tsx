@@ -79,7 +79,7 @@ export default function Section() {
     type: StateType.CameraPicker,
   }));
 
-  const cameraRef = useRef<Camera>();
+  const cameraRef = useRef<Camera>(null);
 
   const selectDevice = useCallback(async () => {
     try {

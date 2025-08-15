@@ -19,7 +19,7 @@ export const MEDIA_URL =
 // https://github.com/illuspas/Node-Media-Server
 function Stream({ stream: url }: { stream: string }) {
   const [error, setError] = useState<object>(null);
-  const videoRef = useRef();
+  const videoRef = useRef(null);
 
   useEffect(() => {
     // https://github.com/illuspas/pro-fiv.js

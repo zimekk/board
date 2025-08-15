@@ -1,14 +1,14 @@
 // import mqtt from "mqtt";
+import { Spinner } from "@dev/video/components";
 import React, {
+  Dispatch,
   type MouseEventHandler,
+  SetStateAction,
   useCallback,
+  useEffect,
   useRef,
   useState,
-  useEffect,
-  SetStateAction,
-  Dispatch,
 } from "react";
-import { Spinner } from "@dev/video/components";
 import { type ItemType } from "../schema";
 
 function List({ setItem }: { setItem: Dispatch<SetStateAction<ItemType>> }) {
@@ -54,7 +54,7 @@ function List({ setItem }: { setItem: Dispatch<SetStateAction<ItemType>> }) {
 }
 
 function Item({ item }: { item: ItemType }) {
-  const videoRef = useRef();
+  const videoRef = useRef(null);
 
   return (
     <div

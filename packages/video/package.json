@@ -20,7 +20,7 @@
     "express": "^5.0.0",
     "fluent-ffmpeg": "^2.1.2",
     "node-localstorage": "^3.0.5",
-    "react": "^18.2.0",
+    "react": "^19.0.0",
     "react-player": "^2.13.0",
     "rxjs": "^7.8.1",
     "styled-components": "^6.1.19",
@@ -30,6 +30,6 @@
   "devDependencies": {
     "@types/express": "^5.0.0",
     "@types/fluent-ffmpeg": "^2.1.27",
-    "@types/react": "^18.3.12"
+    "@types/react": "^19.0.0"
   }
 }
