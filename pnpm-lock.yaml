@@ -428,7 +428,7 @@ importers:
     devDependencies:
       '@crxjs/vite-plugin':
         specifier: ^2.0.3
-        version: 2.1.0
+        version: 2.2.0
       '@types/chrome':
         specifier: ^0.1.0
         version: 0.1.4
@@ -2282,8 +2282,8 @@ packages:
     resolution: {integrity: sha512-/yCrWGCoA1SVKOks25EGadP9Pnj0oAIHGpl2wH2M2Y46dPM2ueb8wyCVOD7O3WCTkaJ0IkKvzhl1JY7+uCT2Dw==}
     engines: {node: '>=v18'}
 
-  '@crxjs/vite-plugin@2.1.0':
-    resolution: {integrity: sha512-7PkVsg9ar/QyXJvi9aHekrpWpxf6xHOH6bDQPfLbwsyAGzzmDrI5naXsJeNvQw6WPyHexQRk8gSwXmjfOyMmIg==}
+  '@crxjs/vite-plugin@2.2.0':
+    resolution: {integrity: sha512-HpT1GLbUQy42nlpN4sGzFgulacBraMM778s8Q+oPo4cb26DwO9tTwdndlvAS8fe6vEProFXvbdt37objp/0IQA==}
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -8467,8 +8467,8 @@ packages:
   undici-types@7.10.0:
     resolution: {integrity: sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag==}
 
-  undici@7.13.0:
-    resolution: {integrity: sha512-l+zSMssRqrzDcb3fjMkjjLGmuiiK2pMIcV++mJaAc9vhjSGpvM7h43QgP+OAMb1GImHmbPyG2tBXeuyG5iY4gA==}
+  undici@7.14.0:
+    resolution: {integrity: sha512-Vqs8HTzjpQXZeXdpsfChQTlafcMQaaIwnGwLam1wudSSjlJeQ3bw1j+TLPePgrCnCpUXx7Ba5Pdpf5OBih62NQ==}
     engines: {node: '>=20.18.1'}
 
   unicode-canonical-property-names-ecmascript@2.0.1:
@@ -10595,7 +10595,7 @@ snapshots:
       '@types/conventional-commits-parser': 5.0.1
       chalk: 5.5.0
 
-  '@crxjs/vite-plugin@2.1.0':
+  '@crxjs/vite-plugin@2.2.0':
     dependencies:
       '@rollup/pluginutils': 4.2.1
       '@webcomponents/custom-elements': 1.6.0
@@ -12987,7 +12987,7 @@ snapshots:
       parse5: 7.3.0
       parse5-htmlparser2-tree-adapter: 7.1.0
       parse5-parser-stream: 7.1.2
-      undici: 7.13.0
+      undici: 7.14.0
       whatwg-mimetype: 4.0.0
 
   chokidar@3.6.0:
@@ -17625,7 +17625,7 @@ snapshots:
 
   undici-types@7.10.0: {}
 
-  undici@7.13.0: {}
+  undici@7.14.0: {}
 
   unicode-canonical-property-names-ecmascript@2.0.1: {}
 
