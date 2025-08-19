@@ -1,3 +1,4 @@
+import { format } from "date-fns";
 import React, {
   ChangeEventHandler,
   MouseEventHandler,
@@ -5,20 +6,20 @@ import React, {
   useEffect,
   useState,
 } from "react";
-import { format } from "date-fns";
 import "typeface-roboto";
 import styles from "./styles.module.scss";
 
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      marquee: React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLElement>,
-        HTMLElement
-      >;
-    }
-  }
-}
+// declare global {
+//   namespace JSX {
+//     interface IntrinsicElements {
+//       'marquee': { className: string }
+//       // marquee: React.DetailedHTMLProps<
+//       //   React.HTMLAttributes<HTMLElement>,
+//       //   HTMLElement
+//       // >;
+//     }
+//   }
+// }
 
 export default function Section() {
   const [data, setData] = useState(() => ({
@@ -57,6 +58,8 @@ export default function Section() {
         </div>
         <div className={styles.Strip}>
           <div className={styles.Time}>{format(time, "HH:mm")}</div>
+          {/* 
+// @ts-ignore */}
           <marquee className={styles.Marquee}>{data.text}</marquee>
         </div>
         {edit && (
