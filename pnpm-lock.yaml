@@ -1287,10 +1287,10 @@ importers:
     dependencies:
       '@bull-board/api':
         specifier: ^6.11.1
-        version: 6.12.1(@bull-board/ui@6.12.0)
+        version: 6.12.1(@bull-board/ui@6.12.1)
       '@bull-board/express':
         specifier: ^6.11.1
-        version: 6.12.0
+        version: 6.12.1
       '@dev/chrome':
         specifier: workspace:*
         version: link:../chrome
@@ -2105,21 +2105,16 @@ packages:
     resolution: {integrity: sha512-ruv7Ae4J5dUYULmeXw1gmb7rYRz57OWCPM57pHojnLq/3Z1CK2lNSLTCVjxVk1F/TZHwOZZrOWi0ur95BbLxNQ==}
     engines: {node: '>=6.9.0'}
 
-  '@bull-board/api@6.12.0':
-    resolution: {integrity: sha512-tlMQTc0EAiYbv8gjR0lCYAXDL1Uc8/dPD9tKjxvG+m9lUUpPAoRUXUHNtzwVQo+AHiF6WHEK9iA3+8KHJamc/w==}
-    peerDependencies:
-      '@bull-board/ui': 6.12.0
-
   '@bull-board/api@6.12.1':
     resolution: {integrity: sha512-PejAqqtnasXHxGkSVCdh2VLNkwNPZ6/JN1BR31VCqX4l54JtWd9vSlcRU2jrwcNIK4aunvOx4VfKSII1pr4T/w==}
     peerDependencies:
       '@bull-board/ui': 6.12.1
 
-  '@bull-board/express@6.12.0':
-    resolution: {integrity: sha512-wvydsoc/nX7OWWZIQ0TbjLST47nfKHMsWKZj26e+6R9YbvUtxZuKXpqWdDrRY/slpXUzvN0+3GkttMOUkuT92Q==}
+  '@bull-board/express@6.12.1':
+    resolution: {integrity: sha512-OveudE1Cqe+4epf2CYk/D7nx0gqqvVw1GKYj05hgoa6uEQMDKwQt3W3zcU5+fbXABiNaA8I1+3rzFi3v+m8awA==}
 
-  '@bull-board/ui@6.12.0':
-    resolution: {integrity: sha512-a1+9bUlNViXIQcO9KPOd1EP66Ts4caYHgsc5OuunDMZ9Q6Y7sfrQXMhfnv3JWahSNo3hiX6Fc8wIL4p/bcTwsw==}
+  '@bull-board/ui@6.12.1':
+    resolution: {integrity: sha512-vTGr3jS01b8JPOfnCqcEDxGUe8k5Zb4iGWiw38hlyiAC8c4qnKMc3FaFTSWeiT9va/s+nr5FqAu/kobqn/yNDg==}
 
   '@changesets/apply-release-plan@7.0.12':
     resolution: {integrity: sha512-EaET7As5CeuhTzvXTQCRZeBUcisoYPDDcXvgTE/2jmmypKp0RC7LxKj/yzqeh/1qFTZI7oDGFcL1PHRuQuketQ==}
@@ -6022,8 +6017,8 @@ packages:
   jackspeak@3.4.3:
     resolution: {integrity: sha512-OGlZQpz2yfahA/Rd1Y8Cd9SIEsqvXkLVoSw/cgwhnhFMDbsQFeZYoJJ7bIZBS9BcamUW96asq/npPWugM+RQBw==}
 
-  jake@10.9.2:
-    resolution: {integrity: sha512-2P4SQ0HrLQ+fw6llpLnOaGAvN2Zu6778SJMrCUwns4fOoG9ayrTiZk3VV8sCPkVZF8ab0zksVpS8FDY5pRCNBA==}
+  jake@10.9.4:
+    resolution: {integrity: sha512-wpHYzhxiVQL+IV05BLE2Xn34zW1S223hvjtqk0+gsPrwd/8JNLXJgZZM/iPFsYc1xyphF+6M6EvdE5E9MBGkDA==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -10200,28 +10195,23 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
 
-  '@bull-board/api@6.12.0(@bull-board/ui@6.12.0)':
+  '@bull-board/api@6.12.1(@bull-board/ui@6.12.1)':
     dependencies:
-      '@bull-board/ui': 6.12.0
+      '@bull-board/ui': 6.12.1
       redis-info: 3.1.0
 
-  '@bull-board/api@6.12.1(@bull-board/ui@6.12.0)':
+  '@bull-board/express@6.12.1':
     dependencies:
-      '@bull-board/ui': 6.12.0
-      redis-info: 3.1.0
-
-  '@bull-board/express@6.12.0':
-    dependencies:
-      '@bull-board/api': 6.12.0(@bull-board/ui@6.12.0)
-      '@bull-board/ui': 6.12.0
+      '@bull-board/api': 6.12.1(@bull-board/ui@6.12.1)
+      '@bull-board/ui': 6.12.1
       ejs: 3.1.10
       express: 5.1.0
     transitivePeerDependencies:
       - supports-color
 
-  '@bull-board/ui@6.12.0':
+  '@bull-board/ui@6.12.1':
     dependencies:
-      '@bull-board/api': 6.12.0(@bull-board/ui@6.12.0)
+      '@bull-board/api': 6.12.1(@bull-board/ui@6.12.1)
 
   '@changesets/apply-release-plan@7.0.12':
     dependencies:
@@ -13524,7 +13514,7 @@ snapshots:
 
   ejs@3.1.10:
     dependencies:
-      jake: 10.9.2
+      jake: 10.9.4
 
   electron-to-chromium@1.5.203: {}
 
@@ -14838,12 +14828,11 @@ snapshots:
     optionalDependencies:
       '@pkgjs/parseargs': 0.11.0
 
-  jake@10.9.2:
+  jake@10.9.4:
     dependencies:
       async: 3.2.6
-      chalk: 4.1.2
       filelist: 1.0.4
-      minimatch: 3.1.2
+      picocolors: 1.1.1
 
   jest-worker@27.5.1:
     dependencies:
