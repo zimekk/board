@@ -1287,7 +1287,7 @@ importers:
     dependencies:
       '@bull-board/api':
         specifier: ^6.11.1
-        version: 6.12.0(@bull-board/ui@6.12.0)
+        version: 6.12.1(@bull-board/ui@6.12.0)
       '@bull-board/express':
         specifier: ^6.11.1
         version: 6.12.0
@@ -2109,6 +2109,11 @@ packages:
     resolution: {integrity: sha512-tlMQTc0EAiYbv8gjR0lCYAXDL1Uc8/dPD9tKjxvG+m9lUUpPAoRUXUHNtzwVQo+AHiF6WHEK9iA3+8KHJamc/w==}
     peerDependencies:
       '@bull-board/ui': 6.12.0
+
+  '@bull-board/api@6.12.1':
+    resolution: {integrity: sha512-PejAqqtnasXHxGkSVCdh2VLNkwNPZ6/JN1BR31VCqX4l54JtWd9vSlcRU2jrwcNIK4aunvOx4VfKSII1pr4T/w==}
+    peerDependencies:
+      '@bull-board/ui': 6.12.1
 
   '@bull-board/express@6.12.0':
     resolution: {integrity: sha512-wvydsoc/nX7OWWZIQ0TbjLST47nfKHMsWKZj26e+6R9YbvUtxZuKXpqWdDrRY/slpXUzvN0+3GkttMOUkuT92Q==}
@@ -10196,6 +10201,11 @@ snapshots:
       '@babel/helper-validator-identifier': 7.27.1
 
   '@bull-board/api@6.12.0(@bull-board/ui@6.12.0)':
+    dependencies:
+      '@bull-board/ui': 6.12.0
+      redis-info: 3.1.0
+
+  '@bull-board/api@6.12.1(@bull-board/ui@6.12.0)':
     dependencies:
       '@bull-board/ui': 6.12.0
       redis-info: 3.1.0
