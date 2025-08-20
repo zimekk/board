@@ -898,7 +898,7 @@ importers:
         version: 5.0.3
       '@types/nodemailer':
         specifier: ^7.0.0
-        version: 7.0.0
+        version: 7.0.1
       '@types/react':
         specifier: ^19.0.0
         version: 19.1.10
@@ -3551,8 +3551,8 @@ packages:
   '@types/node@24.3.0':
     resolution: {integrity: sha512-aPTXCrfwnDLj4VvXrm+UUCQjNEvJgNA8s5F1cvwQU+3KNltTOkBm1j30uNLyqqPNe7gE3KFzImYoZEfLhp4Yow==}
 
-  '@types/nodemailer@7.0.0':
-    resolution: {integrity: sha512-APKHivjoJ1OyLrlhdJ/QJpnj78OaGSHQ18J12CeOVbffvBgUjqBiIzCW2lnRuwQiLxCpahgMf+T7G2dZBvgeYw==}
+  '@types/nodemailer@7.0.1':
+    resolution: {integrity: sha512-UfHAghPmGZVzaL8x9y+mKZMWyHC399+iq0MOmya5tIyenWX3lcdSb60vOmp0DocR6gCDTYTozv/ULQnREyyjkg==}
 
   '@types/pg@8.15.5':
     resolution: {integrity: sha512-LF7lF6zWEKxuT3/OR8wAZGzkg4ENGXFNyiV/JeOt9z5B+0ZVwbql9McqX5c/WStFq1GaGso7H1AzP/qSzmlCKQ==}
@@ -11797,7 +11797,7 @@ snapshots:
 
   '@types/conventional-commits-parser@5.0.1':
     dependencies:
-      '@types/node': 22.17.2
+      '@types/node': 24.3.0
 
   '@types/cors@2.8.19':
     dependencies:
@@ -11921,10 +11921,10 @@ snapshots:
     dependencies:
       undici-types: 7.10.0
 
-  '@types/nodemailer@7.0.0':
+  '@types/nodemailer@7.0.1':
     dependencies:
       '@aws-sdk/client-sesv2': 3.864.0
-      '@types/node': 22.17.2
+      '@types/node': 24.3.0
     transitivePeerDependencies:
       - aws-crt
 
