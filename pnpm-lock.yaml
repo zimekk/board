@@ -1287,10 +1287,10 @@ importers:
     dependencies:
       '@bull-board/api':
         specifier: ^6.11.1
-        version: 6.12.4(@bull-board/ui@6.12.1)
+        version: 6.12.4(@bull-board/ui@6.12.5)
       '@bull-board/express':
         specifier: ^6.11.1
-        version: 6.12.1
+        version: 6.12.5
       '@dev/chrome':
         specifier: workspace:*
         version: link:../chrome
@@ -2105,21 +2105,21 @@ packages:
     resolution: {integrity: sha512-ruv7Ae4J5dUYULmeXw1gmb7rYRz57OWCPM57pHojnLq/3Z1CK2lNSLTCVjxVk1F/TZHwOZZrOWi0ur95BbLxNQ==}
     engines: {node: '>=6.9.0'}
 
-  '@bull-board/api@6.12.1':
-    resolution: {integrity: sha512-PejAqqtnasXHxGkSVCdh2VLNkwNPZ6/JN1BR31VCqX4l54JtWd9vSlcRU2jrwcNIK4aunvOx4VfKSII1pr4T/w==}
-    peerDependencies:
-      '@bull-board/ui': 6.12.1
-
   '@bull-board/api@6.12.4':
     resolution: {integrity: sha512-z+j//rCnWZUkba3WBSpv3/gs04fiCtvtOoOwV+VgcOXHEXQdf0bUb8eAQXvC5W8zRi7KHSpG2Fhbx4xIBI7wUA==}
     peerDependencies:
       '@bull-board/ui': 6.12.4
 
-  '@bull-board/express@6.12.1':
-    resolution: {integrity: sha512-OveudE1Cqe+4epf2CYk/D7nx0gqqvVw1GKYj05hgoa6uEQMDKwQt3W3zcU5+fbXABiNaA8I1+3rzFi3v+m8awA==}
+  '@bull-board/api@6.12.5':
+    resolution: {integrity: sha512-54X+dsWzAv/Svz1CyAP3hng+M0Fv8rjDlgi1FkGeafMODWoUUYhCU85YLbJ+NSwZHcy/Ey3ZGe0VFHqndJSL9A==}
+    peerDependencies:
+      '@bull-board/ui': 6.12.5
 
-  '@bull-board/ui@6.12.1':
-    resolution: {integrity: sha512-vTGr3jS01b8JPOfnCqcEDxGUe8k5Zb4iGWiw38hlyiAC8c4qnKMc3FaFTSWeiT9va/s+nr5FqAu/kobqn/yNDg==}
+  '@bull-board/express@6.12.5':
+    resolution: {integrity: sha512-wIP3W88py+/jRRjuYpTmp8LN7h67jfdlp/vunSXHUGK7tBbcEKTeMOHzJXBKOeahSD3YkKSvGIwfS4PE8MZ5oQ==}
+
+  '@bull-board/ui@6.12.5':
+    resolution: {integrity: sha512-4sBEQqkN1fcY/6Y5napZWVcFJZ26XCNnd9xbBq2PY5Prk++BhsjlTXJgxrpho+ZaR9Qb2GQ3z8yXsigj2UZYxA==}
 
   '@changesets/apply-release-plan@7.0.12':
     resolution: {integrity: sha512-EaET7As5CeuhTzvXTQCRZeBUcisoYPDDcXvgTE/2jmmypKp0RC7LxKj/yzqeh/1qFTZI7oDGFcL1PHRuQuketQ==}
@@ -10200,28 +10200,28 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
 
-  '@bull-board/api@6.12.1(@bull-board/ui@6.12.1)':
+  '@bull-board/api@6.12.4(@bull-board/ui@6.12.5)':
     dependencies:
-      '@bull-board/ui': 6.12.1
+      '@bull-board/ui': 6.12.5
       redis-info: 3.1.0
 
-  '@bull-board/api@6.12.4(@bull-board/ui@6.12.1)':
+  '@bull-board/api@6.12.5(@bull-board/ui@6.12.5)':
     dependencies:
-      '@bull-board/ui': 6.12.1
+      '@bull-board/ui': 6.12.5
       redis-info: 3.1.0
 
-  '@bull-board/express@6.12.1':
+  '@bull-board/express@6.12.5':
     dependencies:
-      '@bull-board/api': 6.12.1(@bull-board/ui@6.12.1)
-      '@bull-board/ui': 6.12.1
+      '@bull-board/api': 6.12.5(@bull-board/ui@6.12.5)
+      '@bull-board/ui': 6.12.5
       ejs: 3.1.10
       express: 5.1.0
     transitivePeerDependencies:
       - supports-color
 
-  '@bull-board/ui@6.12.1':
+  '@bull-board/ui@6.12.5':
     dependencies:
-      '@bull-board/api': 6.12.1(@bull-board/ui@6.12.1)
+      '@bull-board/api': 6.12.5(@bull-board/ui@6.12.5)
 
   '@changesets/apply-release-plan@7.0.12':
     dependencies:
