@@ -431,7 +431,7 @@ importers:
         version: 2.2.0
       '@types/chrome':
         specifier: ^0.1.0
-        version: 0.1.4
+        version: 0.1.6
       '@types/react':
         specifier: ^19.0.0
         version: 19.1.12
@@ -1181,7 +1181,7 @@ importers:
         version: 17.0.2(react@19.1.1)
       '@types/chrome':
         specifier: ^0.1.0
-        version: 0.1.4
+        version: 0.1.6
       '@types/chromecast-caf-sender':
         specifier: ^1.0.11
         version: 1.0.11
@@ -3423,8 +3423,8 @@ packages:
   '@types/chrome@0.1.0':
     resolution: {integrity: sha512-Mq712O2Ykw+EVAC5D1wt4Ot4v2rfp7nDosmxhIMKULJAa8o7ELeO88rWzRasaB+AYnqayzfX/XSWaDKBfk1rYQ==}
 
-  '@types/chrome@0.1.4':
-    resolution: {integrity: sha512-vfISO7SPppN3OKVUqWujtZ4vux3nhDqKaHYEHgfQuPARHuWJ3jjyc1s13H0ckzEc86/neTkCl1TeW72UK6jYKA==}
+  '@types/chrome@0.1.6':
+    resolution: {integrity: sha512-Rnv8CDthTPA4/ojSWw5A//7Ew7P2pAJECxAR8YeOhehaUKZ7WX5fHIZbEw8m6bTRNzFyhxhzUb6T3gjKMry+2w==}
 
   '@types/chromecast-caf-receiver@6.0.24':
     resolution: {integrity: sha512-EeLuoqZn1gMwdyKX4+67kjHeVkLn5IlYHKXMSBEPltYXT2hRZkCNF3DEBITo/7LYdQNW1zpqsTDC2u+WB+eE2A==}
@@ -7215,7 +7215,7 @@ packages:
   puppeteer@21.0.3:
     resolution: {integrity: sha512-+eBNTEOOBrRBLJ1/jIuHcOoUUOVpUQjQFwp9L/sm/iBDqii+4jv9jxpPJSOmOHXuy++X7GWfhuDw4vz8crNzPw==}
     engines: {node: '>=16.3.0'}
-    deprecated: < 24.9.0 is no longer supported
+    deprecated: < 24.10.2 is no longer supported
 
   qrcode@1.5.4:
     resolution: {integrity: sha512-1ca71Zgiu6ORjHqFBDpnSMTR2ReToX4l1Au1VFLyVeBTFavzQnv5JxMFr3ukHVKpSrSA2MCk0lNJSykjUfz7Zg==}
@@ -11760,7 +11760,7 @@ snapshots:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
 
-  '@types/chrome@0.1.4':
+  '@types/chrome@0.1.6':
     dependencies:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
