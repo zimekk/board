@@ -5,8 +5,9 @@ import React, {
   type ChangeEventHandler,
   type MouseEventHandler,
 } from "react";
-import ReactPlayer from "react-player/youtube";
+// import ReactPlayer from "react-player/youtube";
 import { LazyImage, LazyImageProvider } from "../components/Image";
+import ReactPlayer from "../components/ReactPlayer";
 import { Spinner } from "../components/Spinner";
 import {
   BasicInfoSchema as InfoSchema,
@@ -177,7 +178,7 @@ function List() {
       >
         {videoId && (
           <ReactPlayer
-            url={videoId}
+            src={videoId}
             width={320}
             height={180}
             controls

@@ -80,7 +80,7 @@ export default (env, argv) =>
         headers: {
           // "Access-Control-Allow-Origin": "*",
           "Cross-Origin-Opener-Policy": "same-origin",
-          "Cross-Origin-Embedder-Policy": "require-corp",
+          // "Cross-Origin-Embedder-Policy": "require-corp",
         },
         setupMiddlewares: (middlewares, devServer) => {
           if (!devServer) {
