@@ -9,7 +9,8 @@ import React, {
   useState,
   type MouseEventHandler,
 } from "react";
-import ReactPlayer from "react-player/youtube";
+// import ReactPlayer from "react-player/youtube";
+import { ReactPlayer } from "@dev/video/components";
 import data from "../recipes";
 
 interface RecipeType {
@@ -179,7 +180,7 @@ export default function Section() {
           }}
         >
           <ReactPlayer
-            url={videoId}
+            src={videoId}
             width={320}
             height={180}
             controls
