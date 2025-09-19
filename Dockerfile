@@ -42,6 +42,7 @@ RUN pnpm fetch
 
 COPY . .
 RUN pnpm install --offline --config.ignore-scripts=true
-RUN pnpm build && pnpm prune --prod --config.ignore-scripts=true
+# RUN pnpm build && pnpm prune --prod --config.ignore-scripts=true
+RUN pnpm build
 
 CMD ["pnpm", "serve"]
