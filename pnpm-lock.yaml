@@ -393,7 +393,7 @@ importers:
         version: 1.0.3
       pretty-bytes:
         specifier: ^7.0.0
-        version: 7.0.1
+        version: 7.1.0
       react:
         specifier: ^19.0.0
         version: 19.1.1
@@ -740,7 +740,7 @@ importers:
         version: 1.0.3
       pretty-bytes:
         specifier: ^7.0.0
-        version: 7.0.1
+        version: 7.1.0
       react:
         specifier: ^19.0.0
         version: 19.1.1
@@ -870,7 +870,7 @@ importers:
         version: 7.0.6
       pretty-bytes:
         specifier: ^7.0.0
-        version: 7.0.1
+        version: 7.1.0
       pretty-ms:
         specifier: ^9.2.0
         version: 9.3.0
@@ -7061,8 +7061,8 @@ packages:
     resolution: {integrity: sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==}
     engines: {node: '>=6'}
 
-  pretty-bytes@7.0.1:
-    resolution: {integrity: sha512-285/jRCYIbMGDciDdrw0KPNC4LKEEwz/bwErcYNxSJOi4CpGUuLpb9gQpg3XJP0XYj9ldSRluXxih4lX2YN8Xw==}
+  pretty-bytes@7.1.0:
+    resolution: {integrity: sha512-nODzvTiYVRGRqAOvE84Vk5JDPyyxsVk0/fbA/bq7RqlnhksGpset09XTxbpvLTIjoaF7K8Z8DG8yHtKGTPSYRw==}
     engines: {node: '>=20'}
 
   pretty-error@4.0.0:
@@ -15825,7 +15825,7 @@ snapshots:
 
   pretty-bytes@5.6.0: {}
 
-  pretty-bytes@7.0.1: {}
+  pretty-bytes@7.1.0: {}
 
   pretty-error@4.0.0:
     dependencies:
