@@ -315,7 +315,7 @@ importers:
     devDependencies:
       '@types/chromecast-caf-receiver':
         specifier: ^6.0.19
-        version: 6.0.24
+        version: 6.0.25
       '@types/chromecast-caf-sender':
         specifier: ^1.0.11
         version: 1.0.11
@@ -3433,8 +3433,8 @@ packages:
   '@types/chrome@0.1.15':
     resolution: {integrity: sha512-1dDZb8vNPa0UrSamj7dA5TtHhPu5QZZheWzay75yhwJ2JG6xMYmzpgHwn1sYAKBw1H5lG5PWkW4K+lSN2qSAHA==}
 
-  '@types/chromecast-caf-receiver@6.0.24':
-    resolution: {integrity: sha512-EeLuoqZn1gMwdyKX4+67kjHeVkLn5IlYHKXMSBEPltYXT2hRZkCNF3DEBITo/7LYdQNW1zpqsTDC2u+WB+eE2A==}
+  '@types/chromecast-caf-receiver@6.0.25':
+    resolution: {integrity: sha512-76M/NBSEK+2Lc5FCzeUQYnGtn0wK+aBgDjT4JFKhpAOACeM/eoSnKMuND3SQ/ND1vcGgCc6QauNEfXozQOq7Lg==}
 
   '@types/chromecast-caf-sender@1.0.11':
     resolution: {integrity: sha512-Pv3xvNYtxD/cTM/tKfuZRlLasvpxAm+CFni0GJd6Cp8XgiZS9g9tMZkR1uymsi5fIFv057SZKKAWVFFgy7fJtw==}
@@ -11739,7 +11739,7 @@ snapshots:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
 
-  '@types/chromecast-caf-receiver@6.0.24': {}
+  '@types/chromecast-caf-receiver@6.0.25': {}
 
   '@types/chromecast-caf-sender@1.0.11':
     dependencies:
