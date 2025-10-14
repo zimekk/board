@@ -938,7 +938,7 @@ importers:
         version: 2.9.0(react-redux@9.2.0(@types/react@19.2.2)(react@19.2.0)(redux@5.0.1))(react@19.2.0)
       antd:
         specifier: ^5.26.5
-        version: 5.27.4(date-fns@4.1.0)(luxon@3.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        version: 5.27.5(date-fns@4.1.0)(luxon@3.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       express:
         specifier: ^5.0.0
         version: 5.1.0
@@ -3928,8 +3928,8 @@ packages:
     resolution: {integrity: sha512-4Dj6M28JB+oAH8kFkTLUo+a2jwOFkuqb3yucU0CANcRRUbxS0cP0nZYCGjcc3BNXwRIsUVmDGgzawme7zvJHvg==}
     engines: {node: '>=12'}
 
-  antd@5.27.4:
-    resolution: {integrity: sha512-rhArohoAUCxhkPjGI/BXthOrrjaElL4Fb7d4vEHnIR3DpxFXfegd4rN21IgGdiF+Iz4EFuUZu8MdS8NuJHLSVQ==}
+  antd@5.27.5:
+    resolution: {integrity: sha512-Ehd9mqtHvJ1clon1yJ/1BTV6eX/3SH2YXZZPTHUk8XdzXFwUioI+Lht47s+MaHIUBY77RnZrmtKwwR+VVu0l7A==}
     peerDependencies:
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
@@ -7421,8 +7421,8 @@ packages:
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
 
-  rc-table@7.53.0:
-    resolution: {integrity: sha512-c+Ifi9CNon7xj3S0Xno3IMiYDiW6eu0KiOntFzf78sIxY3e6PIelqHvp+LqzJTZDcJbdwX5d4ptSRDFf/tn2iw==}
+  rc-table@7.54.0:
+    resolution: {integrity: sha512-/wDTkki6wBTjwylwAGjpLKYklKo9YgjZwAU77+7ME5mBoS32Q4nAwoqhA2lSge6fobLW3Tap6uc5xfwaL2p0Sw==}
     engines: {node: '>=8.x'}
     peerDependencies:
       react: '>=16.9.0'
@@ -12394,7 +12394,7 @@ snapshots:
 
   ansi-styles@6.2.3: {}
 
-  antd@5.27.4(date-fns@4.1.0)(luxon@3.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+  antd@5.27.5(date-fns@4.1.0)(luxon@3.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
     dependencies:
       '@ant-design/colors': 7.2.1
       '@ant-design/cssinjs': 1.24.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -12435,7 +12435,7 @@ snapshots:
       rc-slider: 11.1.9(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       rc-steps: 6.0.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       rc-switch: 4.1.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      rc-table: 7.53.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      rc-table: 7.54.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       rc-tabs: 15.7.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       rc-textarea: 1.10.2(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       rc-tooltip: 6.4.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -16340,7 +16340,7 @@ snapshots:
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
 
-  rc-table@7.53.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+  rc-table@7.54.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
     dependencies:
       '@babel/runtime': 7.28.4
       '@rc-component/context': 1.4.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
