@@ -1009,7 +1009,7 @@ importers:
         version: 5.0.3
       '@types/fluent-ffmpeg':
         specifier: ^2.1.27
-        version: 2.1.27
+        version: 2.1.28
       '@types/react':
         specifier: ^19.0.0
         version: 19.2.2
@@ -3515,8 +3515,8 @@ packages:
   '@types/filewriter@0.0.33':
     resolution: {integrity: sha512-xFU8ZXTw4gd358lb2jw25nxY9QAgqn2+bKKjKOYfNCzN4DKCFetK7sPtrlpg66Ywe3vWY9FNxprZawAh9wfJ3g==}
 
-  '@types/fluent-ffmpeg@2.1.27':
-    resolution: {integrity: sha512-QiDWjihpUhriISNoBi2hJBRUUmoj/BMTYcfz+F+ZM9hHWBYABFAE6hjP/TbCZC0GWwlpa3FzvHH9RzFeRusZ7A==}
+  '@types/fluent-ffmpeg@2.1.28':
+    resolution: {integrity: sha512-5ovxsDwBcPfJ+eYs1I/ZpcYCnkce7pvH9AHSvrZllAp1ZPpTRDZAFjF3TRFbukxSgIYTTNYePbS0rKUmaxVbXw==}
 
   '@types/har-format@1.2.16':
     resolution: {integrity: sha512-fluxdy7ryD3MV6h8pTfTYpy/xQzCFC7m89nOH9y94cNqJ1mDIDPut7MnRHI3F6qRmh/cT2fUjG1MLdCNb4hE9A==}
@@ -11979,7 +11979,7 @@ snapshots:
 
   '@types/filewriter@0.0.33': {}
 
-  '@types/fluent-ffmpeg@2.1.27':
+  '@types/fluent-ffmpeg@2.1.28':
     dependencies:
       '@types/node': 24.9.1
 
