@@ -7,6 +7,8 @@ export const scrap = async (page: Page, url: string) =>
         ["font", "image", "other", "stylesheet"].includes(req.resourceType())
       ) {
         req.abort();
+      } else if (["script"].includes(req.resourceType())) {
+        req.abort();
       } else {
         console.log(["request"], {
           req: req.url(),

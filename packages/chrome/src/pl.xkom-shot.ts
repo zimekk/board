@@ -8,6 +8,11 @@ export async function scrap(page: Page, url: string) {
           .on("request", (req: HTTPRequest) => {
             if (["font", "image", "stylesheet"].includes(req.resourceType())) {
               req.abort();
+            } else if (
+              ["script"].includes(req.resourceType()) &&
+              !req.url().match("/public/xkom/")
+            ) {
+              req.abort();
             } else {
               console.log(["request"], {
                 req: req.url(),

@@ -37,7 +37,7 @@ RUN npm i -g pnpm
 WORKDIR $WORKDIR
 COPY pnpm-lock.yaml .
 # RUN pnpm fetch --prod
-RUN ls -la
+# RUN ls -la
 RUN pnpm fetch
 
 COPY . .
