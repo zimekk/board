@@ -996,7 +996,7 @@ importers:
         version: 6.1.19(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       youtube-video-element:
         specifier: ^1.6.2
-        version: 1.6.2
+        version: 1.7.0
       ytdl-core:
         specifier: ^4.11.5
         version: 4.11.5
@@ -9010,8 +9010,8 @@ packages:
   youtube-remote@1.1.0:
     resolution: {integrity: sha512-OY0fDu3O4+rNUr44lPxWNQqB/wcHBv9QV8aPBBxoh52BT6TDX1X4xGjaioj7jNbGh3JRSh8TpfrmV5UG9PyRyw==}
 
-  youtube-video-element@1.6.2:
-    resolution: {integrity: sha512-YHDIOAqgRpfl1Ois9HcB8UFtWOxK8KJrV5TXpImj4BKYP1rWT04f/fMM9tQ9SYZlBKukT7NR+9wcI3UpB5BMDQ==}
+  youtube-video-element@1.7.0:
+    resolution: {integrity: sha512-vVRsv39v9gu3BMOEGTOT41XmnPlBmGrLKFYVoFA0iP/BDndan/tLZ01Q5bzNlGqQxpyd6mlOJ+TtAw50lAKpsQ==}
 
   ytdl-core@4.11.5:
     resolution: {integrity: sha512-27LwsW4n4nyNviRCO1hmr8Wr5J1wLLMawHCQvH8Fk0hiRqrxuIu028WzbJetiYH28K8XDbeinYW4/wcHQD1EXA==}
@@ -18254,7 +18254,7 @@ snapshots:
       lodash: 4.17.21
       needle: 3.3.1
 
-  youtube-video-element@1.6.2: {}
+  youtube-video-element@1.7.0: {}
 
   ytdl-core@4.11.5:
     dependencies:
