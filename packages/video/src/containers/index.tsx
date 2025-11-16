@@ -31,18 +31,22 @@ function Data({ data }: { data: object }) {
 }
 
 function Info({
+  info: initialInfo = null,
   link,
   onClick: handleClick,
 }: {
+  info?: Pick<InfoType, "videoDetails">;
   link: string;
   onClick: MouseEventHandler<HTMLAnchorElement>;
 }) {
-  const [info, setInfo] = useState<InfoType | null>(null);
+  const [info, setInfo] = useState<Pick<InfoType, "videoDetails"> | null>(
+    initialInfo,
+  );
 
   useEffect(() => {
     fetch(`video/info?videoId=${link}`)
       .then((res) => res.json())
-      .then((info) => InfoSchema.parseAsync(info))
+      .then((info) => InfoSchema.pick({ videoDetails: true }).parseAsync(info))
       .then(setInfo);
   }, []);
 
@@ -67,15 +71,29 @@ function Info({
   );
 }
 
+function Meta({ info }: { info: InfoType }) {
+  return (
+    <div>
+      <div>
+        <div>
+          <strong>{info.videoDetails.title}</strong>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function List() {
   const [selected, setSelected] = useState<string[]>(() => []);
   const [videoId, setVideoId] = useState("");
   const [list] = useState(() => videos);
+  const [meta, setMeta] = useState<Record<string, InfoType>>(() => ({}));
 
   useEffect(() => {
     fetch("video")
       .then((res) => res.json())
-      .then(console.info);
+      .then(({ meta = {} }) => meta)
+      .then(setMeta);
   }, []);
 
   const handleClick = useCallback<MouseEventHandler<HTMLAnchorElement>>(
@@ -162,8 +180,10 @@ function List() {
               download-audio
             </a>
             ]
-            {selected.includes(link) && (
-              <Info link={link} onClick={handleClick} />
+            {selected.includes(link) ? (
+              <Info info={meta[link]} link={link} onClick={handleClick} />
+            ) : (
+              meta[link] && <Meta info={meta[link]} />
             )}
           </li>
         ))}

@@ -5,6 +5,8 @@ import fs from "node:fs";
 import { dirname, resolve } from "node:path";
 import ytdl from "ytdl-core";
 import { z } from "zod";
+import { type BasicInfoType as InfoType } from "../schema";
+import videos from "../videos";
 
 const { LIBRARY_PATH = "" } = process.env;
 
@@ -16,9 +18,33 @@ const STORAGE_QUOTA = 32 * 1024 * 1024;
 
 const storage = new LocalStorage(resolve(cwd, `storage`), STORAGE_QUOTA);
 
+const getItem = (videoId: string) => {
+  const item = storage.getItem(videoId);
+  if (item) {
+    const { videoDetails }: InfoType = JSON.parse(item);
+    return { videoDetails };
+  }
+  return item;
+};
+
 export const router = () =>
   Router()
-    .get("/", (_req, res) => res.json({ status: 1 }))
+    .get("/", (_req, res) =>
+      res.json({
+        status: 1,
+        meta: videos.slice(0, 200).reduce((result, videoId) => {
+          const item = getItem(videoId);
+          return Object.assign(
+            result,
+            item
+              ? {
+                  [videoId]: item,
+                }
+              : {},
+          );
+        }, {}),
+      }),
+    )
     .get("/info", (req, res) =>
       z
         .object({
@@ -26,9 +52,9 @@ export const router = () =>
         })
         .parseAsync(req.query)
         .then(({ videoId }) => {
-          const item = storage.getItem(videoId);
+          const item = getItem(videoId);
           if (item) {
-            return JSON.parse(item);
+            return item;
           }
           return ytdl.getBasicInfo(videoId).then((info) => {
             storage.setItem(videoId, JSON.stringify(info));
