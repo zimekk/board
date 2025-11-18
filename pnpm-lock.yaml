@@ -437,10 +437,10 @@ importers:
         version: 19.2.6
       '@vitejs/plugin-react':
         specifier: ^5.0.0
-        version: 5.1.1(vite@7.2.2(@types/node@24.10.1)(jiti@2.6.0)(sass@1.94.0)(terser@5.44.0)(yaml@2.8.1))
+        version: 5.1.1(vite@7.2.2(@types/node@24.10.1)(jiti@2.6.0)(sass@1.94.0)(terser@5.44.1)(yaml@2.8.1))
       vite:
         specifier: ~7.2.0
-        version: 7.2.2(@types/node@24.10.1)(jiti@2.6.0)(sass@1.94.0)(terser@5.44.0)(yaml@2.8.1)
+        version: 7.2.2(@types/node@24.10.1)(jiti@2.6.0)(sass@1.94.0)(terser@5.44.1)(yaml@2.8.1)
 
   packages/gphoto:
     dependencies:
@@ -1217,7 +1217,7 @@ importers:
         version: 6.2.0(webpack@5.102.1)
       html-webpack-plugin:
         specifier: ^5.6.3
-        version: 5.6.4(webpack@5.102.1)
+        version: 5.6.5(webpack@5.102.1)
       react-hot-loader:
         specifier: ^4.13.1
         version: 4.13.1(@types/react@19.2.6)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -5624,8 +5624,8 @@ packages:
     engines: {node: '>=12'}
     hasBin: true
 
-  html-webpack-plugin@5.6.4:
-    resolution: {integrity: sha512-V/PZeWsqhfpE27nKeX9EO2sbR+D17A+tLf6qU+ht66jdUsN0QLKJN27Z+1+gHrVMKgndBahes0PU6rRihDgHTw==}
+  html-webpack-plugin@5.6.5:
+    resolution: {integrity: sha512-4xynFbKNNk+WlzXeQQ+6YYsH2g7mpfPszQZUi3ovKlj+pDmngQ7vRXjrrmGROabmKwyQkcgcX5hqfOwHbFmK5g==}
     engines: {node: '>=10.13.0'}
     peerDependencies:
       '@rspack/core': 0.x || 1.x
@@ -8255,13 +8255,13 @@ packages:
       uglify-js:
         optional: true
 
-  terser@5.43.1:
-    resolution: {integrity: sha512-+6erLbBm0+LROX2sPXlUYx/ux5PyE9K/a92Wrt6oA+WDAoFTdpHE5tCYCI5PNzq2y8df4rA+QgHLJuR4jNymsg==}
+  terser@5.44.0:
+    resolution: {integrity: sha512-nIVck8DK+GM/0Frwd+nIhZ84pR/BX7rmXMfYwyg+Sri5oGVE99/E3KvXqpC2xHFxyqXyGHTKBSioxxplrO4I4w==}
     engines: {node: '>=10'}
     hasBin: true
 
-  terser@5.44.0:
-    resolution: {integrity: sha512-nIVck8DK+GM/0Frwd+nIhZ84pR/BX7rmXMfYwyg+Sri5oGVE99/E3KvXqpC2xHFxyqXyGHTKBSioxxplrO4I4w==}
+  terser@5.44.1:
+    resolution: {integrity: sha512-t/R3R/n0MSwnnazuPpPNVO60LX0SKL45pyl9YlvxIdkH0Of7D5qM2EVe+yASRIlY5pZ73nclYJfNANGWPwFDZw==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -12194,7 +12194,7 @@ snapshots:
       '@typescript-eslint/types': 8.46.4
       eslint-visitor-keys: 4.2.1
 
-  '@vitejs/plugin-react@5.1.1(vite@7.2.2(@types/node@24.10.1)(jiti@2.6.0)(sass@1.94.0)(terser@5.44.0)(yaml@2.8.1))':
+  '@vitejs/plugin-react@5.1.1(vite@7.2.2(@types/node@24.10.1)(jiti@2.6.0)(sass@1.94.0)(terser@5.44.1)(yaml@2.8.1))':
     dependencies:
       '@babel/core': 7.28.5
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.28.5)
@@ -12202,7 +12202,7 @@ snapshots:
       '@rolldown/pluginutils': 1.0.0-beta.47
       '@types/babel__core': 7.20.5
       react-refresh: 0.18.0
-      vite: 7.2.2(@types/node@24.10.1)(jiti@2.6.0)(sass@1.94.0)(terser@5.44.0)(yaml@2.8.1)
+      vite: 7.2.2(@types/node@24.10.1)(jiti@2.6.0)(sass@1.94.0)(terser@5.44.1)(yaml@2.8.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -14475,15 +14475,15 @@ snapshots:
       he: 1.2.0
       param-case: 3.0.4
       relateurl: 0.2.7
-      terser: 5.43.1
+      terser: 5.44.1
 
-  html-webpack-plugin@5.6.4(webpack@5.102.1):
+  html-webpack-plugin@5.6.5(webpack@5.102.1):
     dependencies:
       '@types/html-minifier-terser': 6.1.0
       html-minifier-terser: 6.1.0
       lodash: 4.17.21
       pretty-error: 4.0.0
-      tapable: 2.2.2
+      tapable: 2.3.0
     optionalDependencies:
       webpack: 5.102.1(webpack-cli@6.0.1)
 
@@ -17366,14 +17366,14 @@ snapshots:
       terser: 5.44.0
       webpack: 5.102.1(webpack-cli@6.0.1)
 
-  terser@5.43.1:
+  terser@5.44.0:
     dependencies:
       '@jridgewell/source-map': 0.3.11
       acorn: 8.15.0
       commander: 2.20.3
       source-map-support: 0.5.21
 
-  terser@5.44.0:
+  terser@5.44.1:
     dependencies:
       '@jridgewell/source-map': 0.3.11
       acorn: 8.15.0
@@ -17697,7 +17697,7 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite@7.2.2(@types/node@24.10.1)(jiti@2.6.0)(sass@1.94.0)(terser@5.44.0)(yaml@2.8.1):
+  vite@7.2.2(@types/node@24.10.1)(jiti@2.6.0)(sass@1.94.0)(terser@5.44.1)(yaml@2.8.1):
     dependencies:
       esbuild: 0.25.12
       fdir: 6.5.0(picomatch@4.0.3)
@@ -17710,7 +17710,7 @@ snapshots:
       fsevents: 2.3.3
       jiti: 2.6.0
       sass: 1.94.0
-      terser: 5.44.0
+      terser: 5.44.1
       yaml: 2.8.1
 
   watchpack@2.4.4:
