@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "express": "^5.0.0",
-    "glob": "^10.3.3",
+    "glob": "^13.0.0",
     "jimp": "^0.22.8",
     "mime-types": "^3.0.0",
     "mqtt": "^5.13.2",

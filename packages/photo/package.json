@@ -19,7 +19,7 @@
   "dependencies": {
     "@dev/video": "workspace:*",
     "express": "^5.0.0",
-    "glob": "^10.3.3",
+    "glob": "^13.0.0",
     "mqtt": "^5.13.2",
     "react": "^19.0.0",
     "styled-components": "^6.1.19",
