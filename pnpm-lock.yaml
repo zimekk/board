@@ -256,7 +256,7 @@ importers:
         version: 0.22.12
       mime-types:
         specifier: ^3.0.0
-        version: 3.0.1
+        version: 3.0.2
       mqtt:
         specifier: ^5.13.2
         version: 5.14.1
@@ -780,7 +780,7 @@ importers:
         version: 10.5.0
       mime-types:
         specifier: ^3.0.0
-        version: 3.0.1
+        version: 3.0.2
       mqtt:
         specifier: ^5.13.2
         version: 5.14.1
@@ -6382,6 +6382,10 @@ packages:
   mime-types@3.0.1:
     resolution: {integrity: sha512-xRc4oEhT6eaBpU1XF7AjpOFD+xQmXNB5OVKwp4tqCuBpHLS/ZbBDrc07mYTDqVMg6PfxUjjNp85O6Cd2Z/5HWA==}
     engines: {node: '>= 0.6'}
+
+  mime-types@3.0.2:
+    resolution: {integrity: sha512-Lbgzdk0h4juoQ9fCKXW4by0UJqj+nOOrI9MJ1sSj4nI8aI2eo1qmvQEie4VD1glsS250n15LsWsYtCugiStS5A==}
+    engines: {node: '>=18'}
 
   mime@1.6.0:
     resolution: {integrity: sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==}
@@ -15181,6 +15185,10 @@ snapshots:
       mime-db: 1.52.0
 
   mime-types@3.0.1:
+    dependencies:
+      mime-db: 1.54.0
+
+  mime-types@3.0.2:
     dependencies:
       mime-db: 1.54.0
 
