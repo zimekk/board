@@ -380,8 +380,8 @@ importers:
         specifier: ^0.0.3
         version: 0.0.3
       cron-parser:
-        specifier: ^4.9.0
-        version: 4.9.0
+        specifier: ^5.0.0
+        version: 5.4.0
       date-fns:
         specifier: ^4.0.0
         version: 4.1.0
@@ -938,7 +938,7 @@ importers:
         version: 2.10.1(react-redux@9.2.0(@types/react@19.2.6)(react@19.2.0)(redux@5.0.1))(react@19.2.0)
       antd:
         specifier: ^6.0.0
-        version: 6.0.0(date-fns@4.1.0)(luxon@3.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        version: 6.0.0(date-fns@4.1.0)(luxon@3.7.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       express:
         specifier: ^5.0.0
         version: 5.1.0
@@ -4777,6 +4777,10 @@ packages:
     resolution: {integrity: sha512-p0SaNjrHOnQeR8/VnfGbmg9te2kfyYSQ7Sc/j/6DtPL3JQvKxmjO9TSjNFpujqV3vEYYBvNNvXSxzyksBWAx1Q==}
     engines: {node: '>=12.0.0'}
 
+  cron-parser@5.4.0:
+    resolution: {integrity: sha512-HxYB8vTvnQFx4dLsZpGRa0uHp6X3qIzS3ZJgJ9v6l/5TJMgeWQbLkR5yiJ5hOxGbc9+jCADDnydIe15ReLZnJA==}
+    engines: {node: '>=18'}
+
   cross-fetch@3.1.8:
     resolution: {integrity: sha512-cvA+JwZoU0Xq+h6WkMvAUqPEYy92Obet6UdKLfW60qn99ftItKjB5T+BkyWOFWe2pUyfQ+IJHmpOTznqk1M6Kg==}
 
@@ -6484,6 +6488,10 @@ packages:
 
   luxon@3.4.0:
     resolution: {integrity: sha512-7eDo4Pt7aGhoCheGFIuq4Xa2fJm4ZpmldpGhjTYBNUYNCN6TIEP6v7chwwwt3KRp7YR+rghbfvjyo3V5y9hgBw==}
+    engines: {node: '>=12'}
+
+  luxon@3.7.2:
+    resolution: {integrity: sha512-vtEhXh/gNjI9Yg1u4jX/0YVPMvxzHuGgCm6tC5kZyb08yjGWGnqAjGJvcXbqQR2P3MyMEFnRbpcdFS6PBcLqew==}
     engines: {node: '>=12'}
 
   m3u8stream@0.8.6:
@@ -11367,7 +11375,7 @@ snapshots:
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
 
-  '@rc-component/picker@1.6.0(date-fns@4.1.0)(dayjs@1.11.19)(luxon@3.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
+  '@rc-component/picker@1.6.0(date-fns@4.1.0)(dayjs@1.11.19)(luxon@3.7.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
     dependencies:
       '@rc-component/resize-observer': 1.0.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@rc-component/trigger': 3.6.15(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -11379,7 +11387,7 @@ snapshots:
     optionalDependencies:
       date-fns: 4.1.0
       dayjs: 1.11.19
-      luxon: 3.4.0
+      luxon: 3.7.2
 
   '@rc-component/portal@2.0.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
     dependencies:
@@ -12658,7 +12666,7 @@ snapshots:
 
   ansi-styles@6.2.3: {}
 
-  antd@6.0.0(date-fns@4.1.0)(luxon@3.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+  antd@6.0.0(date-fns@4.1.0)(luxon@3.7.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
     dependencies:
       '@ant-design/colors': 8.0.0
       '@ant-design/cssinjs': 2.0.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -12683,7 +12691,7 @@ snapshots:
       '@rc-component/mutate-observer': 2.0.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@rc-component/notification': 1.2.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@rc-component/pagination': 1.2.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      '@rc-component/picker': 1.6.0(date-fns@4.1.0)(dayjs@1.11.19)(luxon@3.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      '@rc-component/picker': 1.6.0(date-fns@4.1.0)(dayjs@1.11.19)(luxon@3.7.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@rc-component/progress': 1.0.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@rc-component/qrcode': 1.1.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@rc-component/rate': 1.0.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -13470,6 +13478,10 @@ snapshots:
   cron-parser@4.9.0:
     dependencies:
       luxon: 3.4.0
+
+  cron-parser@5.4.0:
+    dependencies:
+      luxon: 3.7.2
 
   cross-fetch@3.1.8:
     dependencies:
@@ -15350,6 +15362,8 @@ snapshots:
   lru-cache@7.18.3: {}
 
   luxon@3.4.0: {}
+
+  luxon@3.7.2: {}
 
   m3u8stream@0.8.6:
     dependencies:
