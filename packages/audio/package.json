@@ -19,7 +19,7 @@
   "dependencies": {
     "express": "^5.0.0",
     "glob": "^13.0.0",
-    "jimp": "^0.22.8",
+    "jimp": "^1.0.0",
     "mime-types": "^3.0.0",
     "mqtt": "^5.13.2",
     "music-metadata": "^7.13.4",
