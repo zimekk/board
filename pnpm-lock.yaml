@@ -287,7 +287,7 @@ importers:
         version: 3.0.1
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.6
+        version: 19.2.7
 
   packages/cast:
     dependencies:
@@ -324,7 +324,7 @@ importers:
         version: 22.19.1
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.6
+        version: 19.2.7
       ts-node-dev:
         specifier: ^2.0.0
         version: 2.0.0(@types/node@22.19.1)(typescript@5.9.3)
@@ -415,7 +415,7 @@ importers:
     devDependencies:
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.6
+        version: 19.2.7
 
   packages/ext:
     dependencies:
@@ -434,7 +434,7 @@ importers:
         version: 0.1.31
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.6
+        version: 19.2.7
       '@vitejs/plugin-react':
         specifier: ^5.0.0
         version: 5.1.1(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.0)(sass@1.94.2)(terser@5.44.1)(yaml@2.8.1))
@@ -474,7 +474,7 @@ importers:
         version: 5.0.5
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.6
+        version: 19.2.7
 
   packages/lan:
     dependencies:
@@ -511,7 +511,7 @@ importers:
         version: 2.0.2
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.6
+        version: 19.2.7
       graphql:
         specifier: ^16.11.0
         version: 16.12.0
@@ -539,7 +539,7 @@ importers:
         version: 5.0.5
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.6
+        version: 19.2.7
 
   packages/movie:
     dependencies:
@@ -573,7 +573,7 @@ importers:
         version: 5.0.5
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.6
+        version: 19.2.7
 
   packages/overlay:
     dependencies:
@@ -592,7 +592,7 @@ importers:
     devDependencies:
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.6
+        version: 19.2.7
 
   packages/photo:
     dependencies:
@@ -623,7 +623,7 @@ importers:
         version: 5.0.5
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.6
+        version: 19.2.7
 
   packages/player:
     dependencies:
@@ -666,7 +666,7 @@ importers:
         version: 1.1.2
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.6
+        version: 19.2.7
 
   packages/recipes:
     dependencies:
@@ -685,7 +685,7 @@ importers:
     devDependencies:
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.6
+        version: 19.2.7
 
   packages/request:
     dependencies:
@@ -713,7 +713,7 @@ importers:
         version: 5.0.5
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.6
+        version: 19.2.7
 
   packages/schema:
     dependencies:
@@ -762,7 +762,7 @@ importers:
     devDependencies:
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.6
+        version: 19.2.7
 
   packages/share:
     dependencies:
@@ -802,7 +802,7 @@ importers:
         version: 5.0.5
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.6
+        version: 19.2.7
       '@types/styled-components':
         specifier: ^5.1.26
         version: 5.1.36
@@ -833,7 +833,7 @@ importers:
         version: 5.0.5
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.6
+        version: 19.2.7
 
   packages/sql:
     dependencies:
@@ -898,7 +898,7 @@ importers:
         version: 7.0.4
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.6
+        version: 19.2.7
       '@types/styled-components':
         specifier: ^5.1.26
         version: 5.1.36
@@ -926,7 +926,7 @@ importers:
         version: 22.19.1
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.6
+        version: 19.2.7
 
   packages/transfer:
     dependencies:
@@ -935,7 +935,7 @@ importers:
         version: 6.1.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@reduxjs/toolkit':
         specifier: ^2.8.2
-        version: 2.10.1(react-redux@9.2.0(@types/react@19.2.6)(react@19.2.0)(redux@5.0.1))(react@19.2.0)
+        version: 2.10.1(react-redux@9.2.0(@types/react@19.2.7)(react@19.2.0)(redux@5.0.1))(react@19.2.0)
       antd:
         specifier: ^6.0.0
         version: 6.0.0(date-fns@4.1.0)(luxon@3.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -956,7 +956,7 @@ importers:
         version: 19.2.0
       react-redux:
         specifier: ^9.1.0
-        version: 9.2.0(@types/react@19.2.6)(react@19.2.0)(redux@5.0.1)
+        version: 9.2.0(@types/react@19.2.7)(react@19.2.0)(redux@5.0.1)
       redux:
         specifier: ^5.0.1
         version: 5.0.1
@@ -972,7 +972,7 @@ importers:
         version: 1.5.6
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.6
+        version: 19.2.7
 
   packages/video:
     dependencies:
@@ -1012,7 +1012,7 @@ importers:
         version: 2.1.28
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.6
+        version: 19.2.7
 
   packages/wakeword:
     dependencies:
@@ -1051,7 +1051,7 @@ importers:
     devDependencies:
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.6
+        version: 19.2.7
 
   packages/web:
     dependencies:
@@ -1190,10 +1190,10 @@ importers:
         version: 22.19.1
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.6
+        version: 19.2.7
       '@types/react-dom':
         specifier: ^19.0.0
-        version: 19.2.3(@types/react@19.2.6)
+        version: 19.2.3(@types/react@19.2.7)
       '@types/redux-actions':
         specifier: ^2.6.2
         version: 2.6.5
@@ -1220,7 +1220,7 @@ importers:
         version: 5.6.5(webpack@5.103.0)
       react-hot-loader:
         specifier: ^4.13.1
-        version: 4.13.1(@types/react@19.2.6)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        version: 4.13.1(@types/react@19.2.7)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       sass:
         specifier: ^1.89.2
         version: 1.94.2
@@ -1275,7 +1275,7 @@ importers:
         version: 5.0.5
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.6
+        version: 19.2.7
       peer:
         specifier: ^1.0.2
         version: 1.0.2
@@ -3779,8 +3779,8 @@ packages:
     peerDependencies:
       '@types/react': ^19.2.0
 
-  '@types/react@19.2.6':
-    resolution: {integrity: sha512-p/jUvulfgU7oKtj6Xpk8cA2Y1xKTtICGpJYeJXz2YVO2UcvjQgeRMLDGfDeqeRW2Ta+0QNFwcc8X3GH8SxZz6w==}
+  '@types/react@19.2.7':
+    resolution: {integrity: sha512-MWtvHrGZLFttgeEj28VXHxpmwYbor/ATPYbBfSFZEIRK0ecCFLl2Qo55z52Hss+UV9CRN7trSeq1zbgx7YDWWg==}
 
   '@types/readable-stream@4.0.21':
     resolution: {integrity: sha512-19eKVv9tugr03IgfXlA9UVUVRbW6IuqRO5B92Dl4a6pT7K8uaGrNS0GkxiZD0BOk6PLuXl5FhWl//eX/pzYdTQ==}
@@ -11553,7 +11553,7 @@ snapshots:
       react-dom: 19.2.0(react@19.2.0)
       react-is: 18.3.1
 
-  '@reduxjs/toolkit@2.10.1(react-redux@9.2.0(@types/react@19.2.6)(react@19.2.0)(redux@5.0.1))(react@19.2.0)':
+  '@reduxjs/toolkit@2.10.1(react-redux@9.2.0(@types/react@19.2.7)(react@19.2.0)(redux@5.0.1))(react@19.2.0)':
     dependencies:
       '@standard-schema/spec': 1.0.0
       '@standard-schema/utils': 0.3.0
@@ -11563,7 +11563,7 @@ snapshots:
       reselect: 5.1.1
     optionalDependencies:
       react: 19.2.0
-      react-redux: 9.2.0(@types/react@19.2.6)(react@19.2.0)(redux@5.0.1)
+      react-redux: 9.2.0(@types/react@19.2.7)(react@19.2.0)(redux@5.0.1)
 
   '@rolldown/pluginutils@1.0.0-beta.47': {}
 
@@ -12125,9 +12125,9 @@ snapshots:
 
   '@types/har-format@1.2.16': {}
 
-  '@types/hoist-non-react-statics@3.3.7(@types/react@19.2.6)':
+  '@types/hoist-non-react-statics@3.3.7(@types/react@19.2.7)':
     dependencies:
-      '@types/react': 19.2.6
+      '@types/react': 19.2.7
       hoist-non-react-statics: 3.3.2
 
   '@types/html-minifier-terser@6.1.0': {}
@@ -12211,11 +12211,11 @@ snapshots:
 
   '@types/range-parser@1.2.7': {}
 
-  '@types/react-dom@19.2.3(@types/react@19.2.6)':
+  '@types/react-dom@19.2.3(@types/react@19.2.7)':
     dependencies:
-      '@types/react': 19.2.6
+      '@types/react': 19.2.7
 
-  '@types/react@19.2.6':
+  '@types/react@19.2.7':
     dependencies:
       csstype: 3.2.3
 
@@ -12279,8 +12279,8 @@ snapshots:
 
   '@types/styled-components@5.1.36':
     dependencies:
-      '@types/hoist-non-react-statics': 3.3.7(@types/react@19.2.6)
-      '@types/react': 19.2.6
+      '@types/hoist-non-react-statics': 3.3.7(@types/react@19.2.7)
+      '@types/react': 19.2.7
       csstype: 3.2.3
 
   '@types/stylis@4.2.5': {}
@@ -16207,7 +16207,7 @@ snapshots:
   proxy-agent@6.3.1:
     dependencies:
       agent-base: 7.1.4
-      debug: 4.4.3
+      debug: 4.3.4
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.6
       lru-cache: 7.18.3
@@ -16425,7 +16425,7 @@ snapshots:
       react: 19.2.0
       scheduler: 0.27.0
 
-  react-hot-loader@4.13.1(@types/react@19.2.6)(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+  react-hot-loader@4.13.1(@types/react@19.2.7)(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
     dependencies:
       fast-levenshtein: 2.0.6
       global: 4.4.0
@@ -16438,7 +16438,7 @@ snapshots:
       shallowequal: 1.1.0
       source-map: 0.7.4
     optionalDependencies:
-      '@types/react': 19.2.6
+      '@types/react': 19.2.7
 
   react-is@16.13.1: {}
 
@@ -16446,13 +16446,13 @@ snapshots:
 
   react-lifecycles-compat@3.0.4: {}
 
-  react-redux@9.2.0(@types/react@19.2.6)(react@19.2.0)(redux@5.0.1):
+  react-redux@9.2.0(@types/react@19.2.7)(react@19.2.0)(redux@5.0.1):
     dependencies:
       '@types/use-sync-external-store': 0.0.6
       react: 19.2.0
       use-sync-external-store: 1.4.0(react@19.2.0)
     optionalDependencies:
-      '@types/react': 19.2.6
+      '@types/react': 19.2.7
       redux: 5.0.1
 
   react-refresh@0.13.0: {}
