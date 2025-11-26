@@ -867,7 +867,7 @@ importers:
         version: 5.14.1
       nodemailer:
         specifier: ^7.0.0
-        version: 7.0.10
+        version: 7.0.11
       pretty-bytes:
         specifier: ^7.0.0
         version: 7.1.0
@@ -6826,8 +6826,8 @@ packages:
   nodecast-js@1.0.3:
     resolution: {integrity: sha512-ewbdcK7E0MCqWY1f3GyEcypKMD3KR1wIp4ZEwMhHDrc+TqNdo7CuLAYV6lq1KB/n3AJD9Xz6gHkDS9n+w0eoQQ==}
 
-  nodemailer@7.0.10:
-    resolution: {integrity: sha512-Us/Se1WtT0ylXgNFfyFSx4LElllVLJXQjWi2Xz17xWw7amDKO2MLtFnVp1WACy7GkVGs+oBlRopVNUzlrGSw1w==}
+  nodemailer@7.0.11:
+    resolution: {integrity: sha512-gnXhNRE0FNhD7wPSCGhdNh46Hs6nm+uTyg+Kq0cZukNQiYdnCsoQjodNP9BQVG9XrcK/v6/MgpAPBUFyzh9pvw==}
     engines: {node: '>=6.0.0'}
 
   nopt@5.0.0:
@@ -15709,7 +15709,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  nodemailer@7.0.10: {}
+  nodemailer@7.0.11: {}
 
   nopt@5.0.0:
     dependencies:
