@@ -504,6 +504,7 @@ export const records = [
       // "g-6/c/1544-drukarki-etykiet.html",
       "g-6/c/1749-projektory.html?f1809-technologia-wyswietlania=126474-laser&f1809-technologia-wyswietlania=157709-led",
       "g-6/c/1751-prezentery.html",
+      "g-6/c/1753-ekrany-projekcyjne.html?f4345-przeznaczenie=96796-kino-domowe",
       "g-6/c/2280-szafy-rack.html?producent=154-apc",
       "g-6/c/2280-szafy-rack.html?producent=1278-lanberg",
       "g-6/c/2326-kamery-ip.html?producent=276-tp-link&producent=2287-hikvision",
