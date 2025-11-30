@@ -1,6 +1,6 @@
-import React, { useMemo, useState } from "react";
-import parser from "cron-parser";
+import { CronExpressionParser } from "cron-parser";
 import { addDays, format, subDays } from "date-fns";
+import React, { useMemo, useState } from "react";
 
 function Cron({ expression }: { expression: string }) {
   const dates = useMemo(() => {
@@ -9,7 +9,7 @@ function Cron({ expression }: { expression: string }) {
       endDate: addDays(new Date(), 30),
       // iterator: true
     };
-    const interval = parser.parseExpression(expression, options);
+    const interval = CronExpressionParser.parse(expression, options);
     const dates = [];
     while (interval.hasNext()) {
       dates.push(interval.next().toDate());
