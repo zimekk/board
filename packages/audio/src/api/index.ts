@@ -6,6 +6,7 @@ import { Jimp, JimpMime } from "jimp";
 import mime from "mime-types";
 import { parseFile } from "music-metadata";
 import { dirname, resolve } from "path";
+import { uint8ArrayToBase64 } from "uint8array-extras";
 import { z } from "zod";
 import { getVolume, setVolume } from "./easy-volume";
 
@@ -102,9 +103,7 @@ export const router = () =>
                       })),
                       picture: picture?.map(
                         ({ format, data }) =>
-                          `data:${format};${encoding},${data.toString(
-                            encoding,
-                          )}`,
+                          `data:${format};${encoding},${uint8ArrayToBase64(data)}`,
                       ),
                       // picture: picture?.map(({ format, data }) =>
                       //   URL.createObjectURL(new Blob([data], { type: format }))
