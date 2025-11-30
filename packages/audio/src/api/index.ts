@@ -2,7 +2,7 @@ import { createReadStream, statSync } from "fs";
 import { sync } from "glob";
 // https://github.com/Arciiix/easy-volume
 import { Router } from "express";
-import jimp from "jimp";
+import { Jimp, JimpMime } from "jimp";
 import mime from "mime-types";
 import { parseFile } from "music-metadata";
 import { dirname, resolve } from "path";
@@ -32,12 +32,9 @@ export const router = () =>
         .then(({ common: { picture } }) => picture[params.artwork])
         // https://github.com/jimp-dev/jimp/tree/main/packages/jimp#basic-usage
         .then(({ format: _format, data }) =>
-          jimp
-            .read(data)
+          Jimp.read(data)
             .then((image) =>
-              image
-                .resize(Number(params.size), Number(params.size))
-                .getBufferAsync(jimp.MIME_PNG),
+              image.resize({ w: Number(params.size) }).getBuffer(JimpMime.png),
             )
             .then((data) => res.contentType("image/png").send(data)),
         )
