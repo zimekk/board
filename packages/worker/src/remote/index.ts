@@ -1,6 +1,9 @@
 const { DMR_URL = "", VCR_URL = "" } = process.env;
 
 export const remote = async (url = "") => {
+  if (!DMR_URL && !VCR_URL) {
+    return;
+  }
   console.log(["remote"], { url });
 
   await Promise.resolve()
