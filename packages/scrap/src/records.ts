@@ -540,6 +540,7 @@ export const records = [
       // "g-64/c/2582-gimbale.html?producent=1155-zhiyun",
       "g-64/c/2684-filtry-do-dronow.html?producent=1009-dji&f5751-kompatybilnosc=246401-dji-mini-3-pro",
       // "g-64/c/2994-lampy-led.html?producent=952-newell",
+      "g-64/c/3003-inteligentne-sterowniki.html?producent=1982-sonoff",
       "g-64/c/3003-inteligentne-sterowniki.html?producent=2421-grenton",
       "g-64/c/3006-inteligentne-lampy.html?producent=2867-twinkly",
       "g-64/c/3037-rejestratory-ip.html?producent=276-tp-link&producent=628-ubiquiti&producent=2287-hikvision",
