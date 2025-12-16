@@ -479,6 +479,7 @@ export const records = [
       "g-5/c/388-obudowy-komputerowe.html?producent=942-phanteks",
       // "g-5/c/388-obudowy-komputerowe.html?producent=1168-jonsbo",
       "g-5/c/439-dyski-zewnetrzne-hdd.html?producent=26-wd&f1730-format=18808-2.5",
+      "g-5/c/1580-dyski-hdd.html?producent=28-toshiba",
       "g-5/c/1779-dyski-ssd.html?producent=29-samsung&producent=59-kingston&producent=506-crucial",
       // "g-5/c/1779-dyski-ssd.html?producent=29-samsung",
       // "g-5/c/1779-dyski-ssd.html?producent=59-kingston",
