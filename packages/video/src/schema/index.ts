@@ -481,18 +481,21 @@ export const BasicInfoSchema = z.object({
     //   })
     // }),
     trackingParams: z.string(),
-    attestation: z.object({
-      playerAttestationRenderer: z.object({
-        challenge: z.string(),
-        botguardData: z.object({
-          program: z.string(),
-          interpreterSafeUrl: z.object({
-            privateDoNotAccessOrElseTrustedResourceUrlWrappedValue: z.string(),
+    attestation: z
+      .object({
+        playerAttestationRenderer: z.object({
+          challenge: z.string(),
+          botguardData: z.object({
+            program: z.string(),
+            interpreterSafeUrl: z.object({
+              privateDoNotAccessOrElseTrustedResourceUrlWrappedValue:
+                z.string(),
+            }),
+            serverEnvironment: z.number(),
           }),
-          serverEnvironment: z.number(),
         }),
-      }),
-    }).optional(),
+      })
+      .optional(),
     // adPlacements: z.array(
     //   z.object({
     //     // adPlacementRenderer: z.object({
@@ -5989,7 +5992,7 @@ export const BasicInfoSchema = z.object({
         z.object({ url: z.string(), width: z.number(), height: z.number() }),
       ),
       verified: z.boolean(),
-      subscriber_count: z.number(),
+      subscriber_count: z.number().optional(),
     }),
     // isLowLatencyLiveStream: z.boolean(),
     isPrivate: z.boolean(),
@@ -6178,7 +6181,7 @@ export const InfoSchema = z.object({
         z.object({ url: z.string(), width: z.number(), height: z.number() }),
       ),
       verified: z.boolean(),
-      subscriber_count: z.number(),
+      subscriber_count: z.number().optional(),
     }),
     isLowLatencyLiveStream: z.boolean().optional(),
     isPrivate: z.boolean(),
