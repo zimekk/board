@@ -16,7 +16,7 @@ const cwd = resolve(dirname(require.resolve("../../../../.env")), LIBRARY_PATH);
 
 export const router = () =>
   Router()
-    .get("/volume/{:volume}", async (req, res) =>
+    .get("/volume{/:volume}", async (req, res) =>
       z
         .object({
           volume: z.coerce.number().optional(),
