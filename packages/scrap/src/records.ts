@@ -544,6 +544,7 @@ export const records = [
       "g-64/c/3003-inteligentne-sterowniki.html?producent=1982-sonoff",
       "g-64/c/3003-inteligentne-sterowniki.html?producent=2421-grenton",
       "g-64/c/3006-inteligentne-lampy.html?producent=2867-twinkly",
+      "g-64/c/3026-kamery-sportowe-i-akcesoria.html?producent=1009-dji",
       "g-64/c/3037-rejestratory-ip.html?producent=276-tp-link&producent=628-ubiquiti&producent=2287-hikvision",
       "g-64/c/3086-dyski-twarde-do-monitoringu.html",
       "g-64/c/3451-akcesoria-do-urzadzen-smart.html?producent=2421-grenton",
