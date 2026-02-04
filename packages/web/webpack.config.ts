@@ -54,7 +54,7 @@ export default (_env, { mode }, dev = mode === "development") => ({
         exclude: /node_modules/,
         options: {
           presets: ["@babel/preset-react", "@babel/preset-typescript"],
-          plugins: [].concat(dev ? "react-hot-loader/babel" : []),
+          plugins: [].concat(false ? "react-hot-loader/babel" : []),
         },
       },
     ],

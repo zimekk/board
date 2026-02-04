@@ -36,6 +36,7 @@
     "@dev/video": "workspace:*",
     "@dev/web": "workspace:*",
     "@dev/webrtc": "workspace:*",
+    "@dev/wled": "workspace:*",
     "@dev/worker": "workspace:*",
     "cors": "^2.8.5",
     "dotenv": "^17.0.0",

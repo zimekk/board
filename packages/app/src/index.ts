@@ -15,6 +15,7 @@ export const router = Router()
   .use(require("@dev/status/api").router())
   .use(require("@dev/transfer/api").router())
   .use(require("@dev/webrtc/api").router())
+  .use(require("@dev/wled/api").router())
   .use(require("@dev/worker").router())
   .use(require("./push").default());
 

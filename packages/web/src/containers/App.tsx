@@ -1,6 +1,6 @@
 import history from "history/browser";
 import React, { Suspense, lazy, useEffect, useState } from "react";
-import { hot } from "react-hot-loader/root";
+// import { hot } from "react-hot-loader/root";
 import styles from "./App.module.scss";
 
 const Spinner = () => <span>Loading...</span>;
@@ -27,6 +27,7 @@ const PAGES = {
   video: lazy(() => import("@dev/video")),
   waveform: lazy(() => import("@dev/waveform")),
   webrtc: lazy(() => import("@dev/webrtc")),
+  wled: lazy(() => import("@dev/wled")),
 };
 
 const getPage = (location: { hash: string }) => {
@@ -65,4 +66,5 @@ function App() {
   );
 }
 
-export default hot(App);
+// export default hot(App);
+export default App;

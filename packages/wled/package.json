@@ -1,0 +1,30 @@
+{
+  "name": "@dev/wled",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "eslintConfig": {
+    "env": {
+      "browser": true
+    }
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production tsc",
+    "coverage": "type-coverage && tsc --noEmit"
+  },
+  "dependencies": {
+    "express": "^5.0.0",
+    "glob": "^13.0.0",
+    "react": "^19.0.0",
+    "styled-components": "^6.1.19",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/react": "^19.0.0"
+  }
+}
