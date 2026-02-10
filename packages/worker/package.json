@@ -35,15 +35,15 @@
     "whisper": "node bin/whisper"
   },
   "dependencies": {
-    "@bull-board/api": "^6.11.1",
-    "@bull-board/express": "^6.11.1",
+    "@bull-board/api": "^6.17.0",
+    "@bull-board/express": "^6.17.0",
     "@dev/chrome": "workspace:*",
     "@dev/schema": "workspace:*",
     "bull": "^4.16.4",
     "chunk": "^0.0.3",
     "cross-fetch": "^4.0.0",
     "date-fns": "^4.0.0",
-    "dotenv": "^17.0.0",
+    "dotenv": "^17.2.4",
     "express": "^5.0.0",
     "milliseconds": "^1.0.3",
     "node-html-parser": "^7.0.0",
@@ -54,7 +54,7 @@
   "devDependencies": {
     "@types/express": "^5.0.0",
     "@types/milliseconds": "^1.0.0",
-    "@types/node": "^22.0.0",
+    "@types/node": "^22.19.11",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0"
   },

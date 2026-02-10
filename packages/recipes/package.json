@@ -20,10 +20,10 @@
     "@dev/video": "workspace:*",
     "format-quantity": "^3.0.0",
     "react": "^19.0.0",
-    "styled-components": "^6.1.19"
+    "styled-components": "^6.3.9"
   },
   "devDependencies": {
-    "@types/node": "^22.0.0",
-    "@types/react": "^19.0.0"
+    "@types/node": "^22.19.11",
+    "@types/react": "^19.2.13"
   }
 }

@@ -19,14 +19,14 @@
   "dependencies": {
     "@dev/video": "workspace:*",
     "express": "^5.0.0",
-    "glob": "^13.0.0",
+    "glob": "^13.0.2",
     "mqtt": "^5.13.2",
     "react": "^19.0.0",
-    "styled-components": "^6.1.19",
+    "styled-components": "^6.3.9",
     "zod": "^4.0.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
-    "@types/react": "^19.0.0"
+    "@types/react": "^19.2.13"
   }
 }

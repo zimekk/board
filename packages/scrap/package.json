@@ -26,12 +26,12 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "rxjs": "^7.8.1",
-    "styled-components": "^6.1.19",
+    "styled-components": "^6.3.9",
     "use-asset": "^1.0.4",
     "zod": "^4.0.0"
   },
   "devDependencies": {
-    "@types/node": "^22.0.0",
-    "@types/react": "^19.0.0"
+    "@types/node": "^22.19.11",
+    "@types/react": "^19.2.13"
   }
 }
