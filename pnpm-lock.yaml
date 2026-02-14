@@ -681,7 +681,7 @@ importers:
         version: link:../video
       format-quantity:
         specifier: ^3.0.0
-        version: 3.0.0
+        version: 3.1.0
       react:
         specifier: ^19.0.0
         version: 19.2.4
@@ -5350,8 +5350,8 @@ packages:
     resolution: {integrity: sha512-gIXjKqtFuWEgzFRJA9WCQeSJLZDjgJUOMCMzxtvFq/37KojM1BFGufqsCy0r4qSQmYLsZYMeyRqzIWOMup03sw==}
     engines: {node: '>=14'}
 
-  format-quantity@3.0.0:
-    resolution: {integrity: sha512-rFMqM+RLYVMKDlw6ky3sfHmZnT8FudiPAPq9Hpylr6G3dZb7K42TTtcIKniFQrZZzEZgyT11ktEzJqr6E0uD2w==}
+  format-quantity@3.1.0:
+    resolution: {integrity: sha512-xUSv8MrEIoIsuflANvkSrtr0fgNY4D/JIv302LnaL0LYdTJ+cbN5/1J5scBMXVDIdNejw8BYWgc+Pen+Qgk2tw==}
     engines: {node: '>=16'}
 
   formdata-polyfill@4.0.10:
@@ -6649,6 +6649,10 @@ packages:
 
   number-allocator@1.0.14:
     resolution: {integrity: sha512-OrL44UTVAvkKdOdRQZIJpLkAdjXGTRda052sN4sO77bKEzYYqWKMBjQvrJFzqygI99gL6Z4u2xctPW1tB8ErvA==}
+
+  numeric-quantity@3.2.0:
+    resolution: {integrity: sha512-4ocEhptko1r2Ey0aCAN0mi3KJnTspHkh6TYYDP3Xtsmli80GqztkXeH5GJ3r6hbFPCnelARHbAeYVHYRhvLDBA==}
+    engines: {node: '>=16'}
 
   object-assign@4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
@@ -13543,7 +13547,9 @@ snapshots:
       cross-spawn: 7.0.6
       signal-exit: 4.1.0
 
-  format-quantity@3.0.0: {}
+  format-quantity@3.1.0:
+    dependencies:
+      numeric-quantity: 3.2.0
 
   formdata-polyfill@4.0.10:
     dependencies:
@@ -14893,6 +14899,8 @@ snapshots:
       js-sdsl: 4.3.0
     transitivePeerDependencies:
       - supports-color
+
+  numeric-quantity@3.2.0: {}
 
   object-assign@4.1.1: {}
 
