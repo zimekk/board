@@ -1,3 +1,4 @@
+import { DelayedSchema } from "@dev/schema";
 import React, {
   type ChangeEventHandler,
   type Dispatch,
@@ -10,11 +11,10 @@ import React, {
 import { Subject } from "rxjs";
 import { debounceTime, distinctUntilChanged, map } from "rxjs/operators";
 import { z } from "zod";
-import { DelayedSchema } from "@dev/schema";
 import { Fieldset } from "../components/Fieldset";
 import { Spinner } from "../components/Spinner";
-import Process, { API_URL, post } from "./Process";
 import Failed from "./Failed";
+import Process, { API_URL, post } from "./Process";
 
 type DelayedType = z.infer<typeof DelayedSchema>;
 
@@ -168,8 +168,12 @@ function Delayed({
                 onChange={onSelect}
               />
               <span>{item.id}</span>
-            </label>{" "}
-            | <a href={item.data.url}>open</a> |{" "}
+            </label>
+            {" | "}
+            <a href={item.data.url}>open</a>
+            {" | "}
+            <a href={`${API_URL}promote/${item.id}`}>promote</a>
+            {" | "}
             <a href={`${API_URL}delete/${item.id}`}>delete</a>
           </div>
           <pre>
