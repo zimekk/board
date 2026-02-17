@@ -265,7 +265,7 @@ importers:
         version: 5.15.0
       music-metadata:
         specifier: ^11.12.0
-        version: 11.12.0
+        version: 11.12.1
       react:
         specifier: ^19.0.0
         version: 19.2.4
@@ -641,7 +641,7 @@ importers:
         version: 5.15.0
       music-metadata:
         specifier: ^11.12.0
-        version: 11.12.0
+        version: 11.12.1
       play-sound:
         specifier: ^1.1.6
         version: 1.1.6
@@ -6502,8 +6502,8 @@ packages:
     resolution: {integrity: sha512-2eznPJP8z2BFLX50tf0LuODrpINqP1RVIm/CObbTcBRITQgmC/TjcREF1NeTBzIcR5XO/ukWo+YHOjBbFwIupg==}
     hasBin: true
 
-  music-metadata@11.12.0:
-    resolution: {integrity: sha512-9ChYnmVmyHvFxR2g0MWFSHmJfbssRy07457G4gbb4LA9WYvyZea/8EMbqvg5dcv4oXNCNL01m8HXtymLlhhkYg==}
+  music-metadata@11.12.1:
+    resolution: {integrity: sha512-j++ltLxHDb5VCXET9FzQ8bnueiLHwQKgCO7vcbkRH/3F7fRjPkv6qncGEJ47yFhmemcYtgvsOAlcQ1dRBTkDjg==}
     engines: {node: '>=18'}
 
   nan@2.18.0:
@@ -14730,7 +14730,7 @@ snapshots:
       dns-packet: 5.6.1
       thunky: 1.1.0
 
-  music-metadata@11.12.0:
+  music-metadata@11.12.1:
     dependencies:
       '@borewit/text-codec': 0.2.1
       '@tokenizer/token': 0.3.0
