@@ -1008,7 +1008,7 @@ importers:
         version: 6.3.9(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       youtube-video-element:
         specifier: ^1.6.2
-        version: 1.8.1
+        version: 1.9.0
       ytdl-core:
         specifier: ^4.11.5
         version: 4.11.5
@@ -6299,6 +6299,9 @@ packages:
   mdns@2.7.2:
     resolution: {integrity: sha512-NBOQT22DKvuNWVY7nKNbs6w9eGRyPwnc4ZjKOsCG2G/4wNt1+IyiHvc+5yhcAUZLG46cOY321YW7Ufz3lMtrhw==}
 
+  media-played-ranges-mixin@0.1.0:
+    resolution: {integrity: sha512-zTsvkleu5sAyTsPVxDI+KUbCwy/lXwHgOPi3ER9S3lhtAWhGTQH6qxvfrVMym1cvoLU36SPbVr6Qe8Zxyc0WpA==}
+
   media-typer@0.3.0:
     resolution: {integrity: sha512-dq+qelQ9akHpcOl/gUVRTxVIOkAJ1wR3QAvb4RsVjS8oVoFjDGTc679wJYmUmknUF5HwMLOgb5O+a3KxfWapPQ==}
     engines: {node: '>= 0.6'}
@@ -8703,8 +8706,8 @@ packages:
   youtube-remote@1.1.0:
     resolution: {integrity: sha512-OY0fDu3O4+rNUr44lPxWNQqB/wcHBv9QV8aPBBxoh52BT6TDX1X4xGjaioj7jNbGh3JRSh8TpfrmV5UG9PyRyw==}
 
-  youtube-video-element@1.8.1:
-    resolution: {integrity: sha512-+5UuAGaj+5AnBf39huLVpy/4dLtR0rmJP1TxOHVZ81bac4ZHFpTtQ4Dz2FAn2GPnfXISezvUEaQoAdFW4hH9Xg==}
+  youtube-video-element@1.9.0:
+    resolution: {integrity: sha512-Hh0dbQM+FVlUaYUbpYkZNUvdKxTNcSNvTGzkQKYShltnX+LRHEp2eYvC2Zm43eU8Np+CBZuoNR2i+seCYzzAyg==}
 
   ytdl-core@4.11.5:
     resolution: {integrity: sha512-27LwsW4n4nyNviRCO1hmr8Wr5J1wLLMawHCQvH8Fk0hiRqrxuIu028WzbJetiYH28K8XDbeinYW4/wcHQD1EXA==}
@@ -14526,6 +14529,8 @@ snapshots:
       nan: 2.18.0
     optional: true
 
+  media-played-ranges-mixin@0.1.0: {}
+
   media-typer@0.3.0: {}
 
   media-typer@1.1.0: {}
@@ -17261,7 +17266,9 @@ snapshots:
       lodash: 4.17.23
       needle: 3.3.1
 
-  youtube-video-element@1.8.1: {}
+  youtube-video-element@1.9.0:
+    dependencies:
+      media-played-ranges-mixin: 0.1.0
 
   ytdl-core@4.11.5:
     dependencies:
