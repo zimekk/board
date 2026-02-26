@@ -52,7 +52,7 @@
     "@babel/preset-typescript": "^7.27.1",
     "@types/cors": "^2.8.13",
     "@types/express": "^5.0.0",
-    "@types/node": "^22.19.11",
+    "@types/node": "^22.19.13",
     "babel-loader": "^10.0.0",
     "css-loader": "^7.0.0",
     "file-loader": "^6.2.0",
@@ -61,7 +61,7 @@
     "style-loader": "^4.0.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.8.3",
-    "webpack": "^5.105.1",
+    "webpack": "^5.105.3",
     "webpack-dev-middleware": "^7.4.2",
     "webpack-hot-middleware": "^2.25.4",
     "webpack-node-externals": "^3.0.0"
