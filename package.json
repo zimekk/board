@@ -64,7 +64,7 @@
     "@commitlint/config-conventional": "^20.0.0",
     "@typescript-eslint/eslint-plugin": "^8.55.0",
     "@typescript-eslint/parser": "^8.55.0",
-    "changeset-conventional-commits": "^0.2.5",
+    "changeset-conventional-commits": "^1.0.0",
     "dotenv-cli": "^11.0.0",
     "eslint": "^10.0.0",
     "eslint-plugin-prettier": "^5.5.1",
