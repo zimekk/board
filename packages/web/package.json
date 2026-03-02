@@ -68,7 +68,7 @@
     "@types/redux-actions": "^2.6.2",
     "@types/webpack": "^5.28.1",
     "babel-loader": "^10.0.0",
-    "copy-webpack-plugin": "^13.0.0",
+    "copy-webpack-plugin": "^14.0.0",
     "css-loader": "^7.0.0",
     "dotenv": "^17.2.4",
     "file-loader": "^6.2.0",
