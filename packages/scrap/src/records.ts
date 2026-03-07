@@ -619,6 +619,7 @@ export const records = [
       "category=akcesoria-do-drukarek-3&__=3doodler&_n=1",
       "category=akcesoria-do-ipada-i-tabletow-multimedialnych&__=Apple",
       "category=archiwizacja-danych1&__=WD",
+      "category=blendery&__=Bosch%2Cwmf",
       "category=czysciki-parowe&__=Karcher",
       "category=dyski-wewnetrzne-ssd&__=Kingston",
       "category=ekspresy-cisnieniowe&__=Siemens,jura",
@@ -664,6 +665,7 @@ export const records = [
           `https://www.euro.com.pl/rest/api/products/search?startFrom=0&numberOfItems=17&${path}&developSearchMode=false&orderBy=POPULARITY&direction=ASC`,
       )
       .map((url, i) => ({
+        blocked: true,
         data: {
           url,
         },

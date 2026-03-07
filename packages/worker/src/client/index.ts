@@ -49,7 +49,15 @@ export const chrome = async (url: string) =>
     ? await fetch(url)
         .then((res) => res.json())
         .then((json) => (console.log(json), { url, json }))
-    : (await import("@dev/chrome")).chrome(url);
+    : url.match(new RegExp("euro.com.pl/rest/api/products"))
+      ? await fetch(url, {
+          headers: {
+            accept: "application/json",
+          },
+        })
+          .then((res) => res.json())
+          .then((json) => (console.log(json), { url, json }))
+      : (await import("@dev/chrome")).chrome(url);
 
 export const parse = async (
   { id, data, returnvalue },
