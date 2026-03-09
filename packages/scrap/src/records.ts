@@ -617,9 +617,9 @@ export const records = [
   .concat(
     [
       "category=accesspoint&__=ubiquiti",
-      "category=akcesoria-do-drukarek-3&__=3doodler&_n=1",
+      // "category=akcesoria-do-drukarek-3&__=3doodler&_n=1",
       "category=akcesoria-do-ipada-i-tabletow-multimedialnych&__=Apple",
-      "category=archiwizacja-danych1&__=WD",
+      // "category=archiwizacja-danych1&__=WD",
       "category=blendery&__=Bosch%2Cwmf",
       "category=czysciki-parowe&__=Karcher",
       "category=dyski-twarde-wewnetrzne&__=Toshiba",
@@ -656,7 +656,7 @@ export const records = [
       // "category=roboty-wieloczynnosciowe&__=KitchenAid&_aw=1",
       "category=sluchawki&__=Apple,marshall",
       "category=smartwatch&__=Apple",
-      "category=stabilizatory-do-kamer-i-aparatow",
+      // "category=stabilizatory-do-kamer-i-aparatow",
       "category=suszarki&__=Siemens",
       "category=switche-przelaczniki-sieciowe&__=ubiquiti",
       "category=telefony-komorkowe&__=Apple",
