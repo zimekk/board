@@ -1324,10 +1324,10 @@ importers:
     dependencies:
       '@bull-board/api':
         specifier: ^6.17.0
-        version: 6.20.6(@bull-board/ui@6.20.6)
+        version: 6.20.7(@bull-board/ui@6.20.7)
       '@bull-board/express':
         specifier: ^6.17.0
-        version: 6.20.6
+        version: 6.20.7
       '@dev/chrome':
         specifier: workspace:*
         version: link:../chrome
@@ -1995,16 +1995,16 @@ packages:
   '@borewit/text-codec@0.2.2':
     resolution: {integrity: sha512-DDaRehssg1aNrH4+2hnj1B7vnUGEjU6OIlyRdkMd0aUdIUvKXrJfXsy8LVtXAy7DRvYVluWbMspsRhz2lcW0mQ==}
 
-  '@bull-board/api@6.20.6':
-    resolution: {integrity: sha512-B/9OlKWJ/He421Lyuc7htMpKN4R8hcNu5uoIRiyh9y9J0kMOfxfs82GKXdfR9R0595LvAcCOSvjn8EtWHXesTA==}
+  '@bull-board/api@6.20.7':
+    resolution: {integrity: sha512-Iwu82QkYTZn1SJQuBBUTdKRMd804GtjqsBWZn79YgTi5RPKsp3eYnM5pUVOF6bUmDUEsxtJaG/3pLK8rlZ8yvg==}
     peerDependencies:
-      '@bull-board/ui': 6.20.6
+      '@bull-board/ui': 6.20.7
 
-  '@bull-board/express@6.20.6':
-    resolution: {integrity: sha512-QBOjhi3jR4qIJvLCo++DdL0CyG4umiFXBCPJYr74DmRN41m27rDS3NSf7ceHdbQr9Ol8mw3xbVqGLn50x3QdWQ==}
+  '@bull-board/express@6.20.7':
+    resolution: {integrity: sha512-7k/5kKjW27VAJll1VnGS3nYf/fBvVOUwbkbbv3OpHPDjCmL6A6TNahxZhHdrxNVH3tPiFKsD6TjQmHdWzgsDLA==}
 
-  '@bull-board/ui@6.20.6':
-    resolution: {integrity: sha512-nEXRgMHHd48ssINgvDqT7b4p/+57XRf3CUcTGQ7UIJb4F7n/kRRj8+ZQvQmMFsYGdNmbNU2eNheQ05vXSYiqdQ==}
+  '@bull-board/ui@6.20.7':
+    resolution: {integrity: sha512-3XHjbWzJRv3N9lziGuqTwNEHfQtbL6rC3RP6GNOcjcZoebtkxgLeRwDFdHb3VVQ4D1bOaqlRRGHSCVaa/Csw0Q==}
 
   '@changesets/apply-release-plan@7.1.0':
     resolution: {integrity: sha512-yq8ML3YS7koKQ/9bk1PqO0HMzApIFNwjlwCnwFEXMzNe8NpzeeYYKCmnhWJGkN8g7E51MnWaSbqRcTcdIxUgnQ==}
@@ -6369,6 +6369,9 @@ packages:
   lodash@4.17.23:
     resolution: {integrity: sha512-LgVTMpQtIopCi79SJeDiP0TfWi5CNEc/L/aRdTh3yIvmZXTnheWpKjSZhnvMl8iXbC1tFg9gdHHDMLoV7CnG+w==}
 
+  lodash@4.18.1:
+    resolution: {integrity: sha512-dMInicTPVE8d1e5otfwmmjlxkZoUpiVLwyeTdUsi/Caj/gfzzblBcCE5sRHV/AsjuCmxWrte2TNGSYuCeCq+0Q==}
+
   log-update@6.1.0:
     resolution: {integrity: sha512-9ie8ItPR6tjY5uYJh8K/Zrv/RMZ5VOlOWvtZdEHYSTFKZfIBPQa9tOAEeAWhd+AnIneLJ22w5fjOYtoutpWq5w==}
     engines: {node: '>=18'}
@@ -9619,23 +9622,23 @@ snapshots:
 
   '@borewit/text-codec@0.2.2': {}
 
-  '@bull-board/api@6.20.6(@bull-board/ui@6.20.6)':
+  '@bull-board/api@6.20.7(@bull-board/ui@6.20.7)':
     dependencies:
-      '@bull-board/ui': 6.20.6
+      '@bull-board/ui': 6.20.7
       redis-info: 3.1.0
 
-  '@bull-board/express@6.20.6':
+  '@bull-board/express@6.20.7':
     dependencies:
-      '@bull-board/api': 6.20.6(@bull-board/ui@6.20.6)
-      '@bull-board/ui': 6.20.6
+      '@bull-board/api': 6.20.7(@bull-board/ui@6.20.7)
+      '@bull-board/ui': 6.20.7
       ejs: 3.1.10
       express: 5.2.1
     transitivePeerDependencies:
       - supports-color
 
-  '@bull-board/ui@6.20.6':
+  '@bull-board/ui@6.20.7':
     dependencies:
-      '@bull-board/api': 6.20.6(@bull-board/ui@6.20.6)
+      '@bull-board/api': 6.20.7(@bull-board/ui@6.20.7)
 
   '@changesets/apply-release-plan@7.1.0':
     dependencies:
@@ -12153,7 +12156,7 @@ snapshots:
 
   async@2.6.4:
     dependencies:
-      lodash: 4.17.23
+      lodash: 4.18.1
 
   async@3.2.6: {}
 
@@ -14635,6 +14638,8 @@ snapshots:
 
   lodash@4.17.23: {}
 
+  lodash@4.18.1: {}
+
   log-update@6.1.0:
     dependencies:
       ansi-escapes: 7.3.0
@@ -15768,7 +15773,7 @@ snapshots:
 
   redis-info@3.1.0:
     dependencies:
-      lodash: 4.17.23
+      lodash: 4.18.1
 
   redis-parser@3.0.0:
     dependencies:
@@ -17171,7 +17176,7 @@ snapshots:
       fast-json-stable-stringify: 2.1.0
       fs-extra: 9.1.0
       glob: 11.1.0
-      lodash: 4.17.23
+      lodash: 4.18.1
       pretty-bytes: 5.6.0
       rollup: 2.80.0
       source-map: 0.8.0-beta.0
