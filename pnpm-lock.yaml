@@ -1324,10 +1324,10 @@ importers:
     dependencies:
       '@bull-board/api':
         specifier: ^6.17.0
-        version: 6.20.7(@bull-board/ui@6.20.7)
+        version: 6.21.0(@bull-board/ui@6.21.0)
       '@bull-board/express':
         specifier: ^6.17.0
-        version: 6.20.7
+        version: 6.21.0
       '@dev/chrome':
         specifier: workspace:*
         version: link:../chrome
@@ -1995,16 +1995,16 @@ packages:
   '@borewit/text-codec@0.2.2':
     resolution: {integrity: sha512-DDaRehssg1aNrH4+2hnj1B7vnUGEjU6OIlyRdkMd0aUdIUvKXrJfXsy8LVtXAy7DRvYVluWbMspsRhz2lcW0mQ==}
 
-  '@bull-board/api@6.20.7':
-    resolution: {integrity: sha512-Iwu82QkYTZn1SJQuBBUTdKRMd804GtjqsBWZn79YgTi5RPKsp3eYnM5pUVOF6bUmDUEsxtJaG/3pLK8rlZ8yvg==}
+  '@bull-board/api@6.21.0':
+    resolution: {integrity: sha512-5bX3U8baU4OulDLeXwqWI6/FZolpi1APfoJVXndR4fKdmuYr9cdbH8cg7juublfzX01T+3zoiZkveX7iD5y8gA==}
     peerDependencies:
-      '@bull-board/ui': 6.20.7
+      '@bull-board/ui': 6.21.0
 
-  '@bull-board/express@6.20.7':
-    resolution: {integrity: sha512-7k/5kKjW27VAJll1VnGS3nYf/fBvVOUwbkbbv3OpHPDjCmL6A6TNahxZhHdrxNVH3tPiFKsD6TjQmHdWzgsDLA==}
+  '@bull-board/express@6.21.0':
+    resolution: {integrity: sha512-es5UhfDvF6YOa34mKUWUmopxmcLbNNCx5SlgeeyWQgs6WkMqahZ5kve7YCgclQomHdsycJIL3wCktXnTEQ6wRg==}
 
-  '@bull-board/ui@6.20.7':
-    resolution: {integrity: sha512-3XHjbWzJRv3N9lziGuqTwNEHfQtbL6rC3RP6GNOcjcZoebtkxgLeRwDFdHb3VVQ4D1bOaqlRRGHSCVaa/Csw0Q==}
+  '@bull-board/ui@6.21.0':
+    resolution: {integrity: sha512-SemKRipdrZVqboae/Xhl7CTdIwWJ+F3G/DEP7XHi1Qt1kXZUIKJkySXlFHILunygCiHRpCJ6/Ax/XNdHI/n3QA==}
 
   '@changesets/apply-release-plan@7.1.0':
     resolution: {integrity: sha512-yq8ML3YS7koKQ/9bk1PqO0HMzApIFNwjlwCnwFEXMzNe8NpzeeYYKCmnhWJGkN8g7E51MnWaSbqRcTcdIxUgnQ==}
@@ -9618,23 +9618,23 @@ snapshots:
 
   '@borewit/text-codec@0.2.2': {}
 
-  '@bull-board/api@6.20.7(@bull-board/ui@6.20.7)':
+  '@bull-board/api@6.21.0(@bull-board/ui@6.21.0)':
     dependencies:
-      '@bull-board/ui': 6.20.7
+      '@bull-board/ui': 6.21.0
       redis-info: 3.1.0
 
-  '@bull-board/express@6.20.7':
+  '@bull-board/express@6.21.0':
     dependencies:
-      '@bull-board/api': 6.20.7(@bull-board/ui@6.20.7)
-      '@bull-board/ui': 6.20.7
+      '@bull-board/api': 6.21.0(@bull-board/ui@6.21.0)
+      '@bull-board/ui': 6.21.0
       ejs: 3.1.10
       express: 5.2.1
     transitivePeerDependencies:
       - supports-color
 
-  '@bull-board/ui@6.20.7':
+  '@bull-board/ui@6.21.0':
     dependencies:
-      '@bull-board/api': 6.20.7(@bull-board/ui@6.20.7)
+      '@bull-board/api': 6.21.0(@bull-board/ui@6.21.0)
 
   '@changesets/apply-release-plan@7.1.0':
     dependencies:
