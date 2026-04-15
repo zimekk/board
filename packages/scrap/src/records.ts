@@ -628,7 +628,7 @@ export const records = [
       "category=ekspresy-cisnieniowe&__=Siemens",
       "category=ekspresy-cisnieniowe&__=wmf",
       "category=etui-do-telefonow&__=Apple",
-      "category=fotele-i-stojaki-do-kierownicy&__=Asus,sparco",
+      // "category=fotele-i-stojaki-do-kierownicy&__=Asus,sparco",
       "category=gilotyny-i-trymery",
       "category=glosniki-przenosne&__=BowersWilkins,Sonos,Yamaha,jbl,marshall",
       // "category=glosniki-przenosne&__=jbl",
