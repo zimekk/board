@@ -499,9 +499,11 @@ export const records = [
       "g-6/c/15-monitory.html?producent=357-apple",
       // "g-6/c/34-zasilacze-awaryjne-ups.html?producent=154-apc",
       // "g-6/c/34-zasilacze-awaryjne-ups.html?producent=1308-eaton",
+      "g-6/c/34-zasilacze-awaryjne-ups.html?f%5Bprice%5D%5Bto%5D=10000&producent=154-apc&producent=1053-cyberpower&producent=1308-eaton&f3019-typ-obudowy=51340-rack&f7870-typ-produktu=180922-zasilacz-ups&hide_unavailable=1",
       "g-6/c/111-mikrofony.html?producent=1009-dji",
       "g-6/c/421-urzadzenia-sieciowe.html?producent=628-ubiquiti&hide_unavailable=1",
       "g-6/c/425-switche.html?producent=276-tp-link&f3303-typ-obudowy=45868-do-szaf-rack&hide_unavailable=1",
+      "g-6/c/431-akcesoria-sieciowe.html?producent=628-ubiquiti",
       "g-6/c/456-access-pointy.html?producent=276-tp-link&hide_unavailable=1",
       "g-6/c/459-drukarki-do-zdjec.html",
       "g-6/c/1119-przelaczniki-kvm.html?producent=832-unitek",
@@ -609,7 +611,12 @@ export const records = [
         },
         opts: {
           repeat: {
-            cron: `${(i + 1) % 60} ${7 + Math.floor((i + 1) / 60)},${15 + Math.floor((i + 1) / 60)} * * *`,
+            cron: ((m, h, h2) =>
+              `${m % 60} ${h + Math.floor(m / 60)},${h2 + Math.floor(m / 60)} * * *`)(
+              i + 1,
+              7,
+              15,
+            ),
           },
         },
       })),
