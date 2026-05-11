@@ -70,6 +70,10 @@ export async function chrome(url = "https://zimekk.github.io/robot/") {
     return import("./pl.moto")
       .then(({ scrap }) => scrap(page, url))
       .finally(() => browser.close());
+  } else if (url.match("domitech.pl/|jysk.pl/|speckable.pl/")) {
+    return import("./pl.jysk")
+      .then(({ scrap }) => scrap(page, url))
+      .finally(() => browser.close());
   }
 
   return await Promise.all([
