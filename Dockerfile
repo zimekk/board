@@ -35,14 +35,16 @@ ENV WORKDIR=/app
 RUN npm i -g pnpm
 
 WORKDIR $WORKDIR
+ENV CI=true
 COPY pnpm-lock.yaml .
 # RUN pnpm fetch --prod
 # RUN ls -la
 RUN pnpm fetch
 
 COPY . .
-RUN pnpm install --offline --config.ignore-scripts=true
+# RUN pnpm install --offline --config.ignore-scripts=true
 # RUN pnpm build && pnpm prune --prod --config.ignore-scripts=true
+RUN pnpm install --prefer-offline --config.ignore-scripts=true
 RUN pnpm build
 
 CMD ["pnpm", "serve"]
