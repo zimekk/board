@@ -1,2 +1,12 @@
 packages:
   - "packages/*"
+allowBuilds:
+  "@mathquis/node-gist": false
+  "@parcel/watcher": false
+  core-js: false
+  esbuild: false
+  mdns: false
+  msgpackr-extract: false
+  node-vad: false
+  protobufjs: false
+  puppeteer: false
