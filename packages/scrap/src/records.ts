@@ -763,6 +763,7 @@ export const records = [
       "product-pol-10583-Wkretarka-do-GK-Makita-DFS452RFE.html",
       "product-pol-11698-Przyssawka-do-plytek-RUBI-vacuum-SC-200.html",
       "product-pol-11886-Szlifierka-do-gipsu-Makita-DSL800RTEU.html",
+      "product-pol-12087-Przecinarka-reczna-HIT-1200-Rubi-26962-torba.html",
       "product-pol-14323-Przecinarka-do-plytek-Makita-CC301DSMJ.html",
       "product-pol-14778-Odkurzacz-Makita-VC4210M.html",
       "product-pol-17206-Zaglebiarka-Makita-DSP600-z-zestawem-zasilajacym-walizka-i-szyna.html",
@@ -774,11 +775,14 @@ export const records = [
       "product-pol-23976-Przyssawka-do-plytek-Rubi-21951.html",
       "product-pol-27437-Wkretarka-do-GK-Bosch-GTB-185-Li.html",
       "product-pol-27578-Urzadzenie-RUBI-TILE-GAP-CLOSER.html",
+      "product-pol-36208-Przecinarka-Makita-DMC300Z.html",
       "product-pol-42011-Pas-narzedziowy-Makita-E-15235.html",
       "product-pol-43796-Wkretarka-do-GK-Makita-DFR551RTJ.html",
       "product-pol-44324-Detektor-cyfrowy-Bosch-Truvo-06036812Z0.html",
       "product-pol-45912-Detektor-Bosch-UniversalDetect-06036813Z0.html",
+      "product-pol-46866-Przecinarka-reczna-do-glazury-Rubi-TK-1020.html",
       "product-pol-51723-Odkurzacz-przemyslowy-Bosch-UniversalVac-15-06033D1100.html",
+      "rubi-tc-125-g2-51951",
     ]
       .map((path) => `https://domitech.pl/${path}`)
       .map((url, i) => ({
