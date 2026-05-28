@@ -10,3 +10,4 @@ allowBuilds:
   node-vad: false
   protobufjs: false
   puppeteer: false
+# blockExoticSubdeps: false
