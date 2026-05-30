@@ -493,7 +493,7 @@ export const records = [
       "g-5/c/2599-chlodzenia-komputerowe.html?producent=368-nzxt",
       "g-5/c/2665-karty-przechwytujace-wideo.html?producent=818-elgato",
       "g-5/c/2737-narzedzia-serwisowe-i-sieciowe.html?producent=1283-ifixit&producent=2822-jimi-home&producent=2823-hoto",
-      "g-5/c/2997-procesory-amd-ryzen-5.html?producent=3-amd",
+      "g-5/c/2997-procesory-amd-ryzen-5.html",
       "g-5/c/3402-pamieci-ram-ddr5.html?producent=2484-kingston-fury",
       "g-5/c/3618-plyty-glowne-socket-am5.html",
       "g-6/c/15-monitory.html?producent=357-apple",
