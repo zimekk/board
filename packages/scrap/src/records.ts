@@ -493,7 +493,7 @@ export const records = [
       "g-5/c/2599-chlodzenia-komputerowe.html?producent=368-nzxt",
       "g-5/c/2665-karty-przechwytujace-wideo.html?producent=818-elgato",
       "g-5/c/2737-narzedzia-serwisowe-i-sieciowe.html?producent=1283-ifixit&producent=2822-jimi-home&producent=2823-hoto",
-      "g-5/c/2997-procesory-amd-ryzen-5.html?producent=3-amd",
+      "g-5/c/2997-procesory-amd-ryzen-5.html",
       "g-5/c/3402-pamieci-ram-ddr5.html?producent=2484-kingston-fury",
       "g-5/c/3618-plyty-glowne-socket-am5.html",
       "g-6/c/15-monitory.html?producent=357-apple",
@@ -555,6 +555,7 @@ export const records = [
       "g-64/c/3026-kamery-sportowe-i-akcesoria.html?producent=1009-dji",
       "g-64/c/3037-rejestratory-ip.html?producent=276-tp-link&producent=628-ubiquiti&producent=2287-hikvision",
       "g-64/c/3086-dyski-twarde-do-monitoringu.html",
+      "g-64/c/3346-roboty-koszace.html",
       "g-64/c/3451-akcesoria-do-urzadzen-smart.html?producent=2421-grenton",
     ]
       .map((path) => `https://www.x-kom.pl/${path}`)
