@@ -13,6 +13,7 @@ export const Type = {
   HOTSHOT: "HOTSHOT",
   LECLERC: "LECLERC",
   MACAN: "MACAN",
+  OFFER: "OFFER",
   PLOTS: "PLOTS",
   PROMO: "PROMO",
   PROMO_ITEM: "PROMO_ITEM",
