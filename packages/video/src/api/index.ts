@@ -8,13 +8,13 @@ import { z } from "zod";
 import { type BasicInfoType as InfoType } from "../schema";
 import videos from "../videos";
 
-const { LIBRARY_PATH = "" } = process.env;
+const { LIBRARY_PATH = "", STORAGE_QUOTA_MB = 48 } = process.env;
 
 const cwd = resolve(dirname(require.resolve("../../../../.env")), LIBRARY_PATH);
 
 // console.log({ LIBRARY_PATH, cwd });
-
-const STORAGE_QUOTA = 32 * 1024 * 1024;
+const MB = 1024 * 1024;
+const STORAGE_QUOTA = Number(STORAGE_QUOTA_MB) * MB;
 
 const storage = new LocalStorage(resolve(cwd, `storage`), STORAGE_QUOTA);
 
