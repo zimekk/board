@@ -6,5 +6,6 @@
       "matchPackageNames": ["*"],
       "minimumReleaseAge": "1 day"
     }
-  ]
+  ],
+  "postUpdateOptions": "pnpmDedupe"
 }
