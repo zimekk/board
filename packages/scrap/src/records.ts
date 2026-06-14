@@ -811,6 +811,40 @@ export const records = [
   )
   .concat(
     [
+      "jadalnia/krzesla-do-jadalni/krzeslo-guderup-naturalny-dab-naturalny",
+      "lazienka/maty-lazienkowe/mata-lazienkowa-dalstorp-50x80-bezowy",
+      "lazienka/maty-lazienkowe/mata-lazienkowa-storfors-60x110-naturalny",
+      "lazienka/wyposazenie-lazienki/dozowniki-mydla/dozownik-mydla-husby-z-czujnikiem-szary",
+      "ogrod/dekoracje-ogrodowe/palenisko-rosenfink-s59xw16cm-czarny",
+      "ogrod/akcesoria-ogrodowe/donice-ogrodowe/donica-ogrodowa-stork-s28-24-przydymiony-fiolet-2-szt-zest",
+      "ogrod/akcesoria-ogrodowe/donice-ogrodowe/doniczka-svartbak-s40xw35-naturalny",
+      "ogrod/meble-ogrodowe/krzesla-ogrodowe/metalowe-i-plecione-krzesla-ogrodowe/krzeslo-ogrodowe-gilja",
+      "ogrod/meble-ogrodowe/krzesla-ogrodowe/metalowe-i-plecione-krzesla-ogrodowe/krzeslo-ogrodowe-gilja-0",
+      "przechowywanie/przechowywanie-rozne/stolik-lydum-s34xw46-bezowy-wlokno-cementowe",
+      "przechowywanie/regaly/regal-astrup-6-polek-czarny",
+      "przechowywanie/regaly/regal-herning-5-polek-bialy",
+      "przechowywanie/regaly/regal-lyngerup-4-polki-kolor-cieply-dab",
+      "przedpokoj/przedpokoj/lawka-do-przedpokoju/lawka-bislev-tkanina-ciemnopiaskowy",
+      "salon/kanapy/sofa-modulowa-skejby-2-miejscowa-tkanina-bezowy",
+      "salon/kanapy/sofa-modulowa-skejby-3-miejscowa-tkanina-bezowy",
+      "salon/stoliki-kawowe-i-boczne/stolik-kawowy-lydum-s60-bezowy-wlokno-cementowe",
+      "salon/stoliki-kawowe-i-boczne/zestaw-stolikow-munkebo-s55-s45-kolor-naturalny-dab-2szt",
+    ]
+      .map((path) => `https://jysk.pl/${path}`)
+      .map((url, i) => ({
+        blocked: true,
+        data: {
+          url,
+        },
+        opts: {
+          repeat: {
+            cron: ((m, h) => `${m % 60} ${h + Math.floor(m / 60)} * * *`)(i, 3),
+          },
+        },
+      })),
+  )
+  .concat(
+    [
       "product-pol-344-Wkretarka-do-GK-Bosch-GSR-18V-EC-TE.html",
       "product-pol-6922-Odkurzacz-Makita-VC4210L.html",
       "product-pol-10581-Wkretarka-do-GK-Makita-DFR550RFE.html",
