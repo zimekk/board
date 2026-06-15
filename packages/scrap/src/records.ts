@@ -811,15 +811,13 @@ export const records = [
   )
   .concat(
     [
-      "jadalnia/krzesla-do-jadalni/krzeslo-guderup-naturalny-dab-naturalny",
+      "jadalnia/krzesla-do-jadalni/krzeslo-guderup-ndab-naturalny",
       "lazienka/maty-lazienkowe/mata-lazienkowa-dalstorp-50x80-bezowy",
       "lazienka/maty-lazienkowe/mata-lazienkowa-storfors-60x110-naturalny",
       "lazienka/wyposazenie-lazienki/dozowniki-mydla/dozownik-mydla-husby-z-czujnikiem-szary",
       "ogrod/dekoracje-ogrodowe/palenisko-rosenfink-s59xw16cm-czarny",
       "ogrod/akcesoria-ogrodowe/donice-ogrodowe/donica-ogrodowa-stork-s28-24-przydymiony-fiolet-2-szt-zest",
       "ogrod/akcesoria-ogrodowe/donice-ogrodowe/doniczka-svartbak-s40xw35-naturalny",
-      "ogrod/meble-ogrodowe/krzesla-ogrodowe/metalowe-i-plecione-krzesla-ogrodowe/krzeslo-ogrodowe-gilja",
-      "ogrod/meble-ogrodowe/krzesla-ogrodowe/metalowe-i-plecione-krzesla-ogrodowe/krzeslo-ogrodowe-gilja-0",
       "przechowywanie/przechowywanie-rozne/stolik-lydum-s34xw46-bezowy-wlokno-cementowe",
       "przechowywanie/regaly/regal-astrup-6-polek-czarny",
       "przechowywanie/regaly/regal-herning-5-polek-bialy",

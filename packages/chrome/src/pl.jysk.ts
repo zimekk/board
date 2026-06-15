@@ -23,7 +23,7 @@ export const scrap = async (page: Page, url: string) =>
     })
     .then(async () => {
       console.log(await page.title());
-      const e = `[...document.querySelectorAll('script[type="application/ld+json"]')].map(e => JSON.parse(unescape(e.textContent))).find(item => item['@type'] === 'Product')`;
+      const e = `[...document.querySelectorAll('script[type="application/ld+json"]')].map(e => JSON.parse(unescape(e.textContent))).find(item => ['Product', 'ProductGroup'].includes(item['@type']))`;
       console.log(["page.evaluate"], e);
       const properties = (await page.evaluate(e)) as object;
       console.log(properties);
