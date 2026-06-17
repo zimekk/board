@@ -531,6 +531,7 @@ export const records = [
       // "g-8/c/2672-etui-na-sluchawki.html?f5654-kompatybilnosc=151468-apple-airpods",
       "g-8/c/3478-sprzet-dj.html",
       "g-12/c/266-kable-usb.html?producent=470-gembird&producent=832-unitek&f2934-dlugosc=od-3",
+      "g-12/c/381-sprezone-powietrze.html",
       "g-12/c/409-ladowarki-do-aparatow.html?f3821-kompatybilne-baterie=207606-lp-e12",
       "g-12/c/2466-baterie-i-akumulatorki.html?f2834-typ-ogniwa=41678-aa-r6&f2834-typ-ogniwa=41679-aaa-r03",
       // "g-12/c/3472-stacje-zasilania.html?producent=2599-ecoflow",
