@@ -317,6 +317,8 @@ export const records = [
       // "audi/q5?search%5Bfilter_enum_generation%5D=gen-fy-2017",
       "audi/a6-avant-e-tron--a6-e-tron",
       "audi/q6--q6-sportback-e-tron",
+      "audi/q3?search%5Bfilter_enum_generation%5D=gen-iii-2025-q3",
+      "audi/q3-sportback?search%5Bfilter_enum_generation%5D=gen-ii-2025-q3-sportback",
       "audi/q7?search%5Bfilter_enum_generation%5D=gen-ii-2015-q7",
       // "audi/q8",
       "bmw/seria-5?search%5Bfilter_enum_generation%5D%5B0%5D=gen-g30-2017&search%5Bfilter_enum_generation%5D%5B1%5D=gen-g60-2023",
