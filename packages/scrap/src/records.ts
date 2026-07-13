@@ -310,6 +310,8 @@ export const records = [
   )
   .concat(
     [
+      "audi/a1-sportback",
+      "audi/a3-sportback",
       // "audi/a4-allroad",
       // "audi/a5?search%5Bfilter_enum_generation%5D=gen-f5-2016",
       "audi/a6/seg-combi?search%5Bfilter_enum_generation%5D=gen-c8-2018",
@@ -327,12 +329,15 @@ export const records = [
       "bmw/x5/od-2024?search%5Bbrand_program_id%5D=16&search%5Bfilter_enum_generation%5D=gen-g05-2018&search%5Border%5D=relevance_web",
       "honda/accord/seg-combi?search%5Bfilter_enum_generation%5D=gen-viii-2008",
       // "honda/jazz?search%5Bfilter_enum_generation%5D=gen-ii-2002-2008-jazz",
+      "mazda/2/od-2022?search%5Bfilter_float_price%3Ato%5D=100000",
       "mini/cooper-s--john-cooper-works",
       "mini/cooper/od-2026",
       "mini/cooper-s/od-2025",
+      "mini/cooper?search%5Bfilter_enum_fuel_type%5D=electric",
       "nowe/volvo/xc-90",
       "porsche/macan",
       "porsche/macan/od-2026",
+      "toyota/yaris/od-2022?search%5Bfilter_float_price%3Ato%5D=100000",
       "volvo/ex90",
       // "volvo/xc-60?search%5Bfilter_enum_generation%5D=gen-ii-2017",
     ]
