@@ -89,7 +89,7 @@ export const client = () => {
   const queue = new Queue<Data>(QUEUE_NAME, REDIS_URL, {
     limiter: {
       max: 1, // Max number of jobs processed
-      duration: seconds(45), // per duration in milliseconds
+      duration: seconds(15), // per duration in milliseconds
     },
   });
 
