@@ -317,12 +317,15 @@ export const records = [
       "audi/a6/seg-combi?search%5Bfilter_enum_generation%5D=gen-c8-2018",
       "audi/a6-allroad?search%5Bfilter_enum_generation%5D=gen-c8-2019",
       // "audi/q5?search%5Bfilter_enum_generation%5D=gen-fy-2017",
+      "audi/a6-avant?search%5Bfilter_enum_generation%5D=gen-c9-2025",
       "audi/a6-avant-e-tron--a6-e-tron",
       "audi/q6--q6-sportback-e-tron",
       "audi/q3?search%5Bfilter_enum_generation%5D=gen-iii-2025-q3",
       "audi/q3-sportback?search%5Bfilter_enum_generation%5D=gen-ii-2025-q3-sportback",
       "audi/q7?search%5Bfilter_enum_generation%5D=gen-ii-2015-q7",
+      "audi/q7?search%5Bfilter_enum_generation%5D=gen-iii-2026-q7",
       // "audi/q8",
+      "audi/q9",
       "bmw/seria-1",
       "bmw/seria-5?search%5Bfilter_enum_generation%5D%5B0%5D=gen-g30-2017&search%5Bfilter_enum_generation%5D%5B1%5D=gen-g60-2023",
       "bmw/x3?search%5Bfilter_enum_generation%5D=gen-g01-2017",
@@ -461,6 +464,7 @@ export const records = [
   )
   .concat(
     [
+      "g-2/c/159-laptopy-notebooki-ultrabooki.html?f7287-seria=280198-dell-inspiron",
       "g-2/c/159-laptopy-notebooki-ultrabooki.html?producent=357-apple",
       "g-2/c/494-konwertery.html",
       // "g-2/c/1329-notebooki-laptopy-13-3.html?producent=357-apple",
