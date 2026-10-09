@@ -32,13 +32,14 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
 ENV NODE_LLAMA_CPP_SKIP_DOWNLOAD=true
 
 ENV WORKDIR=/app
-RUN npm i -g pnpm
+# RUN npm i -g pnpm
 
 WORKDIR $WORKDIR
 ENV CI=true
-COPY pnpm-lock.yaml .
+COPY package.json pnpm-lock.yaml .
 # RUN pnpm fetch --prod
 # RUN ls -la
+RUN corepack enable
 RUN pnpm fetch
 
 COPY . .
