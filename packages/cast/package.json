@@ -38,7 +38,7 @@
     "@types/react": "^19.2.13",
     "ts-node-dev": "^2.0.0",
     "type-coverage": "^2.29.7",
-    "typescript": "^5.8.3"
+    "typescript": "^6.0.0"
   },
   "optionalDependencies": {
     "mdns": "^2.7.2"
