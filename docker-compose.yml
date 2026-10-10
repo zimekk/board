@@ -9,10 +9,11 @@ services:
           # memory: 100M
           # pids: 1
     environment:
-      - PORT
       - DATABASE_URL=postgres://postgres:password@sql:5432/board
       - MQTT_URL=mqtt://mqtt
+      - PORT
       - REDIS_URL=redis://redis
+      - STORAGE_QUOTA
     links:
       - mqtt
       - redis
