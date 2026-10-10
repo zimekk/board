@@ -8,13 +8,19 @@ import { z } from "zod";
 import { type BasicInfoType as InfoType } from "../schema";
 import videos from "../videos";
 
-const { LIBRARY_PATH = "", STORAGE_QUOTA_MB = 48 } = process.env;
+const {
+  ITEMS_LIMIT = 500,
+  LIBRARY_PATH = "",
+  STORAGE_QUOTA_MB = 48,
+} = process.env;
 
 const cwd = resolve(dirname(require.resolve("../../../../.env")), LIBRARY_PATH);
 
 // console.log({ LIBRARY_PATH, cwd });
 const MB = 1024 * 1024;
 const STORAGE_QUOTA = Number(STORAGE_QUOTA_MB) * MB;
+
+console.log({ ITEMS_LIMIT, STORAGE_QUOTA_MB, STORAGE_QUOTA });
 
 const storage = new LocalStorage(resolve(cwd, `storage`), STORAGE_QUOTA);
 
@@ -32,7 +38,7 @@ export const router = () =>
     .get("/", (_req, res) =>
       res.json({
         status: 1,
-        meta: videos.slice(0, 250).reduce((result, videoId) => {
+        meta: videos.slice(0, Number(ITEMS_LIMIT)).reduce((result, videoId) => {
           const item = getItem(videoId);
           return Object.assign(
             result,
