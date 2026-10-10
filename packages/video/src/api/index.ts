@@ -16,6 +16,8 @@ const cwd = resolve(dirname(require.resolve("../../../../.env")), LIBRARY_PATH);
 const MB = 1024 * 1024;
 const STORAGE_QUOTA = Number(STORAGE_QUOTA_MB) * MB;
 
+console.log({ STORAGE_QUOTA });
+
 const storage = new LocalStorage(resolve(cwd, `storage`), STORAGE_QUOTA);
 
 const getItem = (videoId: string) => {

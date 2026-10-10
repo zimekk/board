@@ -36,10 +36,11 @@ ENV WORKDIR=/app
 
 WORKDIR $WORKDIR
 ENV CI=true
-COPY package.json pnpm-lock.yaml .
+COPY package.json .
+RUN corepack enable
+COPY pnpm-lock.yaml .
 # RUN pnpm fetch --prod
 # RUN ls -la
-RUN corepack enable
 RUN pnpm fetch
 
 COPY . .
