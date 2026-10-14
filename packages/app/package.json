@@ -33,6 +33,7 @@
     "@dev/speed": "workspace:*",
     "@dev/status": "workspace:*",
     "@dev/transfer": "workspace:*",
+    "@dev/vcr": "workspace:*",
     "@dev/video": "workspace:*",
     "@dev/web": "workspace:*",
     "@dev/webrtc": "workspace:*",

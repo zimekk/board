@@ -54,6 +54,7 @@
     "@dev/status": "workspace:*",
     "@dev/stream": "workspace:*",
     "@dev/transfer": "workspace:*",
+    "@dev/vcr": "workspace:*",
     "@dev/video": "workspace:*",
     "@dev/waveform": "workspace:*",
     "@dev/webrtc": "workspace:*",

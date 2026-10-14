@@ -1,0 +1,80 @@
+import React, {
+  type ChangeEventHandler,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
+import { Subject, debounceTime, distinctUntilChanged, skip, tap } from "rxjs";
+
+const useId = () => "volume-list";
+
+export default function Volume() {
+  const [volume, setVolume] = useState(NaN);
+
+  useEffect(() => {
+    fetch("vcr/volume")
+      .then((res) => res.json())
+      .then(({ volume }) => volume)
+      .then(setVolume);
+  }, []);
+
+  const volume$ = useMemo(() => new Subject<number>(), []);
+
+  useEffect(() => {
+    const subscription = volume$
+      .pipe(
+        skip(1),
+        tap(console.log),
+        distinctUntilChanged(),
+        debounceTime(400),
+      )
+      .subscribe((volume) =>
+        fetch(`vcr/volume/${volume}`)
+          .then((res) => res.json())
+          .then(console.log),
+      );
+    return () => subscription.unsubscribe();
+  }, [volume$]);
+
+  useEffect(() => {
+    if (!Number.isNaN(volume)) {
+      volume$.next(volume);
+    }
+  }, [volume]);
+
+  const handleChange = useCallback<ChangeEventHandler<HTMLInputElement>>(
+    ({ target }) => setVolume(Number(target.value)),
+    [],
+  );
+
+  const listId = useId();
+
+  return (
+    <div style={{ display: "flex" }}>
+      {!Number.isNaN(volume) && (
+        <div style={{ display: "flex", alignItems: "center", flex: "auto" }}>
+          <span>volume</span>
+          <input
+            style={{ flex: "auto" }}
+            type="range"
+            list={listId}
+            min="0"
+            max="100"
+            value={volume}
+            onChange={handleChange}
+          />
+          <span>{`${volume}%`}</span>
+        </div>
+      )}
+      <datalist id={listId}>
+        {[...Array(10 + 1)].map((_, index, array) => (
+          <option
+            key={index}
+            value={(100 / (array.length - 1)) * index}
+          ></option>
+        ))}
+      </datalist>
+    </div>
+  );
+}
