@@ -59,7 +59,7 @@ function Recipe({
   recipe: RecipeType;
   setVideoId: (video: string) => void;
 }) {
-  const [info, setInfo] = useState<InfoType | null>(null);
+  const [info, setInfo] = useState<Pick<InfoType, "videoDetails"> | null>(null);
   const [servings, setServings] = useState<RecipeType["servings"]>(
     recipe.servings,
   );
@@ -67,7 +67,7 @@ function Recipe({
   useEffect(() => {
     fetch(`video/info?videoId=${recipe.video}`)
       .then((res) => res.json())
-      .then((info) => InfoSchema.parseAsync(info))
+      .then((info) => InfoSchema.pick({ videoDetails: true }).parseAsync(info))
       .then(setInfo);
   }, []);
 
